@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Session 1 — Edition One</title>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+:root{--ring:#FFD700;--border:#FFD700}
+*{box-sizing:border-box}
+body{margin:0;background:#000;color:#fff;font:16px/1.6 Georgia,"Times New Roman",serif}
+a{text-decoration:none;color:#FFD700}
+.ticker-wrap{position:sticky;top:0;z-index:50;background:var(--ring);border-bottom:4px solid #000;overflow:hidden}
+.ticker{display:flex;width:max-content;animation:scroll 35s linear infinite}
+.ticker span{padding:14px 36px;font-size:14px;font-weight:700;letter-spacing:.8px;color:#000;white-space:nowrap;font-family:system-ui;text-transform:uppercase}
+@keyframes scroll{from{transform:translateX(100%)}to{transform:translateX(-100%)}}
+header{border-bottom:2px solid var(--border);padding:24px 16px;text-align:center}
+.brand{font-size:36px;font-weight:600;letter-spacing:.8px;color:var(--ring)}
+.tagline{margin-top:6px;font-size:14px;letter-spacing:2px;text-transform:uppercase;color:#fff}
+.nav{margin-top:18px}
+.nav a{display:inline-block;margin:0 8px;padding:8px 16px;border:2px solid var(--border);border-radius:20px;font-family:system-ui;font-size:12px;color:#fff}
+.nav a.active,.nav a:hover{background:var(--ring);color:#000}
+section{max-width:860px;margin:0 auto;padding:28px 16px}
+.card{border:2px solid var(--border);border-radius:16px;padding:22px;margin-bottom:28px;background:#0b0b0b}
+.card h3{margin:6px 0 10px;font-size:22px;color:var(--ring)}
+.edition-title{text-align:center;margin-bottom:30px}
+.edition-title h2{color:var(--ring);margin:0}
+footer{border-top:2px solid var(--border);margin-top:40px;padding:24px 16px;text-align:center;font-size:12px;color:#888}
+.footer-edition{
+  font-size:11px;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  color:#bfae4d;
+  margin-bottom:10px;
+  padding-bottom:10px;
+  border-bottom:1px solid #333;
+}
+.small{font-size:11px;color:#777}
+</style>
+
+</head>
+<body>
+
+<div class="ticker-wrap">
+  <div class="ticker">
+    <span>Measured optimism still matters</span>
+    <span>Progress does not require spectacle</span>
+    <span>Quiet systems endure</span>
+    <span>Evidence over outrage</span>
+    <span>Repair is more powerful than reaction</span>
+    <span>Kindness remains functional</span>
+    <span>Stability is a form of progress</span>
+  </div>
+</div>
+
+
+<header>
+  <div class="brand">EMPERICAL</div>
+  <div class="tagline">Ethical · Real · Clear</div>
+  <nav class="nav">
+    <a href="index.html">Home</a>
+    <a href="archive.html" class="active">Archive</a>
+    <a href="about.html">About</a>
+  </nav>
+</header>
+
+
+<section>
+<div class="edition-title">
+<h2>Session 1 · Edition One</h2>
+<p>January 17, 2026</p>
+</div>
+
+<div class="card">
+<h3>An 86-Year-Old Woman Gives What She Has — A Community Responds</h3>
+<p><strong>Summary</strong> — An elderly woman on a fixed income donated what little she had to help someone she believed needed it more, prompting wider community support.</p>
+<p><strong>Why It Matters</strong> — Individual generosity can activate collective responsibility without publicity or pressure.</p>
+<p><strong>Source</strong> — <a href="https://apnews.com/search?q=86-year-old%20woman%20donated%20what%20she%20had%20community%20responded" target="_blank" rel="noopener">Associated Press (search)</a></p>
+</div>
+
+
+<div class="card">
+<h3>A Rural Town Reopens Its Only Grocery Store</h3>
+<p><strong>Summary</strong> — Residents collaborated to reopen their only grocery store after months without local food access.</p>
+<p><strong>Why It Matters</strong> — Local coordination can restore essential infrastructure when formal systems fall short.</p>
+<p><strong>Source</strong> — <a href="https://apnews.com/search?q=rural%20town%20reopens%20only%20grocery%20store%20residents%20collaborated" target="_blank" rel="noopener">Associated Press (search)</a></p>
+</div>
+
+
+<div class="card">
+<h3>Clean Energy Quietly Overtakes Coal in Multiple Regions</h3>
+<p><strong>Summary</strong> — Renewable generation surpassed coal across multiple regions through gradual transition and deployment.</p>
+<p><strong>Why It Matters</strong> — Sustained structural change often matters more than dramatic announcements.</p>
+<p><strong>Source</strong> — <a href="https://www.iea.org/search?q=renewables%20surpassed%20coal%20multiple%20regions" target="_blank" rel="noopener">International Energy Agency (search)</a></p>
+</div>
+
+
+<div class="card">
+<h3>A Teacher’s After-Hours Program Improves Graduation Rates</h3>
+<p><strong>Summary</strong> — Optional after-hours sessions improved graduation outcomes without new funding.</p>
+<p><strong>Why It Matters</strong> — Human consistency can produce measurable results even without additional resources.</p>
+<p><strong>Source</strong> — <a href="https://www.edweek.org/search?q=after-hours%20program%20improves%20graduation%20rates%20without%20new%20funding" target="_blank" rel="noopener">Education Week (search)</a></p>
+</div>
+
+
+<div class="card">
+<h3>Medical Supplies Reach a Remote Clinic After Years of Delay</h3>
+<p><strong>Summary</strong> — Improved logistics restored reliable delivery of medical supplies to a remote clinic.</p>
+<p><strong>Why It Matters</strong> — Fixing supply chains can unlock progress faster than inventing new systems.</p>
+<p><strong>Source</strong> — <a href="https://www.who.int/search?q=medical%20supplies%20reach%20remote%20clinic%20logistics%20restored%20delivery" target="_blank" rel="noopener">WHO (search)</a></p>
+</div>
+
+
+<div class="card">
+<h3>A City Converts Vacant Land Into Public Green Space</h3>
+<p><strong>Summary</strong> — Vacant municipal land was converted into permanent public green areas.</p>
+<p><strong>Why It Matters</strong> — Small permanent changes can significantly improve daily life.</p>
+<p><strong>Source</strong> — <a href="https://www.planetizen.com/search/site/city%20converts%20vacant%20land%20into%20public%20green%20space" target="_blank" rel="noopener">Planetizen</a></p>
+</div>
+
+</section>
+
+
+<footer>
+EMPERICAL is an independent ethical editorial record.
+</footer>
+
+</body>
+</html>
