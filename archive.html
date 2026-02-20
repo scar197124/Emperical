@@ -1,16 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>EMPERICAL Archive</title>
+<title>EMPERICAL — Archive</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 :root{--ring:#FFD700;--border:#FFD700}
 *{box-sizing:border-box}
-body{margin:0;background:#000;color:#fff;font:16px/1.7 Georgia,"Times New Roman",serif}
+body{margin:0;background:#000;color:#fff;font:16px/1.6 Georgia,"Times New Roman",serif}
 a{text-decoration:none;color:#FFD700}
 .ticker-wrap{position:sticky;top:0;z-index:50;background:var(--ring);border-bottom:6px solid #000;overflow:hidden}
-.ticker{display:flex;width:max-content;animation:scroll 40s linear infinite}
+.ticker{display:flex;width:max-content;animation:scroll 35s linear infinite}
 .ticker span{padding:16px 42px;font-size:15px;font-weight:700;letter-spacing:1px;color:#000;white-space:nowrap;font-family:system-ui;text-transform:uppercase}
 @keyframes scroll{from{transform:translateX(100%)}to{transform:translateX(-100%)}}
 header{border-bottom:2px solid var(--border);padding:24px 16px;text-align:center}
@@ -20,13 +20,16 @@ header{border-bottom:2px solid var(--border);padding:24px 16px;text-align:center
 .nav a{display:inline-block;margin:0 8px;padding:8px 16px;border:2px solid var(--border);border-radius:20px;font-family:system-ui;font-size:12px;color:#fff}
 .nav a.active,.nav a:hover{background:var(--ring);color:#000}
 section{max-width:900px;margin:0 auto;padding:30px 16px}
-.card{border:2px solid var(--border);border-radius:16px;padding:24px;margin-bottom:24px;background:#0b0b0b}
-.card h3{margin:6px 0 14px;font-size:22px;color:var(--ring)}
-footer{border-top:2px solid var(--border);margin-top:50px;padding:24px 16px;text-align:center;font-size:12px;color:#888}
-details{margin-bottom:20px;border:2px solid #333;border-radius:14px;padding:14px;background:#070707}
-summary{cursor:pointer;font-family:system-ui;font-weight:700;letter-spacing:1px;color:var(--ring);text-transform:uppercase;list-style:none}
-summary::-webkit-details-marker{display:none}
-details[open]{border-color:var(--ring)}
+.card{border:2px solid var(--border);border-radius:16px;padding:22px;margin-bottom:22px;background:#0b0b0b}
+.card h3{margin:6px 0 12px;font-size:22px;color:var(--ring)}
+footer{border-top:2px solid var(--border);margin-top:40px;padding:24px 16px;text-align:center;font-size:12px;color:#888}
+.footer-edition{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#bfae4d;margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid #333;}
+/* Archive edition cards */
+details.edition{border:2px solid var(--border);border-radius:16px;background:#070707;margin:0 0 22px 0;padding:0}
+details.edition > summary{list-style:none;cursor:pointer;padding:18px 20px;color:var(--ring);font-family:system-ui;font-weight:800;letter-spacing:1px;text-transform:uppercase}
+details.edition > summary::-webkit-details-marker{display:none}
+details.edition[open]{background:#0b0b0b}
+.edition-inner{padding:0 16px 8px 16px}
 </style>
 </head>
 <body>
@@ -38,334 +41,373 @@ details[open]{border-color:var(--ring)}
     <span>Quiet systems endure</span>
     <span>Evidence over outrage</span>
     <span>Repair is more powerful than reaction</span>
+    <span>Kindness remains functional</span>
+    <span>Stability is a form of progress</span>
   </div>
 </div>
 
 <header>
-<div class="brand">EMPERICAL</div>
-<div class="tagline">Archive</div>
-<nav class="nav">
-<a href="index.html">Home</a>
-<a href="archive.html" class="active">Archive</a>
-<a href="about.html">About</a>
-</nav>
+  <div class="brand">EMPERICAL</div>
+  <div class="tagline">Archive</div>
+  
+  <nav class="nav">
+    <a href="index.html" class="">Home</a>
+    <a href="archive.html" class="active">Archive</a>
+    <a href="about.html" class="">About</a>
+  </nav>
+
 </header>
 <section>
-
-<details>
-<summary>Edition 4 · February 14, 2026</summary>
-
-<div class="card">
-<h3>Story 1</h3>
-<p><strong>Summary</strong> — Regional reporting indicates sustained implementation backed by operational metrics rather than announcement cycles.</p>
-<p><strong>Why It Matters</strong> — Durable change compounds quietly. When systems function without spectacle, stability becomes measurable rather than rhetorical.</p>
-<p><strong>Source</strong> — Associated Press</p>
+<details class="edition">
+  <summary>Edition Four · February 7, 2026</summary>
+  <div class="edition-inner">
+    <div class="card">
+  <h3>Transit Shelter Upgrades Improve Winter Safety</h3>
+  <p><strong>Summary</strong> — Cities added weather-protected shelters and better lighting at high-use stops to reduce exposure during delays.</p>
+  <p><strong>Why It Matters</strong> — Small infrastructure upgrades can prevent injury and keep public systems usable under stress.</p>
+  <p><strong>Source</strong> — <a href="https://www.apta.com/?s=bus%20shelter%20safety" target="_blank" rel="noopener">APTA (search)</a></p>
 </div>
-
 <div class="card">
-<h3>Story 2</h3>
-<p><strong>Summary</strong> — Regional reporting indicates sustained implementation backed by operational metrics rather than announcement cycles.</p>
-<p><strong>Why It Matters</strong> — Durable change compounds quietly. When systems function without spectacle, stability becomes measurable rather than rhetorical.</p>
-<p><strong>Source</strong> — Associated Press</p>
+  <h3>Low-Cost Air Sensors Expand Local Monitoring</h3>
+  <p><strong>Summary</strong> — Neighborhood sensor networks increased visibility into pollution hotspots, improving targeted advisories.</p>
+  <p><strong>Why It Matters</strong> — Granular data supports precise action instead of broad panic—especially for asthma and seniors.</p>
+  <p><strong>Source</strong> — <a href="https://www.who.int/search?q=low-cost%20air%20quality%20sensors" target="_blank" rel="noopener">WHO (search)</a></p>
 </div>
-
 <div class="card">
-<h3>Story 3</h3>
-<p><strong>Summary</strong> — Regional reporting indicates sustained implementation backed by operational metrics rather than announcement cycles.</p>
-<p><strong>Why It Matters</strong> — Durable change compounds quietly. When systems function without spectacle, stability becomes measurable rather than rhetorical.</p>
-<p><strong>Source</strong> — Associated Press</p>
+  <h3>Floodplain Restoration Reduces Peak Flow Damage</h3>
+  <p><strong>Summary</strong> — Watershed projects restored wetlands and buffers to slow runoff and reduce downstream damage.</p>
+  <p><strong>Why It Matters</strong> — Prevention is cheaper than response. Natural infrastructure also restores habitat and water quality.</p>
+  <p><strong>Source</strong> — <a href="https://www.epa.gov/search?query=floodplain%20restoration" target="_blank" rel="noopener">EPA (search)</a></p>
 </div>
-
 <div class="card">
-<h3>Story 4</h3>
-<p><strong>Summary</strong> — Regional reporting indicates sustained implementation backed by operational metrics rather than announcement cycles.</p>
-<p><strong>Why It Matters</strong> — Durable change compounds quietly. When systems function without spectacle, stability becomes measurable rather than rhetorical.</p>
-<p><strong>Source</strong> — Associated Press</p>
+  <h3>Heat Pump Rebates Accelerate Home Retrofits</h3>
+  <p><strong>Summary</strong> — Incentive programs increased adoption of efficient heating systems and weatherization improvements.</p>
+  <p><strong>Why It Matters</strong> — Efficiency is the fastest stability gain: lower bills, less demand pressure, and fewer emissions.</p>
+  <p><strong>Source</strong> — <a href="https://www.iea.org/search?q=heat%20pump%20rebates" target="_blank" rel="noopener">IEA (search)</a></p>
 </div>
-
 <div class="card">
-<h3>Story 5</h3>
-<p><strong>Summary</strong> — Regional reporting indicates sustained implementation backed by operational metrics rather than announcement cycles.</p>
-<p><strong>Why It Matters</strong> — Durable change compounds quietly. When systems function without spectacle, stability becomes measurable rather than rhetorical.</p>
-<p><strong>Source</strong> — Associated Press</p>
+  <h3>Libraries Expand Digital Access and Services</h3>
+  <p><strong>Summary</strong> — Libraries continued expanding device lending and tech-help services for job applications and benefits access.</p>
+  <p><strong>Why It Matters</strong> — Libraries function as low-friction civic infrastructure where trust is already established.</p>
+  <p><strong>Source</strong> — <a href="https://www.ala.org/search/site?keys=digital%20access%20device%20lending" target="_blank" rel="noopener">ALA (search)</a></p>
 </div>
-
 <div class="card">
-<h3>Story 6</h3>
-<p><strong>Summary</strong> — Regional reporting indicates sustained implementation backed by operational metrics rather than announcement cycles.</p>
-<p><strong>Why It Matters</strong> — Durable change compounds quietly. When systems function without spectacle, stability becomes measurable rather than rhetorical.</p>
-<p><strong>Source</strong> — Associated Press</p>
+  <h3>Community Food Rescue Networks Scale Logistics</h3>
+  <p><strong>Summary</strong> — Food rescue organizations improved routing and storage to move surplus food to community partners.</p>
+  <p><strong>Why It Matters</strong> — Waste is a systems problem. Better logistics reduces landfill load while easing food insecurity.</p>
+  <p><strong>Source</strong> — <a href="https://www.fao.org/search/en/?q=food%20rescue" target="_blank" rel="noopener">FAO (search)</a></p>
 </div>
-
 <div class="card">
-<h3>Story 7</h3>
-<p><strong>Summary</strong> — Regional reporting indicates sustained implementation backed by operational metrics rather than announcement cycles.</p>
-<p><strong>Why It Matters</strong> — Durable change compounds quietly. When systems function without spectacle, stability becomes measurable rather than rhetorical.</p>
-<p><strong>Source</strong> — Associated Press</p>
+  <h3>School Counseling Partnerships Increase Reach</h3>
+  <p><strong>Summary</strong> — School districts partnered with local providers to expand counseling availability and early support.</p>
+  <p><strong>Why It Matters</strong> — Early support reduces later crises. Accessible help is a stabilizer, not a luxury.</p>
+  <p><strong>Source</strong> — <a href="https://www.unicef.org/search?query=school%20mental%20health" target="_blank" rel="noopener">UNICEF (search)</a></p>
 </div>
-
 <div class="card">
-<h3>Story 8</h3>
-<p><strong>Summary</strong> — Regional reporting indicates sustained implementation backed by operational metrics rather than announcement cycles.</p>
-<p><strong>Why It Matters</strong> — Durable change compounds quietly. When systems function without spectacle, stability becomes measurable rather than rhetorical.</p>
-<p><strong>Source</strong> — Associated Press</p>
+  <h3>Street Safety Redesigns Reduce Severe Crashes</h3>
+  <p><strong>Summary</strong> — Traffic calming and protected crossings were expanded in high-injury corridors to reduce serious incidents.</p>
+  <p><strong>Why It Matters</strong> — Safety is design. When streets forgive mistakes, everyday mobility becomes safer and more equitable.</p>
+  <p><strong>Source</strong> — <a href="https://www.nhtsa.gov/search?query=traffic%20calming" target="_blank" rel="noopener">NHTSA (search)</a></p>
 </div>
-
 <div class="card">
-<h3>Story 9</h3>
-<p><strong>Summary</strong> — Regional reporting indicates sustained implementation backed by operational metrics rather than announcement cycles.</p>
-<p><strong>Why It Matters</strong> — Durable change compounds quietly. When systems function without spectacle, stability becomes measurable rather than rhetorical.</p>
-<p><strong>Source</strong> — Associated Press</p>
+  <h3>Apprenticeship Pathways Improve Job Entry</h3>
+  <p><strong>Summary</strong> — Skills-first apprenticeship programs added seats and employer partnerships in trades and tech-adjacent roles.</p>
+  <p><strong>Why It Matters</strong> — Stable economies need on-ramps. Apprenticeships connect training to demand without debt traps.</p>
+  <p><strong>Source</strong> — <a href="https://www.oecd.org/search/?q=apprenticeship" target="_blank" rel="noopener">OECD (search)</a></p>
 </div>
-
 <div class="card">
-<h3>Story 10</h3>
-<p><strong>Summary</strong> — Regional reporting indicates sustained implementation backed by operational metrics rather than announcement cycles.</p>
-<p><strong>Why It Matters</strong> — Durable change compounds quietly. When systems function without spectacle, stability becomes measurable rather than rhetorical.</p>
-<p><strong>Source</strong> — Associated Press</p>
+  <h3>Open-Source Tools Improve Public Transparency</h3>
+  <p><strong>Summary</strong> — Civic groups deployed open dashboards for budgets, performance metrics, and service delivery tracking.</p>
+  <p><strong>Why It Matters</strong> — Transparency reduces rumor load and enables accountability through visible outcomes.</p>
+  <p><strong>Source</strong> — <a href="https://www.oecd.org/search/?q=open%20government%20dashboard" target="_blank" rel="noopener">OECD (open gov search)</a></p>
 </div>
-
+  </div>
 </details>
 
-<details>
-<summary>Edition 3 · February 7, 2026</summary>
-
-<div class="card">
-<h3>Story 1</h3>
-<p><strong>Summary</strong> — Regional reporting indicates sustained implementation backed by operational metrics rather than announcement cycles.</p>
-<p><strong>Why It Matters</strong> — Durable change compounds quietly. When systems function without spectacle, stability becomes measurable rather than rhetorical.</p>
-<p><strong>Source</strong> — Associated Press</p>
+<details class="edition">
+  <summary>Edition Three · January 31, 2026</summary>
+  <div class="edition-inner">
+    <div class="card">
+<h3>Teen Returns Thousands Found in Parking Lot</h3>
+<p><strong>Summary</strong> — A teenager who found a large sum of cash chose to return it immediately, declining recognition.</p>
+<p><strong>Why It Matters</strong> — Integrity exercised without pressure reinforces trust at the most basic social level.</p>
+<p><strong>Source</strong> — <a href="https://www.goodnewsnetwork.org/teen-rewarded-with-cash-job-and-gofundme-after-turning-in-wad-of-3500-without-hesitation/" target="_blank" rel="noopener">Good News Network</a></p>
 </div>
 
-<div class="card">
-<h3>Story 2</h3>
-<p><strong>Summary</strong> — Regional reporting indicates sustained implementation backed by operational metrics rather than announcement cycles.</p>
-<p><strong>Why It Matters</strong> — Durable change compounds quietly. When systems function without spectacle, stability becomes measurable rather than rhetorical.</p>
-<p><strong>Source</strong> — Associated Press</p>
-</div>
+
 
 <div class="card">
-<h3>Story 3</h3>
-<p><strong>Summary</strong> — Regional reporting indicates sustained implementation backed by operational metrics rather than announcement cycles.</p>
-<p><strong>Why It Matters</strong> — Durable change compounds quietly. When systems function without spectacle, stability becomes measurable rather than rhetorical.</p>
-<p><strong>Source</strong> — Associated Press</p>
+<h3>Children Return Lost Wallet With Cash Intact</h3>
+<p><strong>Summary</strong> — Young children returned a wallet after locating the owner, leaving all contents untouched.</p>
+<p><strong>Why It Matters</strong> — Ethical habits formed early tend to persist across a lifetime.</p>
+<p><strong>Source</strong> — <a href="https://abc7news.com/post/caught-on-camera-kids-return-wallet-with-700-inside/3835550/" target="_blank" rel="noopener">ABC7 News</a></p>
 </div>
+
+
 
 <div class="card">
-<h3>Story 4</h3>
-<p><strong>Summary</strong> — Regional reporting indicates sustained implementation backed by operational metrics rather than announcement cycles.</p>
-<p><strong>Why It Matters</strong> — Durable change compounds quietly. When systems function without spectacle, stability becomes measurable rather than rhetorical.</p>
-<p><strong>Source</strong> — Associated Press</p>
+<h3>Hospital Custodian Returns Envelope of Cash</h3>
+<p><strong>Summary</strong> — A hospital custodian returned money intended for medical expenses without hesitation.</p>
+<p><strong>Why It Matters</strong> — Institutional trust is upheld by unseen ethical decisions.</p>
+<p><strong>Source</strong> — <a href="https://www.npr.org/search?query=hospital%20custodian%20returned%20envelope%20of%20cash" target="_blank" rel="noopener">NPR (search)</a></p>
 </div>
+
+
 
 <div class="card">
-<h3>Story 5</h3>
-<p><strong>Summary</strong> — Regional reporting indicates sustained implementation backed by operational metrics rather than announcement cycles.</p>
-<p><strong>Why It Matters</strong> — Durable change compounds quietly. When systems function without spectacle, stability becomes measurable rather than rhetorical.</p>
-<p><strong>Source</strong> — Associated Press</p>
+<h3>Student Returns Scholarship Funds Issued in Error</h3>
+<p><strong>Summary</strong> — A student reported and returned scholarship funds that were mistakenly overpaid.</p>
+<p><strong>Why It Matters</strong> — Honesty that carries personal cost signals long-term ethical maturity.</p>
+<p><strong>Source</strong> — <a href="https://www.edweek.org/search?q=student%20returned%20scholarship%20funds%20issued%20in%20error" target="_blank" rel="noopener">Education Week (search)</a></p>
 </div>
+
+
 
 <div class="card">
-<h3>Story 6</h3>
-<p><strong>Summary</strong> — Regional reporting indicates sustained implementation backed by operational metrics rather than announcement cycles.</p>
-<p><strong>Why It Matters</strong> — Durable change compounds quietly. When systems function without spectacle, stability becomes measurable rather than rhetorical.</p>
-<p><strong>Source</strong> — Associated Press</p>
+<h3>Stranger Travels Across City to Return Lost Phone</h3>
+<p><strong>Summary</strong> — A passerby went out of their way to return a lost phone to its owner.</p>
+<p><strong>Why It Matters</strong> — Small inconveniences accepted for others sustain social goodwill.</p>
+<p><strong>Source</strong> — <a href="https://www.bbc.co.uk/search?q=stranger%20traveled%20across%20city%20to%20return%20lost%20phone" target="_blank" rel="noopener">BBC News (search)</a></p>
 </div>
+
+
 
 <div class="card">
-<h3>Story 7</h3>
-<p><strong>Summary</strong> — Regional reporting indicates sustained implementation backed by operational metrics rather than announcement cycles.</p>
-<p><strong>Why It Matters</strong> — Durable change compounds quietly. When systems function without spectacle, stability becomes measurable rather than rhetorical.</p>
-<p><strong>Source</strong> — Associated Press</p>
+<h3>AI Imaging Helps Doctors Detect Cancer Earlier</h3>
+<p><strong>Summary</strong> — AI-assisted medical imaging improved early cancer detection rates in clinical settings.</p>
+<p><strong>Why It Matters</strong> — Earlier diagnosis directly improves patient outcomes.</p>
+<p><strong>Source</strong> — <a href="https://www.bmj.com/search?q=AI%20imaging%20improved%20early%20cancer%20detection%20clinical" target="_blank" rel="noopener">BMJ (search)</a></p>
 </div>
+
+
 
 <div class="card">
-<h3>Story 8</h3>
-<p><strong>Summary</strong> — Regional reporting indicates sustained implementation backed by operational metrics rather than announcement cycles.</p>
-<p><strong>Why It Matters</strong> — Durable change compounds quietly. When systems function without spectacle, stability becomes measurable rather than rhetorical.</p>
-<p><strong>Source</strong> — Associated Press</p>
+<h3>AI Accelerates Discovery of New Antibiotics</h3>
+<p><strong>Summary</strong> — Machine learning techniques identified promising antibiotic candidates faster than traditional methods.</p>
+<p><strong>Why It Matters</strong> — Antibiotic resistance remains a major global health threat.</p>
+<p><strong>Source</strong> — <a href="https://penntoday.upenn.edu/news/uncovering-new-antibiotics-ai" target="_blank" rel="noopener">Penn Today</a></p>
 </div>
+
+
 
 <div class="card">
-<h3>Story 9</h3>
-<p><strong>Summary</strong> — Regional reporting indicates sustained implementation backed by operational metrics rather than announcement cycles.</p>
-<p><strong>Why It Matters</strong> — Durable change compounds quietly. When systems function without spectacle, stability becomes measurable rather than rhetorical.</p>
-<p><strong>Source</strong> — Associated Press</p>
+<h3>Wetland Restoration Leads to Wildlife Recovery</h3>
+<p><strong>Summary</strong> — Restored wetlands saw the return of fish and bird populations within two years.</p>
+<p><strong>Why It Matters</strong> — Ecological repair often outperforms artificial intervention.</p>
+<p><strong>Source</strong> — <a href="https://www.nationalgeographic.com/search?q=wetland%20restoration%20wildlife%20recovery%20return%20of%20fish%20and%20birds" target="_blank" rel="noopener">National Geographic (search)</a></p>
 </div>
+
+
 
 <div class="card">
-<h3>Story 10</h3>
-<p><strong>Summary</strong> — Regional reporting indicates sustained implementation backed by operational metrics rather than announcement cycles.</p>
-<p><strong>Why It Matters</strong> — Durable change compounds quietly. When systems function without spectacle, stability becomes measurable rather than rhetorical.</p>
-<p><strong>Source</strong> — Associated Press</p>
+<h3>Low-Cost Water Sensors Prevent Contamination Events</h3>
+<p><strong>Summary</strong> — Simple sensor systems alerted communities to unsafe drinking water before illness spread.</p>
+<p><strong>Why It Matters</strong> — Prevention protects public health at minimal cost.</p>
+<p><strong>Source</strong> — <a href="https://www.who.int/search?q=low-cost%20water%20sensors%20contamination%20early%20warning" target="_blank" rel="noopener">WHO (search)</a></p>
 </div>
 
+
+
+<div class="card">
+<h3>Electric Buses Reduce Costs and Improve Air Quality</h3>
+<p><strong>Summary</strong> — Cities reported lower operating costs and cleaner air after electrifying bus fleets.</p>
+<p><strong>Why It Matters</strong> — Financially sustainable solutions scale faster than mandates.</p>
+<p><strong>Source</strong> — <a href="https://www.iea.org/search?q=electric%20buses%20lower%20operating%20costs%20improve%20air%20quality" target="_blank" rel="noopener">IEA (search)</a></p>
+</div>
+
+
+  </div>
 </details>
 
-<details>
-<summary>Edition 2 · January 31, 2026</summary>
-
-<div class="card">
-<h3>Story 1</h3>
-<p><strong>Summary</strong> — Regional reporting indicates sustained implementation backed by operational metrics rather than announcement cycles.</p>
-<p><strong>Why It Matters</strong> — Durable change compounds quietly. When systems function without spectacle, stability becomes measurable rather than rhetorical.</p>
-<p><strong>Source</strong> — Associated Press</p>
+<details class="edition">
+  <summary>Edition Two · January 24, 2026</summary>
+  <div class="edition-inner">
+    <div class="card">
+<h3>Medical Breakthroughs and Ecological Recoveries Gain Ground</h3>
+<p><strong>Summary</strong> — Reporting highlighted measurable improvements in medical treatment outcomes and conservation recovery efforts across multiple regions.</p>
+<p><strong>Why It Matters</strong> — Sustained investment in science and stewardship produces long-term measurable returns.</p>
+<p><strong>Source</strong> — <a href="https://www.positive.news/search/medical%20breakthroughs%20ecological%20recoveries" target="_blank" rel="noopener">Positive News (search)</a></p>
 </div>
 
-<div class="card">
-<h3>Story 2</h3>
-<p><strong>Summary</strong> — Regional reporting indicates sustained implementation backed by operational metrics rather than announcement cycles.</p>
-<p><strong>Why It Matters</strong> — Durable change compounds quietly. When systems function without spectacle, stability becomes measurable rather than rhetorical.</p>
-<p><strong>Source</strong> — Associated Press</p>
-</div>
+
 
 <div class="card">
-<h3>Story 3</h3>
-<p><strong>Summary</strong> — Regional reporting indicates sustained implementation backed by operational metrics rather than announcement cycles.</p>
-<p><strong>Why It Matters</strong> — Durable change compounds quietly. When systems function without spectacle, stability becomes measurable rather than rhetorical.</p>
-<p><strong>Source</strong> — Associated Press</p>
+<h3>Artificial Vision Technology Restores Reading Ability for Blind Patients</h3>
+<p><strong>Summary</strong> — Visual prosthetic systems enabled some patients with severe vision loss to read printed text under clinical testing conditions.</p>
+<p><strong>Why It Matters</strong> — Restoring independence improves education access and long-term quality of life.</p>
+<p><strong>Source</strong> — <a href="https://www.positive.news/search/artificial%20vision%20restores%20reading%20ability%20blind" target="_blank" rel="noopener">Positive News (search)</a></p>
 </div>
+
+
 
 <div class="card">
-<h3>Story 4</h3>
-<p><strong>Summary</strong> — Regional reporting indicates sustained implementation backed by operational metrics rather than announcement cycles.</p>
-<p><strong>Why It Matters</strong> — Durable change compounds quietly. When systems function without spectacle, stability becomes measurable rather than rhetorical.</p>
-<p><strong>Source</strong> — Associated Press</p>
+<h3>A New National Park City Is Officially Recognized</h3>
+<p><strong>Summary</strong> — An urban region earned National Park City status through biodiversity commitments and public green initiatives.</p>
+<p><strong>Why It Matters</strong> — Cities can support economic activity and ecological health simultaneously when designed intentionally.</p>
+<p><strong>Source</strong> — <a href="https://www.positive.news/search/National%20Park%20City%20officially%20recognized" target="_blank" rel="noopener">Positive News (search)</a></p>
 </div>
+
+
 
 <div class="card">
-<h3>Story 5</h3>
-<p><strong>Summary</strong> — Regional reporting indicates sustained implementation backed by operational metrics rather than announcement cycles.</p>
-<p><strong>Why It Matters</strong> — Durable change compounds quietly. When systems function without spectacle, stability becomes measurable rather than rhetorical.</p>
-<p><strong>Source</strong> — Associated Press</p>
+<h3>Electric Vehicles Help Stabilize Local Power Grids in Spain</h3>
+<p><strong>Summary</strong> — Vehicle-to-grid pilots used EV fleets as temporary storage during peak demand periods.</p>
+<p><strong>Why It Matters</strong> — Existing technology can strengthen resilience without major new construction.</p>
+<p><strong>Source</strong> — <a href="https://www.positive.news/search/EV%20fleets%20temporary%20energy%20storage%20Spain" target="_blank" rel="noopener">Positive News (search)</a></p>
 </div>
+
+
 
 <div class="card">
-<h3>Story 6</h3>
-<p><strong>Summary</strong> — Regional reporting indicates sustained implementation backed by operational metrics rather than announcement cycles.</p>
-<p><strong>Why It Matters</strong> — Durable change compounds quietly. When systems function without spectacle, stability becomes measurable rather than rhetorical.</p>
-<p><strong>Source</strong> — Associated Press</p>
+<h3>Species Once Considered Extinct Begin to Recover</h3>
+<p><strong>Summary</strong> — Targeted conservation programs supported recovery of species previously thought lost or critically endangered.</p>
+<p><strong>Why It Matters</strong> — Early and consistent intervention can reverse biodiversity loss when action is taken in time.</p>
+<p><strong>Source</strong> — <a href="https://www.positive.news/search/species%20once%20considered%20extinct%20begin%20to%20recover" target="_blank" rel="noopener">Positive News (search)</a></p>
 </div>
+
+
 
 <div class="card">
-<h3>Story 7</h3>
-<p><strong>Summary</strong> — Regional reporting indicates sustained implementation backed by operational metrics rather than announcement cycles.</p>
-<p><strong>Why It Matters</strong> — Durable change compounds quietly. When systems function without spectacle, stability becomes measurable rather than rhetorical.</p>
-<p><strong>Source</strong> — Associated Press</p>
+<h3>Public Universities Improve Social Mobility Outcomes</h3>
+<p><strong>Summary</strong> — Analysis showed strong support for first-generation and low-income students at public universities.</p>
+<p><strong>Why It Matters</strong> — Education remains one of the most effective tools for long-term stability.</p>
+<p><strong>Source</strong> — <a href="https://www.universityofcalifornia.edu/search/google?query=social%20mobility%20outcomes%20first-generation%20low-income%20students" target="_blank" rel="noopener">University of California</a></p>
 </div>
+
+
 
 <div class="card">
-<h3>Story 8</h3>
-<p><strong>Summary</strong> — Regional reporting indicates sustained implementation backed by operational metrics rather than announcement cycles.</p>
-<p><strong>Why It Matters</strong> — Durable change compounds quietly. When systems function without spectacle, stability becomes measurable rather than rhetorical.</p>
-<p><strong>Source</strong> — Associated Press</p>
+<h3>Communities Respond to Tragedy with Coordinated Support</h3>
+<p><strong>Summary</strong> — Following violent events, communities organized direct assistance and mutual-aid style support.</p>
+<p><strong>Why It Matters</strong> — Decentralized compassion often fills gaps faster than formal systems alone.</p>
+<p><strong>Source</strong> — <a href="https://apnews.com/search?q=community%20coordinated%20support%20after%20tragedy" target="_blank" rel="noopener">AP News (search)</a></p>
 </div>
+
+
 
 <div class="card">
-<h3>Story 9</h3>
-<p><strong>Summary</strong> — Regional reporting indicates sustained implementation backed by operational metrics rather than announcement cycles.</p>
-<p><strong>Why It Matters</strong> — Durable change compounds quietly. When systems function without spectacle, stability becomes measurable rather than rhetorical.</p>
-<p><strong>Source</strong> — Associated Press</p>
+<h3>International Cooperation Advances High Seas Protection</h3>
+<p><strong>Summary</strong> — More nations moved toward agreements protecting oceans beyond national borders.</p>
+<p><strong>Why It Matters</strong> — Shared environmental spaces require coordinated responsibility to remain viable.</p>
+<p><strong>Source</strong> — <a href="https://www.positive.news/search/international%20cooperation%20high%20seas%20protection" target="_blank" rel="noopener">Positive News (search)</a></p>
 </div>
+
+
 
 <div class="card">
-<h3>Story 10</h3>
-<p><strong>Summary</strong> — Regional reporting indicates sustained implementation backed by operational metrics rather than announcement cycles.</p>
-<p><strong>Why It Matters</strong> — Durable change compounds quietly. When systems function without spectacle, stability becomes measurable rather than rhetorical.</p>
-<p><strong>Source</strong> — Associated Press</p>
+<h3>Disability Rights and Eye Health Gain Global Attention</h3>
+<p><strong>Summary</strong> — Advocacy translated into expanded access initiatives addressing preventable vision loss and disability inclusion.</p>
+<p><strong>Why It Matters</strong> — Visibility is often the first step toward durable public health reform.</p>
+<p><strong>Source</strong> — <a href="https://www.light-for-the-world.org/search/node/eye%20health%20access%20initiatives" target="_blank" rel="noopener">Light for the World</a></p>
 </div>
 
+
+
+<div class="card">
+<h3>Global Sports Institutions Recognize Community Impact</h3>
+<p><strong>Summary</strong> — Sports organizations highlighted social contribution alongside performance through awards and programs.</p>
+<p><strong>Why It Matters</strong> — When service is rewarded, broader societal priorities begin to shift.</p>
+<p><strong>Source</strong> — <a href="https://www.laureus.com/search?q=community%20impact%20award" target="_blank" rel="noopener">Laureus</a></p>
+</div>
+
+
+  </div>
 </details>
 
-<details>
-<summary>Edition 1 · January 24, 2026</summary>
-
-<div class="card">
-<h3>Story 1</h3>
-<p><strong>Summary</strong> — Regional reporting indicates sustained implementation backed by operational metrics rather than announcement cycles.</p>
-<p><strong>Why It Matters</strong> — Durable change compounds quietly. When systems function without spectacle, stability becomes measurable rather than rhetorical.</p>
-<p><strong>Source</strong> — Associated Press</p>
+<details class="edition">
+  <summary>Edition One · January 17, 2026</summary>
+  <div class="edition-inner">
+    <div class="card">
+<h3>An 86-Year-Old Woman Gives What She Has — A Community Responds</h3>
+<p><strong>Summary</strong> — An elderly woman on a fixed income donated what little she had to help someone she believed needed it more, prompting wider community support.</p>
+<p><strong>Why It Matters</strong> — Individual generosity can activate collective responsibility without publicity or pressure.</p>
+<p><strong>Source</strong> — <a href="https://apnews.com/search?q=86-year-old%20woman%20donated%20what%20she%20had%20community%20responded" target="_blank" rel="noopener">Associated Press (search)</a></p>
 </div>
 
-<div class="card">
-<h3>Story 2</h3>
-<p><strong>Summary</strong> — Regional reporting indicates sustained implementation backed by operational metrics rather than announcement cycles.</p>
-<p><strong>Why It Matters</strong> — Durable change compounds quietly. When systems function without spectacle, stability becomes measurable rather than rhetorical.</p>
-<p><strong>Source</strong> — Associated Press</p>
-</div>
+
 
 <div class="card">
-<h3>Story 3</h3>
-<p><strong>Summary</strong> — Regional reporting indicates sustained implementation backed by operational metrics rather than announcement cycles.</p>
-<p><strong>Why It Matters</strong> — Durable change compounds quietly. When systems function without spectacle, stability becomes measurable rather than rhetorical.</p>
-<p><strong>Source</strong> — Associated Press</p>
+<h3>A Rural Town Reopens Its Only Grocery Store</h3>
+<p><strong>Summary</strong> — Residents collaborated to reopen their only grocery store after months without local food access.</p>
+<p><strong>Why It Matters</strong> — Local coordination can restore essential infrastructure when formal systems fall short.</p>
+<p><strong>Source</strong> — <a href="https://apnews.com/search?q=rural%20town%20reopens%20only%20grocery%20store%20residents%20collaborated" target="_blank" rel="noopener">Associated Press (search)</a></p>
 </div>
+
+
 
 <div class="card">
-<h3>Story 4</h3>
-<p><strong>Summary</strong> — Regional reporting indicates sustained implementation backed by operational metrics rather than announcement cycles.</p>
-<p><strong>Why It Matters</strong> — Durable change compounds quietly. When systems function without spectacle, stability becomes measurable rather than rhetorical.</p>
-<p><strong>Source</strong> — Associated Press</p>
+<h3>Clean Energy Quietly Overtakes Coal in Multiple Regions</h3>
+<p><strong>Summary</strong> — Renewable generation surpassed coal across multiple regions through gradual transition and deployment.</p>
+<p><strong>Why It Matters</strong> — Sustained structural change often matters more than dramatic announcements.</p>
+<p><strong>Source</strong> — <a href="https://www.iea.org/search?q=renewables%20surpassed%20coal%20multiple%20regions" target="_blank" rel="noopener">International Energy Agency (search)</a></p>
 </div>
+
+
 
 <div class="card">
-<h3>Story 5</h3>
-<p><strong>Summary</strong> — Regional reporting indicates sustained implementation backed by operational metrics rather than announcement cycles.</p>
-<p><strong>Why It Matters</strong> — Durable change compounds quietly. When systems function without spectacle, stability becomes measurable rather than rhetorical.</p>
-<p><strong>Source</strong> — Associated Press</p>
+<h3>A Teacher’s After-Hours Program Improves Graduation Rates</h3>
+<p><strong>Summary</strong> — Optional after-hours sessions improved graduation outcomes without new funding.</p>
+<p><strong>Why It Matters</strong> — Human consistency can produce measurable results even without additional resources.</p>
+<p><strong>Source</strong> — <a href="https://www.edweek.org/search?q=after-hours%20program%20improves%20graduation%20rates%20without%20new%20funding" target="_blank" rel="noopener">Education Week (search)</a></p>
 </div>
+
+
 
 <div class="card">
-<h3>Story 6</h3>
-<p><strong>Summary</strong> — Regional reporting indicates sustained implementation backed by operational metrics rather than announcement cycles.</p>
-<p><strong>Why It Matters</strong> — Durable change compounds quietly. When systems function without spectacle, stability becomes measurable rather than rhetorical.</p>
-<p><strong>Source</strong> — Associated Press</p>
+<h3>Medical Supplies Reach a Remote Clinic After Years of Delay</h3>
+<p><strong>Summary</strong> — Improved logistics restored reliable delivery of medical supplies to a remote clinic.</p>
+<p><strong>Why It Matters</strong> — Fixing supply chains can unlock progress faster than inventing new systems.</p>
+<p><strong>Source</strong> — <a href="https://www.who.int/search?q=medical%20supplies%20reach%20remote%20clinic%20logistics%20restored%20delivery" target="_blank" rel="noopener">WHO (search)</a></p>
 </div>
+
+
 
 <div class="card">
-<h3>Story 7</h3>
-<p><strong>Summary</strong> — Regional reporting indicates sustained implementation backed by operational metrics rather than announcement cycles.</p>
-<p><strong>Why It Matters</strong> — Durable change compounds quietly. When systems function without spectacle, stability becomes measurable rather than rhetorical.</p>
-<p><strong>Source</strong> — Associated Press</p>
+<h3>A City Converts Vacant Land Into Public Green Space</h3>
+<p><strong>Summary</strong> — Vacant municipal land was converted into permanent public green areas.</p>
+<p><strong>Why It Matters</strong> — Small permanent changes can significantly improve daily life.</p>
+<p><strong>Source</strong> — <a href="https://www.planetizen.com/search/site/city%20converts%20vacant%20land%20into%20public%20green%20space" target="_blank" rel="noopener">Planetizen</a></p>
 </div>
+
 
 <div class="card">
-<h3>Story 8</h3>
-<p><strong>Summary</strong> — Regional reporting indicates sustained implementation backed by operational metrics rather than announcement cycles.</p>
-<p><strong>Why It Matters</strong> — Durable change compounds quietly. When systems function without spectacle, stability becomes measurable rather than rhetorical.</p>
-<p><strong>Source</strong> — Associated Press</p>
+  <h3>Local Repair Co-ops Cut Household Costs</h3>
+  <p><strong>Summary</strong> — Community tool libraries and repair meetups expanded access to basic fixes, reducing reliance on replacement purchases.</p>
+  <p><strong>Why It Matters</strong> — Repair capacity is economic resilience. Small fixes prevent larger costs and keep money circulating locally.</p>
+  <p><strong>Source</strong> — <a href="https://www.ifixit.com/News" target="_blank" rel="noopener">IFixit (repair culture)</a></p>
 </div>
-
 <div class="card">
-<h3>Story 9</h3>
-<p><strong>Summary</strong> — Regional reporting indicates sustained implementation backed by operational metrics rather than announcement cycles.</p>
-<p><strong>Why It Matters</strong> — Durable change compounds quietly. When systems function without spectacle, stability becomes measurable rather than rhetorical.</p>
-<p><strong>Source</strong> — Associated Press</p>
+  <h3>Open Mapping Volunteers Improve Emergency Response</h3>
+  <p><strong>Summary</strong> — Volunteer mappers continued updating open geospatial data that responders use during floods, storms, and outages.</p>
+  <p><strong>Why It Matters</strong> — In a crisis, missing information becomes delay. Open maps reduce friction between need and response.</p>
+  <p><strong>Source</strong> — <a href="https://www.hotosm.org/" target="_blank" rel="noopener">Humanitarian OpenStreetMap Team</a></p>
 </div>
-
 <div class="card">
-<h3>Story 10</h3>
-<p><strong>Summary</strong> — Regional reporting indicates sustained implementation backed by operational metrics rather than announcement cycles.</p>
-<p><strong>Why It Matters</strong> — Durable change compounds quietly. When systems function without spectacle, stability becomes measurable rather than rhetorical.</p>
-<p><strong>Source</strong> — Associated Press</p>
+  <h3>Energy Assistance Programs Improve Winter Stability</h3>
+  <p><strong>Summary</strong> — Targeted energy assistance and weatherization support helped vulnerable households manage winter bill spikes.</p>
+  <p><strong>Why It Matters</strong> — Stability is preventing cascading stress—cold homes trigger health, debt, and displacement risks.</p>
+  <p><strong>Source</strong> — <a href="https://www.canada.ca/en/sr/srb.html?q=energy%20assistance%20weatherization" target="_blank" rel="noopener">Government of Canada (search)</a></p>
 </div>
-
+<div class="card">
+  <h3>School Breakfast Expansion Improves Attendance</h3>
+  <p><strong>Summary</strong> — More schools adopted universal breakfast approaches that reduce morning barriers and stabilize student readiness.</p>
+  <p><strong>Why It Matters</strong> — Sometimes the highest-return intervention is basic. Nutrition is a quiet lever for performance and equity.</p>
+  <p><strong>Source</strong> — <a href="https://www.wfp.org/school-meals" target="_blank" rel="noopener">UN WFP (school meals)</a></p>
+</div>
+  </div>
 </details>
-
-</section>
 
 <script>
 document.addEventListener('DOMContentLoaded', () => {
-  const all = document.querySelectorAll('details');
-  all.forEach(d => {
-    d.addEventListener('toggle', () => {
-      if (!d.open) return;
-      all.forEach(o => { if (o !== d) o.removeAttribute('open'); });
-    });
-  });
+  const editions = Array.from(document.querySelectorAll('details.edition'));
+  editions.forEach(d => d.addEventListener('toggle', () => {
+    if (!d.open) return;
+    editions.forEach(o => { if (o !== d) o.removeAttribute('open'); });
+  }));
 });
 </script>
 
+</section>
 <footer>Archive Record · EMPERICAL</footer>
 </body>
 </html>
