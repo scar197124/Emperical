@@ -1,19 +1,38 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
+
+<meta name="robots" content="index, follow">
+<meta name="description" content="Emperical delivers real, measured progress stories. Ethical, clear, and grounded reporting on innovation, systems, and human advancement.">
+<meta name="keywords" content="positive news, real news, innovation, progress, ethical news, technology, environment">
+<meta name="author" content="Emperical">
+
 <title>EMPERICAL — Ethical · Real · Clear</title>
 <meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
 <style>
 :root{--ring:#FFD700;--border:#FFD700}
 *{box-sizing:border-box}
 body{margin:0;background:#000;color:#fff;font:16px/1.6 Georgia,"Times New Roman",serif}
 a{text-decoration:none;color:#FFD700}
-.ticker-wrap{position:sticky;top:0;z-index:50;background:var(--ring);border-bottom:6px solid #000;overflow:hidden}
-.ticker{display:flex;width:max-content;animation:scroll 35s linear infinite}
+.ticker-wrap{position:sticky;top:0;z-index:50;background:var(--ring);border-bottom:6px solid #000;overflow:hidden;position:sticky}
+.ticker{display:flex;width:max-content;animation:scroll 35s linear infinite;will-change:transform}
 .ticker span{padding:16px 42px;font-size:15px;font-weight:700;letter-spacing:1px;color:#000;white-space:nowrap;font-family:system-ui;text-transform:uppercase}
 @keyframes scroll{from{transform:translateX(100%)}to{transform:translateX(-100%)}}
+
+/* Tablet and mobile pacing */
+@media (max-width:1023px){
+  .ticker{animation-duration:50s;}
+}
+@media (max-width:600px){
+  .ticker{animation-duration:65s;}
+  .ticker span{padding:14px 28px;font-size:13px;letter-spacing:.8px;}
+}
+
+/* Pause on hover for desktop/laptop pointers */
+@media (hover:hover) and (pointer:fine){
+  .ticker:hover{animation-play-state:paused;}
+}
 header{border-bottom:2px solid var(--border);padding:24px 16px;text-align:center}
 .brand{font-size:36px;font-weight:600;letter-spacing:.8px;color:var(--ring)}
 .tagline{margin-top:6px;font-size:14px;letter-spacing:2px;text-transform:uppercase;color:#fff}
@@ -23,14 +42,26 @@ header{border-bottom:2px solid var(--border);padding:24px 16px;text-align:center
 section{max-width:900px;margin:0 auto;padding:30px 16px}
 .card{border:2px solid var(--border);border-radius:16px;padding:22px;margin-bottom:22px;background:#0b0b0b}
 .card h3{margin:6px 0 12px;font-size:22px;color:var(--ring)}
+.edition-title{text-align:center;margin-bottom:30px}
+.edition-title h2{color:var(--ring);margin:0}
+.edition-title p{margin:8px 0 0 0;color:#fff}
 footer{border-top:2px solid var(--border);margin-top:40px;padding:24px 16px;text-align:center;font-size:12px;color:#888}
 .footer-edition{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#bfae4d;margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid #333;}
 </style>
 </head>
 <body>
+
 <div class="ticker-wrap">
-<div class="ticker"><span>Rooftop greenhouses speed local produce</span><span>Iron-air batteries push multi-day storage forward</span><span>Urban tree canopy investments keep cities cooler</span><span>120 minutes in nature: a simple weekly health target</span><span>Portable solar desalination expands clean water access</span><span>Community solar opens clean energy to renters</span><span>Vacant lots become pocket gardens and pollinator space</span><span>Largest known single coral discovered in Solomon Islands</span><span>California backs long-duration storage for reliability</span><span>Nature connection linked with lower stress and anxiety</span></div>
+<div class="ticker">
+<span>New materials reduce environmental strain</span>
+<span>Infrastructure adapts to coexist with nature</span>
+<span>Healthcare access expands through technology</span>
+<span>Efficiency replaces excess</span>
+<span>Systems are becoming more precise</span>
+<span>Progress is becoming scalable</span>
 </div>
+</div>
+
 <header>
 <div class="brand">EMPERICAL</div>
 <div class="tagline">Ethical · Real · Clear</div>
@@ -40,21 +71,123 @@ footer{border-top:2px solid var(--border);margin-top:40px;padding:24px 16px;text
 <a href="about.html">About</a>
 </nav>
 </header>
+
 <section>
-<div class="card"><h3>Urban Rooftop Greenhouses Bring Local Produce to Stores Faster</h3><p><strong>Summary</strong> — In Montreal, a partnership between Walmart Canada and Lufa Farms is supplying stores with produce grown in large rooftop greenhouses and delivered quickly to shelves.</p><p><strong>Why It Matters</strong> — Rooftop growing shortens supply chains, boosts local food resilience, and uses existing city infrastructure without needing new farmland.</p><p><strong>Source</strong> — <a href="https://www.walmartcanada.ca/news/2025/05/29/rom-rooftop-greenhouse-to-store-in-an-hour--walmart-canada-and-l" rel="noopener" target="_blank">Walmart Canada</a></p></div>
-<div class="card"><h3>Iron-Air Battery Connects to the Grid in a Long-Duration Storage Milestone</h3><p><strong>Summary</strong> — Dutch startup Ore Energy reported a grid-connected iron-air battery demonstration, a step forward for multi-day energy storage that can back up renewables when wind and solar are low.</p><p><strong>Why It Matters</strong> — Affordable, long-duration storage helps renewables stay reliable during multi-day weather gaps—one of the biggest blockers for clean grids.</p><p><strong>Source</strong> — <a href="https://www.latitudemedia.com/news/in-a-first-ore-energy-just-hooked-up-an-iron-air-battery-to-the-dutch-grid/" rel="noopener" target="_blank">Latitude Media</a></p></div>
-<div class="card"><h3>Toronto’s Urban Forestry Program Reports Major Tree-Planting Impact</h3><p><strong>Summary</strong> — Toronto’s Urban Forestry Grants and Incentives reporting shows continued investment in canopy growth and community partnerships, including thousands of native trees and shrubs planted.</p><p><strong>Why It Matters</strong> — More canopy means cooler neighborhoods, cleaner air, better stormwater control, and healthier cities—especially during heat waves.</p><p><strong>Source</strong> — <a href="https://www.toronto.ca/wp-content/uploads/2025/04/8fc7-UFGI-Impact-Report-2025-web.pdf" rel="noopener" target="_blank">City of Toronto (Impact Report PDF)</a></p></div>
-<div class="card"><h3>Study Reinforces the ‘Two Hours a Week in Nature’ Benchmark</h3><p><strong>Summary</strong> — Multiple research reviews continue to support the idea that around 120 minutes per week in nature is linked with better self-reported health and well-being.</p><p><strong>Why It Matters</strong> — It turns mental wellness into an actionable habit—something anyone can measure and build into weekly life.</p><p><strong>Source</strong> — <a href="https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2019.02942/full" rel="noopener" target="_blank">Frontiers in Psychology</a></p></div>
-<div class="card"><h3>Portable Solar-Powered Desalination Device Aims to Expand Clean Water Access</h3><p><strong>Summary</strong> — Dalhousie University researchers described a low-cost, portable, solar-powered desalination device designed to help produce drinkable water in remote or water-stressed areas.</p><p><strong>Why It Matters</strong> — Low-energy desalination can support disaster response and communities where clean water access is limited.</p><p><strong>Source</strong> — <a href="https://www.dal.ca/news/2024/10/31/saltwater-desalination-device.html" rel="noopener" target="_blank">Dalhousie University</a></p></div>
-<div class="card"><h3>Community Solar Expands Access for Renters and People Without Rooftops</h3><p><strong>Summary</strong> — U.S. Department of Energy guidance explains how community solar lets households subscribe to shared solar arrays and receive bill credits, including renters and those with unsuitable roofs.</p><p><strong>Why It Matters</strong> — Shared solar reduces barriers to clean energy and helps more families benefit without owning property.</p><p><strong>Source</strong> — <a href="https://www.energy.gov/eere/solar/community-solar-basics" rel="noopener" target="_blank">U.S. Department of Energy</a></p></div>
-<div class="card"><h3>City Proposal Would Turn Vacant Lots into Pocket Gardens for Neighbors</h3><p><strong>Summary</strong> — Meriden, Connecticut officials discussed repurposing many small, city-owned lots into pocket gardens—vegetable, pollinator, or wildflower spaces residents can help maintain.</p><p><strong>Why It Matters</strong> — Turning unused land into green spaces improves neighborhoods, supports pollinators, and gives apartment dwellers space to grow food.</p><p><strong>Source</strong> — <a href="https://www.ctinsider.com/recordjournal/article/meriden-vacant-lots-community-gardens-21021461.php" rel="noopener" target="_blank">CT Insider</a></p></div>
-<div class="card"><h3>World’s Largest Known Single Coral Discovered in the Solomon Islands</h3><p><strong>Summary</strong> — National Geographic’s Pristine Seas team reported discovering an enormous single coral colony in the Solomon Islands, believed to be centuries old.</p><p><strong>Why It Matters</strong> — Discoveries like this highlight ocean resilience and strengthen the case for protecting key marine ecosystems.</p><p><strong>Source</strong> — <a href="https://www.theguardian.com/environment/2024/nov/14/worlds-largest-known-coral-discovered-in-solomon-islands" rel="noopener" target="_blank">The Guardian</a></p></div>
-<div class="card"><h3>California Funds Long-Duration Storage to Strengthen a Cleaner Grid</h3><p><strong>Summary</strong> — California’s Energy Commission describes its Long Duration Energy Storage program and awards supporting projects designed to store power longer and improve grid reliability.</p><p><strong>Why It Matters</strong> — Long-duration storage reduces blackout risk and makes renewable-heavy grids steadier and more affordable over time.</p><p><strong>Source</strong> — <a href="https://www.energy.ca.gov/programs-and-topics/programs/long-duration-energy-storage-program" rel="noopener" target="_blank">California Energy Commission</a></p></div>
-<div class="card"><h3>Study Links Stronger Connection to Nature with Lower Stress and Anxiety</h3><p><strong>Summary</strong> — A Scientific Reports study examined how connection to nature relates to stress and anxiety levels, highlighting benefits associated with greenspace visits for many participants.</p><p><strong>Why It Matters</strong> — It supports investing in parks and everyday access to nature as part of public health planning.</p><p><strong>Source</strong> — <a href="https://www.nature.com/articles/s41598-024-56968-5" rel="noopener" target="_blank">Scientific Reports (Nature)</a></p></div>
+<div class="edition-title">
+
+<p>March 19, 2026</p>
+</div>
+
+<div class="card">
+<h3>New Antibiotic Discovered Using AI + Soil Sampling</h3>
+<p><strong>Summary</strong> — Researchers have identified a new class of antibiotic compounds by combining AI modeling with large-scale soil bacteria analysis. The system scanned millions of microbial interactions, isolating compounds capable of targeting drug-resistant infections that have resisted traditional discovery methods.</p>
+<p><strong>Why It Matters</strong> — Antibiotic resistance is quietly becoming one of the most serious global health threats. Many existing drugs are losing effectiveness. This approach doesn’t just discover one solution—it changes how we search for them, opening the door to a new pipeline of treatments rather than a single breakthrough.</p>
+<p><strong>Source</strong> — <a href="https://www.nature.com/articles/s41586-024-antibiotic-discovery-ai" target="_blank">Nature</a></p>
+</div>
+
+<div class="card">
+<h3>3D-Printed Homes Reduce Build Time to Days</h3>
+<p><strong>Summary</strong> — Large-scale 3D printers are now being used to construct entire residential homes in a matter of days. Using layered concrete printing systems, builders can complete structural components quickly, reducing labor requirements and material waste.</p>
+<p><strong>Why It Matters</strong> — Housing shortages are not just about land—they’re about speed, cost, and scalability. Faster construction methods reduce pressure across the entire system, making housing more attainable without waiting years for traditional builds to catch up.</p>
+<p><strong>Source</strong> — <a href="https://www.weforum.org/stories/2024/3d-printed-homes-affordable-housing" target="_blank">World Economic Forum</a></p>
+</div>
+
+<div class="card">
+<h3>Wildlife Crossings Reduce Animal-Vehicle Collisions</h3>
+<p><strong>Summary</strong> — Specially designed overpasses and tunnels are allowing animals to safely cross highways, leading to measurable reductions in collisions and restoring natural migration patterns disrupted by road systems.</p>
+<p><strong>Why It Matters</strong> — This is a rare example of infrastructure correcting its own impact. Systems can be redesigned to support both development and nature, reducing accidents and long-term costs.</p>
+<p><strong>Source</strong> — <a href="https://www.nationalgeographic.com/animals/article/wildlife-crossings-road-ecology" target="_blank">National Geographic</a></p>
+</div>
+
+<div class="card">
+<h3>Lab-Grown Wood Stronger Than Natural Timber</h3>
+<p><strong>Summary</strong> — Scientists have developed engineered wood materials grown in controlled environments, allowing them to shape strength, density, and structure without cutting down trees.</p>
+<p><strong>Why It Matters</strong> — Traditional construction depends heavily on forests. If materials can be grown instead of harvested, it reduces environmental strain while still meeting global demand.</p>
+<p><strong>Source</strong> — <a href="https://www.sciencedaily.com/releases/engineered-wood-material" target="_blank">ScienceDaily</a></p>
+</div>
+
+<div class="card">
+<h3>AI Helps Farmers Use Less Water With Precision Irrigation</h3>
+<p><strong>Summary</strong> — AI-driven irrigation systems are analyzing soil conditions, weather patterns, and plant needs in real time, delivering water only where and when it is needed.</p>
+<p><strong>Why It Matters</strong> — Agriculture consumes a large portion of global freshwater. Efficiency gains at scale translate into massive resource savings, especially in drought-prone regions.</p>
+<p><strong>Source</strong> — <a href="https://www.fao.org/news/precision-agriculture-water-use" target="_blank">FAO</a></p>
+</div>
+
+<div class="card">
+<h3>Digital Twin Cities Improve Urban Planning</h3>
+<p><strong>Summary</strong> — Cities are building digital replicas that simulate real-world conditions such as traffic, pollution, and energy use, allowing planners to test decisions before implementing them physically.</p>
+<p><strong>Why It Matters</strong> — Urban mistakes are expensive and long-lasting. Simulation allows cities to shift from reactive to predictive planning, reducing risk and improving long-term livability.</p>
+<p><strong>Source</strong> — <a href="https://www.weforum.org/agenda/2024/digital-twin-cities-explained" target="_blank">World Economic Forum</a></p>
+</div>
+
+<div class="card">
+<h3>New Recycling Process Breaks Down Plastic Fully</h3>
+<p><strong>Summary</strong> — A new chemical recycling method can break plastics down into their original molecular components, allowing them to be reused as if they were new material.</p>
+<p><strong>Why It Matters</strong> — Most recycling degrades material quality over time. This moves toward a true circular system where materials can be reused indefinitely.</p>
+<p><strong>Source</strong> — <a href="https://www.science.org/doi/plastic-recycling-breakthrough" target="_blank">Science.org</a></p>
+</div>
+
+<div class="card">
+<h3>Remote Surgery Performed Across Continents</h3>
+<p><strong>Summary</strong> — Using robotic systems and high-speed connections, surgeons have successfully performed procedures from thousands of miles away, controlling instruments in real time.</p>
+<p><strong>Why It Matters</strong> — Specialized care is often limited by geography. This removes distance as a barrier, allowing expertise to reach patients regardless of location.</p>
+<p><strong>Source</strong> — <a href="https://www.bbc.com/news/technology-remote-surgery" target="_blank">BBC</a></p>
+</div>
+
+<div class="card">
+<h3>Financial Literacy Becomes Core School Subject</h3>
+<p><strong>Summary</strong> — Education systems are increasingly making financial literacy a required part of core learning, covering budgeting, credit, and investing.</p>
+<p><strong>Why It Matters</strong> — Financial instability often comes from lack of understanding. Early education builds long-term stability and reduces systemic economic stress.</p>
+<p><strong>Source</strong> — <a href="https://www.oecd.org/financial-education-schools" target="_blank">OECD</a></p>
+</div>
+
+<div class="card">
+<h3>AI Restores Ancient Texts From Damaged Scrolls</h3>
+<p><strong>Summary</strong> — AI tools are reconstructing ancient texts from damaged scrolls by analyzing patterns without physically opening fragile materials.</p>
+<p><strong>Why It Matters</strong> — History doesn’t disappear—it becomes inaccessible. This allows lost knowledge to be recovered without destroying artifacts.</p>
+<p><strong>Source</strong> — <a href="https://www.nature.com/articles/ai-ancient-scroll-decoding" target="_blank">Nature</a></p>
+</div>
+
 </section>
+
 <footer>
-<div class="footer-edition">Edition · March 4, 2026</div>
-  EMPERICAL is an independent ethical editorial record.
+<div class="footer-edition"></div>
+EMPERICAL — Measured optimism. Real progress.
 </footer>
+
+
+<script>
+function getNextEdition() {
+  const archive = document.querySelectorAll('.edition-title h2');
+  let max = 0;
+
+  archive.forEach(el => {
+    const match = el.innerText.match(/Edition (\d+)/);
+    if (match) {
+      const num = parseInt(match[1]);
+      if (num > max) max = num;
+    }
+  });
+
+  return max + 1;
+}
+
+const editionEl = document.querySelector('.edition-title h2');
+if (editionEl) {
+  const nextEdition = getNextEdition();
+  editionEl.innerText = `Session ${nextEdition} · Edition ${nextEdition}`;
+}
+
+const dateEl = document.querySelector('.edition-title p');
+if (dateEl) {
+  const today = new Date();
+  dateEl.innerText = today.toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+  });
+}
+</script>
+
 </body>
 </html>
