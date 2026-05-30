@@ -1,3 +1,10 @@
+
+## May 30, 2026 — Homepage Edition Update
+- Archived the previous May 25 homepage into Archive.
+- Published a new May 30 current edition with 15 mixed good-news stories.
+- Preserved the black/gold UI, card layout, labels, navigation, and archive style.
+- Kept story text short: minimum summary, minimum why it matters, compact ripple.
+
 Edition Two — January 22, 2026
 Edition One archived.
 May 25, 2026 — Locked homepage date behavior, archived previous homepage as Edition Nine, expanded current homepage summaries, and added editorial rules.
@@ -35,3 +42,10 @@ May 25, 2026 — Locked homepage date behavior, archived previous homepage as Ed
 - Preserved the stronger inner panel border around Category, Summary, Why It Matters, Ripple Effect, and Source.
 - Locked the current homepage date as a manual editorial date: Current Edition · May 25, 2026.
 - Preserved all current homepage, archive, color, navigation, and story-card update-system rules for GitHub push.
+
+
+## May 30, 2026 — Homepage Story Weight Correction
+- Re-expanded the May 30 homepage cards under the newer Empirical story-weight rule.
+- Preserved the existing black/gold UI, navigation, archive behavior, and source-link structure.
+- Increased Summary, Why It Matters, and Ripple Effect sections so each story has a fuller reading weight instead of a thin minimum blurb.
+- No homepage redesign and no archive rollback.

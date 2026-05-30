@@ -1,6 +1,6 @@
 # Emperical Update System
 
-Locked: May 25, 2026
+Locked: May 30, 2026
 
 ## Homepage Rule
 The homepage is a manual editorial edition, not a live daily feed. The visible current-edition date must remain fixed until the site owner intentionally updates the homepage again.
