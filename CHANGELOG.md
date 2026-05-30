@@ -49,3 +49,9 @@ May 25, 2026 — Locked homepage date behavior, archived previous homepage as Ed
 - Preserved the existing black/gold UI, navigation, archive behavior, and source-link structure.
 - Increased Summary, Why It Matters, and Ripple Effect sections so each story has a fuller reading weight instead of a thin minimum blurb.
 - No homepage redesign and no archive rollback.
+
+
+## May 30, 2026 — Empirical Story Weight Rule Reinforcement
+- Preserved the black/gold UI and May 30 homepage structure.
+- Reinforced the new story-weight rule: each story now keeps readable Summary, meaningful Why It Matters, and fuller Ripple Effect/current-state-gap context.
+- No redesign; this is a content-depth correction only.
