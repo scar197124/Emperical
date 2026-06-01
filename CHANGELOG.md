@@ -1,4 +1,16 @@
 
+## May 30, 2026 — Final Readability Polish
+- Added a thin gold reading progress bar to the homepage.
+- Added story count beneath the Latest Edition heading.
+- Added a source transparency note near the bottom of the homepage.
+- Preserved category icons, black/gold UI, archive behavior, and story-card structure.
+
+
+## May 30, 2026 — Category Icon Polish
+- Added small gold category icons beside story category labels on the homepage and archived homepage cards.
+- Preserved the black/gold Emperical identity and kept story headlines/title hierarchy unchanged.
+
+
 ## May 30, 2026 — Homepage Edition Update
 - Archived the previous May 25 homepage into Archive.
 - Published a new May 30 current edition with 15 mixed good-news stories.

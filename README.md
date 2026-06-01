@@ -59,3 +59,11 @@ The homepage now opens with a short Emperical mission panel, then continues into
 - Changed the homepage edition label from “Current Edition” to “Latest Edition” while preserving the manual editorial date rule.
 - Added a fixed side/bottom “↑ Top” button so readers can jump back to the header/navigation from long story scrolls.
 - Preserved the black/gold UI, archive behavior, story-card structure, and editor-note front-door panel.
+
+## UI Note
+Small category icons now appear beside category labels on story cards to improve scanning while preserving the black/gold Emperical identity.
+## May 30, 2026 — Final Readability Polish
+- Added a thin gold reading progress bar to the homepage.
+- Added story count beneath the Latest Edition heading.
+- Added a source transparency note near the bottom of the homepage.
+- Preserved category icons, black/gold UI, archive behavior, and story-card structure.
