@@ -12,6 +12,7 @@
 <style>
 :root{--ring:#FFD700;--border:#FFD700}
 *{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{margin:0;background:#000;color:#fff;font:16px/1.6 Georgia,"Times New Roman",serif}
 a{text-decoration:none;color:#FFD700}
 .ticker-wrap{position:sticky;top:0;z-index:50;background:var(--ring);border-bottom:6px solid #000;overflow:hidden;position:sticky}
@@ -57,9 +58,33 @@ section{max-width:900px;margin:0 auto;padding:30px 16px}
 .edition-title p{margin:8px 0 0 0;color:#fff}
 footer{border-top:2px solid var(--border);margin-top:40px;padding:24px 16px;text-align:center;font-size:12px;color:#888}
 .footer-edition{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#bfae4d;margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid #333;}
+
+/* Editorial front-door panel — May 30 final polish */
+.mission-wrap{max-width:980px;margin:0 auto;padding:28px 16px 6px}
+.mission-panel{position:relative;overflow:hidden;border:2px solid rgba(255,215,0,.82);border-radius:22px;background:linear-gradient(180deg,rgba(255,215,0,.095),rgba(11,11,11,.96) 38%,#050505 100%);box-shadow:0 0 22px rgba(255,215,0,.10),inset 0 0 0 1px rgba(255,255,255,.055);padding:26px 22px;text-align:center}
+.mission-panel:before,.mission-panel:after{content:"";position:absolute;top:22px;width:120px;height:1px;background:linear-gradient(90deg,transparent,rgba(255,215,0,.55),transparent)}
+.mission-panel:before{left:22px}.mission-panel:after{right:22px}
+.mission-kicker{display:inline-block;margin:0 0 12px;padding:4px 12px;border:1px solid rgba(255,215,0,.65);border-radius:999px;color:#FFD700;background:rgba(255,215,0,.08);font-family:system-ui;font-size:11px;font-weight:900;letter-spacing:1.4px;text-transform:uppercase}
+.mission-panel h1{margin:0;color:#FFD700;font-size:clamp(28px,5.5vw,52px);line-height:1.08;letter-spacing:.7px}
+.mission-panel .mission-sub{max-width:760px;margin:14px auto 0;color:#f6f0cf;font-size:clamp(16px,2.45vw,20px);line-height:1.5}
+.editor-line{max-width:720px;margin:10px auto 0;color:#d9c76a;font-family:system-ui;font-size:13px;letter-spacing:.3px}
+.mission-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:22px auto 0;max-width:850px;text-align:left}
+.mission-card{border:1px solid rgba(255,215,0,.52);border-radius:16px;background:rgba(0,0,0,.34);padding:16px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.035)}
+.mission-card strong{display:block;color:#FFD700;font-family:system-ui;font-size:12px;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px}
+.mission-card p{margin:0;color:#ddd;font-size:14px;line-height:1.5}
+.mission-note{max-width:760px;margin:18px auto 0;color:#bfae4d;font-family:system-ui;font-size:12px;letter-spacing:.8px;text-transform:uppercase}
+.edition-anchor{display:inline-block;margin-top:20px;padding:9px 18px;border:2px solid #FFD700;border-radius:999px;color:#000;background:#FFD700;font-family:system-ui;font-size:12px;font-weight:900;letter-spacing:1px;text-transform:uppercase;box-shadow:0 0 16px rgba(255,215,0,.16)}
+.edition-anchor:hover{filter:brightness(1.08);transform:translateY(-1px)}
+@media (max-width:760px){.mission-wrap{padding-top:22px}.mission-panel{padding:24px 16px}.mission-panel:before,.mission-panel:after{display:none}.mission-grid{grid-template-columns:1fr}.mission-card{text-align:center}.mission-note{font-size:11px}.edition-anchor{width:100%;max-width:260px}}
+.back-to-top{position:fixed;right:18px;bottom:22px;z-index:70;display:inline-flex;align-items:center;justify-content:center;gap:6px;min-width:78px;padding:10px 14px;border:2px solid rgba(255,215,0,.95);border-radius:999px;background:rgba(0,0,0,.84);color:#FFD700;font-family:system-ui;font-size:12px;font-weight:900;letter-spacing:.8px;text-transform:uppercase;box-shadow:0 0 18px rgba(255,215,0,.18),inset 0 0 0 1px rgba(255,255,255,.08);backdrop-filter:blur(8px)}
+.back-to-top:hover,.back-to-top:focus{background:#FFD700;color:#000;outline:none;box-shadow:0 0 24px rgba(255,215,0,.32)}
+@media (max-width:640px){.back-to-top{right:12px;bottom:14px;min-width:64px;padding:9px 12px;font-size:11px}}
+
+
 </style>
 </meta></meta></head>
-<body>
+<body id="top">
+<a class="back-to-top" href="#top" aria-label="Back to top">↑ Top</a>
 <div class="ticker-wrap">
 <div class="ticker">
 <span>Good Samaritans still show up</span>
@@ -79,9 +104,35 @@ footer{border-top:2px solid var(--border);margin-top:40px;padding:24px 16px;text
 <a href="about.html">About</a>
 </nav>
 </header>
-<section>
+
+<div class="mission-wrap">
+  <div class="mission-panel" aria-label="Emperical editorial introduction">
+    <div class="mission-kicker">Editor’s note</div>
+    <h1>Real progress, clearly measured.</h1>
+    <p class="mission-sub">Emperical gathers grounded stories of repair, innovation, kindness, and system-level improvement — not noise, not outrage, but evidence that people are still building.</p>
+    <p class="editor-line">A measured record of progress, repair, and human effort.</p>
+    <div class="mission-grid">
+      <div class="mission-card">
+        <strong>Ethical</strong>
+        <p>Stories are summarized in original words, with visible sources and no copied article text.</p>
+      </div>
+      <div class="mission-card">
+        <strong>Real</strong>
+        <p>Each entry points to something concrete: action, discovery, repair, access, or measurable change.</p>
+      </div>
+      <div class="mission-card">
+        <strong>Clear</strong>
+        <p>Every card explains what happened, why it matters, and what ripple it may leave behind.</p>
+      </div>
+    </div>
+    <p class="mission-note">Current homepage editions are manual editorial releases, not an auto-updating feed.</p>
+    <a class="edition-anchor" href="#current-edition">Read current edition ↓</a>
+  </div>
+</div>
+
+<section id="current-edition">
 <div class="edition-title">
-<h2>Current Edition · May 30, 2026</h2>
+<h2>Latest Edition · May 30, 2026</h2>
 </div>
 <div class="card">
 <h3>Volunteers Plant One Million Trees</h3>
@@ -235,7 +286,7 @@ footer{border-top:2px solid var(--border);margin-top:40px;padding:24px 16px;text
 </div>
 </section>
 <footer>
-<div class="footer-edition">Current Edition · May 30, 2026</div>
+<div class="footer-edition">Latest Edition · May 30, 2026</div>
 EMPERICAL — Measured optimism. Real progress.
 </footer>
 </body>

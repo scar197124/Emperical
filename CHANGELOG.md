@@ -55,3 +55,21 @@ May 25, 2026 — Locked homepage date behavior, archived previous homepage as Ed
 - Preserved the black/gold UI and May 30 homepage structure.
 - Reinforced the new story-weight rule: each story now keeps readable Summary, meaningful Why It Matters, and fuller Ripple Effect/current-state-gap context.
 - No redesign; this is a content-depth correction only.
+
+## May 30, 2026 — Mission Front-Door Panel
+- Added a mission/front-door panel above the current homepage edition.
+- Preserved the current homepage as the active May 30 editorial edition.
+- Kept the black/gold visual identity, story-card rules, archive behavior, and manual date rule intact.
+- Added a “Read current edition” anchor so the landing message leads into the stories without creating a separate page.
+
+## May 30, 2026 — Editor Note Front-Door Polish
+- Refined the homepage mission panel into a lighter Editor’s Note style.
+- Added: “A measured record of progress, repair, and human effort.”
+- Kept the current edition visible on the homepage instead of adding a separate Enter page.
+- Preserved black/gold UI, archive rules, manual date behavior, and story-card structure.
+
+
+## May 30, 2026 — Edition Label + Back to Top Polish
+- Changed the homepage edition label from “Current Edition” to “Latest Edition” while preserving the manual editorial date rule.
+- Added a fixed side/bottom “↑ Top” button so readers can jump back to the header/navigation from long story scrolls.
+- Preserved the black/gold UI, archive behavior, story-card structure, and editor-note front-door panel.

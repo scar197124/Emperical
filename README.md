@@ -44,3 +44,18 @@ Story card labels are now visually separated with subtle badge styling so Catego
 
 ## Final GitHub Lock — May 25, 2026
 This build locks the current Emperical homepage system for GitHub: fixed manual edition date, archived previous editions, 15 original good-news cards, visible inner story panels, colored field labels, and centered story-card headlines.
+
+## Current Homepage Structure
+The homepage now opens with a short Emperical mission panel, then continues into the fixed current edition. This is a front-door explanation layer only; the active editorial homepage remains `index.html`, and the archive/update rules are unchanged.
+
+## May 30, 2026 — Editor Note Front-Door Polish
+- Refined the homepage mission panel into a lighter Editor’s Note style.
+- Added: “A measured record of progress, repair, and human effort.”
+- Kept the current edition visible on the homepage instead of adding a separate Enter page.
+- Preserved black/gold UI, archive rules, manual date behavior, and story-card structure.
+
+
+## May 30, 2026 — Edition Label + Back to Top Polish
+- Changed the homepage edition label from “Current Edition” to “Latest Edition” while preserving the manual editorial date rule.
+- Added a fixed side/bottom “↑ Top” button so readers can jump back to the header/navigation from long story scrolls.
+- Preserved the black/gold UI, archive behavior, story-card structure, and editor-note front-door panel.
