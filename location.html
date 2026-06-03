@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<title>EMPERICAL — Location</title>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<style>
+:root{--ring:#FFD700;--border:#FFD700}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:#000;color:#fff;font:16px/1.6 Georgia,"Times New Roman",serif}
+a{text-decoration:none;color:#FFD700}
+.ticker-wrap{position:sticky;top:0;z-index:50;background:var(--ring);border-bottom:6px solid #000;overflow:hidden}
+.ticker{display:flex;width:max-content;animation:scroll 35s linear infinite}
+.ticker span{padding:16px 42px;font-size:15px;font-weight:700;letter-spacing:1px;color:#000;white-space:nowrap;font-family:system-ui;text-transform:uppercase}
+@keyframes scroll{from{transform:translateX(100%)}to{transform:translateX(-100%)}}
+header{border-bottom:2px solid var(--border);padding:24px 16px;text-align:center}.brand{font-size:36px;font-weight:600;letter-spacing:.8px;color:var(--ring)}.tagline{margin-top:6px;font-size:14px;letter-spacing:2px;text-transform:uppercase;color:#fff}.nav{margin-top:18px}.nav a{display:inline-block;margin:0 6px;padding:8px 14px;border:2px solid var(--border);border-radius:20px;font-family:system-ui;font-size:12px;color:#fff}.nav a.active,.nav a:hover{background:var(--ring);color:#000}
+section{max-width:960px;margin:0 auto;padding:30px 16px}.card{border:2px solid var(--border);border-radius:16px;padding:22px;margin-bottom:22px;background:#0b0b0b;box-shadow:inset 0 0 0 1px rgba(255,255,255,.025)}.card h3{margin:6px 0 12px;font-size:22px;color:var(--ring)}footer{border-top:2px solid var(--border);margin-top:40px;padding:24px 16px;text-align:center;font-size:12px;color:#888}.footer-edition{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#bfae4d;margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid #333;}
+.explore-hero{text-align:center}.explore-hero p{max-width:760px;margin:10px auto;color:#ddd}.explore-note{border-left:3px solid var(--ring);padding:10px 14px;background:rgba(255,215,0,.06);color:#eee;text-align:left}.section-kicker{font-family:system-ui;text-transform:uppercase;letter-spacing:1.4px;font-size:11px;color:#bfae4d;margin-bottom:8px}.count-badge{display:inline-block;min-width:24px;text-align:center;margin-left:7px;padding:1px 7px;border-radius:999px;background:rgba(255,215,0,.15);border:1px solid rgba(255,215,0,.4);color:var(--ring);font-family:system-ui;font-size:11px}.pill-grid{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:18px 0 4px}.pill{border:1px solid rgba(255,215,0,.75);border-radius:999px;padding:8px 12px;color:#fff;background:#070707;font-family:system-ui;font-size:12px}.pill:hover{background:rgba(255,215,0,.12)}.pill strong{color:var(--ring)}.mini-list{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:12px}.mini-list li{margin:0;padding:14px 15px;border:1px solid rgba(255,215,0,.34);border-radius:13px;background:rgba(255,215,0,.045);box-shadow:inset 0 0 0 1px rgba(255,255,255,.018)}.mini-list li:hover{border-color:rgba(255,215,0,.68);background:rgba(255,215,0,.075)}.mini-list li a{display:block;font-size:16px;line-height:1.35;color:#FFD700}.mini-list small{display:block;color:#aaa;font-family:system-ui;font-size:12px;margin-top:5px;line-height:1.45}.mini-list small::before{content:"Edition / region: ";color:#bfae4d;text-transform:uppercase;letter-spacing:.7px;font-size:10px}.toggle-wrap{display:flex;justify-content:center;margin:22px auto 8px}.view-toggle{display:inline-flex;border:2px solid var(--border);border-radius:999px;padding:4px;background:#050505;box-shadow:0 0 18px rgba(255,215,0,.08)}.view-toggle button{appearance:none;border:0;background:transparent;color:#fff;border-radius:999px;padding:10px 18px;font-family:system-ui;font-size:12px;font-weight:800;letter-spacing:1px;text-transform:uppercase;cursor:pointer}.view-toggle button.active{background:var(--ring);color:#000}.view-panel{display:none}.view-panel.active{display:block}.view-intro{text-align:center;color:#d8d0a0;font-family:system-ui;font-size:13px;margin:8px auto 18px;max-width:720px}.explore-group{scroll-margin-top:90px}.latest-index{margin-top:28px;border-style:dashed;background:#070707}@media(max-width:760px){.pill-grid{justify-content:flex-start}.nav{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}.nav a{margin:0}.nav a{margin:4px}.view-toggle{width:100%;max-width:360px}.view-toggle button{flex:1;padding:10px 8px}.card{padding:18px}}
+.back-to-top{position:fixed;right:18px;bottom:22px;z-index:70;display:inline-flex;align-items:center;justify-content:center;gap:6px;min-width:78px;padding:10px 14px;border:2px solid rgba(255,215,0,.95);border-radius:999px;background:rgba(0,0,0,.84);color:#FFD700;font-family:system-ui;font-size:12px;font-weight:900;letter-spacing:.8px;text-transform:uppercase;box-shadow:0 0 18px rgba(255,215,0,.18),inset 0 0 0 1px rgba(255,255,255,.08);backdrop-filter:blur(8px)}
+.back-to-top:hover,.back-to-top:focus{background:#FFD700;color:#000;outline:none;box-shadow:0 0 24px rgba(255,215,0,.32)}
+@media (max-width:640px){.back-to-top{right:12px;bottom:14px;min-width:64px;padding:9px 12px;font-size:11px}}
+</style>
+</head>
+<body id="top">
+<div class="ticker-wrap"><div class="ticker">
+<span>Measured optimism still matters</span><span>Progress does not require spectacle</span><span>Quiet systems endure</span><span>Evidence over outrage</span><span>Repair is more powerful than reaction</span><span>Kindness remains functional</span><span>Stability is a form of progress</span>
+</div></div>
+<a aria-label="Back to top" class="back-to-top" href="#top">↑ Top</a>
+<header><div class="brand">EMPERICAL</div><div class="tagline">Location</div><nav class="nav"><a href="index.html">Home</a><a href="archive.html">Archive</a><a href="categories.html">Categories</a><a class="active" href="location.html">Location</a><a href="about.html">About</a></nav></header>
+<section>
+<div class="card explore-hero">
+<div class="section-kicker">Browse by place</div>
+<h3>Location</h3>
+<p>All indexed Emperical stories are grouped by region. A reader can now see the United Kingdom, Africa, Asia, Ocean / Marine, Global, and other location groups without sorting through each edition first.</p>
+<p class="explore-note">This page gathers stories across the current homepage and archive through the June 3, 2026 edition. Future updates can strengthen thinner regions with more targeted story gathering.</p>
+</div>
+<div class="" id="location-view">
+<div class="card"><div class="section-kicker">Jump index</div><h3>Browse by Location</h3><p class="view-intro">Choose a group below, then jump into a bordered story panel.</p><div class="pill-grid"><a class="pill" href="#region-global-general">Global / General <strong>53</strong></a><a class="pill" href="#region-united-kingdom">United Kingdom <strong>7</strong></a><a class="pill" href="#region-united-states">United States <strong>9</strong></a><a class="pill" href="#region-europe">Europe <strong>2</strong></a><a class="pill" href="#region-africa">Africa <strong>2</strong></a><a class="pill" href="#region-asia">Asia <strong>5</strong></a><a class="pill" href="#region-australia-oceania">Australia / Oceania <strong>4</strong></a><a class="pill" href="#region-ocean-marine">Ocean / Marine <strong>9</strong></a></div></div>
+<article class="explore-group card" id="region-global-general">
+<div class="section-kicker">Location</div>
+<h3>Global / General <span class="count-badge">53</span></h3>
+<ul class="mini-list"><li><a href="homepage_may30_2026_archived.html#volunteers-plant-one-million-trees">Volunteers Plant One Million Trees</a><small>Archived Homepage · May 30, 2026 · Nature &amp; Wildlife</small></li>
+<li><a href="homepage_may30_2026_archived.html#radar-tech-helps-track-pollinators">Radar Tech Helps Track Pollinators</a><small>Archived Homepage · May 30, 2026 · Ocean &amp; Marine</small></li>
+<li><a href="homepage_may30_2026_archived.html#electric-truck-cuts-fuel-costs">Electric Truck Cuts Fuel Costs</a><small>Archived Homepage · May 30, 2026 · Climate &amp; Energy</small></li>
+<li><a href="homepage_may30_2026_archived.html#soft-exoskeleton-shirt-supports-mobility">Soft Exoskeleton Shirt Supports Mobility</a><small>Archived Homepage · May 30, 2026 · Health &amp; Medicine</small></li>
+<li><a href="homepage_may30_2026_archived.html#elephant-sanctuary-welcomes-its-first-residents">Elephant Sanctuary Welcomes Its First Residents</a><small>Archived Homepage · May 30, 2026 · Nature &amp; Wildlife</small></li>
+<li><a href="homepage_may30_2026_archived.html#cattle-graze-beneath-solar-panels">Cattle Graze Beneath Solar Panels</a><small>Archived Homepage · May 30, 2026 · Climate &amp; Energy</small></li>
+<li><a href="homepage_may30_2026_archived.html#free-ice-cream-gift-spreads-through-summer">Free Ice Cream Gift Spreads Through Summer</a><small>Archived Homepage · May 30, 2026 · Community &amp; Kindness</small></li>
+<li><a href="homepage_may30_2026_archived.html#school-gardens-grow-environmental-care">School Gardens Grow Environmental Care</a><small>Archived Homepage · May 30, 2026 · Ocean &amp; Marine</small></li>
+<li><a href="homepage_may30_2026_archived.html#ai-helps-search-and-rescue-dogs-work-faster">AI Helps Search-and-Rescue Dogs Work Faster</a><small>Archived Homepage · May 30, 2026 · Ocean &amp; Marine</small></li>
+<li><a href="homepage_may25_2026_archived.html#rescued-puppy-finds-health-and-safety">Rescued Puppy Finds Health and Safety</a><small>Archived Homepage · May 25, 2026 · Health &amp; Medicine</small></li>
+<li><a href="homepage_may25_2026_archived.html#tiny-magnet-shrinks-big-physics-equipment">Tiny Magnet Shrinks Big Physics Equipment</a><small>Archived Homepage · May 25, 2026 · Health &amp; Medicine</small></li>
+<li><a href="homepage_may25_2026_archived.html#free-healthcare-expansion-puts-access-first">Free Healthcare Expansion Puts Access First</a><small>Archived Homepage · May 25, 2026 · Health &amp; Medicine</small></li>
+<li><a href="homepage_may25_2026_archived.html#community-grants-fund-local-wellbeing">Community Grants Fund Local Wellbeing</a><small>Archived Homepage · May 25, 2026 · Education &amp; Youth</small></li>
+<li><a href="edition1.html#an-86-year-old-woman-gives-what-she-has-a-community-responds">An 86-Year-Old Woman Gives What She Has — A Community Responds</a><small>Archive Edition 1 · Community &amp; Kindness</small></li>
+<li><a href="edition1.html#a-rural-town-reopens-its-only-grocery-store">A Rural Town Reopens Its Only Grocery Store</a><small>Archive Edition 1 · Community &amp; Kindness</small></li>
+<li><a href="edition1.html#clean-energy-quietly-overtakes-coal-in-multiple-regions">Clean Energy Quietly Overtakes Coal in Multiple Regions</a><small>Archive Edition 1 · Climate &amp; Energy</small></li>
+<li><a href="edition1.html#a-teachers-after-hours-program-improves-graduation-rates">A Teacher’s After-Hours Program Improves Graduation Rates</a><small>Archive Edition 1 · Education &amp; Youth</small></li>
+<li><a href="edition1.html#medical-supplies-reach-a-remote-clinic-after-years-of-delay">Medical Supplies Reach a Remote Clinic After Years of Delay</a><small>Archive Edition 1 · Health &amp; Medicine</small></li>
+<li><a href="edition1.html#a-city-converts-vacant-land-into-public-green-space">A City Converts Vacant Land Into Public Green Space</a><small>Archive Edition 1 · Nature &amp; Wildlife</small></li>
+<li><a href="edition2.html#medical-breakthroughs-and-ecological-recoveries-gain-ground">Medical Breakthroughs and Ecological Recoveries Gain Ground</a><small>Archive Edition 2 · Health &amp; Medicine</small></li>
+<li><a href="edition2.html#artificial-vision-technology-restores-reading-ability-for-blind-patients">Artificial Vision Technology Restores Reading Ability for Blind Patients</a><small>Archive Edition 2 · Health &amp; Medicine</small></li>
+<li><a href="edition2.html#species-once-considered-extinct-begin-to-recover">Species Once Considered Extinct Begin to Recover</a><small>Archive Edition 2 · Nature &amp; Wildlife</small></li>
+<li><a href="edition2.html#communities-respond-to-tragedy-with-coordinated-support">Communities Respond to Tragedy with Coordinated Support</a><small>Archive Edition 2 · Measured Progress</small></li>
+<li><a href="edition2.html#disability-rights-and-eye-health-gain-global-attention">Disability Rights and Eye Health Gain Global Attention</a><small>Archive Edition 2 · Health &amp; Medicine</small></li>
+<li><a href="edition2.html#global-sports-institutions-recognize-community-impact">Global Sports Institutions Recognize Community Impact</a><small>Archive Edition 2 · Community &amp; Kindness</small></li>
+<li><a href="edition3.html#teen-returns-thousands-found-in-parking-lot">Teen Returns Thousands Found in Parking Lot</a><small>Archive Edition 3 · Community &amp; Kindness</small></li>
+<li><a href="edition3.html#children-return-lost-wallet-with-cash-intact">Children Return Lost Wallet With Cash Intact</a><small>Archive Edition 3 · Education &amp; Youth</small></li>
+<li><a href="edition3.html#hospital-custodian-returns-envelope-of-cash">Hospital Custodian Returns Envelope of Cash</a><small>Archive Edition 3 · Health &amp; Medicine</small></li>
+<li><a href="edition3.html#student-returns-scholarship-funds-issued-in-error">Student Returns Scholarship Funds Issued in Error</a><small>Archive Edition 3 · Education &amp; Youth</small></li>
+<li><a href="edition3.html#stranger-travels-across-city-to-return-lost-phone">Stranger Travels Across City to Return Lost Phone</a><small>Archive Edition 3 · Community &amp; Kindness</small></li>
+<li><a href="edition3.html#ai-imaging-helps-doctors-detect-cancer-earlier">AI Imaging Helps Doctors Detect Cancer Earlier</a><small>Archive Edition 3 · Health &amp; Medicine</small></li>
+<li><a href="edition3.html#ai-accelerates-discovery-of-new-antibiotics">AI Accelerates Discovery of New Antibiotics</a><small>Archive Edition 3 · Health &amp; Medicine</small></li>
+<li><a href="edition3.html#wetland-restoration-leads-to-wildlife-recovery">Wetland Restoration Leads to Wildlife Recovery</a><small>Archive Edition 3 · Nature &amp; Wildlife</small></li>
+<li><a href="edition3.html#low-cost-water-sensors-prevent-contamination-events">Low-Cost Water Sensors Prevent Contamination Events</a><small>Archive Edition 3 · Science &amp; Discovery</small></li>
+<li><a href="edition4.html#solar-microgrids-restore-power-to-remote-communities">Solar Microgrids Restore Power to Remote Communities</a><small>Archive Edition 4 · Climate &amp; Energy</small></li>
+<li><a href="edition4.html#ai-tool-detects-early-signs-of-alzheimers-disease">AI Tool Detects Early Signs of Alzheimer’s Disease</a><small>Archive Edition 4 · Health &amp; Medicine</small></li>
+<li><a href="edition4.html#major-river-cleanup-shows-measurable-recovery">Major River Cleanup Shows Measurable Recovery</a><small>Archive Edition 4 · Measured Progress</small></li>
+<li><a href="edition4.html#global-vaccination-rates-climb-after-coordinated-campaign">Global Vaccination Rates Climb After Coordinated Campaign</a><small>Archive Edition 4 · Health &amp; Medicine</small></li>
+<li><a href="edition4.html#research-team-develops-lower-cost-carbon-capture-material">Research Team Develops Lower-Cost Carbon Capture Material</a><small>Archive Edition 4 · Ocean &amp; Marine</small></li>
+<li><a href="edition4.html#local-cooperative-grocery-model-expands-food-access">Local Cooperative Grocery Model Expands Food Access</a><small>Archive Edition 4 · Community &amp; Kindness</small></li>
+<li><a href="edition4.html#wildlife-corridors-reduce-highway-collisions">Wildlife Corridors Reduce Highway Collisions</a><small>Archive Edition 4 · Nature &amp; Wildlife</small></li>
+<li><a href="edition4.html#open-source-prosthetics-reduce-cost-of-limb-replacement">Open-Source Prosthetics Reduce Cost of Limb Replacement</a><small>Archive Edition 4 · Science &amp; Discovery</small></li>
+<li><a href="edition4.html#reforestation-project-surpasses-tree-planting-targets">Reforestation Project Surpasses Tree-Planting Targets</a><small>Archive Edition 4 · Measured Progress</small></li>
+<li><a href="edition5.html#community-crowd-funds-surgery-for-stranger">Community Crowd-Funds Surgery for Stranger</a><small>Archive Edition 5 · Health &amp; Medicine</small></li>
+<li><a href="edition5.html#ai-identifies-rare-disease-in-minutes">AI Identifies Rare Disease in Minutes</a><small>Archive Edition 5 · Health &amp; Medicine</small></li>
+<li><a href="edition5.html#desert-solar-project-powers-region-early">Desert Solar Project Powers Region Early</a><small>Archive Edition 5 · Climate &amp; Energy</small></li>
+<li><a href="edition5.html#teen-repairs-neighbors-roof-without-being-asked">Teen Repairs Neighbor’s Roof Without Being Asked</a><small>Archive Edition 5 · Community &amp; Kindness</small></li>
+<li><a href="edition5.html#coral-reef-restoration-shows-measurable-recovery">Coral Reef Restoration Shows Measurable Recovery</a><small>Archive Edition 5 · Measured Progress</small></li>
+<li><a href="edition5.html#air-quality-sensors-reduce-asthma-er-visits">Air Quality Sensors Reduce Asthma ER Visits</a><small>Archive Edition 5 · Health &amp; Medicine</small></li>
+<li><a href="edition5.html#open-source-ai-preserves-endangered-languages">Open-Source AI Preserves Endangered Languages</a><small>Archive Edition 5 · Science &amp; Discovery</small></li>
+<li><a href="edition5.html#high-speed-rail-cuts-regional-emissions">High-Speed Rail Cuts Regional Emissions</a><small>Archive Edition 5 · Climate &amp; Energy</small></li>
+<li><a href="edition5.html#regenerative-farming-restores-soil-health">Regenerative Farming Restores Soil Health</a><small>Archive Edition 5 · Health &amp; Medicine</small></li>
+<li><a href="edition5.html#student-returns-financial-aid-overpayment">Student Returns Financial Aid Overpayment</a><small>Archive Edition 5 · Education &amp; Youth</small></li></ul>
+</article><article class="explore-group card" id="region-united-kingdom">
+<div class="section-kicker">Location</div>
+<h3>United Kingdom <span class="count-badge">7</span></h3>
+<ul class="mini-list"><li><a href="index.html#old-building-materials-get-a-second-life-in-london">Old Building Materials Get a Second Life in London</a><small>Latest Edition · June 3, 2026 · Circular Economy</small></li>
+<li><a href="index.html#wildflowers-endure-in-soil-marked-by-mining">Wildflowers Endure in Soil Marked by Mining</a><small>Latest Edition · June 3, 2026 · Nature &amp; Wildlife</small></li>
+<li><a href="index.html#clean-energy-progress-shows-up-in-savings-and-jobs">Clean Energy Progress Shows Up in Savings and Jobs</a><small>Latest Edition · June 3, 2026 · Climate &amp; Energy</small></li>
+<li><a href="index.html#the-uk-green-economy-becomes-a-major-market-force">The UK Green Economy Becomes a Major Market Force</a><small>Latest Edition · June 3, 2026 · Climate &amp; Energy</small></li>
+<li><a href="index.html#britain-sets-a-steeper-2040-climate-marker">Britain Sets a Steeper 2040 Climate Marker</a><small>Latest Edition · June 3, 2026 · Climate &amp; Energy</small></li>
+<li><a href="homepage_may25_2026_archived.html#cleaner-school-meals-aim-to-support-children">Cleaner School Meals Aim to Support Children</a><small>Archived Homepage · May 25, 2026 · Health &amp; Medicine</small></li>
+<li><a href="homepage_may25_2026_archived.html#british-sign-language-show-expands-representation">British Sign Language Show Expands Representation</a><small>Archived Homepage · May 25, 2026 · Arts, Culture &amp; Heritage</small></li></ul>
+</article><article class="explore-group card" id="region-united-states">
+<div class="section-kicker">Location</div>
+<h3>United States <span class="count-badge">9</span></h3>
+<ul class="mini-list"><li><a href="index.html#a-roadside-rescue-turns-harm-into-care">A Roadside Rescue Turns Harm Into Care</a><small>Latest Edition · June 3, 2026 · Animal Rescue</small></li>
+<li><a href="index.html#who-guidance-helps-focus-ebola-trial-priorities">WHO Guidance Helps Focus Ebola Trial Priorities</a><small>Latest Edition · June 3, 2026 · Health &amp; Medicine</small></li>
+<li><a href="homepage_may30_2026_archived.html#everglades-restoration-shows-rewilding-progress">Everglades Restoration Shows Rewilding Progress</a><small>Archived Homepage · May 30, 2026 · Ocean &amp; Marine</small></li>
+<li><a href="homepage_may30_2026_archived.html#riders-save-horses-from-floodwaters">Riders Save Horses From Floodwaters</a><small>Archived Homepage · May 30, 2026 · Animal Rescue</small></li>
+<li><a href="homepage_may25_2026_archived.html#father-and-daughter-help-rescue-crash-victims">Father and Daughter Help Rescue Crash Victims</a><small>Archived Homepage · May 25, 2026 · Ocean &amp; Marine</small></li>
+<li><a href="edition2.html#a-new-national-park-city-is-officially-recognized">A New National Park City Is Officially Recognized</a><small>Archive Edition 2 · Nature &amp; Wildlife</small></li>
+<li><a href="edition2.html#public-universities-improve-social-mobility-outcomes">Public Universities Improve Social Mobility Outcomes</a><small>Archive Edition 2 · Health &amp; Medicine</small></li>
+<li><a href="edition3.html#electric-buses-reduce-costs-and-improve-air-quality">Electric Buses Reduce Costs and Improve Air Quality</a><small>Archive Edition 3 · Climate &amp; Energy</small></li>
+<li><a href="edition4.html#public-transit-expansion-reduces-urban-traffic-congestion">Public Transit Expansion Reduces Urban Traffic Congestion</a><small>Archive Edition 4 · Climate &amp; Energy</small></li></ul>
+</article><article class="explore-group card" id="region-europe">
+<div class="section-kicker">Location</div>
+<h3>Europe <span class="count-badge">2</span></h3>
+<ul class="mini-list"><li><a href="homepage_may30_2026_archived.html#italy-links-historic-pilgrimage-trails">Italy Links Historic Pilgrimage Trails</a><small>Archived Homepage · May 30, 2026 · Climate &amp; Energy</small></li>
+<li><a href="edition2.html#electric-vehicles-help-stabilize-local-power-grids-in-spain">Electric Vehicles Help Stabilize Local Power Grids in Spain</a><small>Archive Edition 2 · Climate &amp; Energy</small></li></ul>
+</article><article class="explore-group card" id="region-africa">
+<div class="section-kicker">Location</div>
+<h3>Africa <span class="count-badge">2</span></h3>
+<ul class="mini-list"><li><a href="index.html#new-funding-targets-a-gap-in-ebola-vaccine-protection">New Funding Targets a Gap in Ebola Vaccine Protection</a><small>Latest Edition · June 3, 2026 · Health &amp; Medicine</small></li>
+<li><a href="homepage_may25_2026_archived.html#baby-elephant-reunited-with-its-herd">Baby Elephant Reunited With Its Herd</a><small>Archived Homepage · May 25, 2026 · Nature &amp; Wildlife</small></li></ul>
+</article><article class="explore-group card" id="region-asia">
+<div class="section-kicker">Location</div>
+<h3>Asia <span class="count-badge">5</span></h3>
+<ul class="mini-list"><li><a href="index.html#fish-printing-preserves-catch-craft-and-memory">Fish Printing Preserves Catch, Craft, and Memory</a><small>Latest Edition · June 3, 2026 · Ocean &amp; Marine</small></li>
+<li><a href="index.html#teen-innovators-test-a-natural-approach-to-microplastics">Teen Innovators Test a Natural Approach to Microplastics</a><small>Latest Edition · June 3, 2026 · Education &amp; Youth</small></li>
+<li><a href="index.html#crested-ibises-take-flight-again-in-hakui">Crested Ibises Take Flight Again in Hakui</a><small>Latest Edition · June 3, 2026 · Nature &amp; Wildlife</small></li>
+<li><a href="homepage_may30_2026_archived.html#vietnam-pheasant-returns-to-the-wild">Vietnam Pheasant Returns to the Wild</a><small>Archived Homepage · May 30, 2026 · Nature &amp; Wildlife</small></li>
+<li><a href="homepage_may25_2026_archived.html#teen-innovators-use-tamarind-to-target-microplastics">Teen Innovators Use Tamarind to Target Microplastics</a><small>Archived Homepage · May 25, 2026 · Education &amp; Youth</small></li></ul>
+</article><article class="explore-group card" id="region-australia-oceania">
+<div class="section-kicker">Location</div>
+<h3>Australia / Oceania <span class="count-badge">4</span></h3>
+<ul class="mini-list"><li><a href="index.html#a-concert-finds-its-rescue-in-the-audience">A Concert Finds Its Rescue in the Audience</a><small>Latest Edition · June 3, 2026 · Animal Rescue</small></li>
+<li><a href="index.html#papua-new-guinea-shows-long-term-progress-against-malaria">Papua New Guinea Shows Long-Term Progress Against Malaria</a><small>Latest Edition · June 3, 2026 · Health &amp; Medicine</small></li>
+<li><a href="homepage_may30_2026_archived.html#australia-eliminates-trachoma-as-a-public-health-problem">Australia Eliminates Trachoma as a Public Health Problem</a><small>Archived Homepage · May 30, 2026 · Health &amp; Medicine</small></li>
+<li><a href="homepage_may25_2026_archived.html#mystery-rescuer-saves-cyclist-with-cpr">Mystery Rescuer Saves Cyclist With CPR</a><small>Archived Homepage · May 25, 2026 · Health &amp; Medicine</small></li></ul>
+</article><article class="explore-group card" id="region-ocean-marine">
+<div class="section-kicker">Location</div>
+<h3>Ocean / Marine <span class="count-badge">9</span></h3>
+<ul class="mini-list"><li><a href="index.html#right-whale-calves-offer-a-rare-sign-of-recovery">Right Whale Calves Offer a Rare Sign of Recovery</a><small>Latest Edition · June 3, 2026 · Ocean &amp; Marine</small></li>
+<li><a href="index.html#a-deep-water-shipwreck-opens-an-18th-century-window">A Deep-Water Shipwreck Opens an 18th-Century Window</a><small>Latest Edition · June 3, 2026 · Ocean &amp; Marine</small></li>
+<li><a href="homepage_may30_2026_archived.html#sea-turtle-populations-show-global-rebounds">Sea Turtle Populations Show Global Rebounds</a><small>Archived Homepage · May 30, 2026 · Ocean &amp; Marine</small></li>
+<li><a href="homepage_may25_2026_archived.html#offshore-wind-prototype-powers-a-data-center">Offshore Wind Prototype Powers a Data Center</a><small>Archived Homepage · May 25, 2026 · Ocean &amp; Marine</small></li>
+<li><a href="homepage_may25_2026_archived.html#underwater-data-center-runs-on-wind-and-seawater-cooling">Underwater Data Center Runs on Wind and Seawater Cooling</a><small>Archived Homepage · May 25, 2026 · Ocean &amp; Marine</small></li>
+<li><a href="homepage_may25_2026_archived.html#trawling-ban-linked-to-seafloor-recovery">Trawling Ban Linked to Seafloor Recovery</a><small>Archived Homepage · May 25, 2026 · Ocean &amp; Marine</small></li>
+<li><a href="homepage_may25_2026_archived.html#ocean-protection-passes-a-global-milestone">Ocean Protection Passes a Global Milestone</a><small>Archived Homepage · May 25, 2026 · Ocean &amp; Marine</small></li>
+<li><a href="homepage_may25_2026_archived.html#ocean-cleanup-plan-targets-plastic-at-the-source">Ocean Cleanup Plan Targets Plastic at the Source</a><small>Archived Homepage · May 25, 2026 · Ocean &amp; Marine</small></li>
+<li><a href="edition2.html#international-cooperation-advances-high-seas-protection">International Cooperation Advances High Seas Protection</a><small>Archive Edition 2 · Ocean &amp; Marine</small></li></ul>
+</article>
+</div></section>
+<footer><div class="footer-edition">Latest Edition · June 3, 2026</div>EMPERICAL — Measured optimism. Real progress.</footer>
+</body>
+</html>

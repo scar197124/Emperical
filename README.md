@@ -67,3 +67,52 @@ Small category icons now appear beside category labels on story cards to improve
 - Added story count beneath the Latest Edition heading.
 - Added a source transparency note near the bottom of the homepage.
 - Preserved category icons, black/gold UI, archive behavior, and story-card structure.
+
+
+## June 3, 2026 Edition Update
+
+This package adds 15 independently summarized progress stories to the homepage, preserves the May 30 homepage as an archived page, and keeps the established Emperical black/gold reading system intact. The homepage copy has been rewritten in original editorial language for publication safety while preserving visible source links for reader verification.
+
+
+## Publication-safety note
+
+The June 3 edition uses original Emperical summaries and reflections rather than republishing source articles. Source links remain visible for transparency and verification.
+
+
+## June 3, 2026 — Categories / Location Index
+- Added reader-facing Categories / Location page for browsing Emperical by category and region.
+- Added Categories / Location link to site navigation.
+- Added region tags to the current June 3 homepage story cards.
+- Preserved archive/update rules and black/gold UI identity.
+
+
+## Categories / Location Toggle Index — June 3, 2026
+
+This build adds a cleaner reader-facing Categories / Location system. The Categories / Location page now uses a pill-style toggle so readers can switch between Category view and Location view. Each view groups stories across the homepage and archive into bordered panels, instead of mixing edition labels into one long list.
+
+- Category view groups stories by theme/type of progress.
+- Location view groups stories by region, including Global / General and Ocean / Marine.
+- Existing archive/update rules and black/gold visual identity are preserved.
+
+
+## June 3, 2026 — Categories / Location Navigation
+
+This package replaces the single Explore toggle page with two direct reader-facing navigation pages:
+
+- `categories.html` groups all indexed stories by story type.
+- `location.html` groups all indexed stories by region/place.
+
+The header now reads: Home / Archive / Categories / Location / About. The current edition, archive structure, black/gold interface, source transparency, and original-summary policy are preserved.
+
+### Categories / Location polish
+
+The Categories and Location pages now group all indexed stories across editions and display each story as its own small bordered card inside the larger category/location panel. This keeps browsing clean while preserving Emperical's publication-style archive structure.
+
+Update note: Back to Top buttons on the long Categories and Location pages improve reader navigation without changing the archive structure.
+
+## June 3, 2026 — Home Story Field Cards Polish
+
+- Added stronger inner cards/borders to homepage story fields.
+- Region now has matching field-card treatment beside Category.
+- Preserved Categories, Location, Archive, About, Back to Top, source transparency, and original-summary policy.
+

@@ -1,3 +1,27 @@
+# Changelog
+
+## June 3, 2026 — Navigation Regression Fix
+
+- Fixed leftover Explore navigation links from the split-nav transition.
+- Updated visible header to Home / Archive / Categories / Location / About across the site.
+- Restored `explore.html` as a compatibility landing page for older/cached links.
+- Preserved Categories and Location story-card browsing as the primary structure.
+
+
+## June 3, 2026 — Categories / Location Story Card Polish
+
+- Added individual small bordered story cards inside the Categories page.
+- Added individual small bordered story cards inside the Location page.
+- Kept all category/location grouping across all indexed editions.
+- Preserved the direct navigation header and removed no active content.
+
+## June 3, 2026 — New Homepage Edition
+
+- Added 15 independently summarized progress stories to `index.html`.
+- Preserved the previous May 30 homepage as `homepage_may30_2026_archived.html`.
+- Added the May 30 edition to the top of `archive.html` before replacing the homepage.
+- Preserved the locked Emperical UI structure, category badges, readability polish, source transparency note, and manual edition-date rule.
+
 
 ## May 30, 2026 — Final Readability Polish
 - Added a thin gold reading progress bar to the homepage.
@@ -85,3 +109,47 @@ May 25, 2026 — Locked homepage date behavior, archived previous homepage as Ed
 - Changed the homepage edition label from “Current Edition” to “Latest Edition” while preserving the manual editorial date rule.
 - Added a fixed side/bottom “↑ Top” button so readers can jump back to the header/navigation from long story scrolls.
 - Preserved the black/gold UI, archive behavior, story-card structure, and editor-note front-door panel.
+
+## Publication-safety rewrite pass
+
+- Rewrote the June 3 homepage story summaries, Why It Matters sections, and Ripple Effect sections in original Emperical language.
+- Preserved source links for verification while avoiding article republication.
+- Corrected homepage card count to exactly 15 story cards.
+
+
+## June 3, 2026 — Explore Index
+- Added reader-facing Explore page for browsing Emperical by category and region.
+- Added Explore link to site navigation.
+- Added region tags to the current June 3 homepage story cards.
+- Preserved archive/update rules and black/gold UI identity.
+
+
+## June 3, 2026 — Explore Toggle / Category + Location Grouping
+
+- Rebuilt `explore.html` with a pill-style Category / Location toggle.
+- Grouped stories across all current indexed pages by category and by region.
+- Added bordered group panels for cleaner browsing.
+- Corrected the Explore structure so region browsing is not mixed with edition-first browsing.
+- Preserved archive pages, homepage edition rules, black/gold UI, and source transparency.
+
+
+## June 3, 2026 — Categories / Location Navigation
+
+- Replaced the single Explore toggle page with two direct pages: `categories.html` and `location.html`.
+- Updated the site header across homepage, archive, archived homepage copies, edition pages, and About.
+- Category view now groups stories across all indexed editions by story type inside bordered panels.
+- Location view now groups stories across all indexed editions by region/place inside bordered panels.
+- Removed the older public Explore toggle surface from the deploy package to reduce page clutter.
+- Preserved source transparency, archive/update rules, publication-safety rewrite, and black/gold styling.
+## June 3, 2026 — Categories / Location Back-to-Top Patch
+
+- Added fixed Back to Top buttons to `categories.html` and `location.html`.
+- Preserved the Categories and Location story-card grids.
+- Preserved the navigation regression fix and compatibility `explore.html` route.
+
+## June 3, 2026 — Home Story Field Cards Polish
+
+- Added stronger inner cards/borders to homepage story fields.
+- Region now has matching field-card treatment beside Category.
+- Preserved Categories, Location, Archive, About, Back to Top, source transparency, and original-summary policy.
+
