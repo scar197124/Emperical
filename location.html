@@ -320,7 +320,82 @@
   bottom:8px!important;
 }
 
-</style></head><body><div class="shell"><header class="top-image"><img src="assets/tree-of-life-header-connected-single.png" alt="Emperical Tree of Life header"><nav class="header-hotspots" aria-label="Primary navigation"><a class="hs-home" href="index.html">Home</a><a class="hs-archive" href="archive.html">Archive</a><a class="hs-categories" href="categories.html">Categories</a><a class="hs-location" href="location.html">Location</a><a class="hs-about" href="about.html">About</a></nav><div class="ticker-overlay" aria-label="Good news ticker"><strong>GOOD NEWS TICKER</strong><div class="ticker-window"><div class="ticker-run"><span>✦ Climate &amp; Energy: Britain Opens Grid Door for Hundreds of Energy Projects</span><span>✦ Climate &amp; Energy: Offshore Wind Forecast Points to a Much Larger Global Buildout</span><span>✦ Climate &amp; Energy: Germany’s Renewable Power Growth Offers Industry a New Opening</span><span>✦ Health &amp; Medicine: Pancreatic Cancer Pill Sets a New Survival Benchmark</span><span>✦ Health &amp; Medicine: Targeted Cancer Drugs Help More Patients Live Longer</span><span>✦ Health &amp; Medicine: GLP-1 Research Points to Possible Cancer Benefits</span><span>✦ Science &amp; Discovery: Angola Expedition Reveals New Species in a Biodiversity Hotspot</span><span>✦ Nature &amp; Wildlife: Mangrove Loss Shows Signs of Reversal Worldwide</span><span>✦ Education &amp; Youth: Dutch Children Again Rank Among the World’s Happiest</span><span>✦ Education &amp; Youth: Schools Give Pupils a Stronger Voice in How They Are Run</span><span>✦ Climate &amp; Energy: Britain Opens Grid Door for Hundreds of Energy Projects</span><span>✦ Climate &amp; Energy: Offshore Wind Forecast Points to a Much Larger Global Buildout</span><span>✦ Climate &amp; Energy: Germany’s Renewable Power Growth Offers Industry a New Opening</span><span>✦ Health &amp; Medicine: Pancreatic Cancer Pill Sets a New Survival Benchmark</span><span>✦ Health &amp; Medicine: Targeted Cancer Drugs Help More Patients Live Longer</span><span>✦ Health &amp; Medicine: GLP-1 Research Points to Possible Cancer Benefits</span><span>✦ Science &amp; Discovery: Angola Expedition Reveals New Species in a Biodiversity Hotspot</span><span>✦ Nature &amp; Wildlife: Mangrove Loss Shows Signs of Reversal Worldwide</span><span>✦ Education &amp; Youth: Dutch Children Again Rank Among the World’s Happiest</span><span>✦ Education &amp; Youth: Schools Give Pupils a Stronger Voice in How They Are Run</span></div></div><em>LIVE</em></div></header><main class="engine"><section class="page-title"><div class="kicker">Story Map</div><h1>Location</h1></section><section class="panel3"><article class="card"><div class="card-head"><h2 class="card-title">Location</h2><p class="card-sub">All recovered stories grouped here.</p></div><div class="scroll" id="groupList"></div></article><article class="card"><div class="card-head"><h2 class="card-title">Stories</h2><p class="card-sub" id="groupMeta"></p></div><div class="scroll" id="groupStories"></div></article><article class="card"><div class="card-head"><h2 class="card-title">Story Record · Source</h2><p class="card-sub">Summary · Why It Matters · Ripple Effect</p></div><div class="scroll" id="groupDetail"></div></article></section></main><footer class="site-footer">EMPERICAL · Good News · Honest Reflection · Positive Ripple</footer></div><script>
+
+/* Mobile navigation repair: visible mobile nav, ticker below it, no collision */
+.mobile-nav{
+  display:none;
+}
+@media(max-width:860px){
+  .shell{
+    padding:8px;
+    gap:8px;
+  }
+  .top-image{
+    overflow:visible;
+    border-radius:18px;
+  }
+  .top-image img{
+    width:100%;
+    height:auto!important;
+    display:block;
+    object-fit:contain!important;
+  }
+  .header-hotspots{
+    display:none!important;
+    pointer-events:none!important;
+  }
+  .ticker-overlay{
+    position:relative!important;
+    left:auto!important;
+    right:auto!important;
+    top:auto!important;
+    bottom:auto!important;
+    transform:none!important;
+    width:100%!important;
+    margin-top:6px;
+    border-radius:14px;
+    z-index:2!important;
+  }
+  .mobile-nav{
+    display:flex!important;
+    position:relative;
+    z-index:3;
+    gap:6px;
+    justify-content:center;
+    flex-wrap:wrap;
+    width:100%;
+    margin-top:6px;
+    padding:7px;
+    border:1px solid rgba(215,183,86,.42);
+    border-radius:14px;
+    background:linear-gradient(180deg,rgba(20,13,4,.96),rgba(5,4,3,.9));
+    box-shadow:0 8px 18px rgba(0,0,0,.24), inset 0 0 0 1px rgba(216,180,90,.05);
+  }
+  .mobile-nav a{
+    color:var(--bright);
+    text-decoration:none;
+    border:1px solid rgba(215,183,86,.42);
+    border-radius:999px;
+    padding:7px 10px;
+    font-size:.78rem;
+    letter-spacing:.035em;
+    background:rgba(0,0,0,.28);
+    line-height:1;
+  }
+  .mobile-nav a:focus,
+  .mobile-nav a:hover{
+    background:rgba(216,180,90,.13);
+    outline:none;
+  }
+  .ticker-overlay strong{
+    font-size:.68rem;
+  }
+  .ticker-run span{
+    font-size:.78rem;
+  }
+}
+
+</style></head><body><div class="shell"><header class="top-image"><img src="assets/tree-of-life-header-connected-single.png" alt="Emperical Tree of Life header"><nav class="header-hotspots" aria-label="Primary navigation"><a class="hs-home" href="index.html">Home</a><a class="hs-archive" href="archive.html">Archive</a><a class="hs-categories" href="categories.html">Categories</a><a class="hs-location" href="location.html">Location</a><a class="hs-about" href="about.html">About</a></nav><nav class="mobile-nav" aria-label="Mobile navigation"><a href="index.html">Home</a><a href="archive.html">Archive</a><a href="categories.html">Categories</a><a href="location.html">Location</a><a href="about.html">About</a></nav><div class="ticker-overlay" aria-label="Good news ticker"><strong>GOOD NEWS TICKER</strong><div class="ticker-window"><div class="ticker-run"><span>✦ Climate &amp; Energy: Britain Opens Grid Door for Hundreds of Energy Projects</span><span>✦ Climate &amp; Energy: Offshore Wind Forecast Points to a Much Larger Global Buildout</span><span>✦ Climate &amp; Energy: Germany’s Renewable Power Growth Offers Industry a New Opening</span><span>✦ Health &amp; Medicine: Pancreatic Cancer Pill Sets a New Survival Benchmark</span><span>✦ Health &amp; Medicine: Targeted Cancer Drugs Help More Patients Live Longer</span><span>✦ Health &amp; Medicine: GLP-1 Research Points to Possible Cancer Benefits</span><span>✦ Science &amp; Discovery: Angola Expedition Reveals New Species in a Biodiversity Hotspot</span><span>✦ Nature &amp; Wildlife: Mangrove Loss Shows Signs of Reversal Worldwide</span><span>✦ Education &amp; Youth: Dutch Children Again Rank Among the World’s Happiest</span><span>✦ Education &amp; Youth: Schools Give Pupils a Stronger Voice in How They Are Run</span><span>✦ Climate &amp; Energy: Britain Opens Grid Door for Hundreds of Energy Projects</span><span>✦ Climate &amp; Energy: Offshore Wind Forecast Points to a Much Larger Global Buildout</span><span>✦ Climate &amp; Energy: Germany’s Renewable Power Growth Offers Industry a New Opening</span><span>✦ Health &amp; Medicine: Pancreatic Cancer Pill Sets a New Survival Benchmark</span><span>✦ Health &amp; Medicine: Targeted Cancer Drugs Help More Patients Live Longer</span><span>✦ Health &amp; Medicine: GLP-1 Research Points to Possible Cancer Benefits</span><span>✦ Science &amp; Discovery: Angola Expedition Reveals New Species in a Biodiversity Hotspot</span><span>✦ Nature &amp; Wildlife: Mangrove Loss Shows Signs of Reversal Worldwide</span><span>✦ Education &amp; Youth: Dutch Children Again Rank Among the World’s Happiest</span><span>✦ Education &amp; Youth: Schools Give Pupils a Stronger Voice in How They Are Run</span></div></div><em>LIVE</em></div></header><main class="engine"><section class="page-title"><div class="kicker">Story Map</div><h1>Location</h1></section><section class="panel3"><article class="card"><div class="card-head"><h2 class="card-title">Location</h2><p class="card-sub">All recovered stories grouped here.</p></div><div class="scroll" id="groupList"></div></article><article class="card"><div class="card-head"><h2 class="card-title">Stories</h2><p class="card-sub" id="groupMeta"></p></div><div class="scroll" id="groupStories"></div></article><article class="card"><div class="card-head"><h2 class="card-title">Story Record · Source</h2><p class="card-sub">Summary · Why It Matters · Ripple Effect</p></div><div class="scroll" id="groupDetail"></div></article></section></main><footer class="site-footer">EMPERICAL · Good News · Honest Reflection · Positive Ripple</footer></div><script>
 function esc(v){return String(v??'').replace(/[&<>"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]));}
 function sourceHTML(s){if(s.sourceUrl){return `<a href="${esc(s.sourceUrl)}" target="_blank" rel="noopener">${esc(s.source||'Source')}</a>`;} return `<span>${esc(s.source||'Source pending')}</span>`;}
 function storyButton(s,active){return `<button class="story-btn ${active?'active':''}" data-story="${esc(s.id)}"><strong>${esc(s.title)}</strong><span>${esc(s.editionDate||s.location||'')} · Source: ${esc(s.source||'Source pending')}</span><div class="chipline"><em class="chip">${esc(s.category||'Uncategorized')}</em><em class="chip">${esc(s.location||'General')}</em></div></button>`;}

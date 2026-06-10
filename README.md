@@ -16,3 +16,8 @@ GitHub-ready static site package.
 - Total story vault: 101 stories
 - Ticker: latest 10 homepage highlights
 - Source fields preserved
+
+## Mobile repair
+- Mobile uses a visible mobile-only nav under the Tree header.
+- Desktop keeps the original header/hotspot navigation.
+- Ticker moves below the mobile nav to prevent overlap.
