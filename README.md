@@ -21,3 +21,7 @@ GitHub-ready static site package.
 - Mobile uses a visible mobile-only nav under the Tree header.
 - Desktop keeps the original header/hotspot navigation.
 - Ticker moves below the mobile nav to prevent overlap.
+
+## Mobile nav fit patch
+- Mobile nav now uses a five-column grid so About stays visible.
+- Mobile ticker animation is slowed down without changing desktop speed.
