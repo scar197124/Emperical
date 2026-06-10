@@ -1,432 +1,335 @@
-<!DOCTYPE html>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Emperical — Current Home</title><style>
+:root{--gold:#d7b756;--bright:#d8b45a;--white:#f7ecd2;--muted:#d6c795;--line:rgba(215,183,86,.42);--dark:#050403;--panel:rgba(8,6,3,.84);--panel2:rgba(17,12,4,.92)}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;background:#050403;color:var(--white);font-family:Georgia,'Times New Roman',serif}body{overflow:hidden}.shell{height:100vh;max-width:1480px;margin:0 auto;padding:10px;display:flex;flex-direction:column;gap:8px}.top-image{position:relative;border:1px solid var(--line);border-radius:22px;overflow:hidden;background:#080603;box-shadow:0 0 30px rgba(215,183,86,.18);flex:0 0 auto}.top-image img{display:block;width:100%;height:clamp(132px,20vh,236px);object-fit:cover;object-position:center top}.tree-nav{z-index:2;position:absolute;left:50%;bottom:10px;transform:translateX(-50%);display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;width:min(92%,760px);padding:8px 10px;border:1px solid rgba(215,183,86,.35);border-radius:999px;background:rgba(5,4,3,.68);backdrop-filter:blur(4px);box-shadow:0 0 18px rgba(0,0,0,.35)}.tree-nav a{color:var(--bright);border:1px solid rgba(215,183,86,.45);border-radius:999px;padding:7px 14px;text-decoration:none;background:rgba(0,0,0,.35);font-size:.86rem;letter-spacing:.04em}.tree-nav a:hover,.tree-nav a:focus{background:rgba(216,180,90,.14);box-shadow:0 0 12px rgba(216,180,90,.16);outline:none}.engine{flex:1 1 auto;min-height:0;display:flex;flex-direction:column;gap:10px}.page-title{flex:0 0 auto;text-align:center;border:1px solid var(--line);border-radius:18px;padding:9px 16px;background:linear-gradient(180deg,rgba(20,13,4,.88),rgba(5,4,3,.72))}.page-title .kicker{font-size:.78rem;letter-spacing:.18em;text-transform:uppercase;color:var(--bright)}.page-title h1{margin:2px 0;font-size:clamp(1.45rem,2.8vw,2.7rem);line-height:1;color:var(--bright)}.page-title p{max-width:900px;margin:4px auto 0;color:var(--muted);font-size:.94rem}.page-title.home-compact{padding:6px 14px}.page-title.home-compact .kicker{font-size:.82rem;color:var(--gold);letter-spacing:.16em;font-weight:650}.page-title.home-compact h1{font-size:clamp(1.45rem,2.8vw,2.7rem);letter-spacing:.045em;text-transform:uppercase;color:var(--bright);margin:2px 0;line-height:1;font-weight:650}.page-title.home-compact p{font-size:.78rem;margin:2px auto 0;color:var(--muted)}.panel3{flex:1 1 auto;min-height:0;display:grid;grid-template-columns:1fr 1.12fr 1fr;gap:10px}.card{min-height:0;overflow:hidden;border:1px solid var(--line);border-radius:20px;background:linear-gradient(180deg,var(--panel2),var(--panel));box-shadow:inset 0 0 0 1px rgba(216,180,90,.05),0 12px 35px rgba(0,0,0,.25);display:flex;flex-direction:column}.card-head{flex:0 0 auto;padding:13px 14px 10px;border-bottom:1px solid rgba(215,183,86,.22)}.card-title{margin:0;color:var(--bright);font-size:1.12rem}.card-sub{margin:4px 0 0;color:var(--muted);font-size:.82rem}.scroll{flex:1 1 auto;min-height:0;overflow:auto;padding:12px;scrollbar-color:var(--gold) rgba(255,255,255,.08);scrollbar-width:thin}.story-btn,.edition-btn,.group-btn{width:100%;text-align:left;cursor:pointer;margin:0 0 9px;padding:11px 12px;border-radius:16px;border:1px solid rgba(215,183,86,.25);background:rgba(216,180,90,.055);color:var(--white);font-family:inherit}.story-btn:hover,.edition-btn:hover,.group-btn:hover,.story-btn.active,.edition-btn.active,.group-btn.active{border-color:var(--bright);box-shadow:0 0 0 1px rgba(216,180,90,.25),0 0 18px rgba(216,180,90,.10);background:rgba(216,180,90,.11)}.story-btn strong,.edition-btn strong,.group-btn strong{display:block;color:var(--bright);font-size:.98rem}.story-btn span,.edition-btn span,.group-btn span{display:block;color:var(--muted);font-size:.78rem;margin-top:5px;line-height:1.35}.chipline{display:flex;gap:6px;flex-wrap:wrap;margin-top:8px}.chip{display:inline-flex;align-items:center;border:1px solid rgba(215,183,86,.3);border-radius:999px;padding:3px 8px;font-size:.72rem;color:var(--bright);background:rgba(0,0,0,.25)}.detail h3{color:var(--bright);margin:8px 0 6px;font-size:1rem}.detail p{color:var(--white);line-height:1.5;margin:0 0 12px}.source-box{border:1px solid rgba(215,183,86,.28);background:rgba(0,0,0,.25);border-radius:14px;padding:10px;margin-top:8px}.source-box a,.source-box span{color:var(--bright)}.mini{color:var(--muted);font-size:.85rem;line-height:1.4}.site-footer{flex:0 0 auto;text-align:center;color:var(--muted);font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;padding:5px}.about-grid{flex:1;min-height:0;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.about-grid .card{padding:18px;overflow:auto}.about-grid h2{color:var(--bright);margin-top:0}.about-grid p{line-height:1.55;color:var(--muted)}@media(max-width:860px){body{overflow:auto}.shell{height:auto;min-height:100vh}.top-image img{height:auto}.mobile-nav{display:flex}.hotspot{display:none}.panel3,.about-grid{grid-template-columns:1fr}.card{min-height:360px}.page-title p{font-size:.88rem}}
 
-<html lang="en">
-<head>
-<meta content="index, follow" name="robots"/>
-<meta content="Emperical delivers real, measured progress stories. Ethical, clear, and grounded reporting on innovation, systems, and human advancement." name="description"/>
-<meta content="positive news, real news, innovation, progress, ethical news, technology, environment" name="keywords"/>
-<meta content="Emperical" name="author"/>
-<title>EMPERICAL — Ethical · Real · Clear</title>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<style>
-:root{--ring:#FFD700;--border:#FFD700}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:#000;color:#fff;font:16px/1.6 Georgia,"Times New Roman",serif}
-a{text-decoration:none;color:#FFD700}
-.ticker-wrap{position:sticky;top:0;z-index:50;background:var(--ring);border-bottom:6px solid #000;overflow:hidden;position:sticky}
-.ticker{display:flex;width:max-content;animation:scroll 35s linear infinite;will-change:transform}
-.ticker span{padding:16px 42px;font-size:15px;font-weight:700;letter-spacing:1px;color:#000;white-space:nowrap;font-family:system-ui;text-transform:uppercase}
-@keyframes scroll{from{transform:translateX(100%)}to{transform:translateX(-100%)}}
+.root-connection{position:absolute;left:10%;right:10%;bottom:54px;height:32px;pointer-events:none;z-index:1;opacity:.95}.root-connection::before{content:"";position:absolute;left:0;right:0;top:15px;height:2px;background:linear-gradient(90deg,transparent,rgba(216,180,90,.18) 8%,rgba(216,180,90,.88) 28%,rgba(238,210,130,.95) 50%,rgba(216,180,90,.88) 72%,rgba(216,180,90,.18) 92%,transparent);box-shadow:0 0 14px rgba(255,207,79,.35),0 0 28px rgba(255,160,30,.22)}.root-connection::after{content:"✦";position:absolute;left:50%;top:3px;transform:translateX(-50%);color:var(--bright);font-size:18px;text-shadow:0 0 12px rgba(216,180,90,.9)}.root-connection span::before,.root-connection span::after{content:"";position:absolute;top:8px;width:42%;height:18px;border-bottom:1px solid rgba(216,180,90,.52);filter:drop-shadow(0 0 6px rgba(255,194,55,.25))}.root-connection span::before{left:3%;border-radius:0 0 55% 0;transform:skewX(-16deg)}.root-connection span::after{right:3%;border-radius:0 0 0 55%;transform:skewX(16deg)}
+.good-news-ticker{flex:0 0 auto;display:flex;align-items:center;gap:12px;min-height:38px;border:1px solid rgba(215,183,86,.42);border-radius:15px;background:linear-gradient(90deg,rgba(12,8,3,.95),rgba(35,21,5,.82),rgba(12,8,3,.95));box-shadow:0 0 18px rgba(215,183,86,.10);overflow:hidden;padding:6px 10px;color:var(--white)}.good-news-ticker strong{flex:0 0 auto;color:var(--bright);font-size:.78rem;letter-spacing:.09em;text-transform:uppercase;padding:7px 12px;border-right:1px solid rgba(215,183,86,.35);text-shadow:0 0 8px rgba(216,180,90,.35)}.ticker-window{flex:1 1 auto;min-width:0;overflow:hidden;white-space:nowrap}.ticker-run{display:inline-flex;gap:34px;align-items:center;padding-left:100%;animation:tickerFlow 34s linear infinite}.ticker-run span{font-size:.88rem;color:#f4e6c2}.good-news-ticker:hover .ticker-run{animation-play-state:paused}.good-news-ticker em{flex:0 0 auto;font-style:normal;color:var(--bright);border:1px solid rgba(216,180,90,.55);border-radius:10px;padding:5px 9px;font-size:.78rem;box-shadow:0 0 10px rgba(216,180,90,.13)}@keyframes tickerFlow{0%{transform:translateX(0)}100%{transform:translateX(-100%)}}
+@media(max-width:860px){.root-connection{bottom:46px;left:6%;right:6%;opacity:.7}.good-news-ticker{min-height:36px}.good-news-ticker strong{font-size:.7rem;padding:6px 8px}.ticker-run span{font-size:.8rem}}
 
-/* Tablet and mobile pacing */
-@media (max-width:1023px){
-  .ticker{animation-duration:50s;}
+
+/* Single-header repair: the Tree image carries the visual nav; these links are transparent hotspots only. */
+.top-image img{display:block;width:100%;height:clamp(245px,29vh,323px);object-fit:cover;object-position:center top}.tree-nav{display:none!important}.root-connection{display:none!important}.header-hotspots{position:absolute;left:0;right:0;top:0;bottom:0;z-index:6;pointer-events:none}.header-hotspots a{position:absolute;display:block;text-indent:-9999px;overflow:hidden;white-space:nowrap;border:0!important;background:transparent!important;box-shadow:none!important;pointer-events:auto}.hs-home{left:26.8%;top:66.5%;width:7.7%;height:14%}.hs-archive{left:36.1%;top:66.5%;width:10.4%;height:14%}.hs-categories{left:47.3%;top:66.5%;width:12.7%;height:14%}.hs-location{left:61.0%;top:66.5%;width:10.8%;height:14%}.hs-about{left:72.8%;top:66.5%;width:8.4%;height:14%}
+.ticker-overlay{position:absolute;left:0;right:0;bottom:0;z-index:5;height:18.4%;min-height:38px;display:flex;align-items:center;gap:12px;border-top:1px solid rgba(215,183,86,.42);background:linear-gradient(90deg,rgba(8,5,2,.96),rgba(27,16,4,.90),rgba(8,5,2,.96));box-shadow:0 -4px 18px rgba(0,0,0,.35);overflow:hidden;padding:5px 10px;color:var(--white)}.ticker-overlay strong{flex:0 0 auto;color:var(--bright);font-size:.78rem;letter-spacing:.09em;text-transform:uppercase;padding:7px 12px;border-right:1px solid rgba(215,183,86,.35);text-shadow:0 0 8px rgba(216,180,90,.35)}.ticker-window{flex:1 1 auto;min-width:0;overflow:hidden;white-space:nowrap}.ticker-run{display:inline-flex;gap:34px;align-items:center;padding-left:100%;animation:tickerFlow 34s linear infinite}.ticker-run span{font-size:.88rem;color:#f4e6c2}.ticker-overlay:hover .ticker-run{animation-play-state:paused}.ticker-overlay em{flex:0 0 auto;font-style:normal;color:var(--bright);border:1px solid rgba(216,180,90,.55);border-radius:10px;padding:5px 9px;font-size:.78rem;box-shadow:0 0 10px rgba(216,180,90,.13)}.good-news-ticker{display:none!important}@keyframes tickerFlow{0%{transform:translateX(0)}100%{transform:translateX(-100%)}}
+@media(max-width:860px){.top-image img{height:clamp(185px,30vw,235px)}.ticker-overlay{height:20%;min-height:34px}.ticker-overlay strong{font-size:.64rem;padding:5px 7px}.ticker-run span{font-size:.76rem}.header-hotspots a{top:64.5%;height:15%}}
+
+
+/* Clean nav-line repair: cover only the faint root lines crossing the nav text, keep one visible header nav. */
+.top-image::before{content:"";position:absolute;left:18.8%;right:18.8%;top:63.6%;height:17.1%;z-index:4;pointer-events:none;background:linear-gradient(90deg,rgba(5,4,3,0),rgba(5,4,3,.92) 12%,rgba(5,4,3,.96) 50%,rgba(5,4,3,.92) 88%,rgba(5,4,3,0));border-top:1px solid rgba(215,183,86,.10);border-bottom:1px solid rgba(215,183,86,.18);box-shadow:0 0 18px rgba(0,0,0,.35)}
+.top-image::after{content:"";position:absolute;left:23%;right:23%;top:80.4%;height:1px;z-index:5;pointer-events:none;background:linear-gradient(90deg,transparent,rgba(216,180,90,.42) 20%,rgba(216,180,90,.52) 50%,rgba(216,180,90,.42) 80%,transparent);box-shadow:0 0 10px rgba(216,180,90,.30)}
+.header-hotspots{z-index:7!important;pointer-events:none!important}.header-hotspots a{text-indent:0!important;overflow:visible!important;white-space:nowrap!important;display:flex!important;align-items:center!important;justify-content:center!important;color:#ffe88c!important;text-decoration:none!important;border:1px solid rgba(216,180,90,.42)!important;border-radius:999px!important;background:rgba(10,7,3,.58)!important;box-shadow:0 0 12px rgba(216,180,90,.12),inset 0 0 0 1px rgba(255,255,255,.04)!important;font-size:clamp(.62rem,.82vw,.9rem)!important;letter-spacing:.045em!important;font-weight:650!important;text-shadow:0 0 8px rgba(216,180,90,.28)!important;pointer-events:auto!important}.header-hotspots a:hover,.header-hotspots a:focus{background:rgba(216,180,90,.12)!important;box-shadow:0 0 15px rgba(216,180,90,.22)!important;outline:none!important}
+@media(max-width:860px){.top-image::before{left:12%;right:12%;top:62.2%;height:19%}.top-image::after{left:16%;right:16%;top:81.4%}.header-hotspots a{font-size:.62rem!important}}
+
+
+/* Tree of Life header balance + bottom unity polish */
+.top-image img{display:block;width:100%;height:auto!important;max-height:none!important;object-fit:contain!important;object-position:center top;background:#050403}
+.panel3,.about-grid{position:relative;isolation:isolate}
+.panel3::before,.about-grid::before{content:"";position:absolute;left:8%;right:8%;top:16px;height:34px;pointer-events:none;z-index:0;background:linear-gradient(90deg,transparent,rgba(215,183,86,.18) 12%,rgba(238,210,130,.66) 50%,rgba(215,183,86,.18) 88%,transparent);box-shadow:0 0 14px rgba(215,183,86,.10)}
+.panel3::after,.about-grid::after{content:"✦";position:absolute;left:50%;top:6px;transform:translateX(-50%);color:var(--bright);font-size:14px;line-height:1;pointer-events:none;z-index:0;text-shadow:0 0 10px rgba(216,180,90,.35)}
+.card{position:relative;z-index:1;background:linear-gradient(180deg,rgba(20,13,4,.95),rgba(7,5,3,.94));box-shadow:inset 0 0 0 1px rgba(216,180,90,.06),0 14px 34px rgba(0,0,0,.28),0 0 18px rgba(216,180,90,.04)}
+.card::before{content:"";position:absolute;inset:0;border-radius:20px;pointer-events:none;background:radial-gradient(circle at top center,rgba(216,180,90,.12),transparent 38%),linear-gradient(180deg,rgba(255,220,120,.04),transparent 22%);opacity:.95}
+.card-head{position:relative;padding:15px 16px 11px}
+.card-head::after{content:"";position:absolute;left:16px;right:16px;bottom:0;height:1px;background:linear-gradient(90deg,transparent,rgba(215,183,86,.52),transparent)}
+.card-title{text-shadow:0 0 10px rgba(216,180,90,.16);letter-spacing:.02em}
+.page-title{box-shadow:inset 0 0 0 1px rgba(216,180,90,.05),0 10px 24px rgba(0,0,0,.18)}
+.story-btn,.edition-btn,.group-btn{background:linear-gradient(180deg,rgba(216,180,90,.08),rgba(216,180,90,.04));transition:background .18s ease,border-color .18s ease,box-shadow .18s ease,transform .18s ease}
+.story-btn:hover,.edition-btn:hover,.group-btn:hover,.story-btn.active,.edition-btn.active,.group-btn.active{transform:translateY(-1px)}
+.story-btn.active strong::before,.edition-btn.active strong::before,.group-btn.active strong::before{content:"✦ ";color:var(--bright)}
+.source-box{box-shadow:inset 0 0 0 1px rgba(216,180,90,.05)}
+@media(max-width:860px){.panel3::before,.panel3::after,.about-grid::before,.about-grid::after{display:none}}
+
+
+/* Universal card-header polish: sticky gold control bars */
+.card{
+  overflow:hidden;
 }
-@media (max-width:600px){
-  .ticker{animation-duration:65s;}
-  .ticker span{padding:14px 28px;font-size:13px;letter-spacing:.8px;}
-}
-
-/* Pause on hover for desktop/laptop pointers */
-@media (hover:hover) and (pointer:fine){
-  .ticker:hover{animation-play-state:paused;}
-}
-header{border-bottom:2px solid var(--border);padding:24px 16px;text-align:center}
-.brand{font-size:36px;font-weight:600;letter-spacing:.8px;color:var(--ring)}
-.tagline{margin-top:6px;font-size:14px;letter-spacing:2px;text-transform:uppercase;color:#fff}
-.nav{margin-top:18px}
-.nav a{display:inline-block;margin:0 8px;padding:8px 16px;border:2px solid var(--border);border-radius:20px;font-family:system-ui;font-size:12px;color:#fff}
-.nav a.active,.nav a:hover{background:var(--ring);color:#000}
-section{max-width:900px;margin:0 auto;padding:30px 16px}
-.card{border:2px solid var(--border);border-radius:16px;padding:22px;margin-bottom:22px;background:#0b0b0b}
-.card h3{margin:6px 0 16px;font-size:22px;color:var(--ring);text-align:center;line-height:1.35}
-
-.story-meta{margin:14px 0 0;padding:16px 18px;border:2px solid rgba(255,215,0,.82);border-radius:14px;background:linear-gradient(180deg,rgba(255,215,0,.08),rgba(255,215,0,.025));box-shadow:inset 0 0 0 1px rgba(255,255,255,.07),0 0 20px rgba(255,215,0,.10)}
-.story-meta p{margin:11px 0;padding:12px 14px;border:1px solid rgba(255,215,0,.42);border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,.045),rgba(0,0,0,.16));box-shadow:inset 0 0 0 1px rgba(255,255,255,.045),0 0 12px rgba(255,215,0,.045)}
-.story-meta p:first-child{border-color:rgba(255,215,0,.62);background:linear-gradient(180deg,rgba(255,215,0,.095),rgba(0,0,0,.18))}
-.story-meta p:last-child{border-color:rgba(179,255,196,.38);background:linear-gradient(180deg,rgba(179,255,196,.055),rgba(0,0,0,.16))}
-.field-label{display:inline-block;margin-right:7px;padding:2px 9px;border-radius:999px;font-family:system-ui;font-size:11px;font-weight:800;letter-spacing:.7px;text-transform:uppercase}
-.label-category{background:#FFD700;color:#000}
-.label-cat{background:rgba(255,215,0,.12);color:#FFE680;border:1px solid rgba(255,215,0,.42)}
-.label-summary{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.3)}
-.label-why{background:rgba(255,215,0,.16);color:#FFE680;border:1px solid rgba(255,215,0,.42)}
-.label-ripple{background:rgba(139,211,255,.15);color:#bfe9ff;border:1px solid rgba(139,211,255,.42)}
-.label-source{background:rgba(179,255,196,.13);color:#c9ffd4;border:1px solid rgba(179,255,196,.42)}
-.source-row a{font-weight:700;border-bottom:1px solid rgba(255,215,0,.55)}
-.edition-title{text-align:center;margin-bottom:30px}
-.edition-title h2{color:var(--ring);margin:0}
-.edition-title p{margin:8px 0 0 0;color:#fff}
-footer{border-top:2px solid var(--border);margin-top:40px;padding:24px 16px;text-align:center;font-size:12px;color:#888}
-.footer-edition{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#bfae4d;margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid #333;}
-
-/* Editorial front-door panel — May 30 final polish */
-.mission-wrap{max-width:980px;margin:0 auto;padding:28px 16px 6px}
-.mission-panel{position:relative;overflow:hidden;border:2px solid rgba(255,215,0,.82);border-radius:22px;background:linear-gradient(180deg,rgba(255,215,0,.095),rgba(11,11,11,.96) 38%,#050505 100%);box-shadow:0 0 22px rgba(255,215,0,.10),inset 0 0 0 1px rgba(255,255,255,.055);padding:26px 22px;text-align:center}
-.mission-panel:before,.mission-panel:after{content:"";position:absolute;top:22px;width:120px;height:1px;background:linear-gradient(90deg,transparent,rgba(255,215,0,.55),transparent)}
-.mission-panel:before{left:22px}.mission-panel:after{right:22px}
-.mission-kicker{display:inline-block;margin:0 0 12px;padding:4px 12px;border:1px solid rgba(255,215,0,.65);border-radius:999px;color:#FFD700;background:rgba(255,215,0,.08);font-family:system-ui;font-size:11px;font-weight:900;letter-spacing:1.4px;text-transform:uppercase}
-.mission-panel h1{margin:0;color:#FFD700;font-size:clamp(28px,5.5vw,52px);line-height:1.08;letter-spacing:.7px}
-.mission-panel .mission-sub{max-width:760px;margin:14px auto 0;color:#f6f0cf;font-size:clamp(16px,2.45vw,20px);line-height:1.5}
-.editor-line{max-width:720px;margin:10px auto 0;color:#d9c76a;font-family:system-ui;font-size:13px;letter-spacing:.3px}
-.mission-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:22px auto 0;max-width:850px;text-align:left}
-.mission-card{border:1px solid rgba(255,215,0,.52);border-radius:16px;background:rgba(0,0,0,.34);padding:16px;box-shadow:inset 0 0 0 1px rgba(255,255,255,.035)}
-.mission-card strong{display:block;color:#FFD700;font-family:system-ui;font-size:12px;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px}
-.mission-card p{margin:0;color:#ddd;font-size:14px;line-height:1.5}
-.mission-note{max-width:760px;margin:18px auto 0;color:#bfae4d;font-family:system-ui;font-size:12px;letter-spacing:.8px;text-transform:uppercase}
-.edition-anchor{display:inline-block;margin-top:20px;padding:9px 18px;border:2px solid #FFD700;border-radius:999px;color:#000;background:#FFD700;font-family:system-ui;font-size:12px;font-weight:900;letter-spacing:1px;text-transform:uppercase;box-shadow:0 0 16px rgba(255,215,0,.16)}
-.edition-anchor:hover{filter:brightness(1.08);transform:translateY(-1px)}
-@media (max-width:760px){.mission-wrap{padding-top:22px}.mission-panel{padding:24px 16px}.mission-panel:before,.mission-panel:after{display:none}.mission-grid{grid-template-columns:1fr}.mission-card{text-align:center}.mission-note{font-size:11px}.edition-anchor{width:100%;max-width:260px}}
-.back-to-top{position:fixed;right:18px;bottom:22px;z-index:70;display:inline-flex;align-items:center;justify-content:center;gap:6px;min-width:78px;padding:10px 14px;border:2px solid rgba(255,215,0,.95);border-radius:999px;background:rgba(0,0,0,.84);color:#FFD700;font-family:system-ui;font-size:12px;font-weight:900;letter-spacing:.8px;text-transform:uppercase;box-shadow:0 0 18px rgba(255,215,0,.18),inset 0 0 0 1px rgba(255,255,255,.08);backdrop-filter:blur(8px)}
-.back-to-top:hover,.back-to-top:focus{background:#FFD700;color:#000;outline:none;box-shadow:0 0 24px rgba(255,215,0,.32)}
-@media (max-width:640px){.back-to-top{right:12px;bottom:14px;min-width:64px;padding:9px 12px;font-size:11px}}
-
-
-
-
-/* Category icon polish */
-.category-value{display:inline-flex;align-items:center;gap:8px;vertical-align:middle;flex-wrap:wrap}
-.category-icon{display:inline-flex;align-items:center;justify-content:center;width:24px;height:24px;border:1px solid rgba(255,215,0,.42);border-radius:999px;background:rgba(255,215,0,.085);box-shadow:inset 0 0 0 1px rgba(255,255,255,.03),0 0 10px rgba(255,215,0,.08);color:#FFD700;flex:0 0 24px}
-.category-icon svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.category-text{color:#f4efcf;font-weight:600}
-@media (max-width:640px){.category-value{gap:7px}.category-icon{width:22px;height:22px;flex-basis:22px}.category-icon svg{width:13px;height:13px}}
-
-
-/* Final readability polish */
-.reading-progress{
-  position:fixed;
+.card-head{
+  position:sticky;
   top:0;
-  left:0;
-  width:100%;
-  height:4px;
-  z-index:100;
-  background:rgba(255,215,0,.12);
-  pointer-events:none;
+  z-index:5;
+  padding:12px 14px 10px;
+  background:
+    linear-gradient(180deg,rgba(32,21,7,.98),rgba(8,6,3,.96)),
+    radial-gradient(circle at top center,rgba(216,180,90,.16),transparent 45%);
+  border-bottom:1px solid rgba(215,183,86,.58);
+  box-shadow:
+    0 8px 18px rgba(0,0,0,.36),
+    inset 0 1px 0 rgba(255,230,150,.12),
+    inset 0 -1px 0 rgba(216,180,90,.18);
 }
-.reading-progress-bar{
-  display:block;
-  width:0%;
-  height:100%;
-  background:linear-gradient(90deg,#FFD700,#fff2a6,#FFD700);
-  box-shadow:0 0 12px rgba(255,215,0,.45);
-  transition:width .08s linear;
+.card-head::before{
+  content:"";
+  position:absolute;
+  left:14px;
+  right:14px;
+  top:0;
+  height:1px;
+  background:linear-gradient(90deg,transparent,rgba(240,210,120,.76),transparent);
 }
-.story-count{
-  margin:8px 0 0;
-  color:#bfae4d;
-  font-family:system-ui;
-  font-size:12px;
-  font-weight:800;
-  letter-spacing:1.1px;
+.card-head::after{
+  content:"";
+  position:absolute;
+  left:14px;
+  right:14px;
+  bottom:-1px;
+  height:1px;
+  background:linear-gradient(90deg,transparent,rgba(240,210,120,.62),transparent);
+}
+.card-title{
+  display:flex;
+  align-items:center;
+  gap:7px;
+  margin:0;
+  color:var(--bright);
+  font-size:.92rem;
+  line-height:1.1;
+  letter-spacing:.105em;
   text-transform:uppercase;
+  text-shadow:0 0 12px rgba(216,180,90,.22);
 }
-.source-transparency-note{
-  max-width:860px;
-  margin:8px auto 0;
-  padding:16px 18px;
-  border:1px solid rgba(255,215,0,.54);
-  border-radius:16px;
-  background:linear-gradient(180deg,rgba(255,215,0,.06),rgba(0,0,0,.35));
-  color:#d8d0a0;
-  font-family:system-ui;
-  font-size:13px;
-  line-height:1.55;
-  text-align:center;
-  box-shadow:inset 0 0 0 1px rgba(255,255,255,.035);
+.card-title::before{
+  content:"✦";
+  flex:0 0 auto;
+  color:var(--bright);
+  font-size:.82rem;
+  text-shadow:0 0 10px rgba(216,180,90,.52);
 }
-.source-transparency-note strong{
-  color:#FFD700;
-  letter-spacing:.8px;
+.card-sub{
+  margin:5px 0 0 22px;
+  color:var(--muted);
+  font-size:.74rem;
+  line-height:1.25;
+  letter-spacing:.035em;
+}
+.scroll{
+  padding-top:14px;
+}
+.about-grid .card{
+  padding:0;
+}
+.about-grid .card h2{
+  position:sticky;
+  top:0;
+  z-index:5;
+  margin:0;
+  padding:13px 16px 12px;
+  color:var(--bright);
+  font-size:.92rem;
+  line-height:1.1;
+  letter-spacing:.105em;
   text-transform:uppercase;
+  background:
+    linear-gradient(180deg,rgba(32,21,7,.98),rgba(8,6,3,.96)),
+    radial-gradient(circle at top center,rgba(216,180,90,.16),transparent 45%);
+  border-bottom:1px solid rgba(215,183,86,.58);
+  box-shadow:
+    0 8px 18px rgba(0,0,0,.36),
+    inset 0 1px 0 rgba(255,230,150,.12),
+    inset 0 -1px 0 rgba(216,180,90,.18);
 }
-@media (max-width:640px){
-  .reading-progress{height:3px}
-  .story-count{font-size:11px}
-  .source-transparency-note{font-size:12px;margin-top:2px}
+.about-grid .card h2::before{
+  content:"✦ ";
+  color:var(--bright);
+  text-shadow:0 0 10px rgba(216,180,90,.52);
+}
+.about-grid .card p{
+  padding:0 18px;
+}
+.about-grid .card p:first-of-type{
+  margin-top:16px;
 }
 
-</style>
-</head>
-<body id="top">
-<div aria-hidden="true" class="reading-progress"><span class="reading-progress-bar" id="readingProgressBar"></span></div>
-<a aria-label="Back to top" class="back-to-top" href="#top">↑ Top</a>
-<div class="ticker-wrap">
-<div class="ticker">
-<span>Good Samaritans still show up</span>
-<span>Technology can serve rescue and repair</span>
-<span>Nature recovers when protected</span>
-<span>Health access is progress</span>
-<span>Young people and communities keep building</span>
-<span>Measured optimism · June 3, 2026</span>
-</div>
-</div>
-<header>
-<div class="brand">EMPERICAL</div>
-<div class="tagline">Ethical · Real · Clear</div>
-<nav class="nav"><a class="active" href="index.html">Home</a><a href="archive.html">Archive</a><a href="categories.html">Categories</a><a href="location.html">Location</a><a href="about.html">About</a></nav>
-</header>
-<div class="mission-wrap">
-<div aria-label="Emperical editorial introduction" class="mission-panel">
-<div class="mission-kicker">Editor’s note</div>
-<h1>Real progress, clearly measured.</h1>
-<p class="mission-sub">Emperical gathers grounded stories of repair, innovation, kindness, and system-level improvement — not noise, not outrage, but evidence that people are still building.</p>
-<p class="editor-line">A measured record of progress, repair, and human effort.</p>
-<div class="mission-grid">
-<div class="mission-card">
-<strong>Ethical</strong>
-<p>Stories are summarized in original words, with visible sources and no copied article text.</p>
-</div>
-<div class="mission-card">
-<strong>Real</strong>
-<p>Each entry points to something concrete: action, discovery, repair, access, or measurable change.</p>
-</div>
-<div class="mission-card">
-<strong>Clear</strong>
-<p>Every card explains what happened, why it matters, and what ripple it may leave behind.</p>
-</div>
-</div>
-<p class="mission-note">Current homepage editions are manual editorial releases, not an auto-updating feed.</p>
-<a class="edition-anchor" href="#current-edition">Read current edition ↓</a>
-</div>
-</div>
-<section id="current-edition">
-<div class="edition-title">
-<h2>Latest Edition · June 3, 2026</h2>
-<p class="story-count">15 new independently summarized progress stories</p>
-</div>
-<div class="card" id="a-concert-finds-its-rescue-in-the-audience">
-<h3 id="a-concert-finds-its-rescue-in-the-audience">A Concert Finds Its Rescue in the Audience</h3>
-<div class="story-meta">
-<p><span class="field-label label-category">Category</span> Arts &amp; Culture</p><p><span class="field-label label-cat">Region</span> <span class="category-value">Australia / Oceania</span></p>
-<p><span class="field-label label-summary">Summary</span> When a live orchestral performance in Sydney suddenly lost its pianist, the evening could have ended in disappointment. Instead, the conductor opened the door for someone in the crowd to help, and a young audience member stepped forward with the ability to read and play the demanding part. What might have been remembered as a breakdown became a public example of preparation meeting an unexpected opening.</p>
-<p><span class="field-label label-why">Why It Matters</span> The value here is not only the musical save. It shows how skill often grows quietly before anyone sees it, and how a community can recover when people are trusted to contribute. Public art can look polished from the outside, but moments like this reveal the human courage and flexibility that keep it alive.</p>
-<p><span class="field-label label-ripple">Ripple Effect</span> The wider effect is encouragement. A student, hobbyist, or young musician reading this may feel that practice is never wasted, even when no stage is promised. It also reminds teachers, conductors, and audiences that hidden talent may be closer than expected when pressure arrives.</p>
-<p class="source-row"><span class="field-label label-source">Source</span> <a href="https://www.goodnewsnetwork.org/conductor-blown-away-after-guy-in-audience-steps-in-for-pianist-during-la-la-land-concert-mishap-watch/" rel="noopener" target="_blank">Good News Network</a></p>
-</div>
-</div>
-<div class="card" id="a-roadside-rescue-turns-harm-into-care">
-<h3 id="a-roadside-rescue-turns-harm-into-care">A Roadside Rescue Turns Harm Into Care</h3>
-<div class="story-meta">
-<p><span class="field-label label-category">Category</span> Animal Rescue</p><p><span class="field-label label-cat">Region</span> <span class="category-value">United States</span></p>
-<p><span class="field-label label-summary">Summary</span> In Wisconsin, a state trooper helped save a kitten after the animal was reportedly thrown from a moving vehicle. The rescue moved the kitten out of immediate danger and toward care, changing what began as a harmful act into a chance for protection and recovery. It is a small story, but it carries the force of someone stopping when a vulnerable life needed help.</p>
-<p><span class="field-label label-why">Why It Matters</span> This matters because many acts of kindness begin as attention. Abuse and abandonment can pass unnoticed when people look away, but a single intervention can shift the outcome. The story also shows that public service can include compassion in moments that are not part of a planned emergency.</p>
-<p><span class="field-label label-ripple">Ripple Effect</span> The ripple is practical: more people may report animal cruelty, slow down for animals in distress, support shelters, or choose adoption. It strengthens the idea that rescue is not only an institution; sometimes it is a decision made on the side of the road.</p>
-<p class="source-row"><span class="field-label label-source">Source</span> <a href="https://www.goodnewsnetwork.org/wisconsin-trooper-has-a-new-pawtner-a-kitten-he-saved-from-the-side-of-the-road/" rel="noopener" target="_blank">Good News Network</a></p>
-</div>
-</div>
-<div class="card" id="old-building-materials-get-a-second-life-in-london">
-<h3 id="old-building-materials-get-a-second-life-in-london">Old Building Materials Get a Second Life in London</h3>
-<div class="story-meta">
-<p><span class="field-label label-category">Category</span> Circular Economy</p><p><span class="field-label label-cat">Region</span> <span class="category-value">United Kingdom</span></p>
-<p><span class="field-label label-summary">Summary</span> A reuse effort in London is keeping usable construction materials from being treated as waste. Items such as timber, brick, glass, metal, and fixtures can be recovered from buildings and redirected into new projects. The work reframes demolition: instead of seeing an old structure only as debris, it treats the useful pieces as resources with history and remaining value.</p>
-<p><span class="field-label label-why">Why It Matters</span> Construction waste is a major challenge for growing cities, and reuse offers a practical way to reduce the pressure. This kind of project connects environmental responsibility with cost awareness, local craft, and urban memory. It proves that progress does not always require starting from zero.</p>
-<p><span class="field-label label-ripple">Ripple Effect</span> If more builders, designers, and property owners adopt this mindset, cities could reduce waste while creating a stronger market for salvaged materials. The ripple could touch architecture, job training, neighborhood character, and the way people think about what is worth saving.</p>
-<p class="source-row"><span class="field-label label-source">Source</span> <a href="https://www.goodnewsnetwork.org/rescuing-londons-precious-building-materials-diverting-them-from-dumps-for-reuse/" rel="noopener" target="_blank">Good News Network</a></p>
-</div>
-</div>
-<div class="card" id="right-whale-calves-offer-a-rare-sign-of-recovery">
-<h3 id="right-whale-calves-offer-a-rare-sign-of-recovery">Right Whale Calves Offer a Rare Sign of Recovery</h3>
-<div class="story-meta">
-<p><span class="field-label label-category">Category</span> Conservation</p><p><span class="field-label label-cat">Region</span> <span class="category-value">Ocean / Marine</span></p>
-<p><span class="field-label label-summary">Summary</span> The latest North Atlantic right whale calving season brought the strongest reported number of calves in many years, giving conservationists a much-needed sign of possibility. The species remains endangered and continues to face serious risks from vessels, fishing gear, and changing ocean conditions. Still, each calf represents evidence that recovery is not closed off.</p>
-<p><span class="field-label label-why">Why It Matters</span> This matters because endangered-species work is often slow, difficult, and emotionally heavy. A better calf count does not erase the danger, but it gives scientists, regulators, and communities a signal that protection can still matter. Hope is strongest when it is tied to real biological evidence.</p>
-<p><span class="field-label label-ripple">Ripple Effect</span> The ripple effect may be renewed attention to safer shipping practices, stronger monitoring, fishing-gear innovation, and public support for marine protection. When people see signs of survival, they are more likely to keep investing in the hard work that survival requires.</p>
-<p class="source-row"><span class="field-label label-source">Source</span> <a href="https://www.goodnewsnetwork.org/2026-sees-the-most-right-whale-calves-born-in-one-season-since-2009/" rel="noopener" target="_blank">Good News Network</a></p>
-</div>
-</div>
-<div class="card" id="fish-printing-preserves-catch-craft-and-memory">
-<h3 id="fish-printing-preserves-catch-craft-and-memory">Fish Printing Preserves Catch, Craft, and Memory</h3>
-<div class="story-meta">
-<p><span class="field-label label-category">Category</span> Culture &amp; Heritage</p><p><span class="field-label label-cat">Region</span> <span class="category-value">Asia</span></p>
-<p><span class="field-label label-summary">Summary</span> Gyotaku, a Japanese method of making prints from fish, began as a practical way to record a catch and later grew into an expressive art. The practice carries details of shape, scale, and presence while also preserving a relationship between people and the natural world. It turns documentation into something that can be studied, displayed, and remembered.</p>
-<p><span class="field-label label-why">Why It Matters</span> The story matters because traditional knowledge can hold both utility and beauty. In a digital age, older hands-on practices remind people that careful observation is itself a form of respect. Gyotaku also sits at the meeting point of food culture, ecology, design, and historical recordkeeping.</p>
-<p><span class="field-label label-ripple">Ripple Effect</span> The wider effect is cultural continuity. Artists, educators, fishers, and museums can use practices like this to teach patience, biodiversity, and heritage. It also shows how a simple record of daily life can become a bridge between generations.</p>
-<p class="source-row"><span class="field-label label-source">Source</span> <a href="https://www.goodnewsnetwork.org/how-japanese-fish-printing-grew-from-documenting-days-catch-to-acclaimed-artform/" rel="noopener" target="_blank">Good News Network</a></p>
-</div>
-</div>
-<div class="card" id="wildflowers-endure-in-soil-marked-by-mining">
-<h3 id="wildflowers-endure-in-soil-marked-by-mining">Wildflowers Endure in Soil Marked by Mining</h3>
-<div class="story-meta">
-<p><span class="field-label label-category">Category</span> Nature &amp; Repair</p><p><span class="field-label label-cat">Region</span> <span class="category-value">United Kingdom</span></p>
-<p><span class="field-label label-summary">Summary</span> In northern England, certain rare plants are surviving in ground affected by historic lead mining. Species adapted to metal-rich soils can grow where many other plants struggle, creating unusual habitats in places shaped by industrial damage. Their presence does not make pollution harmless, but it shows nature finding specialized ways to persist.</p>
-<p><span class="field-label label-why">Why It Matters</span> This matters because damaged landscapes are not always empty landscapes. Studying plants that tolerate contaminated soil can help scientists and conservationists understand resilience, restoration, and the limits of recovery. The story holds both caution and wonder at the same time.</p>
-<p><span class="field-label label-ripple">Ripple Effect</span> The ripple could influence conservation planning, mine-land restoration, and public education about ecological adaptation. These plants may help communities see scarred land with more complexity: not as fully healed, but as places where careful protection and learning are still possible.</p>
-<p class="source-row"><span class="field-label label-source">Source</span> <a href="https://www.theguardian.com/environment/2026/may/27/blossoming-spoil-heaps-plants-metallophytes-heavy-metal-aoe" rel="noopener" target="_blank">The Guardian</a></p>
-</div>
-</div>
-<div class="card" id="papua-new-guinea-shows-long-term-progress-against-malaria">
-<h3 id="papua-new-guinea-shows-long-term-progress-against-malaria">Papua New Guinea Shows Long-Term Progress Against Malaria</h3>
-<div class="story-meta">
-<p><span class="field-label label-category">Category</span> Public Health</p><p><span class="field-label label-cat">Region</span> <span class="category-value">Africa</span></p>
-<p><span class="field-label label-summary">Summary</span> Papua New Guinea has reported a major decline in malaria deaths over time, pointing to the impact of steady public-health work. The progress reflects many combined actions rather than one dramatic breakthrough: prevention, testing, treatment access, bed nets, surveillance, and local health systems all play a role. It is the kind of improvement that grows through persistence.</p>
-<p><span class="field-label label-why">Why It Matters</span> The lesson is that public health success can be quiet before it becomes visible in the numbers. Malaria remains a serious threat in many regions, so reductions in deaths show what consistent investment can achieve. It also honors the health workers and community efforts that rarely receive headline attention.</p>
-<p><span class="field-label label-ripple">Ripple Effect</span> The ripple effect could be stronger support for prevention programs, better funding continuity, and more confidence in locally grounded health strategies. When progress is measured clearly, it can help other regions adapt the methods that work.</p>
-<p class="source-row"><span class="field-label label-source">Source</span> <a href="https://www.goodnewsnetwork.org/no-vaccine-no-problem-papua-new-guinea-malaria-deaths-fall-by-92/" rel="noopener" target="_blank">Good News Network</a></p>
-</div>
-</div>
-<div class="card" id="teen-innovators-test-a-natural-approach-to-microplastics">
-<h3 id="teen-innovators-test-a-natural-approach-to-microplastics">Teen Innovators Test a Natural Approach to Microplastics</h3>
-<div class="story-meta">
-<p><span class="field-label label-category">Category</span> Youth Innovation</p><p><span class="field-label label-cat">Region</span> <span class="category-value">Ocean / Marine</span></p>
-<p><span class="field-label label-summary">Summary</span> Three teenage students earned recognition for an idea that uses tamarind-based material to help gather microplastics from water so they can be removed more easily. The concept is still part of an innovation journey, not a finished global fix, but it shows young scientists applying accessible materials to a major pollution problem. Their work turns concern into experimentation.</p>
-<p><span class="field-label label-why">Why It Matters</span> This matters because environmental challenges need many types of solutions, including low-cost ideas that can be tested and improved. Youth-led invention also changes the emotional tone around pollution: instead of only fear, it brings agency, curiosity, and problem-solving.</p>
-<p><span class="field-label label-ripple">Ripple Effect</span> The ripple may reach classrooms, science fairs, water researchers, and communities searching for practical cleanup tools. Even if the final technology evolves, the example can inspire more young people to treat science as something they can participate in now.</p>
-<p class="source-row"><span class="field-label label-source">Source</span> <a href="https://www.goodnewsnetwork.org/3-teens-win-global-earth-prize-for-inventing-tamarind-powder-that-easily-removes-microplastics/" rel="noopener" target="_blank">Good News Network</a></p>
-</div>
-</div>
-<div class="card" id="crested-ibises-take-flight-again-in-hakui">
-<h3 id="crested-ibises-take-flight-again-in-hakui">Crested Ibises Take Flight Again in Hakui</h3>
-<div class="story-meta">
-<p><span class="field-label label-category">Category</span> Wildlife Return</p><p><span class="field-label label-cat">Region</span> <span class="category-value">Asia</span></p>
-<p><span class="field-label label-summary">Summary</span> Eight crested ibises were released in Hakui, Japan, returning a species that had vanished from the country’s main island decades earlier. The release came after years of breeding, cooperation, and conservation planning. For local residents, the birds’ flight carried extra meaning in a region still healing from the 2024 Noto earthquake.</p>
-<p><span class="field-label label-why">Why It Matters</span> This matters because reintroduction work requires patience across many years. It is not only about releasing animals; it depends on habitat, monitoring, local trust, and international cooperation. The story shows that extinction from a place does not always have to be permanent.</p>
-<p><span class="field-label label-ripple">Ripple Effect</span> The ripple may strengthen community support for habitat protection and inspire other restoration projects. When people witness a species return, conservation becomes less abstract and more personal, tied to place, memory, and recovery.</p>
-<p class="source-row"><span class="field-label label-source">Source</span> <a href="https://apnews.com/article/japan-crested-ibis-release-b45a911d3a735ca280686ce3c04f5bd4" rel="noopener" target="_blank">Associated Press</a></p>
-</div>
-</div>
-<div class="card" id="clean-energy-progress-shows-up-in-savings-and-jobs">
-<h3 id="clean-energy-progress-shows-up-in-savings-and-jobs">Clean Energy Progress Shows Up in Savings and Jobs</h3>
-<div class="story-meta">
-<p><span class="field-label label-category">Category</span> Clean Energy</p><p><span class="field-label label-cat">Region</span> <span class="category-value">United Kingdom</span></p>
-<p><span class="field-label label-summary">Summary</span> A European progress roundup pointed to major savings from renewable energy and continued growth in green employment, including clean-energy work connected to Scotland. The story frames the energy transition as more than an environmental goal. It is also becoming part of budgets, regional economies, skills training, and long-term resilience.</p>
-<p><span class="field-label label-why">Why It Matters</span> This matters because climate progress often feels distant until people see its practical effects. Savings and jobs make the transition easier to understand for households, workers, and local leaders. They also show that cleaner energy can be part of economic planning, not separate from it.</p>
-<p><span class="field-label label-ripple">Ripple Effect</span> The ripple could be stronger public support for renewable infrastructure, training programs, and policies that connect climate action with everyday economic benefit. When clean energy is seen as both protection and opportunity, it becomes harder to dismiss as only a future ideal.</p>
-<p class="source-row"><span class="field-label label-source">Source</span> <a href="https://goodnews.eu/en/good-news/renewable-energy-saves-the-eu-over-e51-billion-green-jobs-secure-over-100000-jobs-in-scotland/" rel="noopener" target="_blank">Good News EU</a></p>
-</div>
-</div>
-<div class="card" id="the-uk-green-economy-becomes-a-major-market-force">
-<h3 id="the-uk-green-economy-becomes-a-major-market-force">The UK Green Economy Becomes a Major Market Force</h3>
-<div class="story-meta">
-<p><span class="field-label label-category">Category</span> Green Economy</p><p><span class="field-label label-cat">Region</span> <span class="category-value">United Kingdom</span></p>
-<p><span class="field-label label-summary">Summary</span> Recent reporting on the United Kingdom’s green economy placed its annual value above £100 billion, with substantial employment tied to clean-energy and net-zero-related activity. The number is important because it shows the environmental transition becoming measurable in business terms. Green growth is no longer only a campaign phrase; it is part of the country’s economic structure.</p>
-<p><span class="field-label label-why">Why It Matters</span> This matters because investment follows evidence. When a sector shows clear value and employment, governments, schools, companies, and workers can plan around it with more confidence. It also challenges the idea that climate action and economic strength must be opposites.</p>
-<p><span class="field-label label-ripple">Ripple Effect</span> The ripple could include more training pathways, stronger regional investment, better industrial planning, and wider public understanding of climate-related work. The more visible the sector becomes, the easier it is for people to see where future jobs and skills may be heading.</p>
-<p class="source-row"><span class="field-label label-source">Source</span> <a href="https://www.theguardian.com/environment/2026/jun/02/uk-green-economy-worth-more-than-100bn-a-year-net-zero" rel="noopener" target="_blank">The Guardian</a></p>
-</div>
-</div>
-<div class="card" id="britain-sets-a-steeper-2040-climate-marker">
-<h3 id="britain-sets-a-steeper-2040-climate-marker">Britain Sets a Steeper 2040 Climate Marker</h3>
-<div class="story-meta">
-<p><span class="field-label label-category">Category</span> Climate Policy</p><p><span class="field-label label-cat">Region</span> <span class="category-value">United Kingdom</span></p>
-<p><span class="field-label label-summary">Summary</span> Britain announced a target to cut greenhouse gas emissions by 87% by 2040 compared with 1990 levels. The target aligns with expert advice and the country’s broader net-zero direction, though the practical delivery will require detailed action across energy, housing, transport, industry, and public costs. It is a marker of intent that now needs execution.</p>
-<p><span class="field-label label-why">Why It Matters</span> Targets matter when they create accountability, but they only become meaningful through implementation. This story is important because it sets a clearer benchmark for the next phase of transition. It also raises the real question of how to protect households while moving faster on emissions.</p>
-<p><span class="field-label label-ripple">Ripple Effect</span> The ripple could shape infrastructure planning, investment decisions, vehicle policy, building upgrades, and political debate for years. A clear target gives institutions a direction, but public trust will depend on whether the path feels fair and practical.</p>
-<p class="source-row"><span class="field-label label-source">Source</span> <a href="https://www.reuters.com/business/energy/britain-sets-87-emissions-reduction-target-2038-2042-period-2026-06-02/" rel="noopener" target="_blank">Reuters</a></p>
-</div>
-</div>
-<div class="card" id="new-funding-targets-a-gap-in-ebola-vaccine-protection">
-<h3 id="new-funding-targets-a-gap-in-ebola-vaccine-protection">New Funding Targets a Gap in Ebola Vaccine Protection</h3>
-<div class="story-meta">
-<p><span class="field-label label-category">Category</span> Health Innovation</p><p><span class="field-label label-cat">Region</span> <span class="category-value">Africa</span></p>
-<p><span class="field-label label-summary">Summary</span> The Coalition for Epidemic Preparedness Innovations is supporting vaccine development for Ebola Bundibugyo with roughly $60 million in funding directed toward Moderna and other partners. This Ebola strain does not yet have an approved vaccine or treatment, so the work is aimed at building readiness before a larger emergency demands it. It is prevention before panic.</p>
-<p><span class="field-label label-why">Why It Matters</span> This matters because outbreak preparation often has to begin before the world is paying attention. Vaccine development takes time, testing, coordination, and sustained funding. Investing early can reduce the delay between scientific possibility and real-world response when lives are at risk.</p>
-<p><span class="field-label label-ripple">Ripple Effect</span> The ripple may strengthen outbreak preparedness, clinical research capacity, and confidence in faster vaccine development for neglected threats. It also shows that global health security depends on closing gaps for specific strains, not only responding to diseases after they spread.</p>
-<p class="source-row"><span class="field-label label-source">Source</span> <a href="https://www.reuters.com/business/healthcare-pharmaceuticals/moderna-partners-with-global-health-coalition-develop-bundibugyo-ebola-vaccine-2026-06-01/" rel="noopener" target="_blank">Reuters</a></p>
-</div>
-</div>
-<div class="card" id="who-guidance-helps-focus-ebola-trial-priorities">
-<h3 id="who-guidance-helps-focus-ebola-trial-priorities">WHO Guidance Helps Focus Ebola Trial Priorities</h3>
-<div class="story-meta">
-<p><span class="field-label label-category">Category</span> Global Health</p><p><span class="field-label label-cat">Region</span> <span class="category-value">Africa</span></p>
-<p><span class="field-label label-summary">Summary</span> A World Health Organization expert process identified candidate treatments and vaccines that should be prioritized for clinical trials against Ebola disease caused by the Bundibugyo virus. The guidance is not a finished cure, but it gives researchers and responders a clearer order of action. In a dangerous outbreak context, organized priorities can save time.</p>
-<p><span class="field-label label-why">Why It Matters</span> This matters because scientific effort can lose momentum when options are scattered. Clear trial priorities help limited resources move toward the most promising candidates. The work also supports better coordination between researchers, health agencies, and communities affected by outbreaks.</p>
-<p><span class="field-label label-ripple">Ripple Effect</span> The ripple could be faster trial preparation, more focused funding, and improved readiness if a future outbreak occurs. It also reinforces a key lesson of public health: coordination can be as important as discovery when the clock is moving.</p>
-<p class="source-row"><span class="field-label label-source">Source</span> <a href="https://www.who.int/news/item/28-05-2026-experts-convened-by-who-advise-on-candidate-treatments-and-vaccines-for-ebola-disease-caused-by-bundibugyo-virus" rel="noopener" target="_blank">World Health Organization</a></p>
-</div>
-</div>
-<div class="card" id="a-deep-water-shipwreck-opens-an-18th-century-window">
-<h3 id="a-deep-water-shipwreck-opens-an-18th-century-window">A Deep-Water Shipwreck Opens an 18th-Century Window</h3>
-<div class="story-meta">
-<p><span class="field-label label-category">Category</span> History &amp; Discovery</p><p><span class="field-label label-cat">Region</span> <span class="category-value">Ocean / Marine</span></p>
-<p><span class="field-label label-summary">Summary</span> Norwegian archaeologists recovered artifacts from a recently discovered 18th-century shipwreck in the Skagerrak, including goods that point to trade, craft, and daily life from another era. The recovery combines underwater technology with historical preservation, allowing researchers to study material culture that had remained hidden beneath the sea. The find turns the ocean floor into an archive.</p>
-<p><span class="field-label label-why">Why It Matters</span> This matters because history is not only preserved in books and buildings. Shipwrecks can hold evidence of commerce, design, migration, and ordinary objects that shaped people’s lives. Each recovered item adds texture to the story of how societies moved and exchanged goods.</p>
-<p><span class="field-label label-ripple">Ripple Effect</span> The ripple effect reaches museums, classrooms, maritime research, and public imagination. Discoveries like this can renew interest in protecting underwater heritage and remind people that the sea still contains unfinished chapters of human history.</p>
-<p class="source-row"><span class="field-label label-source">Source</span> <a href="https://www.reuters.com/science/norway-recovers-porcelain-chandeliers-18th-century-shipwreck-2026-06-01/" rel="noopener" target="_blank">Reuters</a></p>
-</div>
-</div>
-</section>
-<div aria-label="Source transparency note" class="source-transparency-note">
-<strong>Source note:</strong> Sources remain visible for transparency. Emperical does not republish articles; each story is independently summarized in original wording, with credit links kept so readers can verify the source context.
-</div>
-<footer>
-<div class="footer-edition">Latest Edition · June 3, 2026</div>
-EMPERICAL — Measured optimism. Real progress.
-</footer>
-<script id="emperical-category-icons">
-(function(){
-  const ICONS = {
-    paw: '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="8" r="2.2"/><circle cx="16" cy="8" r="2.2"/><circle cx="6.4" cy="13" r="1.8"/><circle cx="17.6" cy="13" r="1.8"/><path d="M9 18.2c1.1-1.4 4.9-1.4 6 0 .9 1.2-.2 3-3 3s-3.9-1.8-3-3z"/></svg>',
-    heart: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.5-7-9.2C5 8 6.9 6 9.2 6c1.4 0 2.2.6 2.8 1.5.6-.9 1.4-1.5 2.8-1.5C17.1 6 19 8 19 10.8 19 15.5 12 20 12 20z"/></svg>',
-    leaf: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 5c-8.2 0-12 5-12 12 0 0 6.8 0 10-3.2C19.5 11.3 19 5 19 5z"/><path d="M7 17c2.2-2.2 5.2-5.1 10-7.2"/></svg>',
-    cross: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5v14"/><path d="M5 12h14"/></svg>',
-    book: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6.5c0-1 1-1.5 2-1.5h10v14H8c-1 0-2 .5-2 1.5V6.5z"/><path d="M8 5v14"/></svg>',
-    chip: '<svg viewBox="0 0 24 24" aria-hidden="true"><rect x="7" y="7" width="10" height="10" rx="2"/><path d="M9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3"/></svg>',
-    bulb: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M8 10a4 4 0 1 1 8 0c0 1.5-.8 2.4-1.6 3.3-.7.7-1.4 1.5-1.4 2.7h-2c0-1.2-.7-2-1.4-2.7C8.8 12.4 8 11.5 8 10z"/><path d="M9.5 19h5"/><path d="M10.5 21h3"/></svg>',
-    wave: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2 14c2-2 4-2 6 0s4 2 6 0 4-2 8 0"/><path d="M2 9.5c2-2 4-2 6 0s4 2 6 0 4-2 8 0"/></svg>',
-    globe: '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M4 12h16"/><path d="M12 4a12 12 0 0 1 0 16"/><path d="M12 4a12 12 0 0 0 0 16"/></svg>',
-    truck: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 7h10v8H3z"/><path d="M13 10h4l3 3v2h-7z"/><circle cx="8" cy="17" r="1.7"/><circle cx="18" cy="17" r="1.7"/></svg>',
-    sprout: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20v-7"/><path d="M12 13c0-4 3-6 7-6 0 4-2 7-7 7"/><path d="M12 13c0-3-2-5-6-5 0 4 2 6 6 6"/></svg>',
-    people: '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="9" cy="9" r="2.2"/><circle cx="15.5" cy="10" r="1.9"/><path d="M5.6 17.5c.8-2 2.4-3 4.4-3s3.6 1 4.4 3"/><path d="M13.3 17.5c.5-1.4 1.6-2.2 3.1-2.2 1.2 0 2.3.5 3 2"/></svg>',
-    star: '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4.5l2.1 4.3 4.7.7-3.4 3.3.8 4.7-4.2-2.2-4.2 2.2.8-4.7-3.4-3.3 4.7-.7z"/></svg>',
-    compass: '<svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8"/><path d="M15.5 8.5l-2 5-5 2 2-5z"/></svg>'
-  };
-  function iconFor(category){
-    const c = category.toLowerCase();
-    if (c.includes('animal rescue') || c.includes('animal welfare')) return ICONS.paw;
-    if (c.includes('community kindness') || c.includes('community light') || c.includes('good samaritan')) return ICONS.heart;
-    if (c.includes('energy') || c.includes('farming')) return ICONS.sprout;
-    if (c.includes('clean transport')) return ICONS.truck;
-    if (c.includes('clean tech') || c.includes('technology') || c.includes('science')) return ICONS.chip;
-    if (c.includes('youth innovation')) return ICONS.bulb;
-    if (c.includes('health')) return ICONS.cross;
-    if (c.includes('education')) return ICONS.book;
-    if (c.includes('nature') || c.includes('conservation') || c.includes('environment') || c.includes('planet repair')) return ICONS.leaf;
-    if (c.includes('ocean')) return ICONS.wave;
-    if (c.includes('culture') || c.includes('community') || c.includes('inclusion')) return ICONS.people;
-    if (c.includes('children')) return ICONS.star;
-    if (c.includes('travel')) return ICONS.compass;
-    return ICONS.globe;
-  }
-  document.querySelectorAll('.story-meta p').forEach(function(p){
-    const label = p.querySelector('.label-category');
-    if(!label) return;
-    const category = p.textContent.replace(/\s*Category\s*/i,'').trim();
-    const badge = document.createElement('span');
-    badge.className = 'field-label label-category';
-    badge.textContent = 'Category';
-    const wrap = document.createElement('span');
-    wrap.className = 'category-value';
-    const icon = document.createElement('span');
-    icon.className = 'category-icon';
-    icon.setAttribute('aria-hidden','true');
-    icon.innerHTML = iconFor(category);
-    const text = document.createElement('span');
-    text.className = 'category-text';
-    text.textContent = category;
-    wrap.appendChild(icon);
-    wrap.appendChild(text);
-    p.textContent = '';
-    p.appendChild(badge);
-    p.appendChild(wrap);
-  });
-})();
-</script>
-<script id="emperical-reading-progress">
-(function(){
-  const bar = document.getElementById('readingProgressBar');
-  if(!bar) return;
-  function updateProgress(){
-    const doc = document.documentElement;
-    const scrollTop = window.scrollY || doc.scrollTop;
-    const max = Math.max(1, doc.scrollHeight - window.innerHeight);
-    const pct = Math.min(100, Math.max(0, (scrollTop / max) * 100));
-    bar.style.width = pct + '%';
-  }
-  window.addEventListener('scroll', updateProgress, {passive:true});
-  window.addEventListener('resize', updateProgress);
-  updateProgress();
-})();
-</script>
-</body>
-</html>
+
+
+
+
+
+
+
+/* Continuous latest-story ticker */
+.ticker-window{
+  overflow:hidden;
+  white-space:nowrap;
+}
+.ticker-run{
+  display:inline-flex!important;
+  width:max-content;
+  gap:34px;
+  align-items:center;
+  padding-left:0!important;
+  animation:tickerFlow 46s linear infinite!important;
+  will-change:transform;
+}
+.ticker-run span{
+  flex:0 0 auto;
+}
+@keyframes tickerFlow{
+  0%{transform:translateX(0)}
+  100%{transform:translateX(-50%)}
+}
+
+
+/* Centered larger card headers + source placement polish */
+.card-head{
+  text-align:center;
+  padding:15px 16px 12px!important;
+}
+.card-title{
+  justify-content:center;
+  font-size:1.02rem!important;
+  letter-spacing:.115em!important;
+}
+.card-title::before{
+  font-size:.9rem!important;
+}
+.card-sub{
+  margin:6px auto 0!important;
+  max-width:92%;
+  text-align:center;
+  font-size:.80rem!important;
+}
+.about-grid .card h2{
+  text-align:center;
+  font-size:1.02rem!important;
+  letter-spacing:.115em!important;
+  padding:15px 16px 13px!important;
+}
+
+
+/* Inner record separation polish */
+.story-btn,.edition-btn,.group-btn{
+  position:relative;
+  border:1px solid rgba(215,183,86,.38)!important;
+  border-radius:17px!important;
+  margin:0 0 11px!important;
+  padding:12px 13px!important;
+  background:
+    linear-gradient(180deg,rgba(216,180,90,.075),rgba(0,0,0,.18)),
+    rgba(7,5,3,.56)!important;
+  box-shadow:
+    inset 0 0 0 1px rgba(255,224,140,.035),
+    0 7px 14px rgba(0,0,0,.16);
+}
+.story-btn::after,.edition-btn::after,.group-btn::after{
+  content:"";
+  position:absolute;
+  left:14px;
+  right:14px;
+  bottom:-6px;
+  height:1px;
+  background:linear-gradient(90deg,transparent,rgba(215,183,86,.22),transparent);
+}
+.story-btn:last-child::after,.edition-btn:last-child::after,.group-btn:last-child::after{
+  display:none;
+}
+.story-btn.active,.edition-btn.active,.group-btn.active{
+  border-color:rgba(240,210,120,.86)!important;
+  background:
+    linear-gradient(180deg,rgba(216,180,90,.15),rgba(0,0,0,.22)),
+    rgba(12,8,3,.68)!important;
+}
+.detail{
+  border:1px solid rgba(215,183,86,.34);
+  border-radius:17px;
+  padding:14px;
+  background:
+    linear-gradient(180deg,rgba(216,180,90,.055),rgba(0,0,0,.16)),
+    rgba(7,5,3,.48);
+  box-shadow:inset 0 0 0 1px rgba(255,224,140,.03);
+}
+.detail h3{
+  border-top:1px solid rgba(215,183,86,.18);
+  padding-top:10px;
+}
+.detail h3:first-child{
+  border-top:0;
+  padding-top:0;
+}
+.source-box{
+  border-color:rgba(215,183,86,.42)!important;
+}
+.about-grid .card p{
+  border:1px solid rgba(215,183,86,.24);
+  border-radius:15px;
+  margin:14px 16px;
+  padding:12px 14px!important;
+  background:rgba(0,0,0,.16);
+}
+
+
+/* Final controlled polish: active record glow + source seal + safe empty states */
+.story-btn.active,.edition-btn.active,.group-btn.active{
+  box-shadow:
+    inset 0 0 0 1px rgba(255,232,150,.12),
+    0 0 0 1px rgba(240,210,120,.44),
+    0 0 20px rgba(216,180,90,.18),
+    0 9px 18px rgba(0,0,0,.22)!important;
+}
+.story-btn.active::before,.edition-btn.active::before,.group-btn.active::before{
+  content:"SELECTED";
+  position:absolute;
+  top:8px;
+  right:10px;
+  color:rgba(247,236,210,.88);
+  border:1px solid rgba(215,183,86,.44);
+  border-radius:999px;
+  padding:2px 7px;
+  font-size:.58rem;
+  letter-spacing:.08em;
+  background:rgba(0,0,0,.28);
+}
+.source-box{
+  position:relative;
+  border-radius:16px!important;
+  background:
+    linear-gradient(180deg,rgba(216,180,90,.08),rgba(0,0,0,.22)),
+    rgba(8,6,3,.66)!important;
+}
+.source-box strong{
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  color:var(--bright);
+  letter-spacing:.07em;
+  text-transform:uppercase;
+  font-size:.78rem;
+}
+.source-box strong::before{
+  content:"✦";
+  color:var(--bright);
+  text-shadow:0 0 10px rgba(216,180,90,.55);
+}
+.empty-state{
+  border:1px solid rgba(215,183,86,.28);
+  border-radius:17px;
+  padding:16px;
+  color:var(--muted);
+  background:rgba(0,0,0,.18);
+  text-align:center;
+  line-height:1.45;
+}
+.empty-state strong{
+  display:block;
+  color:var(--bright);
+  margin-bottom:6px;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+}
+
+
+/* Selected badge bottom-right placement */
+.story-btn,.edition-btn,.group-btn{
+  padding-bottom:28px!important;
+}
+.story-btn.active::before,.edition-btn.active::before,.group-btn.active::before{
+  top:auto!important;
+  right:10px!important;
+  bottom:8px!important;
+}
+
+</style></head><body><div class="shell"><header class="top-image"><img src="assets/tree-of-life-header-connected-single.png" alt="Emperical Tree of Life header"><nav class="header-hotspots" aria-label="Primary navigation"><a class="hs-home" href="index.html">Home</a><a class="hs-archive" href="archive.html">Archive</a><a class="hs-categories" href="categories.html">Categories</a><a class="hs-location" href="location.html">Location</a><a class="hs-about" href="about.html">About</a></nav><div class="ticker-overlay" aria-label="Good news ticker"><strong>GOOD NEWS TICKER</strong><div class="ticker-window"><div class="ticker-run"><span>✦ Climate &amp; Energy: Britain Opens Grid Door for Hundreds of Energy Projects</span><span>✦ Climate &amp; Energy: Offshore Wind Forecast Points to a Much Larger Global Buildout</span><span>✦ Climate &amp; Energy: Germany’s Renewable Power Growth Offers Industry a New Opening</span><span>✦ Health &amp; Medicine: Pancreatic Cancer Pill Sets a New Survival Benchmark</span><span>✦ Health &amp; Medicine: Targeted Cancer Drugs Help More Patients Live Longer</span><span>✦ Health &amp; Medicine: GLP-1 Research Points to Possible Cancer Benefits</span><span>✦ Science &amp; Discovery: Angola Expedition Reveals New Species in a Biodiversity Hotspot</span><span>✦ Nature &amp; Wildlife: Mangrove Loss Shows Signs of Reversal Worldwide</span><span>✦ Education &amp; Youth: Dutch Children Again Rank Among the World’s Happiest</span><span>✦ Education &amp; Youth: Schools Give Pupils a Stronger Voice in How They Are Run</span><span>✦ Climate &amp; Energy: Britain Opens Grid Door for Hundreds of Energy Projects</span><span>✦ Climate &amp; Energy: Offshore Wind Forecast Points to a Much Larger Global Buildout</span><span>✦ Climate &amp; Energy: Germany’s Renewable Power Growth Offers Industry a New Opening</span><span>✦ Health &amp; Medicine: Pancreatic Cancer Pill Sets a New Survival Benchmark</span><span>✦ Health &amp; Medicine: Targeted Cancer Drugs Help More Patients Live Longer</span><span>✦ Health &amp; Medicine: GLP-1 Research Points to Possible Cancer Benefits</span><span>✦ Science &amp; Discovery: Angola Expedition Reveals New Species in a Biodiversity Hotspot</span><span>✦ Nature &amp; Wildlife: Mangrove Loss Shows Signs of Reversal Worldwide</span><span>✦ Education &amp; Youth: Dutch Children Again Rank Among the World’s Happiest</span><span>✦ Education &amp; Youth: Schools Give Pupils a Stronger Voice in How They Are Run</span></div></div><em>LIVE</em></div></header><main class="engine"><section class="page-title home-compact"><div class="kicker">Latest Edition · June 10, 2026</div><h1>Current Home</h1><p>Featured stories update the reading panels below.</p></section><section class="panel3"><article class="card"><div class="card-head"><h2 class="card-title">Featured Stories</h2><p class="card-sub">Current edition stories with category and source.</p></div><div class="scroll" id="storyList"></div></article><article class="card"><div class="card-head"><h2 class="card-title">Summary · Why It Matters</h2><p class="card-sub">Selected story meaning.</p></div><div class="scroll" id="mainDetail"></div></article><article class="card"><div class="card-head"><h2 class="card-title">Ripple Effect · Source</h2><p class="card-sub">The wider echo and original source.</p></div><div class="scroll" id="rippleDetail"></div></article></section></main><footer class="site-footer">EMPERICAL · Good News · Honest Reflection · Positive Ripple</footer></div><script>
+function esc(v){return String(v??'').replace(/[&<>"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]));}
+function sourceHTML(s){if(s.sourceUrl){return `<a href="${esc(s.sourceUrl)}" target="_blank" rel="noopener">${esc(s.source||'Source')}</a>`;} return `<span>${esc(s.source||'Source pending')}</span>`;}
+function storyButton(s,active){return `<button class="story-btn ${active?'active':''}" data-story="${esc(s.id)}"><strong>${esc(s.title)}</strong><span>${esc(s.editionDate||s.location||'')} · Source: ${esc(s.source||'Source pending')}</span><div class="chipline"><em class="chip">${esc(s.category||'Uncategorized')}</em><em class="chip">${esc(s.location||'General')}</em></div></button>`;}
+function detailHTML(s, mode='full'){const showSource=mode!=='nosource';return `<div class="detail"><h3>${esc(s.title)}</h3>${mode==='compact'?'':`<p class="mini">${esc(s.category||'Uncategorized')} · ${esc(s.location||'General')} · ${esc(s.edition||'')}</p>`}<h3>Summary</h3><p>${esc(s.summary||'Summary pending.')}</p><h3>Why It Matters</h3><p>${esc(s.why||'Why It Matters pending.')}</p>${mode==='noripple'||mode==='nosource'?'':`<h3>Ripple Effect</h3><p>${esc(s.ripple||'Ripple Effect pending.')}</p>`}${showSource?`<div class="source-box"><strong>Source</strong><br>${sourceHTML(s)}</div>`:''}</div>`;}
+
+const stories=[{"title": "Britain Opens Grid Door for Hundreds of Energy Projects", "category": "Climate & Energy", "mainCategory": "Climate & Energy", "originalCategory": "Clean Energy", "location": "United Kingdom", "summary": "Britain’s grid operator offered connections to more than 700 energy projects under reformed rules designed to move ready projects forward faster. The offers cover wind, solar, hydro, gas, and battery storage projects representing about 37 gigawatts of capacity. The change targets one of the biggest barriers in the clean-power transition: projects that exist on paper but wait too long for connection clarity.", "why": "This matters because clean energy does not become real until it can connect to the grid. Better connection rules can reduce delays, give developers clearer signals, and help national planning move from ambition into infrastructure. It also shows that the energy transition depends on paperwork and systems as much as turbines and panels.", "ripple": "The ripple could be faster clean-power deployment, more confidence for investors, and better planning for communities that need new energy infrastructure. If the grid queue becomes more disciplined, other countries may study the model as they try to unlock stalled renewable projects.", "source": "Reuters", "sourceUrl": "https://www.reuters.com/business/energy/british-grid-operator-makes-connection-offers-over-700-projects-2026-06-10/", "edition": "June 10, 2026 Edition", "editionDate": "June 10, 2026", "file": "index.html", "id": "june10-s1"}, {"title": "Offshore Wind Forecast Points to a Much Larger Global Buildout", "category": "Climate & Energy", "mainCategory": "Climate & Energy", "originalCategory": "Offshore Wind", "location": "Global", "summary": "A Global Wind Energy Council report said global offshore wind capacity is set to quadruple over the next decade, reaching 420 gigawatts by the end of 2035. The forecast reflects stronger policy support, more investment, and the growing role of offshore wind in energy security and climate planning.", "why": "This matters because offshore wind can deliver large-scale clean electricity near major coastal demand centers. A bigger buildout could help countries diversify energy supplies while cutting emissions. It also shows that renewable energy is becoming a long-range infrastructure story, not just a short-term trend.", "ripple": "The ripple could reach ports, supply chains, manufacturing, grid planning, and coastal workforce training. If offshore wind scales as forecast, it may shape regional economies while giving governments another major tool for cleaner electricity.", "source": "Reuters", "sourceUrl": "https://www.reuters.com/business/energy/global-offshore-wind-capacity-set-grow-420-gw-by-end-2035-gwec-report-says-2026-06-09/", "edition": "June 10, 2026 Edition", "editionDate": "June 10, 2026", "file": "index.html", "id": "june10-s2"}, {"title": "Germany’s Renewable Power Growth Offers Industry a New Opening", "category": "Climate & Energy", "mainCategory": "Climate & Energy", "originalCategory": "Renewable Power", "location": "Germany", "summary": "Germany is seeing its fastest electricity-output growth in more than a decade, with renewable power playing a major role. More wind and solar generation have helped stabilize wholesale power prices, offering some relief to industrial sectors that were hit hard by the energy crisis after Russia’s invasion of Ukraine.", "why": "This matters because the clean-energy transition is often judged by climate goals, but it also affects economic resilience. If cheaper domestic renewable electricity supports manufacturing, it strengthens the case that climate infrastructure can also help protect jobs and industrial capacity.", "ripple": "The ripple could be a feedback loop where lower power costs support industry, and stronger industry attracts more energy investment. It may also encourage other industrial countries to treat clean power as economic strategy, not only environmental policy.", "source": "Reuters", "sourceUrl": "https://www.reuters.com/commentary/reuters-open-interest/germanys-power-growth-could-reignite-industrial-engine-2026-06-10/", "edition": "June 10, 2026 Edition", "editionDate": "June 10, 2026", "file": "index.html", "id": "june10-s3"}, {"title": "Pancreatic Cancer Pill Sets a New Survival Benchmark", "category": "Health & Medicine", "mainCategory": "Health & Medicine", "originalCategory": "Cancer Treatment", "location": "United States / Global", "summary": "Revolution Medicines reported that its experimental pancreatic cancer pill, daraxonrasib, doubled overall survival compared with chemotherapy in a trial of previously treated patients. The drug targets RAS mutations that help drive the disease and also improved quality-of-life measures for some patients.", "why": "This matters because pancreatic cancer has long been one of the hardest cancers to treat. A therapy that extends survival and helps some patients regain daily activities represents more than a statistical improvement. It gives researchers, doctors, and families a new point of hope in an area where progress has been slow.", "ripple": "The ripple may extend beyond pancreatic cancer if RAS-targeting approaches prove useful across other cancers. It could accelerate investment in mutation-specific therapies and change the way researchers think about once difficult-to-drug cancer pathways.", "source": "Reuters", "sourceUrl": "https://www.reuters.com/business/healthcare-pharmaceuticals/revolutions-pancreatic-cancer-drug-doubles-survival-boosts-quality-life-2026-05-31/", "edition": "June 10, 2026 Edition", "editionDate": "June 10, 2026", "file": "index.html", "id": "june10-s4"}, {"title": "Targeted Cancer Drugs Help More Patients Live Longer", "category": "Health & Medicine", "mainCategory": "Health & Medicine", "originalCategory": "Targeted Therapy", "location": "Global", "summary": "Reuters reported that more people are living with cancer as targeted drugs become a larger part of treatment. These therapies focus on specific cancer-driving changes rather than treating all fast-growing cells the same way, helping some patients stay on treatment longer and with better outcomes.", "why": "This matters because cancer care is shifting from one-size-fits-all treatment toward more precise, long-term disease control. The story shows how progress can come through many smaller advances that add up over years, turning some diagnoses into conditions people can live with longer.", "ripple": "The ripple could be wider genetic testing, more personalized treatment plans, and stronger pressure to make advanced therapies accessible. As survival improves, health systems may also need to adapt around long-term support, monitoring, and quality of life.", "source": "Reuters", "sourceUrl": "https://www.reuters.com/business/healthcare-pharmaceuticals/its-still-working-more-are-living-with-cancer-era-targeted-drugs-takes-hold-2026-06-03/", "edition": "June 10, 2026 Edition", "editionDate": "June 10, 2026", "file": "index.html", "id": "june10-s5"}, {"title": "GLP-1 Research Points to Possible Cancer Benefits", "category": "Health & Medicine", "mainCategory": "Health & Medicine", "originalCategory": "Medical Research", "location": "Global", "summary": "Studies presented at the American Society of Clinical Oncology meeting suggested that GLP-1 medicines may be associated with lower cancer risk, slower progression, or better survival across several tumor types. Researchers cautioned that much of the evidence is observational and cannot yet prove cause and effect.", "why": "This matters because it shows how medicines first known for diabetes and weight management may open new research paths in cancer prevention and treatment. The caution is important: the story is promising, but it still needs controlled trials before becoming clinical proof.", "ripple": "The ripple could be new clinical trials, fresh questions about inflammation and metabolism in cancer, and broader thinking about how existing drugs might be repurposed. If stronger evidence follows, it could reshape prevention research for several cancers.", "source": "Reuters", "sourceUrl": "https://www.reuters.com/business/healthcare-pharmaceuticals/glp-1-drugs-may-have-beneficial-effect-across-many-types-cancer-2026-06-03/", "edition": "June 10, 2026 Edition", "editionDate": "June 10, 2026", "file": "index.html", "id": "june10-s6"}, {"title": "Angola Expedition Reveals New Species in a Biodiversity Hotspot", "category": "Science & Discovery", "mainCategory": "Science & Discovery", "originalCategory": "Biodiversity Discovery", "location": "Angola", "summary": "Scientists working on Angola’s Lisima plateau reported newly identified species, including dragonflies, grasshoppers, butterflies, moths, and spiders. The area feeds four major African river systems, making it important not only for local wildlife but also for wider ecological health.", "why": "This matters because species cannot be protected if they are never documented. Discoveries like this expand the map of life and show why field science still matters in remote or understudied ecosystems. The findings also arrive during a biodiversity crisis, when unknown species may disappear before they are named.", "ripple": "The ripple could strengthen conservation attention around the Lisima plateau and other African freshwater source regions. New species can become evidence for protecting habitats that support rivers, communities, and wildlife far beyond the discovery site.", "source": "Reuters", "sourceUrl": "https://www.reuters.com/business/environment/scientists-find-new-species-dragonfly-grasshopper-fluorescent-spider-2026-06-03/", "edition": "June 10, 2026 Edition", "editionDate": "June 10, 2026", "file": "index.html", "id": "june10-s7"}, {"title": "Mangrove Loss Shows Signs of Reversal Worldwide", "category": "Nature & Wildlife", "mainCategory": "Nature & Wildlife", "originalCategory": "Ecosystem Recovery", "location": "Global", "summary": "A new mangrove study reported that global mangrove loss has slowed and may now be reversing, with more and denser forests than 20 years ago. Researchers tied the improvement to natural expansion, restoration, and better mapping, while warning that sea-level rise and development still threaten fragile gains.", "why": "This matters because mangroves protect coasts, store carbon, and provide habitat for marine life. A rebound shows that damaged ecosystems can recover when pressure is reduced and restoration takes hold. It is hopeful, but not a reason to relax protection.", "ripple": "The ripple could be stronger coastal restoration funding, better use of satellite monitoring, and more attention to mangroves as climate-resilience infrastructure. Communities facing storms and erosion may benefit when nature-based defenses are protected.", "source": "Good News Network", "sourceUrl": "https://www.goodnewsnetwork.org/global-mangrove-loss-slowed-now-reversing-with-more-denser-forests-than-20-years-ago/", "edition": "June 10, 2026 Edition", "editionDate": "June 10, 2026", "file": "index.html", "id": "june10-s8"}, {"title": "Dutch Children Again Rank Among the World’s Happiest", "category": "Education & Youth", "mainCategory": "Education & Youth", "originalCategory": "Youth Wellbeing", "location": "Netherlands", "summary": "Positive News reported on why Dutch children continue to rank highly in global happiness measures, pointing to factors such as independence, agency, family habits, cycling culture, and cultural education programs that help children develop judgment and confidence.", "why": "This matters because youth wellbeing is not only about test scores or technology. The story highlights the importance of independence, trust, play, culture, and everyday design in shaping children’s lives. It gives other communities ideas to study without pretending one country has every answer.", "ripple": "The ripple could influence school design, youth programs, urban planning, and parenting conversations. When children’s happiness is treated as a systems question, communities can ask what daily conditions help young people feel capable and connected.", "source": "Positive News", "sourceUrl": "https://www.positive.news/lifestyle/wellbeing/dutch-kids-declared-the-worlds-happiest-again-heres-why/", "edition": "June 10, 2026 Edition", "editionDate": "June 10, 2026", "file": "index.html", "id": "june10-s9"}, {"title": "Schools Give Pupils a Stronger Voice in How They Are Run", "category": "Education & Youth", "mainCategory": "Education & Youth", "originalCategory": "Democracy Education", "location": "United Kingdom", "summary": "Positive News reported on school projects that put pupils’ voices at the center of school life. The approach gives students more say in decisions that affect them, turning school into a place where democratic habits can be practiced instead of only discussed.", "why": "This matters because trust and participation are learned through experience. When young people are asked to contribute to school decisions, they can build confidence, responsibility, and a stronger sense that institutions are something they can help shape.", "ripple": "The ripple could be more student councils with real influence, better listening between adults and young people, and stronger civic habits beyond the classroom. A school that practices democracy can become a training ground for healthier community life.", "source": "Positive News", "sourceUrl": "https://www.positive.news/society/democracy/why-children-are-being-given-a-say-in-how-their-school-is-run/", "edition": "June 10, 2026 Edition", "editionDate": "June 10, 2026", "file": "index.html", "id": "june10-s10"}];let current=stories[0];function render(){if(!stories.length){document.getElementById('storyList').innerHTML='<div class="empty-state"><strong>No stories loaded</strong>Current edition stories will appear here.</div>';document.getElementById('mainDetail').innerHTML='<div class="empty-state"><strong>No story selected</strong>Select a story when records are available.</div>';document.getElementById('rippleDetail').innerHTML='<div class="empty-state"><strong>No source record</strong>Source appears with the selected story.</div>';return;}document.getElementById('storyList').innerHTML=stories.map(s=>storyButton(s,s.id===current.id)).join('');document.querySelectorAll('[data-story]').forEach(b=>b.onclick=()=>{current=stories.find(s=>s.id===b.dataset.story);render();});document.getElementById('mainDetail').innerHTML=detailHTML(current,'nosource');document.getElementById('rippleDetail').innerHTML=`<div class="detail"><h3>${esc(current.title)}</h3><h3>Ripple Effect</h3><p>${esc(current.ripple||'Ripple Effect pending.')}</p><div class="source-box"><strong>Source</strong><br>${sourceHTML(current)}</div></div>`;}render();</script></body></html>
