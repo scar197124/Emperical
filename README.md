@@ -25,3 +25,8 @@ GitHub-ready static site package.
 ## Mobile nav fit patch
 - Mobile nav now uses a five-column grid so About stays visible.
 - Mobile ticker animation is slowed down without changing desktop speed.
+
+## Mobile accordion reader
+- Desktop keeps the three-card layout.
+- Mobile hides separate detail panels and opens selected story details directly under the tapped story record.
+- Applies to Home, Archive, Categories, and Location.
