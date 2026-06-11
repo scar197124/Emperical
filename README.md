@@ -31,3 +31,17 @@ GitHub-ready static site package.
 - Mobile swaps the header artwork to the new Earth + humanity + AI + Tree of Life image.
 - Mobile nav and ticker stay outside the image.
 - Build marker: mobile-system-v5-mobile-header-image.
+
+## Mobile System v5 section flow cleanup
+- Archive mobile clearly shows: 1 choose an edition/update, 2 open a story from that selected edition.
+- Categories mobile clearly shows: 1 choose a category, 2 open a story from that selected category.
+- Location mobile clearly shows: 1 choose a location, 2 open a story from that selected location.
+- Selector cards remain meaningful; detail card stays hidden on mobile; story cards use Open/Close/Next.
+- Build marker: mobile-system-v5-section-flow-cleanup.
+
+## Mobile header wordmark visibility fix
+- Kept the section-flow cleanup exactly as-is.
+- Added a real mobile header image element instead of relying only on CSS image replacement.
+- Disabled old desktop header overlay lines on mobile so the EMPERICAL wordmark remains visible.
+- Desktop still uses the original wide header.
+- Build marker: mobile-header-wordmark-visible-section-flow-cleanup.
