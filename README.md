@@ -17,10 +17,17 @@ GitHub-ready static site package.
 - Ticker: latest 10 homepage highlights
 - Source fields preserved
 
-## Mobile System v4 Home-style story lists
-- On mobile, Archive/Categories/Location now match Home: direct story list only, no selector card above it.
-- Archive mobile shows all archive stories in one Home-style list.
-- Categories mobile shows all category stories in one Home-style list.
-- Location mobile shows all location stories in one Home-style list.
-- Desktop selectors remain available on wider screens.
-- Build marker: mobile-system-v4-home-style-story-lists.
+## Mobile System v5 correct section flow
+- Archive mobile: editions remain the archive; tap an edition to see stories from that update.
+- Categories mobile: categories remain the entry point; tap a category to see stories in that branch.
+- Location mobile: locations remain the entry point; tap a location to see stories from that place.
+- Story cards use Home-style Open/Close/Next Story controls.
+- Desktop remains the full three-card system.
+- Build marker: mobile-system-v5-correct-section-flow.
+
+## Mobile header image
+- Added a mobile-only header image: `assets/emperical-mobile-header-tree-earth-human-ai.png`.
+- Desktop keeps `assets/tree-of-life-header-connected-single.png`.
+- Mobile swaps the header artwork to the new Earth + humanity + AI + Tree of Life image.
+- Mobile nav and ticker stay outside the image.
+- Build marker: mobile-system-v5-mobile-header-image.
