@@ -17,17 +17,8 @@ GitHub-ready static site package.
 - Ticker: latest 10 homepage highlights
 - Source fields preserved
 
-## Mobile System v2.0 clean rebuild
-- Rebuilt mobile behavior from the clean June 10 GitHub package, not layered experiment files.
-- Mobile nav is visible and sticky.
-- Home hides desktop detail cards and uses Open/Close story cards.
-- Archive/Categories/Location keep selector + story list visible and hide only the desktop detail panel.
-- Stories do not auto-open on mobile.
-- Each story has Open, Close, Next Story, and Source badge controls on mobile.
-- Added build marker: mobile-system-v2-2026-06-10.
-
-## Archive/Categories/Location mobile match patch
-- Rewrote Archive, Categories, and Location render logic to match Home mobile Open/Close/Next Story behavior.
-- Edition, category, and location selectors now reset open story state and then show their story list.
-- Story buttons in those pages use the same mobile controls as Home.
-- Build marker: mobile-system-v2-archive-category-location-match.
+## Mobile System v3.1 working all pages
+- Rebuilt from clean June 10 GitHub package.
+- Replaced whole render tails to remove broken duplicate script fragments.
+- Archive/Categories/Location story-list cards populate and story Open/Close/Next controls match Home.
+- Build marker: mobile-system-v3-1-working-all-pages.

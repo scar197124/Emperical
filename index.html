@@ -327,293 +327,60 @@
 }
 
 
-/* MOBILE SYSTEM v2.0 — clean rebuild, no layered old mobile rules */
-.mobile-nav,
-.mobile-toggle,
-.mobile-source-badge,
-.mobile-inline-detail{
-  display:none;
-}
-
+/* MOBILE SYSTEM v3.1 — clean working all pages */
+.mobile-nav,.mobile-toggle,.mobile-source-badge,.mobile-inline-detail{display:none;}
 @media(max-width:860px){
-  html{scroll-behavior:smooth;}
-  body{overflow:auto!important;}
-
-  .shell{
-    padding:8px;
-    gap:8px;
-  }
-
-  .top-image{
-    overflow:visible;
-    border-radius:18px;
-  }
-
-  .top-image img{
-    width:100%;
-    height:auto!important;
-    display:block;
-    object-fit:contain!important;
-  }
-
-  .header-hotspots{
-    display:none!important;
-    pointer-events:none!important;
-  }
-
-  .mobile-nav{
-    display:grid!important;
-    grid-template-columns:repeat(5,minmax(0,1fr));
-    gap:4px;
-    width:100%;
-    position:sticky!important;
-    top:0!important;
-    z-index:80!important;
-    margin-top:6px;
-    padding:6px;
-    border:1px solid rgba(215,183,86,.42);
-    border-radius:14px;
-    background:linear-gradient(180deg,rgba(20,13,4,.96),rgba(5,4,3,.91));
-    box-shadow:0 8px 18px rgba(0,0,0,.24), inset 0 0 0 1px rgba(216,180,90,.05);
-    backdrop-filter:blur(8px);
-    -webkit-backdrop-filter:blur(8px);
-  }
-
-  .mobile-nav a{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    min-width:0;
-    width:100%;
-    min-height:36px;
-    padding:8px 3px;
-    border:1px solid rgba(215,183,86,.42);
-    border-radius:999px;
-    color:var(--bright);
-    background:rgba(0,0,0,.28);
-    text-decoration:none;
-    font-size:clamp(.58rem,2.7vw,.74rem);
-    letter-spacing:.015em;
-    line-height:1;
-    white-space:nowrap;
-    text-align:center;
-  }
-
-  .ticker-overlay{
-    position:relative!important;
-    left:auto!important;
-    right:auto!important;
-    top:auto!important;
-    bottom:auto!important;
-    transform:none!important;
-    width:100%!important;
-    margin-top:6px;
-    border-radius:14px;
-    z-index:2!important;
-  }
-
-  .ticker-run{
-    animation-duration:68s!important;
-  }
-
-  .panel3{
-    display:block!important;
-  }
-
-  .panel3 .card{
-    margin-bottom:10px;
-    max-height:none!important;
-  }
-
-  .list{
-    max-height:none!important;
-    overflow:visible!important;
-  }
-
-  /* Home: story details open inside the story list, so hide the two desktop detail cards on mobile. */
-  body.home-page .panel3 .card:nth-child(2),
-  body.home-page .panel3 .card:nth-child(3){
-    display:none!important;
-  }
-
-  /* Archive/Categories/Location: keep selector and story-list cards visible; hide only the desktop detail card. */
-  body.archive-page .panel3 .card:nth-child(1),
-  body.archive-page .panel3 .card:nth-child(2),
-  body.categories-page .panel3 .card:nth-child(1),
-  body.categories-page .panel3 .card:nth-child(2),
-  body.location-page .panel3 .card:nth-child(1),
-  body.location-page .panel3 .card:nth-child(2){
-    display:block!important;
-  }
-
-  body.archive-page .panel3 .card:nth-child(3),
-  body.categories-page .panel3 .card:nth-child(3),
-  body.location-page .panel3 .card:nth-child(3){
-    display:none!important;
-  }
-
-  .story-btn,
-  .edition-btn,
-  .group-btn{
-    width:100%;
-    min-height:44px;
-    touch-action:manipulation;
-  }
-
-  .story-btn{
-    position:relative;
-  }
-
-  .story-btn .mobile-inline-detail{
-    display:none!important;
-    margin-top:12px;
-    padding:12px 10px 4px;
-    border-top:1px solid rgba(215,183,86,.28);
-    text-align:left;
-    background:rgba(0,0,0,.16);
-    border-radius:0 0 14px 14px;
-  }
-
-  .story-btn.open .mobile-inline-detail{
-    display:block!important;
-  }
-
-  .story-btn.open{
-    border-color:rgba(255,220,130,.72)!important;
-    padding-bottom:38px!important;
-  }
-
-  .story-btn.active:not(.open) .mobile-inline-detail{
-    display:none!important;
-  }
-
-  .mobile-inline-detail h4{
-    margin:10px 0 5px;
-    color:var(--bright);
-    font-size:.82rem;
-    letter-spacing:.08em;
-    text-transform:uppercase;
-  }
-
-  .mobile-inline-detail p{
-    margin:0 0 9px;
-    color:var(--white);
-    font-size:.84rem;
-    line-height:1.45;
-  }
-
-  .mobile-inline-detail .source-box{
-    margin-top:10px;
-    font-size:.82rem;
-  }
-
-  .mobile-toggle{
-    display:inline-flex;
-    align-items:center;
-    justify-content:center;
-    min-height:38px;
-    min-width:74px;
-    border:1px solid rgba(215,183,86,.62)!important;
-    border-radius:999px;
-    color:var(--bright);
-    background:rgba(0,0,0,.28);
-    box-shadow:0 5px 13px rgba(0,0,0,.22), inset 0 0 0 1px rgba(255,233,157,.08);
-    font-size:.76rem;
-    font-weight:700;
-    letter-spacing:.06em;
-    text-transform:uppercase;
-    line-height:1;
-  }
-
-  .story-btn .mobile-open{
-    width:100%;
-    margin-top:11px;
-    background:linear-gradient(180deg,rgba(216,180,90,.18),rgba(0,0,0,.25))!important;
-  }
-
-  .story-btn.open .mobile-open{
-    display:none!important;
-  }
-
-  .story-btn:not(.open) .mobile-close,
-  .story-btn:not(.open) .mobile-next{
-    display:none!important;
-  }
-
-  .mobile-detail-actions{
-    display:flex;
-    gap:8px;
-    flex-wrap:wrap;
-    align-items:center;
-    margin-top:10px;
-  }
-
-  .mobile-close,
-  .mobile-next{
-    width:auto;
-    margin-right:6px;
-    background:rgba(216,180,90,.13)!important;
-  }
-
-  .mobile-source-badge{
-    display:inline-flex;
-    align-items:center;
-    max-width:100%;
-    margin-top:7px;
-    padding:5px 8px;
-    border:1px solid rgba(215,183,86,.36);
-    border-radius:999px;
-    color:var(--gold);
-    background:rgba(0,0,0,.22);
-    font-size:.68rem;
-    line-height:1;
-    letter-spacing:.04em;
-    text-transform:uppercase;
-  }
+  html{scroll-behavior:smooth;} body{overflow:auto!important;}
+  .shell{padding:8px;gap:8px;}
+  .top-image{overflow:visible;border-radius:18px;}
+  .top-image img{width:100%;height:auto!important;display:block;object-fit:contain!important;}
+  .header-hotspots{display:none!important;pointer-events:none!important;}
+  .mobile-nav{display:grid!important;grid-template-columns:repeat(5,minmax(0,1fr));gap:4px;width:100%;position:sticky!important;top:0!important;z-index:80!important;margin-top:6px;padding:6px;border:1px solid rgba(215,183,86,.42);border-radius:14px;background:linear-gradient(180deg,rgba(20,13,4,.96),rgba(5,4,3,.91));box-shadow:0 8px 18px rgba(0,0,0,.24), inset 0 0 0 1px rgba(216,180,90,.05);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);}
+  .mobile-nav a{display:flex;align-items:center;justify-content:center;min-width:0;width:100%;min-height:36px;padding:8px 3px;border:1px solid rgba(215,183,86,.42);border-radius:999px;color:var(--bright);background:rgba(0,0,0,.28);text-decoration:none;font-size:clamp(.58rem,2.7vw,.74rem);letter-spacing:.015em;line-height:1;white-space:nowrap;text-align:center;}
+  .ticker-overlay{position:relative!important;left:auto!important;right:auto!important;top:auto!important;bottom:auto!important;transform:none!important;width:100%!important;margin-top:6px;border-radius:14px;z-index:2!important;}
+  .ticker-run{animation-duration:68s!important;}
+  .panel3{display:block!important;}
+  .panel3 .card{margin-bottom:10px;max-height:none!important;}
+  .list{max-height:none!important;overflow:visible!important;}
+  body.home-page .panel3 .card:nth-child(2),body.home-page .panel3 .card:nth-child(3){display:none!important;}
+  body.archive-page .panel3 .card:nth-child(1),body.archive-page .panel3 .card:nth-child(2),body.categories-page .panel3 .card:nth-child(1),body.categories-page .panel3 .card:nth-child(2),body.location-page .panel3 .card:nth-child(1),body.location-page .panel3 .card:nth-child(2){display:block!important;}
+  body.archive-page .panel3 .card:nth-child(3),body.categories-page .panel3 .card:nth-child(3),body.location-page .panel3 .card:nth-child(3){display:none!important;}
+  .story-btn,.edition-btn,.group-btn{width:100%;min-height:44px;touch-action:manipulation;}
+  .story-btn{position:relative;}
+  .story-btn .mobile-inline-detail{display:none!important;margin-top:12px;padding:12px 10px 4px;border-top:1px solid rgba(215,183,86,.28);text-align:left;background:rgba(0,0,0,.16);border-radius:0 0 14px 14px;}
+  .story-btn.open .mobile-inline-detail{display:block!important;}
+  .story-btn.open{border-color:rgba(255,220,130,.72)!important;padding-bottom:38px!important;}
+  .story-btn.active:not(.open) .mobile-inline-detail{display:none!important;}
+  .mobile-inline-detail h4{margin:10px 0 5px;color:var(--bright);font-size:.82rem;letter-spacing:.08em;text-transform:uppercase;}
+  .mobile-inline-detail p{margin:0 0 9px;color:var(--white);font-size:.84rem;line-height:1.45;}
+  .mobile-inline-detail .source-box{margin-top:10px;font-size:.82rem;}
+  .mobile-toggle{display:inline-flex;align-items:center;justify-content:center;min-height:38px;min-width:74px;border:1px solid rgba(215,183,86,.62)!important;border-radius:999px;color:var(--bright);background:rgba(0,0,0,.28);box-shadow:0 5px 13px rgba(0,0,0,.22), inset 0 0 0 1px rgba(255,233,157,.08);font-size:.76rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;line-height:1;}
+  .story-btn .mobile-open{width:100%;margin-top:11px;background:linear-gradient(180deg,rgba(216,180,90,.18),rgba(0,0,0,.25))!important;}
+  .story-btn.open .mobile-open{display:none!important;}
+  .story-btn:not(.open) .mobile-close,.story-btn:not(.open) .mobile-next{display:none!important;}
+  .mobile-detail-actions{display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:10px;}
+  .mobile-close,.mobile-next{width:auto;margin-right:6px;background:rgba(216,180,90,.13)!important;}
+  .mobile-source-badge{display:inline-flex;align-items:center;max-width:100%;margin-top:7px;padding:5px 8px;border:1px solid rgba(215,183,86,.36);border-radius:999px;color:var(--gold);background:rgba(0,0,0,.22);font-size:.68rem;line-height:1;letter-spacing:.04em;text-transform:uppercase;}
 }
-
 @media(max-width:380px){
-  .mobile-nav{
-    gap:3px;
-    padding:5px;
-  }
-
-  .mobile-nav a{
-    padding:8px 2px;
-    font-size:clamp(.54rem,2.55vw,.68rem);
-    letter-spacing:0;
-  }
-
-  .ticker-run{
-    animation-duration:74s!important;
-  }
+  .mobile-nav{gap:3px;padding:5px;}
+  .mobile-nav a{padding:8px 2px;font-size:clamp(.54rem,2.55vw,.68rem);letter-spacing:0;}
+  .ticker-run{animation-duration:74s!important;}
 }
 
-</style><meta name="emperical-build" content="mobile-system-v2-archive-category-location-match">
+</style><meta name="emperical-build" content="mobile-system-v3-1-working-all-pages">
 </head><body class="home-page"><div class="shell"><header class="top-image"><img src="assets/tree-of-life-header-connected-single.png" alt="Emperical Tree of Life header"><nav class="header-hotspots" aria-label="Primary navigation"><a class="hs-home" href="index.html">Home</a><a class="hs-archive" href="archive.html">Archive</a><a class="hs-categories" href="categories.html">Categories</a><a class="hs-location" href="location.html">Location</a><a class="hs-about" href="about.html">About</a></nav><nav class="mobile-nav" aria-label="Mobile navigation"><a href="index.html">Home</a><a href="archive.html">Archive</a><a href="categories.html">Categories</a><a href="location.html">Location</a><a href="about.html">About</a></nav><div class="ticker-overlay" aria-label="Good news ticker"><strong>GOOD NEWS TICKER</strong><div class="ticker-window"><div class="ticker-run"><span>✦ Climate &amp; Energy: Britain Opens Grid Door for Hundreds of Energy Projects</span><span>✦ Climate &amp; Energy: Offshore Wind Forecast Points to a Much Larger Global Buildout</span><span>✦ Climate &amp; Energy: Germany’s Renewable Power Growth Offers Industry a New Opening</span><span>✦ Health &amp; Medicine: Pancreatic Cancer Pill Sets a New Survival Benchmark</span><span>✦ Health &amp; Medicine: Targeted Cancer Drugs Help More Patients Live Longer</span><span>✦ Health &amp; Medicine: GLP-1 Research Points to Possible Cancer Benefits</span><span>✦ Science &amp; Discovery: Angola Expedition Reveals New Species in a Biodiversity Hotspot</span><span>✦ Nature &amp; Wildlife: Mangrove Loss Shows Signs of Reversal Worldwide</span><span>✦ Education &amp; Youth: Dutch Children Again Rank Among the World’s Happiest</span><span>✦ Education &amp; Youth: Schools Give Pupils a Stronger Voice in How They Are Run</span><span>✦ Climate &amp; Energy: Britain Opens Grid Door for Hundreds of Energy Projects</span><span>✦ Climate &amp; Energy: Offshore Wind Forecast Points to a Much Larger Global Buildout</span><span>✦ Climate &amp; Energy: Germany’s Renewable Power Growth Offers Industry a New Opening</span><span>✦ Health &amp; Medicine: Pancreatic Cancer Pill Sets a New Survival Benchmark</span><span>✦ Health &amp; Medicine: Targeted Cancer Drugs Help More Patients Live Longer</span><span>✦ Health &amp; Medicine: GLP-1 Research Points to Possible Cancer Benefits</span><span>✦ Science &amp; Discovery: Angola Expedition Reveals New Species in a Biodiversity Hotspot</span><span>✦ Nature &amp; Wildlife: Mangrove Loss Shows Signs of Reversal Worldwide</span><span>✦ Education &amp; Youth: Dutch Children Again Rank Among the World’s Happiest</span><span>✦ Education &amp; Youth: Schools Give Pupils a Stronger Voice in How They Are Run</span></div></div><em>LIVE</em></div></header><main class="engine"><section class="page-title home-compact"><div class="kicker">Latest Edition · June 10, 2026</div><h1>Current Home</h1><p>Featured stories update the reading panels below.</p></section><section class="panel3"><article class="card"><div class="card-head"><h2 class="card-title">Featured Stories</h2><p class="card-sub">Current edition stories with category and source.</p></div><div class="scroll" id="storyList"></div></article><article class="card"><div class="card-head"><h2 class="card-title">Summary · Why It Matters</h2><p class="card-sub">Selected story meaning.</p></div><div class="scroll" id="mainDetail"></div></article><article class="card"><div class="card-head"><h2 class="card-title">Ripple Effect · Source</h2><p class="card-sub">The wider echo and original source.</p></div><div class="scroll" id="rippleDetail"></div></article></section></main><footer class="site-footer">EMPERICAL · Good News · Honest Reflection · Positive Ripple</footer></div><script>
 let mobileOpenStory=null;
-function mobileMode(){
-  return !!(window.matchMedia && window.matchMedia('(max-width:860px)').matches);
-}
-function mobileActionFromEvent(ev){
-  const target=ev.target && ev.target.closest ? ev.target.closest('[data-mobile-toggle]') : null;
-  return target ? target.dataset.mobileToggle : 'open';
-}
-function nextStoryId(list,currentId){
-  if(!list || !list.length)return currentId;
-  const i=list.findIndex(s=>s.id===currentId);
-  return list[(i+1+list.length)%list.length].id;
-}
-function mobileFocusActive(){
-  if(mobileMode()){
-    const open=document.querySelector('.story-btn.open');
-    if(open){open.scrollIntoView({behavior:'smooth',block:'nearest'});}
-  }
-}
+function mobileMode(){return !!(window.matchMedia && window.matchMedia('(max-width:860px)').matches);}
+function mobileActionFromEvent(ev){const target=ev.target && ev.target.closest ? ev.target.closest('[data-mobile-toggle]') : null;return target ? target.dataset.mobileToggle : 'open';}
+function nextStoryId(list,currentId){if(!list || !list.length)return currentId;const i=list.findIndex(s=>s.id===currentId);return list[(i+1+list.length)%list.length].id;}
+function mobileFocusActive(){if(mobileMode()){const open=document.querySelector('.story-btn.open');if(open){open.scrollIntoView({behavior:'smooth',block:'nearest'});}}}
 
 function esc(v){return String(v??'').replace(/[&<>"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]));}
 function sourceHTML(s){if(s.sourceUrl){return `<a href="${esc(s.sourceUrl)}" target="_blank" rel="noopener">${esc(s.source||'Source')}</a>`;} return `<span>${esc(s.source||'Source pending')}</span>`;}
 function storyButton(s,active){const isOpen=(mobileOpenStory===s.id);const inline=`<div class="mobile-inline-detail"><h4>Summary</h4><p>${esc(s.summary||'Summary pending.')}</p><h4>Why It Matters</h4><p>${esc(s.why||'Why It Matters pending.')}</p><h4>Ripple Effect</h4><p>${esc(s.ripple||'Ripple Effect pending.')}</p><div class="source-box"><strong>Source</strong><br>${sourceHTML(s)}</div><div class="mobile-detail-actions"><span class="mobile-toggle mobile-close" data-mobile-toggle="close">Close</span><span class="mobile-toggle mobile-next" data-mobile-toggle="next">Next Story</span></div></div>`;return `<button class="story-btn ${active?'active':''} ${isOpen?'open':''}" data-story="${esc(s.id)}"><strong>${esc(s.title)}</strong><span>${esc(s.editionDate||s.location||'')} · Source: ${esc(s.source||'Source pending')}</span><span class="mobile-source-badge">Source: ${esc(s.source||'Source pending')}</span><div class="chipline"><em class="chip">${esc(s.mainCategory||s.category||'Uncategorized')}</em><em class="chip">${esc(s.originalCategory||s.category||'Detail')}</em><em class="chip">${esc(s.location||'General')}</em></div><span class="mobile-toggle mobile-open" data-mobile-toggle="open">Open</span>${inline}</button>`;}
 function detailHTML(s, mode='full'){const showSource=mode!=='nosource';return `<div class="detail"><h3>${esc(s.title)}</h3>${mode==='compact'?'':`<p class="mini">${esc(s.category||'Uncategorized')} · ${esc(s.location||'General')} · ${esc(s.edition||'')}</p>`}<h3>Summary</h3><p>${esc(s.summary||'Summary pending.')}</p><h3>Why It Matters</h3><p>${esc(s.why||'Why It Matters pending.')}</p>${mode==='noripple'||mode==='nosource'?'':`<h3>Ripple Effect</h3><p>${esc(s.ripple||'Ripple Effect pending.')}</p>`}${showSource?`<div class="source-box"><strong>Source</strong><br>${sourceHTML(s)}</div>`:''}</div>`;}
 
-const stories=[{"title": "Britain Opens Grid Door for Hundreds of Energy Projects", "category": "Climate & Energy", "mainCategory": "Climate & Energy", "originalCategory": "Clean Energy", "location": "United Kingdom", "summary": "Britain’s grid operator offered connections to more than 700 energy projects under reformed rules designed to move ready projects forward faster. The offers cover wind, solar, hydro, gas, and battery storage projects representing about 37 gigawatts of capacity. The change targets one of the biggest barriers in the clean-power transition: projects that exist on paper but wait too long for connection clarity.", "why": "This matters because clean energy does not become real until it can connect to the grid. Better connection rules can reduce delays, give developers clearer signals, and help national planning move from ambition into infrastructure. It also shows that the energy transition depends on paperwork and systems as much as turbines and panels.", "ripple": "The ripple could be faster clean-power deployment, more confidence for investors, and better planning for communities that need new energy infrastructure. If the grid queue becomes more disciplined, other countries may study the model as they try to unlock stalled renewable projects.", "source": "Reuters", "sourceUrl": "https://www.reuters.com/business/energy/british-grid-operator-makes-connection-offers-over-700-projects-2026-06-10/", "edition": "June 10, 2026 Edition", "editionDate": "June 10, 2026", "file": "index.html", "id": "june10-s1"}, {"title": "Offshore Wind Forecast Points to a Much Larger Global Buildout", "category": "Climate & Energy", "mainCategory": "Climate & Energy", "originalCategory": "Offshore Wind", "location": "Global", "summary": "A Global Wind Energy Council report said global offshore wind capacity is set to quadruple over the next decade, reaching 420 gigawatts by the end of 2035. The forecast reflects stronger policy support, more investment, and the growing role of offshore wind in energy security and climate planning.", "why": "This matters because offshore wind can deliver large-scale clean electricity near major coastal demand centers. A bigger buildout could help countries diversify energy supplies while cutting emissions. It also shows that renewable energy is becoming a long-range infrastructure story, not just a short-term trend.", "ripple": "The ripple could reach ports, supply chains, manufacturing, grid planning, and coastal workforce training. If offshore wind scales as forecast, it may shape regional economies while giving governments another major tool for cleaner electricity.", "source": "Reuters", "sourceUrl": "https://www.reuters.com/business/energy/global-offshore-wind-capacity-set-grow-420-gw-by-end-2035-gwec-report-says-2026-06-09/", "edition": "June 10, 2026 Edition", "editionDate": "June 10, 2026", "file": "index.html", "id": "june10-s2"}, {"title": "Germany’s Renewable Power Growth Offers Industry a New Opening", "category": "Climate & Energy", "mainCategory": "Climate & Energy", "originalCategory": "Renewable Power", "location": "Germany", "summary": "Germany is seeing its fastest electricity-output growth in more than a decade, with renewable power playing a major role. More wind and solar generation have helped stabilize wholesale power prices, offering some relief to industrial sectors that were hit hard by the energy crisis after Russia’s invasion of Ukraine.", "why": "This matters because the clean-energy transition is often judged by climate goals, but it also affects economic resilience. If cheaper domestic renewable electricity supports manufacturing, it strengthens the case that climate infrastructure can also help protect jobs and industrial capacity.", "ripple": "The ripple could be a feedback loop where lower power costs support industry, and stronger industry attracts more energy investment. It may also encourage other industrial countries to treat clean power as economic strategy, not only environmental policy.", "source": "Reuters", "sourceUrl": "https://www.reuters.com/commentary/reuters-open-interest/germanys-power-growth-could-reignite-industrial-engine-2026-06-10/", "edition": "June 10, 2026 Edition", "editionDate": "June 10, 2026", "file": "index.html", "id": "june10-s3"}, {"title": "Pancreatic Cancer Pill Sets a New Survival Benchmark", "category": "Health & Medicine", "mainCategory": "Health & Medicine", "originalCategory": "Cancer Treatment", "location": "United States / Global", "summary": "Revolution Medicines reported that its experimental pancreatic cancer pill, daraxonrasib, doubled overall survival compared with chemotherapy in a trial of previously treated patients. The drug targets RAS mutations that help drive the disease and also improved quality-of-life measures for some patients.", "why": "This matters because pancreatic cancer has long been one of the hardest cancers to treat. A therapy that extends survival and helps some patients regain daily activities represents more than a statistical improvement. It gives researchers, doctors, and families a new point of hope in an area where progress has been slow.", "ripple": "The ripple may extend beyond pancreatic cancer if RAS-targeting approaches prove useful across other cancers. It could accelerate investment in mutation-specific therapies and change the way researchers think about once difficult-to-drug cancer pathways.", "source": "Reuters", "sourceUrl": "https://www.reuters.com/business/healthcare-pharmaceuticals/revolutions-pancreatic-cancer-drug-doubles-survival-boosts-quality-life-2026-05-31/", "edition": "June 10, 2026 Edition", "editionDate": "June 10, 2026", "file": "index.html", "id": "june10-s4"}, {"title": "Targeted Cancer Drugs Help More Patients Live Longer", "category": "Health & Medicine", "mainCategory": "Health & Medicine", "originalCategory": "Targeted Therapy", "location": "Global", "summary": "Reuters reported that more people are living with cancer as targeted drugs become a larger part of treatment. These therapies focus on specific cancer-driving changes rather than treating all fast-growing cells the same way, helping some patients stay on treatment longer and with better outcomes.", "why": "This matters because cancer care is shifting from one-size-fits-all treatment toward more precise, long-term disease control. The story shows how progress can come through many smaller advances that add up over years, turning some diagnoses into conditions people can live with longer.", "ripple": "The ripple could be wider genetic testing, more personalized treatment plans, and stronger pressure to make advanced therapies accessible. As survival improves, health systems may also need to adapt around long-term support, monitoring, and quality of life.", "source": "Reuters", "sourceUrl": "https://www.reuters.com/business/healthcare-pharmaceuticals/its-still-working-more-are-living-with-cancer-era-targeted-drugs-takes-hold-2026-06-03/", "edition": "June 10, 2026 Edition", "editionDate": "June 10, 2026", "file": "index.html", "id": "june10-s5"}, {"title": "GLP-1 Research Points to Possible Cancer Benefits", "category": "Health & Medicine", "mainCategory": "Health & Medicine", "originalCategory": "Medical Research", "location": "Global", "summary": "Studies presented at the American Society of Clinical Oncology meeting suggested that GLP-1 medicines may be associated with lower cancer risk, slower progression, or better survival across several tumor types. Researchers cautioned that much of the evidence is observational and cannot yet prove cause and effect.", "why": "This matters because it shows how medicines first known for diabetes and weight management may open new research paths in cancer prevention and treatment. The caution is important: the story is promising, but it still needs controlled trials before becoming clinical proof.", "ripple": "The ripple could be new clinical trials, fresh questions about inflammation and metabolism in cancer, and broader thinking about how existing drugs might be repurposed. If stronger evidence follows, it could reshape prevention research for several cancers.", "source": "Reuters", "sourceUrl": "https://www.reuters.com/business/healthcare-pharmaceuticals/glp-1-drugs-may-have-beneficial-effect-across-many-types-cancer-2026-06-03/", "edition": "June 10, 2026 Edition", "editionDate": "June 10, 2026", "file": "index.html", "id": "june10-s6"}, {"title": "Angola Expedition Reveals New Species in a Biodiversity Hotspot", "category": "Science & Discovery", "mainCategory": "Science & Discovery", "originalCategory": "Biodiversity Discovery", "location": "Angola", "summary": "Scientists working on Angola’s Lisima plateau reported newly identified species, including dragonflies, grasshoppers, butterflies, moths, and spiders. The area feeds four major African river systems, making it important not only for local wildlife but also for wider ecological health.", "why": "This matters because species cannot be protected if they are never documented. Discoveries like this expand the map of life and show why field science still matters in remote or understudied ecosystems. The findings also arrive during a biodiversity crisis, when unknown species may disappear before they are named.", "ripple": "The ripple could strengthen conservation attention around the Lisima plateau and other African freshwater source regions. New species can become evidence for protecting habitats that support rivers, communities, and wildlife far beyond the discovery site.", "source": "Reuters", "sourceUrl": "https://www.reuters.com/business/environment/scientists-find-new-species-dragonfly-grasshopper-fluorescent-spider-2026-06-03/", "edition": "June 10, 2026 Edition", "editionDate": "June 10, 2026", "file": "index.html", "id": "june10-s7"}, {"title": "Mangrove Loss Shows Signs of Reversal Worldwide", "category": "Nature & Wildlife", "mainCategory": "Nature & Wildlife", "originalCategory": "Ecosystem Recovery", "location": "Global", "summary": "A new mangrove study reported that global mangrove loss has slowed and may now be reversing, with more and denser forests than 20 years ago. Researchers tied the improvement to natural expansion, restoration, and better mapping, while warning that sea-level rise and development still threaten fragile gains.", "why": "This matters because mangroves protect coasts, store carbon, and provide habitat for marine life. A rebound shows that damaged ecosystems can recover when pressure is reduced and restoration takes hold. It is hopeful, but not a reason to relax protection.", "ripple": "The ripple could be stronger coastal restoration funding, better use of satellite monitoring, and more attention to mangroves as climate-resilience infrastructure. Communities facing storms and erosion may benefit when nature-based defenses are protected.", "source": "Good News Network", "sourceUrl": "https://www.goodnewsnetwork.org/global-mangrove-loss-slowed-now-reversing-with-more-denser-forests-than-20-years-ago/", "edition": "June 10, 2026 Edition", "editionDate": "June 10, 2026", "file": "index.html", "id": "june10-s8"}, {"title": "Dutch Children Again Rank Among the World’s Happiest", "category": "Education & Youth", "mainCategory": "Education & Youth", "originalCategory": "Youth Wellbeing", "location": "Netherlands", "summary": "Positive News reported on why Dutch children continue to rank highly in global happiness measures, pointing to factors such as independence, agency, family habits, cycling culture, and cultural education programs that help children develop judgment and confidence.", "why": "This matters because youth wellbeing is not only about test scores or technology. The story highlights the importance of independence, trust, play, culture, and everyday design in shaping children’s lives. It gives other communities ideas to study without pretending one country has every answer.", "ripple": "The ripple could influence school design, youth programs, urban planning, and parenting conversations. When children’s happiness is treated as a systems question, communities can ask what daily conditions help young people feel capable and connected.", "source": "Positive News", "sourceUrl": "https://www.positive.news/lifestyle/wellbeing/dutch-kids-declared-the-worlds-happiest-again-heres-why/", "edition": "June 10, 2026 Edition", "editionDate": "June 10, 2026", "file": "index.html", "id": "june10-s9"}, {"title": "Schools Give Pupils a Stronger Voice in How They Are Run", "category": "Education & Youth", "mainCategory": "Education & Youth", "originalCategory": "Democracy Education", "location": "United Kingdom", "summary": "Positive News reported on school projects that put pupils’ voices at the center of school life. The approach gives students more say in decisions that affect them, turning school into a place where democratic habits can be practiced instead of only discussed.", "why": "This matters because trust and participation are learned through experience. When young people are asked to contribute to school decisions, they can build confidence, responsibility, and a stronger sense that institutions are something they can help shape.", "ripple": "The ripple could be more student councils with real influence, better listening between adults and young people, and stronger civic habits beyond the classroom. A school that practices democracy can become a training ground for healthier community life.", "source": "Positive News", "sourceUrl": "https://www.positive.news/society/democracy/why-children-are-being-given-a-say-in-how-their-school-is-run/", "edition": "June 10, 2026 Edition", "editionDate": "June 10, 2026", "file": "index.html", "id": "june10-s10"}];let current=stories[0];function render(){if(!stories.length){document.getElementById('storyList').innerHTML='<div class="empty-state"><strong>No stories loaded</strong>Current edition stories will appear here.</div>';document.getElementById('mainDetail').innerHTML='<div class="empty-state"><strong>No story selected</strong>Select a story when records are available.</div>';document.getElementById('rippleDetail').innerHTML='<div class="empty-state"><strong>No source record</strong>Source appears with the selected story.</div>';return;}document.getElementById('storyList').innerHTML=stories.map(s=>storyButton(s,s.id===current.id)).join('');document.querySelectorAll('[data-story]').forEach(b=>b.onclick=(ev)=>{current=stories.find(s=>s.id===b.dataset.story)||current;if(mobileMode()){const action=mobileActionFromEvent(ev);if(action==='close'){mobileOpenStory=null;}else if(action==='next'){mobileOpenStory=nextStoryId(stories,b.dataset.story);current=stories.find(s=>s.id===mobileOpenStory)||current;}else{mobileOpenStory=(mobileOpenStory===b.dataset.story)?null:b.dataset.story;}}render();});document.getElementById('mainDetail').innerHTML=detailHTML(current,'nosource');document.getElementById('rippleDetail').innerHTML=`<div class="detail"><h3>${esc(current.title)}</h3><h3>Ripple Effect</h3><p>${esc(current.ripple||'Ripple Effect pending.')}</p><div class="source-box"><strong>Source</strong><br>${sourceHTML(current)}</div></div>`;mobileFocusActive();}render();</script></body></html>
+const stories=[{"title": "Britain Opens Grid Door for Hundreds of Energy Projects", "category": "Climate & Energy", "mainCategory": "Climate & Energy", "originalCategory": "Clean Energy", "location": "United Kingdom", "summary": "Britain’s grid operator offered connections to more than 700 energy projects under reformed rules designed to move ready projects forward faster. The offers cover wind, solar, hydro, gas, and battery storage projects representing about 37 gigawatts of capacity. The change targets one of the biggest barriers in the clean-power transition: projects that exist on paper but wait too long for connection clarity.", "why": "This matters because clean energy does not become real until it can connect to the grid. Better connection rules can reduce delays, give developers clearer signals, and help national planning move from ambition into infrastructure. It also shows that the energy transition depends on paperwork and systems as much as turbines and panels.", "ripple": "The ripple could be faster clean-power deployment, more confidence for investors, and better planning for communities that need new energy infrastructure. If the grid queue becomes more disciplined, other countries may study the model as they try to unlock stalled renewable projects.", "source": "Reuters", "sourceUrl": "https://www.reuters.com/business/energy/british-grid-operator-makes-connection-offers-over-700-projects-2026-06-10/", "edition": "June 10, 2026 Edition", "editionDate": "June 10, 2026", "file": "index.html", "id": "june10-s1"}, {"title": "Offshore Wind Forecast Points to a Much Larger Global Buildout", "category": "Climate & Energy", "mainCategory": "Climate & Energy", "originalCategory": "Offshore Wind", "location": "Global", "summary": "A Global Wind Energy Council report said global offshore wind capacity is set to quadruple over the next decade, reaching 420 gigawatts by the end of 2035. The forecast reflects stronger policy support, more investment, and the growing role of offshore wind in energy security and climate planning.", "why": "This matters because offshore wind can deliver large-scale clean electricity near major coastal demand centers. A bigger buildout could help countries diversify energy supplies while cutting emissions. It also shows that renewable energy is becoming a long-range infrastructure story, not just a short-term trend.", "ripple": "The ripple could reach ports, supply chains, manufacturing, grid planning, and coastal workforce training. If offshore wind scales as forecast, it may shape regional economies while giving governments another major tool for cleaner electricity.", "source": "Reuters", "sourceUrl": "https://www.reuters.com/business/energy/global-offshore-wind-capacity-set-grow-420-gw-by-end-2035-gwec-report-says-2026-06-09/", "edition": "June 10, 2026 Edition", "editionDate": "June 10, 2026", "file": "index.html", "id": "june10-s2"}, {"title": "Germany’s Renewable Power Growth Offers Industry a New Opening", "category": "Climate & Energy", "mainCategory": "Climate & Energy", "originalCategory": "Renewable Power", "location": "Germany", "summary": "Germany is seeing its fastest electricity-output growth in more than a decade, with renewable power playing a major role. More wind and solar generation have helped stabilize wholesale power prices, offering some relief to industrial sectors that were hit hard by the energy crisis after Russia’s invasion of Ukraine.", "why": "This matters because the clean-energy transition is often judged by climate goals, but it also affects economic resilience. If cheaper domestic renewable electricity supports manufacturing, it strengthens the case that climate infrastructure can also help protect jobs and industrial capacity.", "ripple": "The ripple could be a feedback loop where lower power costs support industry, and stronger industry attracts more energy investment. It may also encourage other industrial countries to treat clean power as economic strategy, not only environmental policy.", "source": "Reuters", "sourceUrl": "https://www.reuters.com/commentary/reuters-open-interest/germanys-power-growth-could-reignite-industrial-engine-2026-06-10/", "edition": "June 10, 2026 Edition", "editionDate": "June 10, 2026", "file": "index.html", "id": "june10-s3"}, {"title": "Pancreatic Cancer Pill Sets a New Survival Benchmark", "category": "Health & Medicine", "mainCategory": "Health & Medicine", "originalCategory": "Cancer Treatment", "location": "United States / Global", "summary": "Revolution Medicines reported that its experimental pancreatic cancer pill, daraxonrasib, doubled overall survival compared with chemotherapy in a trial of previously treated patients. The drug targets RAS mutations that help drive the disease and also improved quality-of-life measures for some patients.", "why": "This matters because pancreatic cancer has long been one of the hardest cancers to treat. A therapy that extends survival and helps some patients regain daily activities represents more than a statistical improvement. It gives researchers, doctors, and families a new point of hope in an area where progress has been slow.", "ripple": "The ripple may extend beyond pancreatic cancer if RAS-targeting approaches prove useful across other cancers. It could accelerate investment in mutation-specific therapies and change the way researchers think about once difficult-to-drug cancer pathways.", "source": "Reuters", "sourceUrl": "https://www.reuters.com/business/healthcare-pharmaceuticals/revolutions-pancreatic-cancer-drug-doubles-survival-boosts-quality-life-2026-05-31/", "edition": "June 10, 2026 Edition", "editionDate": "June 10, 2026", "file": "index.html", "id": "june10-s4"}, {"title": "Targeted Cancer Drugs Help More Patients Live Longer", "category": "Health & Medicine", "mainCategory": "Health & Medicine", "originalCategory": "Targeted Therapy", "location": "Global", "summary": "Reuters reported that more people are living with cancer as targeted drugs become a larger part of treatment. These therapies focus on specific cancer-driving changes rather than treating all fast-growing cells the same way, helping some patients stay on treatment longer and with better outcomes.", "why": "This matters because cancer care is shifting from one-size-fits-all treatment toward more precise, long-term disease control. The story shows how progress can come through many smaller advances that add up over years, turning some diagnoses into conditions people can live with longer.", "ripple": "The ripple could be wider genetic testing, more personalized treatment plans, and stronger pressure to make advanced therapies accessible. As survival improves, health systems may also need to adapt around long-term support, monitoring, and quality of life.", "source": "Reuters", "sourceUrl": "https://www.reuters.com/business/healthcare-pharmaceuticals/its-still-working-more-are-living-with-cancer-era-targeted-drugs-takes-hold-2026-06-03/", "edition": "June 10, 2026 Edition", "editionDate": "June 10, 2026", "file": "index.html", "id": "june10-s5"}, {"title": "GLP-1 Research Points to Possible Cancer Benefits", "category": "Health & Medicine", "mainCategory": "Health & Medicine", "originalCategory": "Medical Research", "location": "Global", "summary": "Studies presented at the American Society of Clinical Oncology meeting suggested that GLP-1 medicines may be associated with lower cancer risk, slower progression, or better survival across several tumor types. Researchers cautioned that much of the evidence is observational and cannot yet prove cause and effect.", "why": "This matters because it shows how medicines first known for diabetes and weight management may open new research paths in cancer prevention and treatment. The caution is important: the story is promising, but it still needs controlled trials before becoming clinical proof.", "ripple": "The ripple could be new clinical trials, fresh questions about inflammation and metabolism in cancer, and broader thinking about how existing drugs might be repurposed. If stronger evidence follows, it could reshape prevention research for several cancers.", "source": "Reuters", "sourceUrl": "https://www.reuters.com/business/healthcare-pharmaceuticals/glp-1-drugs-may-have-beneficial-effect-across-many-types-cancer-2026-06-03/", "edition": "June 10, 2026 Edition", "editionDate": "June 10, 2026", "file": "index.html", "id": "june10-s6"}, {"title": "Angola Expedition Reveals New Species in a Biodiversity Hotspot", "category": "Science & Discovery", "mainCategory": "Science & Discovery", "originalCategory": "Biodiversity Discovery", "location": "Angola", "summary": "Scientists working on Angola’s Lisima plateau reported newly identified species, including dragonflies, grasshoppers, butterflies, moths, and spiders. The area feeds four major African river systems, making it important not only for local wildlife but also for wider ecological health.", "why": "This matters because species cannot be protected if they are never documented. Discoveries like this expand the map of life and show why field science still matters in remote or understudied ecosystems. The findings also arrive during a biodiversity crisis, when unknown species may disappear before they are named.", "ripple": "The ripple could strengthen conservation attention around the Lisima plateau and other African freshwater source regions. New species can become evidence for protecting habitats that support rivers, communities, and wildlife far beyond the discovery site.", "source": "Reuters", "sourceUrl": "https://www.reuters.com/business/environment/scientists-find-new-species-dragonfly-grasshopper-fluorescent-spider-2026-06-03/", "edition": "June 10, 2026 Edition", "editionDate": "June 10, 2026", "file": "index.html", "id": "june10-s7"}, {"title": "Mangrove Loss Shows Signs of Reversal Worldwide", "category": "Nature & Wildlife", "mainCategory": "Nature & Wildlife", "originalCategory": "Ecosystem Recovery", "location": "Global", "summary": "A new mangrove study reported that global mangrove loss has slowed and may now be reversing, with more and denser forests than 20 years ago. Researchers tied the improvement to natural expansion, restoration, and better mapping, while warning that sea-level rise and development still threaten fragile gains.", "why": "This matters because mangroves protect coasts, store carbon, and provide habitat for marine life. A rebound shows that damaged ecosystems can recover when pressure is reduced and restoration takes hold. It is hopeful, but not a reason to relax protection.", "ripple": "The ripple could be stronger coastal restoration funding, better use of satellite monitoring, and more attention to mangroves as climate-resilience infrastructure. Communities facing storms and erosion may benefit when nature-based defenses are protected.", "source": "Good News Network", "sourceUrl": "https://www.goodnewsnetwork.org/global-mangrove-loss-slowed-now-reversing-with-more-denser-forests-than-20-years-ago/", "edition": "June 10, 2026 Edition", "editionDate": "June 10, 2026", "file": "index.html", "id": "june10-s8"}, {"title": "Dutch Children Again Rank Among the World’s Happiest", "category": "Education & Youth", "mainCategory": "Education & Youth", "originalCategory": "Youth Wellbeing", "location": "Netherlands", "summary": "Positive News reported on why Dutch children continue to rank highly in global happiness measures, pointing to factors such as independence, agency, family habits, cycling culture, and cultural education programs that help children develop judgment and confidence.", "why": "This matters because youth wellbeing is not only about test scores or technology. The story highlights the importance of independence, trust, play, culture, and everyday design in shaping children’s lives. It gives other communities ideas to study without pretending one country has every answer.", "ripple": "The ripple could influence school design, youth programs, urban planning, and parenting conversations. When children’s happiness is treated as a systems question, communities can ask what daily conditions help young people feel capable and connected.", "source": "Positive News", "sourceUrl": "https://www.positive.news/lifestyle/wellbeing/dutch-kids-declared-the-worlds-happiest-again-heres-why/", "edition": "June 10, 2026 Edition", "editionDate": "June 10, 2026", "file": "index.html", "id": "june10-s9"}, {"title": "Schools Give Pupils a Stronger Voice in How They Are Run", "category": "Education & Youth", "mainCategory": "Education & Youth", "originalCategory": "Democracy Education", "location": "United Kingdom", "summary": "Positive News reported on school projects that put pupils’ voices at the center of school life. The approach gives students more say in decisions that affect them, turning school into a place where democratic habits can be practiced instead of only discussed.", "why": "This matters because trust and participation are learned through experience. When young people are asked to contribute to school decisions, they can build confidence, responsibility, and a stronger sense that institutions are something they can help shape.", "ripple": "The ripple could be more student councils with real influence, better listening between adults and young people, and stronger civic habits beyond the classroom. A school that practices democracy can become a training ground for healthier community life.", "source": "Positive News", "sourceUrl": "https://www.positive.news/society/democracy/why-children-are-being-given-a-say-in-how-their-school-is-run/", "edition": "June 10, 2026 Edition", "editionDate": "June 10, 2026", "file": "index.html", "id": "june10-s10"}];let current=stories[0];function render(){if(!stories.length){document.getElementById('storyList').innerHTML='<div class="empty-state"><strong>No stories loaded</strong>Current edition stories will appear here.</div>';document.getElementById('mainDetail').innerHTML='<div class="empty-state"><strong>No story selected</strong>Select a story when records are available.</div>';document.getElementById('rippleDetail').innerHTML='<div class="empty-state"><strong>No source record</strong>Source appears with the selected story.</div>';return;}document.getElementById('storyList').innerHTML=stories.map(s=>storyButton(s,s.id===current.id)).join('');document.querySelectorAll('#storyList [data-story]').forEach(b=>b.onclick=(ev)=>{current=stories.find(s=>s.id===b.dataset.story)||current;if(mobileMode()){const action=mobileActionFromEvent(ev);if(action==='close'){mobileOpenStory=null;}else if(action==='next'){mobileOpenStory=nextStoryId(stories,b.dataset.story);current=stories.find(s=>s.id===mobileOpenStory)||current;}else{mobileOpenStory=(mobileOpenStory===b.dataset.story)?null:b.dataset.story;}}render();});document.getElementById('mainDetail').innerHTML=detailHTML(current,'nosource');document.getElementById('rippleDetail').innerHTML=`<div class="detail"><h3>${esc(current.title)}</h3><h3>Ripple Effect</h3><p>${esc(current.ripple||'Ripple Effect pending.')}</p><div class="source-box"><strong>Source</strong><br>${sourceHTML(current)}</div></div>`;mobileFocusActive();}
+render();
+</script></body></html>
