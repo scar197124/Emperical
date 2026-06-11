@@ -473,6 +473,32 @@
   }
 }
 
+
+/* Universal mobile reader patch */
+@media(max-width:860px){
+  .panel3{display:block!important;}
+  .panel3 .card{margin-bottom:10px;}
+  .panel3 .card:nth-child(2),.panel3 .card:nth-child(3){display:none;}
+  .list{max-height:none!important;overflow:visible!important;}
+  .card{max-height:none!important;}
+  .story-btn,.edition-btn,.group-btn{width:100%;min-height:44px;touch-action:manipulation;}
+  .mobile-inline-detail{
+    display:none;margin-top:12px;padding:12px 10px 4px;
+    border-top:1px solid rgba(215,183,86,.28);text-align:left;
+    background:rgba(0,0,0,.16);border-radius:0 0 14px 14px;
+  }
+  .story-btn.active .mobile-inline-detail,
+  .edition-btn.active .mobile-inline-detail,
+  .group-btn.active .mobile-inline-detail{display:block;}
+  .mobile-inline-detail h4{
+    margin:10px 0 5px;color:var(--bright);font-size:.82rem;
+    letter-spacing:.08em;text-transform:uppercase;
+  }
+  .mobile-inline-detail p{margin:0 0 9px;color:var(--white);font-size:.84rem;line-height:1.45;}
+  .mobile-inline-detail .source-box{margin-top:10px;font-size:.82rem;}
+  .story-btn.active,.edition-btn.active,.group-btn.active{padding-bottom:38px!important;}
+}
+
 </style></head><body><div class="shell"><header class="top-image"><img src="assets/tree-of-life-header-connected-single.png" alt="Emperical Tree of Life header"><nav class="header-hotspots" aria-label="Primary navigation"><a class="hs-home" href="index.html">Home</a><a class="hs-archive" href="archive.html">Archive</a><a class="hs-categories" href="categories.html">Categories</a><a class="hs-location" href="location.html">Location</a><a class="hs-about" href="about.html">About</a></nav><nav class="mobile-nav" aria-label="Mobile navigation"><a href="index.html">Home</a><a href="archive.html">Archive</a><a href="categories.html">Categories</a><a href="location.html">Location</a><a href="about.html">About</a></nav><div class="ticker-overlay" aria-label="Good news ticker"><strong>GOOD NEWS TICKER</strong><div class="ticker-window"><div class="ticker-run"><span>✦ Climate &amp; Energy: Britain Opens Grid Door for Hundreds of Energy Projects</span><span>✦ Climate &amp; Energy: Offshore Wind Forecast Points to a Much Larger Global Buildout</span><span>✦ Climate &amp; Energy: Germany’s Renewable Power Growth Offers Industry a New Opening</span><span>✦ Health &amp; Medicine: Pancreatic Cancer Pill Sets a New Survival Benchmark</span><span>✦ Health &amp; Medicine: Targeted Cancer Drugs Help More Patients Live Longer</span><span>✦ Health &amp; Medicine: GLP-1 Research Points to Possible Cancer Benefits</span><span>✦ Science &amp; Discovery: Angola Expedition Reveals New Species in a Biodiversity Hotspot</span><span>✦ Nature &amp; Wildlife: Mangrove Loss Shows Signs of Reversal Worldwide</span><span>✦ Education &amp; Youth: Dutch Children Again Rank Among the World’s Happiest</span><span>✦ Education &amp; Youth: Schools Give Pupils a Stronger Voice in How They Are Run</span><span>✦ Climate &amp; Energy: Britain Opens Grid Door for Hundreds of Energy Projects</span><span>✦ Climate &amp; Energy: Offshore Wind Forecast Points to a Much Larger Global Buildout</span><span>✦ Climate &amp; Energy: Germany’s Renewable Power Growth Offers Industry a New Opening</span><span>✦ Health &amp; Medicine: Pancreatic Cancer Pill Sets a New Survival Benchmark</span><span>✦ Health &amp; Medicine: Targeted Cancer Drugs Help More Patients Live Longer</span><span>✦ Health &amp; Medicine: GLP-1 Research Points to Possible Cancer Benefits</span><span>✦ Science &amp; Discovery: Angola Expedition Reveals New Species in a Biodiversity Hotspot</span><span>✦ Nature &amp; Wildlife: Mangrove Loss Shows Signs of Reversal Worldwide</span><span>✦ Education &amp; Youth: Dutch Children Again Rank Among the World’s Happiest</span><span>✦ Education &amp; Youth: Schools Give Pupils a Stronger Voice in How They Are Run</span></div></div><em>LIVE</em></div></header><main class="engine"><section class="page-title"><div class="kicker">Story Map</div><h1>Location</h1></section><section class="panel3"><article class="card"><div class="card-head"><h2 class="card-title">Location</h2><p class="card-sub">All recovered stories grouped here.</p></div><div class="scroll" id="groupList"></div></article><article class="card"><div class="card-head"><h2 class="card-title">Stories</h2><p class="card-sub" id="groupMeta"></p></div><div class="scroll" id="groupStories"></div></article><article class="card"><div class="card-head"><h2 class="card-title">Story Record · Source</h2><p class="card-sub">Summary · Why It Matters · Ripple Effect</p></div><div class="scroll" id="groupDetail"></div></article></section></main><footer class="site-footer">EMPERICAL · Good News · Honest Reflection · Positive Ripple</footer></div><script>
 
 function mobileFocusActive(){

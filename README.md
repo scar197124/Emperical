@@ -30,3 +30,8 @@ GitHub-ready static site package.
 - Desktop keeps the three-card layout.
 - Mobile hides separate detail panels and opens selected story details directly under the tapped story record.
 - Applies to Home, Archive, Categories, and Location.
+
+## Universal mobile reader patch
+- Home, Archive, Categories, and Location now use inline mobile story reading.
+- Archive, Categories, and Location use the same mobile reading settings as Home.
+- Desktop remains unchanged.
