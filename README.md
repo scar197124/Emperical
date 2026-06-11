@@ -17,21 +17,11 @@ GitHub-ready static site package.
 - Ticker: latest 10 homepage highlights
 - Source fields preserved
 
-## Mobile repair
-- Mobile uses a visible mobile-only nav under the Tree header.
-- Desktop keeps the original header/hotspot navigation.
-- Ticker moves below the mobile nav to prevent overlap.
-
-## Mobile nav fit patch
-- Mobile nav now uses a five-column grid so About stays visible.
-- Mobile ticker animation is slowed down without changing desktop speed.
-
-## Mobile accordion reader
-- Desktop keeps the three-card layout.
-- Mobile hides separate detail panels and opens selected story details directly under the tapped story record.
-- Applies to Home, Archive, Categories, and Location.
-
-## Universal mobile reader patch
-- Home, Archive, Categories, and Location now use inline mobile story reading.
-- Archive, Categories, and Location use the same mobile reading settings as Home.
-- Desktop remains unchanged.
+## Mobile System v2.0 clean rebuild
+- Rebuilt mobile behavior from the clean June 10 GitHub package, not layered experiment files.
+- Mobile nav is visible and sticky.
+- Home hides desktop detail cards and uses Open/Close story cards.
+- Archive/Categories/Location keep selector + story list visible and hide only the desktop detail panel.
+- Stories do not auto-open on mobile.
+- Each story has Open, Close, Next Story, and Source badge controls on mobile.
+- Added build marker: mobile-system-v2-2026-06-10.
