@@ -45,3 +45,10 @@ GitHub-ready static site package.
 - Disabled old desktop header overlay lines on mobile so the EMPERICAL wordmark remains visible.
 - Desktop still uses the original wide header.
 - Build marker: mobile-header-wordmark-visible-section-flow-cleanup.
+
+## Single mobile header fix
+- Removed the duplicate mobile header behavior.
+- Desktop shows one desktop header.
+- Mobile shows one mobile Empirical wordmark header.
+- Old content-url image swap rule removed.
+- Build marker: single-mobile-header-wordmark-visible.

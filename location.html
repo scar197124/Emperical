@@ -385,24 +385,6 @@
 }
 
 
-/* Mobile-only Empirical header image */
-@media(max-width:860px){
-  .top-image > img{
-    content:url("assets/emperical-mobile-header-tree-earth-human-ai.png");
-    width:100%!important;
-    height:auto!important;
-    max-height:none!important;
-    object-fit:contain!important;
-    object-position:center!important;
-    display:block!important;
-  }
-
-  .top-image{
-    background:#020201!important;
-  }
-}
-
-
 /* Mobile section clarity: selector first, stories second */
 .mobile-step-label{display:none;}
 @media(max-width:860px){
@@ -501,9 +483,14 @@
 }
 
 
-/* Mobile header wordmark visibility fix */
-.mobile-header-art{display:none;}
-.desktop-header-art{display:block;}
+
+/* Single responsive header fix: one header only */
+.desktop-header-art{
+  display:block!important;
+}
+.mobile-header-art{
+  display:none!important;
+}
 @media(max-width:860px){
   .desktop-header-art{
     display:none!important;
@@ -517,6 +504,9 @@
     object-position:center center!important;
     background:#020201!important;
   }
+  .top-image > img:not(.mobile-header-art){
+    display:none!important;
+  }
   .top-image::before,
   .top-image::after{
     display:none!important;
@@ -528,7 +518,7 @@
   }
 }
 
-</style><meta name="emperical-build" content="mobile-header-wordmark-visible-section-flow-cleanup">
+</style><meta name="emperical-build" content="single-mobile-header-wordmark-visible">
 </head><body class="location-page"><div class="shell"><header class="top-image"><img class="desktop-header-art" src="assets/tree-of-life-header-connected-single.png" alt="Emperical Tree of Life desktop header"><img class="mobile-header-art" src="assets/emperical-mobile-header-tree-earth-human-ai.png" alt="Emperical mobile Tree of Life header with Earth, humanity, and AI"><nav class="header-hotspots" aria-label="Primary navigation"><a class="hs-home" href="index.html">Home</a><a class="hs-archive" href="archive.html">Archive</a><a class="hs-categories" href="categories.html">Categories</a><a class="hs-location" href="location.html">Location</a><a class="hs-about" href="about.html">About</a></nav><nav class="mobile-nav" aria-label="Mobile navigation"><a href="index.html">Home</a><a href="archive.html">Archive</a><a href="categories.html">Categories</a><a href="location.html">Location</a><a href="about.html">About</a></nav><div class="ticker-overlay" aria-label="Good news ticker"><strong>GOOD NEWS TICKER</strong><div class="ticker-window"><div class="ticker-run"><span>✦ Climate &amp; Energy: Britain Opens Grid Door for Hundreds of Energy Projects</span><span>✦ Climate &amp; Energy: Offshore Wind Forecast Points to a Much Larger Global Buildout</span><span>✦ Climate &amp; Energy: Germany’s Renewable Power Growth Offers Industry a New Opening</span><span>✦ Health &amp; Medicine: Pancreatic Cancer Pill Sets a New Survival Benchmark</span><span>✦ Health &amp; Medicine: Targeted Cancer Drugs Help More Patients Live Longer</span><span>✦ Health &amp; Medicine: GLP-1 Research Points to Possible Cancer Benefits</span><span>✦ Science &amp; Discovery: Angola Expedition Reveals New Species in a Biodiversity Hotspot</span><span>✦ Nature &amp; Wildlife: Mangrove Loss Shows Signs of Reversal Worldwide</span><span>✦ Education &amp; Youth: Dutch Children Again Rank Among the World’s Happiest</span><span>✦ Education &amp; Youth: Schools Give Pupils a Stronger Voice in How They Are Run</span><span>✦ Climate &amp; Energy: Britain Opens Grid Door for Hundreds of Energy Projects</span><span>✦ Climate &amp; Energy: Offshore Wind Forecast Points to a Much Larger Global Buildout</span><span>✦ Climate &amp; Energy: Germany’s Renewable Power Growth Offers Industry a New Opening</span><span>✦ Health &amp; Medicine: Pancreatic Cancer Pill Sets a New Survival Benchmark</span><span>✦ Health &amp; Medicine: Targeted Cancer Drugs Help More Patients Live Longer</span><span>✦ Health &amp; Medicine: GLP-1 Research Points to Possible Cancer Benefits</span><span>✦ Science &amp; Discovery: Angola Expedition Reveals New Species in a Biodiversity Hotspot</span><span>✦ Nature &amp; Wildlife: Mangrove Loss Shows Signs of Reversal Worldwide</span><span>✦ Education &amp; Youth: Dutch Children Again Rank Among the World’s Happiest</span><span>✦ Education &amp; Youth: Schools Give Pupils a Stronger Voice in How They Are Run</span></div></div><em>LIVE</em></div></header><main class="engine"><section class="page-title"><div class="kicker">Story Map</div><h1>Location</h1></section><section class="panel3"><article class="card"><div class="card-head"><h2 class="card-title">Story Locations</h2><p class="card-sub">Choose one place to view stories from that location.</p></div><div class="scroll" id="groupList"></div></article><article class="card"><div class="card-head"><h2 class="card-title">Selected Location Stories</h2><p class="card-sub" id="groupMeta"></p></div><div class="scroll" id="groupStories"></div></article><article class="card"><div class="card-head"><h2 class="card-title">Story Record · Source</h2><p class="card-sub">Summary · Why It Matters · Ripple Effect</p></div><div class="scroll" id="groupDetail"></div></article></section></main><footer class="site-footer">EMPERICAL · Good News · Honest Reflection · Positive Ripple</footer></div><script>
 let mobileOpenStory=null;
 function mobileMode(){return !!(window.matchMedia && window.matchMedia('(max-width:860px)').matches);}
