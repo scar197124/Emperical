@@ -25,3 +25,9 @@ GitHub-ready static site package.
 - Stories do not auto-open on mobile.
 - Each story has Open, Close, Next Story, and Source badge controls on mobile.
 - Added build marker: mobile-system-v2-2026-06-10.
+
+## Archive/Categories/Location mobile match patch
+- Rewrote Archive, Categories, and Location render logic to match Home mobile Open/Close/Next Story behavior.
+- Edition, category, and location selectors now reset open story state and then show their story list.
+- Story buttons in those pages use the same mobile controls as Home.
+- Build marker: mobile-system-v2-archive-category-location-match.
