@@ -93,3 +93,10 @@ GitHub-ready static site package.
 - Centered the Open button text and highlighted the button without making it bigger.
 - Kept Home, Archive, Categories, Location, desktop, mobile header, and compact selectors unchanged.
 - Build marker: mobile-system-v6-5-source-open-polish.
+
+## Mobile System v6.6 simplified story chips
+- Closed mobile story cards now show only Topic + Location chips.
+- Full metadata remains inside opened story cards: Main Category, Topic, Location, and Source.
+- Source badge and Open button polish remain unchanged.
+- Home, Archive, Categories, Location, desktop, and mobile header remain unchanged.
+- Build marker: mobile-system-v6-6-simplified-story-chips.
