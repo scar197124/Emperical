@@ -52,3 +52,11 @@ GitHub-ready static site package.
 - Mobile shows one mobile Empirical wordmark header.
 - Old content-url image swap rule removed.
 - Build marker: single-mobile-header-wordmark-visible.
+
+## Mobile System v6 compact section picker
+- Archive mobile now uses one compact edition selector at the top, then stories immediately below.
+- Categories mobile now uses one compact category selector at the top, then stories immediately below.
+- Location mobile now uses one compact location selector at the top, then stories immediately below.
+- Removed forced auto-scroll after changing edition/category/location.
+- Home remains unchanged. Desktop remains unchanged.
+- Build marker: mobile-system-v6-compact-section-picker.
