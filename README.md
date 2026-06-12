@@ -79,3 +79,10 @@ GitHub-ready static site package.
 - Added an explicit mobile-location-picker-card class so mobile browsers target the right Location card.
 - Archive and Categories remain unchanged from v6.2.
 - Build marker: mobile-system-v6-3-location-card-shrink.
+
+## Mobile System v6.4 selected stories header lift
+- Raised/tightened the Selected Stories card header on Archive, Categories, and Location.
+- Removed the sticky overlay behavior from that header on mobile.
+- Added clean top spacing so the first story is not cut off.
+- Kept compact selectors, mobile header, Home, and desktop unchanged.
+- Build marker: mobile-system-v6-4-selected-stories-header-lift.
