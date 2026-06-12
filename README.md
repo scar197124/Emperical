@@ -73,3 +73,9 @@ GitHub-ready static site package.
 - Forced the selector card to fit its content instead of holding extra vertical height.
 - Kept the selector text, dropdown, stories, header, Home page, and desktop unchanged.
 - Build marker: mobile-system-v6-2-shrink-selector-card.
+
+## Mobile System v6.3 location card shrink
+- Applied the selector-card shrink directly to Location.
+- Added an explicit mobile-location-picker-card class so mobile browsers target the right Location card.
+- Archive and Categories remain unchanged from v6.2.
+- Build marker: mobile-system-v6-3-location-card-shrink.
