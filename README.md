@@ -100,3 +100,11 @@ GitHub-ready static site package.
 - Source badge and Open button polish remain unchanged.
 - Home, Archive, Categories, Location, desktop, and mobile header remain unchanged.
 - Build marker: mobile-system-v6-6-simplified-story-chips.
+
+## Mobile System v6.7 close and next button alignment
+- Centered Close button text inside the button.
+- Centered Next Story button text inside the button.
+- Gave Next Story enough width so the text fits cleanly.
+- Applied across Home, Archive, Categories, and Location.
+- Desktop and mobile header remain unchanged.
+- Build marker: mobile-system-v6-7-close-next-button-align.
