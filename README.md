@@ -60,3 +60,10 @@ GitHub-ready static site package.
 - Removed forced auto-scroll after changing edition/category/location.
 - Home remains unchanged. Desktop remains unchanged.
 - Build marker: mobile-system-v6-compact-section-picker.
+
+## Mobile System v6.1 slimmer section picker
+- Kept the compact selector card on Archive, Categories, and Location.
+- Reduced unused vertical space in the selector card.
+- Kept wording and function unchanged.
+- Home, desktop, mobile header, and story open/close behavior remain unchanged.
+- Build marker: mobile-system-v6-1-slim-section-picker.
