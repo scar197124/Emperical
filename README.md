@@ -67,3 +67,9 @@ GitHub-ready static site package.
 - Kept wording and function unchanged.
 - Home, desktop, mobile header, and story open/close behavior remain unchanged.
 - Build marker: mobile-system-v6-1-slim-section-picker.
+
+## Mobile System v6.2 shrink actual selector card
+- Targeted the outer selector card container on Archive, Categories, and Location.
+- Forced the selector card to fit its content instead of holding extra vertical height.
+- Kept the selector text, dropdown, stories, header, Home page, and desktop unchanged.
+- Build marker: mobile-system-v6-2-shrink-selector-card.
