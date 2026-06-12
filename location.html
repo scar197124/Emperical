@@ -832,7 +832,59 @@
   }
 }
 
-</style><meta name="emperical-build" content="mobile-system-v6-4-selected-stories-header-lift">
+
+/* Mobile System v6.5 — source badge and open button polish */
+@media(max-width:860px){
+  .mobile-source-badge{
+    color:var(--bright)!important;
+    border-color:rgba(255,220,130,.70)!important;
+    background:linear-gradient(180deg,rgba(216,180,90,.24),rgba(0,0,0,.20))!important;
+    box-shadow:0 0 10px rgba(216,180,90,.18), inset 0 0 0 1px rgba(255,239,176,.10)!important;
+    font-weight:800!important;
+    text-shadow:0 0 8px rgba(216,180,90,.28)!important;
+  }
+
+  .source-box{
+    border-color:rgba(255,220,130,.56)!important;
+    background:linear-gradient(180deg,rgba(216,180,90,.13),rgba(0,0,0,.20))!important;
+    box-shadow:0 0 12px rgba(216,180,90,.13), inset 0 0 0 1px rgba(255,239,176,.08)!important;
+  }
+
+  .source-box strong{
+    color:var(--bright)!important;
+    letter-spacing:.08em!important;
+    text-transform:uppercase!important;
+    text-shadow:0 0 8px rgba(216,180,90,.25)!important;
+  }
+
+  .story-btn .mobile-open{
+    display:flex!important;
+    align-items:center!important;
+    justify-content:center!important;
+    text-align:center!important;
+    margin-left:auto!important;
+    margin-right:auto!important;
+    padding-left:0!important;
+    padding-right:0!important;
+    color:var(--bright)!important;
+    border-color:rgba(255,220,130,.78)!important;
+    background:linear-gradient(180deg,rgba(216,180,90,.28),rgba(0,0,0,.22))!important;
+    box-shadow:0 0 12px rgba(216,180,90,.18), inset 0 0 0 1px rgba(255,239,176,.10)!important;
+    text-shadow:0 0 8px rgba(216,180,90,.28)!important;
+  }
+
+  .story-btn.open .mobile-open{
+    display:none!important;
+  }
+
+  .mobile-toggle{
+    align-items:center!important;
+    justify-content:center!important;
+    text-align:center!important;
+  }
+}
+
+</style><meta name="emperical-build" content="mobile-system-v6-5-source-open-polish">
 </head><body class="location-page"><div class="shell"><header class="top-image"><img class="desktop-header-art" src="assets/tree-of-life-header-connected-single.png" alt="Emperical Tree of Life desktop header"><img class="mobile-header-art" src="assets/emperical-mobile-header-tree-earth-human-ai.png" alt="Emperical mobile Tree of Life header with Earth, humanity, and AI"><nav class="header-hotspots" aria-label="Primary navigation"><a class="hs-home" href="index.html">Home</a><a class="hs-archive" href="archive.html">Archive</a><a class="hs-categories" href="categories.html">Categories</a><a class="hs-location" href="location.html">Location</a><a class="hs-about" href="about.html">About</a></nav><nav class="mobile-nav" aria-label="Mobile navigation"><a href="index.html">Home</a><a href="archive.html">Archive</a><a href="categories.html">Categories</a><a href="location.html">Location</a><a href="about.html">About</a></nav><div class="ticker-overlay" aria-label="Good news ticker"><strong>GOOD NEWS TICKER</strong><div class="ticker-window"><div class="ticker-run"><span>✦ Climate &amp; Energy: Britain Opens Grid Door for Hundreds of Energy Projects</span><span>✦ Climate &amp; Energy: Offshore Wind Forecast Points to a Much Larger Global Buildout</span><span>✦ Climate &amp; Energy: Germany’s Renewable Power Growth Offers Industry a New Opening</span><span>✦ Health &amp; Medicine: Pancreatic Cancer Pill Sets a New Survival Benchmark</span><span>✦ Health &amp; Medicine: Targeted Cancer Drugs Help More Patients Live Longer</span><span>✦ Health &amp; Medicine: GLP-1 Research Points to Possible Cancer Benefits</span><span>✦ Science &amp; Discovery: Angola Expedition Reveals New Species in a Biodiversity Hotspot</span><span>✦ Nature &amp; Wildlife: Mangrove Loss Shows Signs of Reversal Worldwide</span><span>✦ Education &amp; Youth: Dutch Children Again Rank Among the World’s Happiest</span><span>✦ Education &amp; Youth: Schools Give Pupils a Stronger Voice in How They Are Run</span><span>✦ Climate &amp; Energy: Britain Opens Grid Door for Hundreds of Energy Projects</span><span>✦ Climate &amp; Energy: Offshore Wind Forecast Points to a Much Larger Global Buildout</span><span>✦ Climate &amp; Energy: Germany’s Renewable Power Growth Offers Industry a New Opening</span><span>✦ Health &amp; Medicine: Pancreatic Cancer Pill Sets a New Survival Benchmark</span><span>✦ Health &amp; Medicine: Targeted Cancer Drugs Help More Patients Live Longer</span><span>✦ Health &amp; Medicine: GLP-1 Research Points to Possible Cancer Benefits</span><span>✦ Science &amp; Discovery: Angola Expedition Reveals New Species in a Biodiversity Hotspot</span><span>✦ Nature &amp; Wildlife: Mangrove Loss Shows Signs of Reversal Worldwide</span><span>✦ Education &amp; Youth: Dutch Children Again Rank Among the World’s Happiest</span><span>✦ Education &amp; Youth: Schools Give Pupils a Stronger Voice in How They Are Run</span></div></div><em>LIVE</em></div></header><main class="engine"><section class="page-title"><div class="kicker">Story Map</div><h1>Location</h1></section><section class="panel3"><article class="card mobile-location-picker-card"><div class="card-head"><h2 class="card-title">Story Locations</h2><p class="card-sub">Choose one place to view stories from that location.</p></div><div class="scroll" id="groupList"></div></article><article class="card"><div class="card-head"><h2 class="card-title">Selected Location Stories</h2><p class="card-sub" id="groupMeta"></p></div><div class="scroll" id="groupStories"></div></article><article class="card"><div class="card-head"><h2 class="card-title">Story Record · Source</h2><p class="card-sub">Summary · Why It Matters · Ripple Effect</p></div><div class="scroll" id="groupDetail"></div></article></section></main><footer class="site-footer">EMPERICAL · Good News · Honest Reflection · Positive Ripple</footer></div><script>
 
 function mobilePickerOptions(list,currentId,labelKey){

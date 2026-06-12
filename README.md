@@ -86,3 +86,10 @@ GitHub-ready static site package.
 - Added clean top spacing so the first story is not cut off.
 - Kept compact selectors, mobile header, Home, and desktop unchanged.
 - Build marker: mobile-system-v6-4-selected-stories-header-lift.
+
+## Mobile System v6.5 source and open button polish
+- Made the Source badge/link stand out more without increasing size.
+- Highlighted the Source box inside opened stories.
+- Centered the Open button text and highlighted the button without making it bigger.
+- Kept Home, Archive, Categories, Location, desktop, mobile header, and compact selectors unchanged.
+- Build marker: mobile-system-v6-5-source-open-polish.
