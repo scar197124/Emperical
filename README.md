@@ -108,3 +108,29 @@ GitHub-ready static site package.
 - Applied across Home, Archive, Categories, and Location.
 - Desktop and mobile header remain unchanged.
 - Build marker: mobile-system-v6-7-close-next-button-align.
+
+## Crawler / Meta / AI Harmony Package
+- Added robots.txt.
+- Added sitemap.xml.
+- Added llms.txt and ai.txt for machine-readable AI/human collaboration context.
+- Added Open Graph and Twitter preview metadata to all main pages.
+- Added JSON-LD structured data.
+- Added machine-readable AI-HUMAN-HARMONY comments and meta tags.
+- Added share image: assets/empirical-og-earth-human-ai.png.
+- Assumed GitHub Pages base URL: https://venomas56.github.io/Emperical/
+- Build marker: crawler-meta-ai-harmony-package.
+
+
+## June 13, 2026 Gap-Balance Edition
+- Added 10 source-grounded stories.
+- Moved the June 10 homepage edition into the continuing archive sequence.
+- Rebuilt archive, category, and location groupings.
+- Total stories: 111.
+- Focused on underrepresented categories and regions: Culture & Heritage,
+  Education & Youth, Science & Discovery, Measured Progress, Canada,
+  Latin America, South Asia, and country-specific African stories.
+
+
+## Latest-edition update badges
+- Archive, Categories, and Locations now show small counts for stories added in the newest edition.
+- Groups with no new stories remain unmarked.
