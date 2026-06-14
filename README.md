@@ -134,3 +134,7 @@ GitHub-ready static site package.
 ## Latest-edition update badges
 - Archive, Categories, and Locations now show small counts for stories added in the newest edition.
 - Groups with no new stories remain unmarked.
+
+## Full-width clean ticker
+- Removed the Good News label and Live badge.
+- Ticker now uses the full strip width on desktop and mobile.
