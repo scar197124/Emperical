@@ -12,8 +12,8 @@ GitHub-ready static site package.
 - `assets/tree-of-life-header-connected-single.png` — Header image
 
 ## Current build
-- Latest homepage edition: June 18, 2026
-- Total story vault: 121 stories
+- Latest homepage edition: June 10, 2026
+- Total story vault: 101 stories
 - Ticker: latest 10 homepage highlights
 - Source fields preserved
 
@@ -138,3 +138,8 @@ GitHub-ready static site package.
 ## Full-width clean ticker
 - Removed the Good News label and Live badge.
 - Ticker now uses the full strip width on desktop and mobile.
+
+
+## Latest edition
+
+June 24, 2026 — 10 verified stories organized by category and location.

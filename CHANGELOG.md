@@ -1,5 +1,13 @@
 # Changelog
 
+## June 24, 2026 — New Current Edition
+
+- Published 10 new verified good-news stories.
+- Added Good Samaritan, new technology, wildlife, measured progress, and cultural heritage coverage.
+- Moved the June 13 homepage to `homepage_june13_2026_archived.html`.
+- Updated Archive, Categories, Location, and homepage ticker data.
+- Preserved the black-and-gold Emperical interface and existing navigation.
+
 ## June 3, 2026 — Navigation Regression Fix
 
 - Fixed leftover Explore navigation links from the split-nav transition.

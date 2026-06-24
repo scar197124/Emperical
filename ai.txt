@@ -8,4 +8,4 @@ Canonical site: https://venomas56.github.io/Emperical/
 Sitemap: https://venomas56.github.io/Emperical/sitemap.xml
 Open Graph image: https://venomas56.github.io/Emperical/assets/empirical-og-earth-human-ai.png
 
-Latest edition: June 18, 2026 Edition. Archive total: 121 stories.
+Latest edition: June 13, 2026 Edition. Archive total: 111 stories.
