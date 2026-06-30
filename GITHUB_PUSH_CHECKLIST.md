@@ -30,7 +30,7 @@ Avoid old experimental files such as editor drafts, explorer experiment markdown
 
 Open the live site and check:
 
-- Home loads the June 3, 2026 edition.
+- Home loads the June 30, 2026 edition.
 - Archive loads and links to archived editions.
 - Categories opens and story cards are grouped by story type.
 - Location opens and story cards are grouped by region/place.

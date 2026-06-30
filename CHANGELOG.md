@@ -1,6 +1,6 @@
 # Changelog
 
-## June 24, 2026 — New Current Edition
+## June 30, 2026 — New Current Edition
 
 - Published 10 new verified good-news stories.
 - Added Good Samaritan, new technology, wildlife, measured progress, and cultural heritage coverage.
@@ -161,3 +161,11 @@ May 25, 2026 — Locked homepage date behavior, archived previous homepage as Ed
 - Region now has matching field-card treatment beside Category.
 - Preserved Categories, Location, Archive, About, Back to Top, source transparency, and original-summary policy.
 
+
+
+## June 30, 2026 — Editorial Clarity Pass
+- Reduced reader-facing secondary genres from 53 inconsistent labels to 13 consistent genres.
+- Preserved precise subject labels in `originalCategory`.
+- Simplified homepage story cards to emphasize headlines first.
+- Added Evidence and What Remains Uncertain sections to all 12 current Wow Edition stories.
+- Renamed source presentation to Primary Source.

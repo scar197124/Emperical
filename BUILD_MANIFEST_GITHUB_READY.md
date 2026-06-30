@@ -1,12 +1,12 @@
 # Emperical — GitHub Ready Clean Deploy Manifest
 
-Build name: **Emperical_June3_2026_GitHub_Ready_Clean_Deploy**  
-Build date: **June 3, 2026**  
-Purpose: clean public GitHub deployment package after June 3 edition, Categories/Location navigation, Back to Top controls, and homepage field-card polish.
+Build name: **Emperical_June24_2026_10_Stories_GH_READY**  
+Build date: **June 30, 2026**  
+Purpose: clean public GitHub deployment package for the June 24 edition, with 10 new verified stories and refreshed Archive, Categories, Location, crawler metadata, and sitemap records.
 
 ## Included public deploy files
 
-- `index.html` — current June 3, 2026 homepage edition
+- `index.html` — current June 30, 2026 homepage edition
 - `archive.html` — archive index
 - `categories.html` — all indexed stories grouped by category
 - `location.html` — all indexed stories grouped by region/place
@@ -43,9 +43,9 @@ Purpose: clean public GitHub deployment package after June 3 edition, Categories
 ## Validation counts
 
 - HTML files: 13
-- Homepage story cards: 0
+- Homepage story cards: 10
 - Category groups: 11
 - Location groups: 8
-- Category story entries: 91
-- Location story entries: 91
+- Category story entries: 121
+- Location story entries: 121
 - Missing internal HTML links: 0
