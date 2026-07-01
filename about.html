@@ -150,7 +150,7 @@
   gap:34px;
   align-items:center;
   padding-left:0!important;
-  animation:tickerFlow 46s linear infinite!important;
+  animation:tickerFlow 54s linear infinite!important;
   will-change:transform;
 }
 .ticker-run span{
@@ -335,7 +335,7 @@
   .mobile-nav a{display:flex;align-items:center;justify-content:center;min-width:0;width:100%;min-height:36px;padding:8px 3px;border:1px solid rgba(215,183,86,.42);border-radius:999px;color:var(--bright);background:rgba(0,0,0,.28);text-decoration:none;font-size:clamp(.58rem,2.7vw,.74rem);letter-spacing:.015em;line-height:1;white-space:nowrap;text-align:center;}
 
   .ticker-overlay{position:relative!important;left:auto!important;right:auto!important;top:auto!important;bottom:auto!important;transform:none!important;width:100%!important;margin-top:6px;border-radius:14px;z-index:2!important;}
-  .ticker-run{animation-duration:68s!important;}
+  .ticker-run{animation-duration:78s!important;}
 
   .panel3{display:block!important;}
   .panel3 .card{margin-bottom:10px;max-height:none!important;}
@@ -381,7 +381,7 @@
 @media(max-width:380px){
   .mobile-nav{gap:3px;padding:5px;}
   .mobile-nav a{padding:8px 2px;font-size:clamp(.54rem,2.55vw,.68rem);letter-spacing:0;}
-  .ticker-run{animation-duration:74s!important;}
+  .ticker-run{animation-duration:86s!important;}
 }
 
 
@@ -533,6 +533,41 @@
   padding:0!important;
 }
 
+
+/* VISUAL DISTINCTION PREVIEW V2 — expanded, purposeful accents; header intentionally unchanged */
+:root{
+ --accent-moss:#7f9b72;--accent-teal:#55a6a1;--accent-blue:#668fc4;
+ --accent-violet:#9a7fc1;--accent-rose:#bd7885;--accent-copper:#bd845d;
+ --accent-amber:#caa052;--accent-slate:#82919c;
+ --accent-red:#bd6570;--accent-coral:#c87963;--accent-jade:#5fa181;
+ --accent-ochre:#bd9550;--accent-indigo:#767fc4;--accent-cyan:#5d9fb7;
+ --accent-lilac:#a788b8;--accent-olive:#8f9c62;
+}
+.preview-note{flex:0 0 auto;display:flex;align-items:center;justify-content:center;gap:.65rem;padding:6px 12px;border:1px solid rgba(215,183,86,.28);border-radius:13px;background:rgba(7,5,3,.86);color:var(--muted);font-size:.76rem;letter-spacing:.04em}
+.preview-note strong{color:var(--bright);text-transform:uppercase;letter-spacing:.12em;font-size:.68rem}
+.story-btn,.group-btn,.edition-btn{--item-accent:var(--accent-slate);position:relative;border-left:4px solid color-mix(in srgb,var(--item-accent) 88%,transparent)!important;overflow:hidden}
+.story-btn::before,.group-btn::before,.edition-btn::before{content:"";position:absolute;inset:0 auto 0 0;width:34%;border-radius:15px 0 0 15px;background:linear-gradient(90deg,color-mix(in srgb,var(--item-accent) 20%,transparent),color-mix(in srgb,var(--item-accent) 5%,transparent),transparent);pointer-events:none}
+.story-btn::after,.group-btn::after,.edition-btn::after{content:"";position:absolute;top:10px;right:10px;width:7px;height:7px;border-radius:50%;background:var(--item-accent);box-shadow:0 0 10px color-mix(in srgb,var(--item-accent) 65%,transparent);opacity:.78;pointer-events:none}
+.story-btn strong,.group-btn strong,.edition-btn strong,.story-btn span,.group-btn span,.edition-btn span{position:relative}
+.story-btn.active,.group-btn.active,.edition-btn.active{box-shadow:0 0 0 1px color-mix(in srgb,var(--item-accent) 48%,transparent),0 0 22px color-mix(in srgb,var(--item-accent) 25%,transparent)!important;background-image:linear-gradient(110deg,color-mix(in srgb,var(--item-accent) 12%,transparent),transparent 46%)!important}
+.chip[data-kind="genre"]{border-color:color-mix(in srgb,var(--item-accent) 78%,transparent);color:color-mix(in srgb,var(--item-accent) 78%,#fff);background:color-mix(in srgb,var(--item-accent) 15%,rgba(0,0,0,.25))}
+.chip[data-kind="location"]{border-color:color-mix(in srgb,var(--location-accent,var(--item-accent)) 70%,transparent);color:color-mix(in srgb,var(--location-accent,var(--item-accent)) 74%,#fff);background:color-mix(in srgb,var(--location-accent,var(--item-accent)) 12%,rgba(0,0,0,.25));border-style:solid;opacity:.94}
+[data-accent="moss"]{--item-accent:var(--accent-moss)}[data-accent="teal"]{--item-accent:var(--accent-teal)}[data-accent="blue"]{--item-accent:var(--accent-blue)}[data-accent="violet"]{--item-accent:var(--accent-violet)}[data-accent="rose"]{--item-accent:var(--accent-rose)}[data-accent="copper"]{--item-accent:var(--accent-copper)}[data-accent="amber"]{--item-accent:var(--accent-amber)}[data-accent="slate"]{--item-accent:var(--accent-slate)}[data-accent="red"]{--item-accent:var(--accent-red)}[data-accent="coral"]{--item-accent:var(--accent-coral)}[data-accent="jade"]{--item-accent:var(--accent-jade)}[data-accent="ochre"]{--item-accent:var(--accent-ochre)}[data-accent="indigo"]{--item-accent:var(--accent-indigo)}[data-accent="cyan"]{--item-accent:var(--accent-cyan)}[data-accent="lilac"]{--item-accent:var(--accent-lilac)}[data-accent="olive"]{--item-accent:var(--accent-olive)}
+body.home-page .page-title{border-color:rgba(127,155,114,.52);box-shadow:inset 0 0 0 1px rgba(127,155,114,.08),0 10px 24px rgba(0,0,0,.18)}
+body.archive-page .page-title{border-color:rgba(184,138,99,.58)}
+body.categories-page .page-title{border-color:rgba(102,143,196,.58)}
+body.location-page .page-title{border-color:rgba(85,166,161,.58)}
+body.about-page .page-title{border-color:rgba(154,127,193,.58)}
+body.archive-page .card-head{box-shadow:0 8px 18px rgba(0,0,0,.36),inset 3px 0 0 rgba(184,138,99,.62)}
+body.categories-page .card-head{box-shadow:0 8px 18px rgba(0,0,0,.36),inset 3px 0 0 rgba(102,143,196,.62)}
+body.location-page .card-head{box-shadow:0 8px 18px rgba(0,0,0,.36),inset 3px 0 0 rgba(85,166,161,.62)}
+body.about-page .about-grid .card:nth-child(1){border-top-color:rgba(154,127,193,.8)}
+body.about-page .about-grid .card:nth-child(2){border-top-color:rgba(127,155,114,.8)}
+body.about-page .about-grid .card:nth-child(3){border-top-color:rgba(189,132,93,.8)}
+.detail{--detail-accent:var(--item-accent,var(--accent-slate));border-left:4px solid color-mix(in srgb,var(--detail-accent) 76%,transparent);background-image:linear-gradient(110deg,color-mix(in srgb,var(--detail-accent) 6%,transparent),transparent 34%)}
+.detail h3{position:relative}.detail h3::before{content:"";display:inline-block;width:7px;height:7px;margin:0 7px 1px 0;border-radius:50%;background:var(--detail-accent);box-shadow:0 0 9px color-mix(in srgb,var(--detail-accent) 60%,transparent)}
+@media(max-width:860px){.preview-note{margin:0 1px;font-size:.68rem}.story-btn,.group-btn,.edition-btn{border-left-width:5px!important}}
+
 </style>
 <!-- EMPIRICAL CRAWLER PACKAGE START -->
 <meta name="description" content="Learn the meaning behind Empirical: a source-grounded archive built around Earth, humanity, AI, and the Tree of Life.">
@@ -594,11 +629,69 @@ source visibility, humane technology, and positive ripple effects.
 -->
 <!-- EMPIRICAL CRAWLER PACKAGE END -->
 
-<meta name="emperical-build" content="june13-full-width-clean-ticker" />
+<meta name="emperical-build" content="july1-color-expanded-production" />
 </head><body class="about-page"><div class="shell"><header class="top-image"><img class="desktop-header-art" src="assets/tree-of-life-header-connected-single.png" alt="Emperical Tree of Life desktop header"><img class="mobile-header-art" src="assets/emperical-mobile-header-tree-earth-human-ai.png" alt="Emperical mobile Tree of Life header with Earth, humanity, and AI"><nav class="header-hotspots" aria-label="Primary navigation"><a class="hs-home" href="index.html">Home</a><a class="hs-archive" href="archive.html">Archive</a><a class="hs-categories" href="categories.html">Categories</a><a class="hs-location" href="location.html">Location</a><a class="hs-about" href="about.html">About</a></nav><nav class="mobile-nav" aria-label="Mobile navigation"><a href="index.html">Home</a><a href="archive.html">Archive</a><a href="categories.html">Categories</a><a href="location.html">Location</a><a href="about.html">About</a></nav><div class="ticker-overlay" aria-label="Latest story ticker"><div class="ticker-window"><div class="ticker-run"><span>✦ Climate &amp; Energy: Britain Opens Grid Door for Hundreds of Energy Projects</span><span>✦ Climate &amp; Energy: Offshore Wind Forecast Points to a Much Larger Global Buildout</span><span>✦ Climate &amp; Energy: Europe’s Renewable Power Growth Offers Industry a New Opening</span><span>✦ Health &amp; Medicine: Pancreatic Cancer Pill Sets a New Survival Benchmark</span><span>✦ Health &amp; Medicine: Targeted Cancer Drugs Help More Patients Live Longer</span><span>✦ Health &amp; Medicine: GLP-1 Research Points to Possible Cancer Benefits</span><span>✦ Science &amp; Discovery: Africa Expedition Reveals New Species in a Biodiversity Hotspot</span><span>✦ Nature &amp; Wildlife: Mangrove Loss Shows Signs of Reversal Worldwide</span><span>✦ Education &amp; Youth: Dutch Children Again Rank Among the World’s Happiest</span><span>✦ Education &amp; Youth: Schools Give Pupils a Stronger Voice in How They Are Run</span><span>✦ Climate &amp; Energy: Britain Opens Grid Door for Hundreds of Energy Projects</span><span>✦ Climate &amp; Energy: Offshore Wind Forecast Points to a Much Larger Global Buildout</span><span>✦ Climate &amp; Energy: Europe’s Renewable Power Growth Offers Industry a New Opening</span><span>✦ Health &amp; Medicine: Pancreatic Cancer Pill Sets a New Survival Benchmark</span><span>✦ Health &amp; Medicine: Targeted Cancer Drugs Help More Patients Live Longer</span><span>✦ Health &amp; Medicine: GLP-1 Research Points to Possible Cancer Benefits</span><span>✦ Science &amp; Discovery: Africa Expedition Reveals New Species in a Biodiversity Hotspot</span><span>✦ Nature &amp; Wildlife: Mangrove Loss Shows Signs of Reversal Worldwide</span><span>✦ Education &amp; Youth: Dutch Children Again Rank Among the World’s Happiest</span><span>✦ Education &amp; Youth: Schools Give Pupils a Stronger Voice in How They Are Run</span></div></div></div></header><main class="engine"><section class="page-title"><div class="kicker">Earth · Humanity · Intelligence</div><h1>About Emperical</h1><p>The old archive package was used only to recover story data. The public interface remains the upgraded Tree of Life system.</p></section><section class="about-grid"><article class="card"><h2>Purpose</h2><p>Emperical gathers grounded stories of repair, kindness, invention, recovery, and system-level improvement.</p></article><article class="card"><h2>Tree of Life UI</h2><p>The header, navigation, and panel system are kept as the new visual direction. No duplicate navigation rows are added inside the pages.</p></article><article class="card"><h2>Archive Integrity</h2><p>The archive is edition-first: editions stay preserved, stories stay grouped inside their edition, and every recovered story keeps its Source field visible.</p></article></section></main><footer class="site-footer">EMPERICAL · Good News · Honest Reflection · Positive Ripple</footer></div><script>
 function esc(v){return String(v??'').replace(/[&<>"]/g,m=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[m]));}
 function sourceHTML(s){if(s.sourceUrl){return `<a href="${esc(s.sourceUrl)}" target="_blank" rel="noopener">${esc(s.source||'Source')}</a>`;} return `<span>${esc(s.source||'Source pending')}</span>`;}
 function storyButton(s,active){return `<button class="story-btn ${active?'active':''}" data-story="${esc(s.id)}"><strong>${esc(s.title)}</strong><span>${esc(s.editionDate||s.location||'')} · Source: ${esc(s.source||'Source pending')}</span><div class="chipline"><em class="chip">${esc(s.category||'Uncategorized')}</em><em class="chip">${esc(s.location||'General')}</em></div></button>`;}
 function detailHTML(s, mode='full'){return `<div class="detail"><h3>${esc(s.title)}</h3>${mode==='compact'?'':`<p class="mini">${esc(s.category||'Uncategorized')} · ${esc(s.location||'General')} · ${esc(s.edition||'')}</p>`}<h3>Summary</h3><p>${esc(s.summary||'Summary pending.')}</p><h3>Why It Matters</h3><p>${esc(s.why||'Why It Matters pending.')}</p>${mode==='noripple'?'':`<h3>Ripple Effect</h3><p>${esc(s.ripple||'Ripple Effect pending.')}</p>`}<div class="source-box"><strong>Source</strong><br>${sourceHTML(s)}</div></div>`;}
 
-</script></body></html>
+</script>
+<script>
+(function(){
+ const genreMap={
+  'nature & wildlife':'moss','environment & recovery':'moss','climate & energy':'olive',
+  'health & medicine':'rose','health':'rose','medical innovation':'rose',
+  'science & discovery':'blue','technology & engineering':'violet','technology & innovation':'violet',
+  'space & cosmos':'indigo','community & kindness':'amber','education & youth':'cyan',
+  'culture & heritage':'copper','history & archaeology':'copper','measured progress':'teal'
+ };
+ const locationMap={
+  'canada':'red','united states':'blue','caribbean & latin america':'coral',
+  'united kingdom':'lilac','europe':'violet','africa':'copper','asia':'jade',
+  'australia':'ochre','oceans':'teal','space':'indigo','global':'amber',
+  'north america':'slate'
+ };
+ const locationIdMap={
+  'canada':'red','united-states':'blue','caribbean-latin-america':'coral','caribbean-&-latin-america':'coral',
+  'united-kingdom':'lilac','europe':'violet','africa':'copper','asia':'jade','australia':'ochre',
+  'oceans':'teal','space':'indigo','global':'amber','north-america':'slate'
+ };
+ const editionPalette=['copper','teal','violet','moss','rose','blue','ochre','lilac','jade','coral','indigo','amber'];
+ function norm(s){return (s||'').trim().toLowerCase()}
+ function genreAccent(text){const n=norm(text);for(const [k,v] of Object.entries(genreMap)){if(n.includes(k))return v}return 'slate'}
+ function locationAccent(text){const n=norm(text);for(const [k,v] of Object.entries(locationMap)){if(n.includes(k))return v}return 'slate'}
+ function accentVar(name){return `var(--accent-${name||'slate'})`}
+ function decorate(){
+   const body=document.body;
+   document.querySelectorAll('.story-btn').forEach(el=>{
+     const chips=el.querySelectorAll('.chip');
+     chips.forEach((chip,i)=>chip.dataset.kind=i===0?'genre':'location');
+     const genre=chips[0]?.textContent||el.querySelector('strong')?.textContent||'';
+     const location=chips[1]?.textContent||'';
+     let a=genreAccent(genre);
+     if(body.classList.contains('location-page')){
+       const activeGroup=document.querySelector('.group-btn.active');
+       a=activeGroup?.dataset.accent||locationAccent(location);
+     }
+     el.dataset.accent=a;
+     el.style.setProperty('--location-accent',accentVar(locationAccent(location)));
+   });
+   document.querySelectorAll('.group-btn').forEach((el,i)=>{
+     const text=el.querySelector('strong')?.textContent||el.textContent;
+     let a='slate';
+     if(body.classList.contains('location-page')) a=locationIdMap[el.dataset.group]||locationAccent(text);
+     else if(body.classList.contains('categories-page')) a=genreAccent(text);
+     else a=editionPalette[i%editionPalette.length];
+     el.dataset.accent=a;
+   });
+   document.querySelectorAll('.edition-btn').forEach((el,i)=>el.dataset.accent=editionPalette[i%editionPalette.length]);
+   const active=document.querySelector('.story-btn.active,.group-btn.active,.edition-btn.active');
+   const accent=active?.dataset.accent||'slate';
+   document.querySelectorAll('.detail').forEach(d=>d.style.setProperty('--detail-accent',accentVar(accent)));
+ }
+ const observer=new MutationObserver(decorate);observer.observe(document.body,{subtree:true,childList:true,attributes:true,attributeFilter:['class']});
+ decorate();
+})();
+</script>
+</body></html>
