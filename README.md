@@ -142,4 +142,4 @@ GitHub-ready static site package.
 
 ## Latest edition
 
-June 30, 2026 — 10 verified stories organized by category and location.
+June 30, 2026 — 10 verified stories organized by category and location. 
