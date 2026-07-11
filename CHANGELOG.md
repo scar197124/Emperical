@@ -1,3 +1,11 @@
+# Empirical Expansion Pack 1 — July 11, 2026
+
+- Added 18 fully written briefings across History, Science, Innovation, Human Stories, Mystery, and a three-story WOW Collection.
+- Preserved Summary, Why It Matters, Ripple Effect, Source, Evidence, and Uncertainty fields.
+- Added permanent IDs `emp-exp1-001` through `emp-exp1-018`.
+- Updated the homepage, archive, category explorer, and recovered-story data.
+- No UI redesign.
+
 # Changelog
 
 ## June 30, 2026 — New Current Edition
