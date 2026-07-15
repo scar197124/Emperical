@@ -1,3 +1,10 @@
+# July 15, 2026 — Good News Edition
+
+- Replaced Home with 20 new good-news briefings.
+- Preserved the previous Home editions in Archive.
+- Kept the July 15 stories exclusive to Home until the next publishing cycle.
+- Verified all story IDs are unique and all 20 records include source, evidence, uncertainty, and ripple fields.
+
 # Empirical Expansion Pack 1 — July 11, 2026
 
 - Added 18 fully written briefings across History, Science, Innovation, Human Stories, Mystery, and a three-story WOW Collection.
@@ -177,3 +184,8 @@ May 25, 2026 — Locked homepage date behavior, archived previous homepage as Ed
 - Simplified homepage story cards to emphasize headlines first.
 - Added Evidence and What Remains Uncertain sections to all 12 current Wow Edition stories.
 - Renamed source presentation to Primary Source.
+
+## July 15, 2026 — Editorial Depth Update
+- Expanded Summary and Why It Matters copy across all 20 Home stories.
+- Renamed What Remains Uncertain to Limits and Uncertainty while preserving the field.
+- Left Archive unchanged.
