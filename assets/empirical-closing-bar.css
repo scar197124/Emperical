@@ -1,0 +1,163 @@
+/* Empirical v5.3 — shared editorial closing bar */
+:root{--emp-footer-line:rgba(215,183,86,.30);--emp-footer-gold:#d7b756;--emp-footer-bright:#f2d47b;--emp-footer-muted:#b7aa91}
+.shell > .engine{min-height:0}
+.empirical-closing-bar{
+  flex:0 0 46px; min-height:46px; width:100%;
+  display:grid; grid-template-columns:minmax(190px,.9fr) minmax(280px,1.25fr) minmax(290px,1.15fr);
+  align-items:center; gap:14px; padding:7px 16px;
+  border:1px solid var(--line,var(--emp-footer-line)); border-radius:16px;
+  background:linear-gradient(180deg,var(--panel2,rgba(20,13,4,.94)),var(--panel,rgba(7,5,3,.96)));
+  box-shadow:inset 0 0 0 1px rgba(216,180,90,.045),0 8px 24px rgba(0,0,0,.22);
+  color:var(--white,#f4ead2); font-family:Georgia,'Times New Roman',serif;
+  overflow:hidden;
+}
+.empirical-closing-bar__identity{display:flex;align-items:center;gap:9px;min-width:0}
+.empirical-closing-bar__mark{width:7px;height:7px;border-radius:50%;background:var(--gold,var(--emp-footer-gold));box-shadow:0 0 12px rgba(215,183,86,.42);flex:0 0 auto}
+.empirical-closing-bar__label{color:var(--bright,var(--emp-footer-bright));font-size:.68rem;line-height:1;letter-spacing:.13em;text-transform:uppercase;font-weight:700;white-space:nowrap}
+.empirical-closing-bar__movement{display:flex;align-items:center;justify-content:center;gap:9px;min-width:0;color:var(--white,#f4ead2);font-size:.73rem;letter-spacing:.045em;white-space:nowrap}
+.empirical-closing-bar__movement i{width:3px;height:3px;border-radius:50%;background:rgba(215,183,86,.55);display:block;flex:0 0 auto}
+.empirical-closing-bar__movement span{transition:color .16s ease}
+.empirical-closing-bar__movement span:hover{color:var(--bright,var(--emp-footer-bright))}
+.empirical-closing-bar__closing{display:flex;align-items:center;justify-content:flex-end;gap:12px;min-width:0;color:var(--muted,var(--emp-footer-muted))}
+.empirical-closing-bar__quote{font-size:.72rem;font-style:italic;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.empirical-closing-bar__about{font-size:.62rem;letter-spacing:.10em;text-transform:uppercase;color:var(--bright,var(--emp-footer-bright));text-decoration:none;border-left:1px solid rgba(215,183,86,.24);padding-left:12px;white-space:nowrap}
+.empirical-closing-bar__about:hover,.empirical-closing-bar__about:focus{color:#fff1bd;outline:none}
+@media(max-width:980px){
+ .empirical-closing-bar{grid-template-columns:1fr auto;grid-template-rows:auto auto;min-height:52px;flex-basis:52px;padding:6px 13px;gap:3px 12px}
+ .empirical-closing-bar__identity{grid-column:1;grid-row:1}
+ .empirical-closing-bar__movement{grid-column:1;grid-row:2;justify-content:flex-start;font-size:.67rem}
+ .empirical-closing-bar__closing{grid-column:2;grid-row:1/3}
+ .empirical-closing-bar__quote{max-width:260px}
+}
+@media(max-width:680px){
+ .empirical-closing-bar{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:4px;min-height:58px;flex-basis:auto;padding:8px 12px;border-radius:14px}
+ .empirical-closing-bar__movement{width:100%;justify-content:flex-start;gap:7px;font-size:.64rem}
+ .empirical-closing-bar__closing{width:100%;justify-content:space-between;gap:8px}
+ .empirical-closing-bar__quote{font-size:.66rem;max-width:calc(100% - 55px)}
+ .empirical-closing-bar__about{font-size:.58rem;padding-left:8px}
+}
+
+/* Empirical v5.4 — unified text hierarchy + illuminated borders */
+:root{
+  --emp-ui-white:#f8efd9;
+  --emp-ui-line:rgba(236,205,112,.62);
+  --emp-ui-line-soft:rgba(236,205,112,.46);
+  --emp-ui-line-bright:rgba(247,218,132,.78);
+}
+
+/* Closing bar now follows the same gold-heading / white-supporting-text language. */
+.empirical-closing-bar{
+  border-color:var(--emp-ui-line)!important;
+  box-shadow:inset 0 0 0 1px rgba(247,218,132,.10),0 0 20px rgba(215,183,86,.08),0 8px 24px rgba(0,0,0,.22);
+}
+.empirical-closing-bar__label,
+.empirical-closing-bar__movement,
+.empirical-closing-bar__movement span,
+.empirical-closing-bar__closing,
+.empirical-closing-bar__quote,
+.empirical-closing-bar__about{
+  color:var(--white,var(--emp-ui-white))!important;
+}
+.empirical-closing-bar__label{font-size:.72rem}
+.empirical-closing-bar__movement{font-size:.77rem}
+.empirical-closing-bar__quote{font-size:.75rem}
+.empirical-closing-bar__about{font-size:.66rem}
+.empirical-closing-bar__movement i,
+.empirical-closing-bar__mark{background:var(--gold,#d7b756)}
+.empirical-closing-bar__about{border-left-color:var(--emp-ui-line-soft)}
+
+/* Slightly enlarge the small browse/count language without touching Today's Edition at a Glance. */
+.v2-genre-card em{
+  color:var(--white,var(--emp-ui-white))!important;
+  font-size:.80rem!important;
+  line-height:1.35;
+  font-weight:600;
+  letter-spacing:.01em;
+}
+.story-btn span,.edition-btn span,.group-btn span,
+.archive-story-button .story-button-meta,
+.category-story-button .story-button-meta,
+.location-story-button .story-button-meta,
+.selector-story-count,.selector-new-count,
+.archive-selector-control small,
+.category-selector-control small,
+.location-selector-control small{
+  color:var(--white,var(--emp-ui-white))!important;
+  font-size:max(.81rem,1em);
+}
+
+/* Turn the lights on: brighter, consistent borders without changing geometry. */
+.top-image,.page-title,.card,.good-news-ticker,.ticker-overlay,
+.v2-intro,.v2-feature,.v2-edition-panel,.v2-latest,.v2-genres,
+.v2-edition-summary,.v2-reader-heading,.v2-preview,.v2-genre-card,
+.empirical-closing-bar{
+  border-color:var(--emp-ui-line)!important;
+}
+.card-head,.universal-story-hero,.universal-story-source,
+.v2-standouts,.universal-story-section + .universal-story-section{
+  border-color:var(--emp-ui-line-soft)!important;
+}
+.story-btn,.edition-btn,.group-btn,.chip,.source-box,
+.v2-intro-stats span,.v2-genre-stat,.v2-summary-stats span,
+.v2-primary,.header-hotspots a,.ticker-overlay em,
+.archive-story-button,.category-story-button,.location-story-button,
+.archive-selector-control,.category-selector-control,.location-selector-control{
+  border-color:var(--emp-ui-line-soft)!important;
+}
+.story-btn:hover,.edition-btn:hover,.group-btn:hover,
+.story-btn.active,.edition-btn.active,.group-btn.active,
+.v2-preview:hover,.v2-genre-card:hover,.v2-genre-card.active-filter,
+.archive-story-button:hover,.archive-story-button.active,
+.category-story-button:hover,.category-story-button.active,
+.location-story-button:hover,.location-story-button.active,
+.archive-selector-control:hover,.archive-selector-control:focus-within,
+.category-selector-control:hover,.category-selector-control:focus-within,
+.location-selector-control:hover,.location-selector-control:focus-within{
+  border-color:var(--emp-ui-line-bright)!important;
+  box-shadow:0 0 0 1px rgba(247,218,132,.16),0 0 20px rgba(215,183,86,.13)!important;
+}
+
+@media(max-width:680px){
+  .empirical-closing-bar__label{font-size:.68rem}
+  .empirical-closing-bar__movement{font-size:.69rem}
+  .empirical-closing-bar__quote{font-size:.69rem}
+  .empirical-closing-bar__about{font-size:.61rem}
+  .v2-genre-card em{font-size:.77rem!important}
+}
+
+/* Empirical v5.6 — guaranteed cross-page footer visibility
+   The closing bar is anchored to the viewport on every active section.
+   Reserved page space prevents it from covering the reading system. */
+body{
+  padding-bottom:68px!important;
+}
+.empirical-closing-bar{
+  position:fixed!important;
+  left:50%!important;
+  bottom:8px!important;
+  transform:translateX(-50%)!important;
+  width:min(calc(100% - 20px),1520px)!important;
+  z-index:9999!important;
+  margin:0!important;
+  isolation:isolate;
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+}
+@media(max-width:980px){
+  body{padding-bottom:76px!important}
+  .empirical-closing-bar{bottom:6px!important;width:calc(100% - 16px)!important}
+}
+@media(max-width:680px){
+  body{padding-bottom:92px!important}
+  .empirical-closing-bar{bottom:5px!important;width:calc(100% - 12px)!important}
+}
+
+/* v5.7.1 — footer must live outside page shells to avoid clipping */
+body > .empirical-closing-bar{
+  display:grid!important;
+  visibility:visible!important;
+  opacity:1!important;
+}
+@media(max-width:680px){
+  body > .empirical-closing-bar{display:flex!important}
+}

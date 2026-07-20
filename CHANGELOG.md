@@ -1,3 +1,23 @@
+# v5.1 — Unified Navigation Identity
+
+- Added matching Current Archive, Current Category, and Current Location identity controls.
+- Replaced the Location rich legacy selector presentation with the same selector architecture used by Categories.
+- Preserved unified story-button lists and fixed no-drift geometry.
+
+
+## v5.0 — Location Story Button Unification
+- Location story buttons now match the official Home/Archive/Categories editorial navigator styling.
+- Removed the visible legacy location-card treatment from the story list.
+- No geometry or scrolling changes.
+## v4.6 — Unified Category Buttons
+
+- Unified both Category selector and Category story buttons with the official Home/Archive editorial button system.
+- Preserved all fixed dimensions and no-drift behavior.
+
+## v4.0 Universal Framework
+- Unified Home, Archive, Categories, Location, and About around the fixed two-panel system.
+- Added data-driven archive filters and corrected category page labels.
+
 # July 15, 2026 — Good News Edition
 
 - Replaced Home with 20 new good-news briefings.
@@ -189,3 +209,20 @@ May 25, 2026 — Locked homepage date behavior, archived previous homepage as Ed
 - Expanded Summary and Why It Matters copy across all 20 Home stories.
 - Renamed What Remains Uncertain to Limits and Uncertainty while preserving the field.
 - Left Archive unchanged.
+
+## v4.4 — Official Archive Navigator Buttons
+
+- Updated Archive story buttons to match the homepage editorial card/link language.
+- Preserved fixed card measurements and internal scrolling.
+- Added clearer active, hover, and focus states without changing workspace geometry.
+
+## v4.8 — Location Single-Scroll System
+- Unified Location with the Home, Archive, and Categories navigator system.
+
+## v4.9
+Universal editorial Location selector control; consistent dimensions and information display across the ecosystem.
+
+## v5.4 — Text and Border Illumination
+- Unified footer supporting text in white.
+- Raised undersized browse/count metadata slightly.
+- Brightened borders throughout the complete UI while preserving layout geometry.

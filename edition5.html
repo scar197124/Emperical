@@ -37,6 +37,23 @@ footer{border-top:2px solid var(--border);margin-top:40px;padding:24px 16px;text
 }
 .small{font-size:11px;color:#777}
 </style>
+<link rel="stylesheet" href="assets/empirical-closing-bar.css">
+<style id="empirical-footer-critical">
+body{padding-bottom:76px!important}
+body>.empirical-closing-bar{position:fixed!important;left:50%!important;bottom:8px!important;transform:translateX(-50%)!important;width:min(calc(100% - 20px),1520px)!important;min-height:46px!important;display:grid!important;grid-template-columns:minmax(190px,.9fr) minmax(280px,1.25fr) minmax(290px,1.15fr)!important;align-items:center!important;gap:14px!important;padding:7px 16px!important;border:1px solid rgba(236,205,112,.62)!important;border-radius:16px!important;background:linear-gradient(180deg,rgba(20,13,4,.98),rgba(7,5,3,.98))!important;box-shadow:0 8px 24px rgba(0,0,0,.45)!important;color:#f8efd9!important;z-index:2147483647!important;visibility:visible!important;opacity:1!important;overflow:hidden!important;font-family:Georgia,'Times New Roman',serif!important}
+body>.empirical-closing-bar .empirical-closing-bar__identity,body>.empirical-closing-bar .empirical-closing-bar__movement,body>.empirical-closing-bar .empirical-closing-bar__closing{display:flex;align-items:center;min-width:0}
+body>.empirical-closing-bar .empirical-closing-bar__identity{gap:9px}
+body>.empirical-closing-bar .empirical-closing-bar__movement{justify-content:center;gap:9px;white-space:nowrap}
+body>.empirical-closing-bar .empirical-closing-bar__closing{justify-content:flex-end;gap:12px}
+body>.empirical-closing-bar .empirical-closing-bar__mark{width:7px;height:7px;border-radius:50%;background:#d7b756;flex:0 0 auto}
+body>.empirical-closing-bar .empirical-closing-bar__label{font-size:.72rem;letter-spacing:.13em;text-transform:uppercase;font-weight:700;white-space:nowrap}
+body>.empirical-closing-bar .empirical-closing-bar__movement{font-size:.77rem;letter-spacing:.045em}
+body>.empirical-closing-bar .empirical-closing-bar__movement i{width:3px;height:3px;border-radius:50%;background:#d7b756;display:block;flex:0 0 auto}
+body>.empirical-closing-bar .empirical-closing-bar__quote{font-size:.75rem;font-style:italic;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+body>.empirical-closing-bar .empirical-closing-bar__about{font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:#f8efd9;text-decoration:none;border-left:1px solid rgba(236,205,112,.46);padding-left:12px;white-space:nowrap}
+@media(max-width:980px){body{padding-bottom:82px!important}body>.empirical-closing-bar{grid-template-columns:1fr auto!important;grid-template-rows:auto auto!important;bottom:6px!important;width:calc(100% - 16px)!important;gap:3px 12px!important}body>.empirical-closing-bar .empirical-closing-bar__identity{grid-column:1;grid-row:1}body>.empirical-closing-bar .empirical-closing-bar__movement{grid-column:1;grid-row:2;justify-content:flex-start}body>.empirical-closing-bar .empirical-closing-bar__closing{grid-column:2;grid-row:1/3}}
+@media(max-width:680px){body{padding-bottom:100px!important}body>.empirical-closing-bar{display:flex!important;flex-direction:column!important;align-items:flex-start!important;justify-content:center!important;bottom:5px!important;width:calc(100% - 12px)!important;min-height:72px!important;gap:4px!important;padding:8px 12px!important}body>.empirical-closing-bar .empirical-closing-bar__movement{width:100%;justify-content:flex-start;font-size:.69rem}body>.empirical-closing-bar .empirical-closing-bar__closing{width:100%;justify-content:space-between}body>.empirical-closing-bar .empirical-closing-bar__quote{max-width:calc(100% - 55px);font-size:.69rem}}
+</style>
 </head>
 <body>
 <div class="ticker-wrap">
@@ -120,8 +137,10 @@ footer{border-top:2px solid var(--border);margin-top:40px;padding:24px 16px;text
 <p><strong>Source</strong> — <a href="https://www.edweek.org/search?q=student%20returned%20financial%20aid%20overpayment" rel="noopener" target="_blank">Education Week</a></p>
 </div>
 </section>
-<footer>
-EMPERICAL is an independent ethical editorial record.
+<footer class="empirical-closing-bar" aria-label="Empirical editorial closing">
+<div class="empirical-closing-bar__identity"><span class="empirical-closing-bar__mark" aria-hidden="true"></span><span class="empirical-closing-bar__label">Four Ways Good News Moves</span></div>
+<div class="empirical-closing-bar__movement" aria-label="Seen, Shared, Supported, Multiplied"><span>Seen</span><i aria-hidden="true"></i><span>Shared</span><i aria-hidden="true"></i><span>Supported</span><i aria-hidden="true"></i><span>Multiplied</span></div>
+<div class="empirical-closing-bar__closing"><span class="empirical-closing-bar__quote">Progress becomes visible when we look closely.</span><a class="empirical-closing-bar__about" href="about.html">About</a></div>
 </footer>
 </body>
 </html>

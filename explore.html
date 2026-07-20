@@ -18,6 +18,23 @@ header{border-bottom:2px solid var(--border);padding:24px 16px;text-align:center
 section{max-width:960px;margin:0 auto;padding:30px 16px}.card{border:2px solid var(--border);border-radius:16px;padding:22px;margin-bottom:22px;background:#0b0b0b;box-shadow:inset 0 0 0 1px rgba(255,255,255,.025)}.card h3{margin:6px 0 12px;font-size:22px;color:var(--ring)}footer{border-top:2px solid var(--border);margin-top:40px;padding:24px 16px;text-align:center;font-size:12px;color:#888}.footer-edition{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#bfae4d;margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid #333;}
 .explore-hero{text-align:center}.explore-hero p{max-width:760px;margin:10px auto;color:#ddd}.explore-note{border-left:3px solid var(--ring);padding:10px 14px;background:rgba(255,215,0,.06);color:#eee;text-align:left}.section-kicker{font-family:system-ui;text-transform:uppercase;letter-spacing:1.4px;font-size:11px;color:#bfae4d;margin-bottom:8px}.count-badge{display:inline-block;min-width:24px;text-align:center;margin-left:7px;padding:1px 7px;border-radius:999px;background:rgba(255,215,0,.15);border:1px solid rgba(255,215,0,.4);color:var(--ring);font-family:system-ui;font-size:11px}.pill-grid{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:18px 0 4px}.pill{border:1px solid rgba(255,215,0,.75);border-radius:999px;padding:8px 12px;color:#fff;background:#070707;font-family:system-ui;font-size:12px}.pill:hover{background:rgba(255,215,0,.12)}.pill strong{color:var(--ring)}.mini-list{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:12px}.mini-list li{margin:0;padding:14px 15px;border:1px solid rgba(255,215,0,.34);border-radius:13px;background:rgba(255,215,0,.045);box-shadow:inset 0 0 0 1px rgba(255,255,255,.018)}.mini-list li:hover{border-color:rgba(255,215,0,.68);background:rgba(255,215,0,.075)}.mini-list li a{display:block;font-size:16px;line-height:1.35;color:#FFD700}.mini-list small{display:block;color:#aaa;font-family:system-ui;font-size:12px;margin-top:5px;line-height:1.45}.mini-list small::before{content:"Edition / region: ";color:#bfae4d;text-transform:uppercase;letter-spacing:.7px;font-size:10px}.toggle-wrap{display:flex;justify-content:center;margin:22px auto 8px}.view-toggle{display:inline-flex;border:2px solid var(--border);border-radius:999px;padding:4px;background:#050505;box-shadow:0 0 18px rgba(255,215,0,.08)}.view-toggle button{appearance:none;border:0;background:transparent;color:#fff;border-radius:999px;padding:10px 18px;font-family:system-ui;font-size:12px;font-weight:800;letter-spacing:1px;text-transform:uppercase;cursor:pointer}.view-toggle button.active{background:var(--ring);color:#000}.view-panel{display:none}.view-panel.active{display:block}.view-intro{text-align:center;color:#d8d0a0;font-family:system-ui;font-size:13px;margin:8px auto 18px;max-width:720px}.explore-group{scroll-margin-top:90px}.latest-index{margin-top:28px;border-style:dashed;background:#070707}@media(max-width:760px){.pill-grid{justify-content:flex-start}.nav{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}.nav a{margin:0}.nav a{margin:4px}.view-toggle{width:100%;max-width:360px}.view-toggle button{flex:1;padding:10px 8px}.card{padding:18px}}
 </style>
+<link rel="stylesheet" href="assets/empirical-closing-bar.css">
+<style id="empirical-footer-critical">
+body{padding-bottom:76px!important}
+body>.empirical-closing-bar{position:fixed!important;left:50%!important;bottom:8px!important;transform:translateX(-50%)!important;width:min(calc(100% - 20px),1520px)!important;min-height:46px!important;display:grid!important;grid-template-columns:minmax(190px,.9fr) minmax(280px,1.25fr) minmax(290px,1.15fr)!important;align-items:center!important;gap:14px!important;padding:7px 16px!important;border:1px solid rgba(236,205,112,.62)!important;border-radius:16px!important;background:linear-gradient(180deg,rgba(20,13,4,.98),rgba(7,5,3,.98))!important;box-shadow:0 8px 24px rgba(0,0,0,.45)!important;color:#f8efd9!important;z-index:2147483647!important;visibility:visible!important;opacity:1!important;overflow:hidden!important;font-family:Georgia,'Times New Roman',serif!important}
+body>.empirical-closing-bar .empirical-closing-bar__identity,body>.empirical-closing-bar .empirical-closing-bar__movement,body>.empirical-closing-bar .empirical-closing-bar__closing{display:flex;align-items:center;min-width:0}
+body>.empirical-closing-bar .empirical-closing-bar__identity{gap:9px}
+body>.empirical-closing-bar .empirical-closing-bar__movement{justify-content:center;gap:9px;white-space:nowrap}
+body>.empirical-closing-bar .empirical-closing-bar__closing{justify-content:flex-end;gap:12px}
+body>.empirical-closing-bar .empirical-closing-bar__mark{width:7px;height:7px;border-radius:50%;background:#d7b756;flex:0 0 auto}
+body>.empirical-closing-bar .empirical-closing-bar__label{font-size:.72rem;letter-spacing:.13em;text-transform:uppercase;font-weight:700;white-space:nowrap}
+body>.empirical-closing-bar .empirical-closing-bar__movement{font-size:.77rem;letter-spacing:.045em}
+body>.empirical-closing-bar .empirical-closing-bar__movement i{width:3px;height:3px;border-radius:50%;background:#d7b756;display:block;flex:0 0 auto}
+body>.empirical-closing-bar .empirical-closing-bar__quote{font-size:.75rem;font-style:italic;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+body>.empirical-closing-bar .empirical-closing-bar__about{font-size:.66rem;letter-spacing:.1em;text-transform:uppercase;color:#f8efd9;text-decoration:none;border-left:1px solid rgba(236,205,112,.46);padding-left:12px;white-space:nowrap}
+@media(max-width:980px){body{padding-bottom:82px!important}body>.empirical-closing-bar{grid-template-columns:1fr auto!important;grid-template-rows:auto auto!important;bottom:6px!important;width:calc(100% - 16px)!important;gap:3px 12px!important}body>.empirical-closing-bar .empirical-closing-bar__identity{grid-column:1;grid-row:1}body>.empirical-closing-bar .empirical-closing-bar__movement{grid-column:1;grid-row:2;justify-content:flex-start}body>.empirical-closing-bar .empirical-closing-bar__closing{grid-column:2;grid-row:1/3}}
+@media(max-width:680px){body{padding-bottom:100px!important}body>.empirical-closing-bar{display:flex!important;flex-direction:column!important;align-items:flex-start!important;justify-content:center!important;bottom:5px!important;width:calc(100% - 12px)!important;min-height:72px!important;gap:4px!important;padding:8px 12px!important}body>.empirical-closing-bar .empirical-closing-bar__movement{width:100%;justify-content:flex-start;font-size:.69rem}body>.empirical-closing-bar .empirical-closing-bar__closing{width:100%;justify-content:space-between}body>.empirical-closing-bar .empirical-closing-bar__quote{max-width:calc(100% - 55px);font-size:.69rem}}
+</style>
 </head>
 <body>
 <div class="progress-bar" aria-hidden="true"></div>
@@ -33,9 +50,7 @@ section{max-width:960px;margin:0 auto;padding:30px 16px}.card{border:2px solid v
     </div>
   </section>
 </main>
-<footer class="site-footer">
-  <p>Emperical keeps source links visible for transparency. Stories are independently summarized in original wording.</p>
-</footer>
+
 <script>
 window.addEventListener('scroll', () => {
   const doc = document.documentElement;
@@ -44,5 +59,10 @@ window.addEventListener('scroll', () => {
   if (bar) bar.style.width = `${Math.min(100, Math.max(0, scrolled * 100))}%`;
 });
 </script>
+<footer class="empirical-closing-bar" aria-label="Empirical editorial closing">
+<div class="empirical-closing-bar__identity"><span class="empirical-closing-bar__mark" aria-hidden="true"></span><span class="empirical-closing-bar__label">Four Ways Good News Moves</span></div>
+<div class="empirical-closing-bar__movement" aria-label="Seen, Shared, Supported, Multiplied"><span>Seen</span><i aria-hidden="true"></i><span>Shared</span><i aria-hidden="true"></i><span>Supported</span><i aria-hidden="true"></i><span>Multiplied</span></div>
+<div class="empirical-closing-bar__closing"><span class="empirical-closing-bar__quote">Progress becomes visible when we look closely.</span><a class="empirical-closing-bar__about" href="about.html">About</a></div>
+</footer>
 </body>
 </html>
