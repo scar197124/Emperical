@@ -1,0 +1,62 @@
+/* Empirical v7.7 — universal gold scrollbar system */
+:root{
+  --emp-scroll-gold:#d7b756;
+  --emp-scroll-gold-bright:#f2d77a;
+  --emp-scroll-gold-deep:#9f7e2f;
+  --emp-scroll-track:rgba(215,183,86,.10);
+}
+
+/* Firefox: applies only when an element actually scrolls. */
+html, body, body *{
+  scrollbar-width:thin !important;
+  scrollbar-color:var(--emp-scroll-gold) var(--emp-scroll-track) !important;
+}
+
+/* Chromium, Safari and modern mobile WebKit. */
+html::-webkit-scrollbar,
+body::-webkit-scrollbar,
+body *::-webkit-scrollbar{
+  width:8px !important;
+  height:8px !important;
+}
+html::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track,
+body *::-webkit-scrollbar-track{
+  background:var(--emp-scroll-track) !important;
+  border-radius:999px !important;
+}
+html::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb,
+body *::-webkit-scrollbar-thumb{
+  background:linear-gradient(180deg,var(--emp-scroll-gold-bright),var(--emp-scroll-gold-deep)) !important;
+  border:1px solid rgba(255,235,166,.48) !important;
+  border-radius:999px !important;
+  box-shadow:0 0 7px rgba(215,183,86,.42) !important;
+}
+html::-webkit-scrollbar-thumb:hover,
+body::-webkit-scrollbar-thumb:hover,
+body *::-webkit-scrollbar-thumb:hover{
+  background:linear-gradient(180deg,#ffe6a0,#bf9638) !important;
+  box-shadow:0 0 10px rgba(242,215,122,.62) !important;
+}
+html::-webkit-scrollbar-corner,
+body::-webkit-scrollbar-corner,
+body *::-webkit-scrollbar-corner{
+  background:transparent !important;
+}
+
+/* Preserve compact mobile layout while keeping the thumb visible. */
+@media (max-width:860px){
+  html::-webkit-scrollbar,
+  body::-webkit-scrollbar,
+  body *::-webkit-scrollbar{
+    width:6px !important;
+    height:6px !important;
+  }
+}
+
+@media (prefers-contrast:more){
+  html, body, body *{
+    scrollbar-color:var(--emp-scroll-gold-bright) rgba(215,183,86,.18) !important;
+  }
+}

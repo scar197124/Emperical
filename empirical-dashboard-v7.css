@@ -1,0 +1,195 @@
+/* Empirical v7 — one dashboard contract for every active page */
+:root{
+  --emp-dashboard-gap:8px;
+  --emp-footer-h:54px;
+  --emp-shell-max:1540px;
+}
+html,body{width:100%;height:100%;min-height:100%;}
+body,
+body.home-page,
+body.archive-page,
+body.categories-page,
+body.location-page,
+body.about-page{
+  margin:0!important;
+  height:100dvh!important;
+  min-height:100dvh!important;
+  overflow:hidden!important;
+  padding:0!important;
+  display:grid!important;
+  grid-template-rows:minmax(0,1fr) auto!important;
+  background:#050403!important;
+}
+body>.shell{
+  grid-row:1!important;
+  width:min(100%,var(--emp-shell-max))!important;
+  height:100%!important;
+  min-height:0!important;
+  margin:0 auto!important;
+  padding:8px 10px 6px!important;
+  overflow:hidden!important;
+  display:grid!important;
+  grid-template-rows:auto minmax(0,1fr)!important;
+  gap:var(--emp-dashboard-gap)!important;
+}
+body>.shell>.top-image{
+  min-height:0!important;
+  flex:none!important;
+  margin:0!important;
+}
+body>.shell>.engine{
+  min-height:0!important;
+  height:100%!important;
+  overflow:hidden!important;
+  display:flex!important;
+  flex-direction:column!important;
+  gap:8px!important;
+}
+body>.shell>.engine>.page-title{
+  flex:0 0 auto!important;
+  margin:0!important;
+}
+body>.shell>.engine>.panel3,
+body>.shell>.engine>.about-grid,
+body>.shell>.engine>.unified-layout,
+body>.shell>.engine>.home-v2-engine,
+body>.shell>.engine>[class*="layout"],
+body>.shell>.engine>[class*="system"]{
+  min-height:0!important;
+}
+/* The workspace, not the page, owns scrolling. */
+body>.shell>.engine>.panel3,
+body>.shell>.engine>.about-grid,
+body>.shell>.engine>.unified-layout,
+body>.shell>.engine>.home-v2-engine{
+  flex:1 1 auto!important;
+  overflow:auto!important;
+  overscroll-behavior:contain;
+  scrollbar-width:thin;
+  scrollbar-color:#d7b756 rgba(255,255,255,.07);
+}
+/* Footer is always the second dashboard row, never an overlay. */
+body>.empirical-closing-bar,
+body>.site-footer,
+body>footer.empirical-closing-bar{
+  grid-row:2!important;
+  position:relative!important;
+  inset:auto!important;
+  left:auto!important;
+  right:auto!important;
+  top:auto!important;
+  bottom:auto!important;
+  transform:none!important;
+  z-index:20!important;
+  width:min(calc(100% - 20px),var(--emp-shell-max))!important;
+  min-height:46px!important;
+  height:auto!important;
+  margin:0 auto max(6px,env(safe-area-inset-bottom))!important;
+  padding:8px 14px!important;
+  flex:0 0 auto!important;
+  visibility:visible!important;
+  opacity:1!important;
+  overflow:hidden!important;
+  box-sizing:border-box!important;
+}
+/* One header/ticker rhythm. */
+.top-image .ticker-overlay,
+.top-image .good-news-ticker{
+  animation:none!important;
+}
+.ticker-run{
+  animation-name:tickerFlow!important;
+  animation-duration:72s!important;
+  animation-timing-function:linear!important;
+  animation-iteration-count:infinite!important;
+}
+@media (prefers-reduced-motion:reduce){.ticker-run{animation:none!important;transform:none!important;padding-left:0!important}}
+/* Current mode remains obvious on every dashboard. */
+body.home-page .header-hotspots .hs-home,
+body.archive-page .header-hotspots .hs-archive,
+body.categories-page .header-hotspots .hs-categories,
+body.location-page .header-hotspots .hs-location,
+body.about-page .header-hotspots .hs-about,
+body.home-page .mobile-nav a[href="index.html"],
+body.archive-page .mobile-nav a[href="archive.html"],
+body.categories-page .mobile-nav a[href="categories.html"],
+body.location-page .mobile-nav a[href="location.html"],
+body.about-page .mobile-nav a[href="about.html"]{
+  border-color:#f1cf69!important;
+  background:rgba(216,180,90,.18)!important;
+  color:#fff4d2!important;
+  box-shadow:0 0 14px rgba(216,180,90,.18)!important;
+}
+@media(max-width:860px){
+  :root{--emp-footer-h:72px;--emp-dashboard-gap:6px}
+  body>.shell{padding:6px 6px 4px!important;gap:6px!important}
+  body>.shell>.top-image{border-radius:16px!important}
+  body>.shell>.engine{gap:6px!important}
+  body>.shell>.engine>.page-title{padding:6px 10px!important;border-radius:14px!important}
+  body>.shell>.engine>.page-title h1{font-size:clamp(1.25rem,6vw,1.75rem)!important}
+  body>.shell>.engine>.page-title p{display:none!important}
+  body>.shell>.engine>.panel3,
+  body>.shell>.engine>.about-grid,
+  body>.shell>.engine>.unified-layout,
+  body>.shell>.engine>.home-v2-engine{
+    overflow:auto!important;
+    -webkit-overflow-scrolling:touch;
+  }
+  body>.empirical-closing-bar,
+  body>footer.empirical-closing-bar{
+    width:calc(100% - 12px)!important;
+    min-height:60px!important;
+    margin:0 auto max(4px,env(safe-area-inset-bottom))!important;
+    padding:7px 10px!important;
+    display:grid!important;
+    grid-template-columns:1fr auto!important;
+    grid-template-rows:auto auto!important;
+    gap:3px 8px!important;
+  }
+  body>.empirical-closing-bar .empirical-closing-bar__identity{grid-column:1;grid-row:1!important}
+  body>.empirical-closing-bar .empirical-closing-bar__movement{grid-column:1;grid-row:2!important;justify-content:flex-start!important;font-size:.66rem!important}
+  body>.empirical-closing-bar .empirical-closing-bar__closing{grid-column:2;grid-row:1/3!important;align-items:flex-end!important;justify-content:center!important;flex-direction:column!important}
+  body>.empirical-closing-bar .empirical-closing-bar__quote{display:none!important}
+  .ticker-run{animation-duration:72s!important}
+}
+@media(max-width:520px){
+  body>.shell{padding-top:4px!important}
+  body>.empirical-closing-bar .empirical-closing-bar__label{font-size:.59rem!important;letter-spacing:.09em!important}
+  body>.empirical-closing-bar .empirical-closing-bar__movement{gap:5px!important;font-size:.61rem!important}
+  body>.empirical-closing-bar .empirical-closing-bar__about{font-size:.6rem!important}
+}
+
+/* Empirical v7.1 — final footer-row correction
+   The v7 shell previously used height:100% with content-box padding, making
+   the first dashboard row taller than its grid track and pushing the footer
+   below the viewport. The shell now fills its assigned row without overflow. */
+body,
+body.home-page,
+body.archive-page,
+body.categories-page,
+body.location-page,
+body.about-page{
+  grid-template-rows:minmax(0,1fr) max-content!important;
+}
+body>.shell{
+  height:auto!important;
+  max-height:100%!important;
+  min-height:0!important;
+  box-sizing:border-box!important;
+  align-self:stretch!important;
+}
+body>.empirical-closing-bar,
+body>footer.empirical-closing-bar{
+  display:grid!important;
+  align-self:end!important;
+  box-sizing:border-box!important;
+  position:relative!important;
+  visibility:visible!important;
+  opacity:1!important;
+}
+@media(max-width:860px){
+  body>.empirical-closing-bar,
+  body>footer.empirical-closing-bar{
+    display:grid!important;
+  }
+}

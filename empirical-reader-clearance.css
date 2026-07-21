@@ -1,0 +1,47 @@
+/* Empirical v7.4 — reader/source clearance above the universal footer */
+:root{--emp-reader-clearance:26px}
+
+/* Give the working dashboard a little more air above the fixed footer. */
+body>.shell{
+  height:calc(100dvh - var(--emp-real-footer-h) - var(--emp-reader-clearance) - 16px - env(safe-area-inset-bottom))!important;
+}
+
+/* Every scrollable reader can reach its final source/resource link. */
+.scroll,
+.reader-card,
+#mainDetail,
+#rippleDetail,
+#groupDetail,
+.v2-feature-content,
+.v2-edition-panel,
+.v2-reader,
+[class*="reading"],
+[class*="reader"]{
+  scroll-padding-bottom:calc(var(--emp-real-footer-h) + var(--emp-reader-clearance))!important;
+}
+.scroll,
+#mainDetail,
+#rippleDetail,
+#groupDetail{
+  padding-bottom:calc(22px + var(--emp-reader-clearance))!important;
+}
+.source-box,
+.v2-feature-source,
+#v2FeatureSource{
+  position:relative!important;
+  z-index:2!important;
+  margin-bottom:var(--emp-reader-clearance)!important;
+}
+
+@media(max-width:860px){
+  :root{--emp-reader-clearance:34px}
+  body>.shell{
+    height:calc(100dvh - var(--emp-real-footer-h) - var(--emp-reader-clearance) - 14px - env(safe-area-inset-bottom))!important;
+  }
+  .scroll,
+  #mainDetail,
+  #rippleDetail,
+  #groupDetail{
+    padding-bottom:calc(28px + var(--emp-reader-clearance))!important;
+  }
+}
