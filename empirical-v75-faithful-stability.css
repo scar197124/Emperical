@@ -1,0 +1,78 @@
+/* Empirical v7.5.1 — faithful stability layer
+   Keeps the original v7.5 design. Only prevents the mobile shell/footer collapse. */
+@media (max-width: 860px) {
+  html, body,
+  body.home-page,
+  body.archive-page,
+  body.categories-page,
+  body.location-page,
+  body.about-page {
+    height: auto !important;
+    min-height: 100% !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    display: block !important;
+    padding: 0 !important;
+  }
+
+  body > .shell {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    height: auto !important;
+    max-height: none !important;
+    min-height: 100svh !important;
+    overflow: visible !important;
+    padding: 6px !important;
+    margin: 0 auto !important;
+  }
+
+  body > .shell > .top-image,
+  body > .shell > .engine,
+  body > .shell > .engine > .home-v2-engine,
+  .home-v2-engine,
+  .v2-hero,
+  .v2-feature,
+  .v2-edition-panel {
+    visibility: visible !important;
+    opacity: 1 !important;
+  }
+
+  body > .shell > .engine,
+  .home-v2-engine {
+    display: flex !important;
+    flex-direction: column !important;
+    height: auto !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+  }
+
+  .home-v2-engine .v2-hero {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  .home-v2-engine .v2-feature,
+  .home-v2-engine .v2-edition-panel {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+
+  body > .empirical-global-footer,
+  body > .empirical-closing-bar,
+  body > footer {
+    position: relative !important;
+    inset: auto !important;
+    left: auto !important;
+    right: auto !important;
+    top: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+    width: calc(100% - 12px) !important;
+    margin: 8px auto max(6px, env(safe-area-inset-bottom)) !important;
+    z-index: 1 !important;
+  }
+}
