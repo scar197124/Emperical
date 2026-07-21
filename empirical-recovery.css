@@ -1,0 +1,97 @@
+/* Empirical emergency recovery: one final layout authority */
+html, body {
+  width: 100% !important;
+  min-height: 100% !important;
+  overflow-x: hidden !important;
+}
+body {
+  display: block !important;
+  height: auto !important;
+  min-height: 100svh !important;
+  overflow-y: auto !important;
+  padding-bottom: 0 !important;
+}
+body > .shell {
+  display: flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  position: relative !important;
+  inset: auto !important;
+  width: min(100%, 1480px) !important;
+  height: auto !important;
+  min-height: calc(100svh - 92px) !important;
+  max-height: none !important;
+  margin: 0 auto !important;
+  overflow: visible !important;
+}
+body > .shell > .engine,
+body > .shell .panel3,
+body > .shell .unified-layout,
+body > .shell .about-grid,
+body > .shell .about-system {
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+body > .empirical-closing-bar { display: none !important; }
+body > .empirical-global-footer {
+  display: grid !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  position: relative !important;
+  inset: auto !important;
+  left: auto !important;
+  right: auto !important;
+  bottom: auto !important;
+  transform: none !important;
+  width: min(calc(100% - 20px), 1480px) !important;
+  min-height: 0 !important;
+  height: auto !important;
+  margin: 8px auto max(8px, env(safe-area-inset-bottom)) !important;
+  z-index: 10 !important;
+}
+@media (max-width: 860px) {
+  body > .shell {
+    min-height: 0 !important;
+    padding: 7px !important;
+    gap: 7px !important;
+  }
+  body > .shell > .engine {
+    display: flex !important;
+    flex-direction: column !important;
+    min-height: 0 !important;
+    overflow: visible !important;
+  }
+  body > .shell .panel3,
+  body > .shell .unified-layout,
+  body > .shell .about-grid,
+  body > .shell .about-system {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+  body > .shell .card,
+  body > .shell .reader-card,
+  body > .shell .archive-reader-twin,
+  body > .shell .archive-navigator-twin {
+    display: flex !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    height: auto !important;
+    min-height: 320px !important;
+    max-height: none !important;
+  }
+  body > .shell .scroll,
+  body > .shell [id$="List"],
+  body > .shell [id$="Stories"],
+  body > .shell [id$="Detail"] {
+    max-height: 58svh !important;
+    overflow-y: auto !important;
+  }
+  body > .empirical-global-footer {
+    width: calc(100% - 12px) !important;
+    margin-top: 8px !important;
+  }
+}
