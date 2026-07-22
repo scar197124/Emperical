@@ -1,7 +1,9 @@
-# Empirical v9.6 — Clean GitHub Build
+# Empirical v9.7 — Mobile Portrait Visibility Fix
 
-Upload the contents of this folder directly to the root of the GitHub Pages repository.
+Clean GitHub-ready production build.
 
-This clean package contains only the active website pages, required CSS/JavaScript, images, and basic discovery files. Historical release notes, archived homepage copies, build manifests, and unused files were removed.
-
-Main entry point: `index.html`
+Mobile behavior:
+- Portrait phones: reader first, navigator second, matching the homepage's readable flow.
+- Landscape phones and tablets: reader left, navigator right.
+- Legacy Open/Close/Next Story controls remain disabled.
+- Normal page scrolling remains available.
