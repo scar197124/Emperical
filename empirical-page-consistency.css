@@ -1,0 +1,81 @@
+/* Empirical v9.2 — homepage-anchored spacing and card consistency */
+
+/* Archive, Categories and Location should end when their workspace ends,
+   just like the homepage. Do not reserve an empty viewport beneath it. */
+body.archive-page > .shell,
+body.categories-page > .shell,
+body.location-page > .shell{
+  min-height:auto!important;
+  padding-bottom:0!important;
+}
+
+body.archive-page > .shell > .engine,
+body.categories-page > .shell > .engine,
+body.location-page > .shell > .engine{
+  margin-bottom:0!important;
+  padding-bottom:0!important;
+}
+
+/* Match the homepage section rhythm: 10px between major cards. */
+.empirical-lower-sections{
+  width:min(calc(100% - 20px),1520px)!important;
+  margin:10px auto 0!important;
+  padding:0!important;
+  gap:10px!important;
+}
+
+/* Match homepage border, radius, fill, shadow and padding exactly. */
+.empirical-lower-genres,
+.empirical-lower-summary{
+  border:1px solid rgba(215,183,86,.32)!important;
+  border-radius:20px!important;
+  background:linear-gradient(180deg,rgba(20,13,4,.95),rgba(7,5,3,.96))!important;
+  box-shadow:0 14px 34px rgba(0,0,0,.26)!important;
+}
+
+.empirical-lower-genres{padding:22px!important}
+.empirical-lower-summary{
+  padding:25px!important;
+  gap:22px!important;
+  background:radial-gradient(circle at left top,rgba(216,180,90,.16),transparent 35%),linear-gradient(100deg,rgba(26,17,5,.98),rgba(7,5,3,.97))!important;
+}
+
+.empirical-lower-genre-grid{
+  gap:11px!important;
+  margin-top:15px!important;
+}
+
+.empirical-lower-genre-card{
+  border:1px solid rgba(215,183,86,.24)!important;
+  border-radius:16px!important;
+  padding:18px!important;
+  min-height:160px!important;
+  background:radial-gradient(circle at top right,rgba(216,180,90,.13),transparent 48%),rgba(0,0,0,.18)!important;
+}
+
+.empirical-lower-eyebrow{color:#f0cf70!important}
+.empirical-lower-genres h2,
+.empirical-lower-summary h2{color:#f3d47a!important}
+.empirical-lower-genre-card strong,
+.empirical-lower-stats span{color:#f0cf70!important}
+.empirical-lower-genre-card p,
+.empirical-lower-summary p{color:#bfb49c!important}
+
+/* Match the homepage gap between its final summary card and black footer. */
+body.archive-page > .empirical-global-footer,
+body.categories-page > .empirical-global-footer,
+body.location-page > .empirical-global-footer{
+  margin-top:10px!important;
+}
+
+@media(max-width:860px){
+  .empirical-lower-sections{
+    width:calc(100% - 12px)!important;
+    margin-top:8px!important;
+  }
+}
+
+@media(max-width:650px){
+  .empirical-lower-genres,
+  .empirical-lower-summary{padding:17px!important}
+}

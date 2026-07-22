@@ -1,0 +1,95 @@
+/* Empirical v9.3 — Archive border unification
+   Homepage is the anchor. This file changes border color/brightness only. */
+
+body.archive-page{
+  --line:rgba(215,183,86,.42);
+  --archive-border:rgba(215,183,86,.42);
+  --archive-border-soft:rgba(215,183,86,.25);
+  --archive-border-subtle:rgba(215,183,86,.22);
+  --archive-border-medium:rgba(215,183,86,.30);
+  --archive-border-strong:rgba(215,183,86,.45);
+}
+
+/* Primary containers: same gold line used by the homepage. */
+body.archive-page .top-image,
+body.archive-page .page-title,
+body.archive-page .card,
+body.archive-page .archive-home-twin,
+body.archive-page .archive-home-twin .v2-feature-card,
+body.archive-page .archive-home-twin .v2-nav-card,
+body.archive-page .unified-layout > .card,
+body.archive-page .empirical-lower-genres,
+body.archive-page .empirical-lower-summary,
+body.archive-page .empirical-global-footer{
+  border-color:var(--archive-border)!important;
+}
+
+/* Remove the archive-only brown tint so headings match Home. */
+body.archive-page .page-title{
+  border-color:var(--line)!important;
+  box-shadow:inset 0 0 0 1px rgba(216,180,90,.05),0 10px 24px rgba(0,0,0,.18)!important;
+}
+
+body.archive-page .card-head{
+  border-bottom-color:var(--archive-border-subtle)!important;
+  box-shadow:none!important;
+}
+
+/* Reader, navigator and content boxes. */
+body.archive-page .story-btn,
+body.archive-page .edition-btn,
+body.archive-page .group-btn,
+body.archive-page .v2-story-btn,
+body.archive-page .v2-edition-btn,
+body.archive-page .v2-group-btn,
+body.archive-page .mode-tab,
+body.archive-page .filter-chip,
+body.archive-page .nav-select,
+body.archive-page .principle,
+body.archive-page .about-links a,
+body.archive-page .source-box,
+body.archive-page .archive-home-twin .v2-feature-reading > div,
+body.archive-page .archive-home-twin .v2-feature-source,
+body.archive-page .empirical-lower-genre-card{
+  border-color:var(--archive-border-soft)!important;
+}
+
+body.archive-page .chip,
+body.archive-page .tag,
+body.archive-page .meta-chip,
+body.archive-page .story-meta span{
+  border-color:var(--archive-border-medium)!important;
+}
+
+body.archive-page .unified-right-body #groupList,
+body.archive-page .navigator-section,
+body.archive-page .reader-section,
+body.archive-page .reflection-grid,
+body.archive-page .reflection-box{
+  border-color:var(--archive-border-subtle)!important;
+}
+
+/* Interactive state brightness mirrors Home. */
+body.archive-page .story-btn:hover,
+body.archive-page .edition-btn:hover,
+body.archive-page .group-btn:hover,
+body.archive-page .story-btn.active,
+body.archive-page .edition-btn.active,
+body.archive-page .group-btn.active,
+body.archive-page .v2-story-btn:hover,
+body.archive-page .v2-story-btn.active,
+body.archive-page .v2-edition-btn:hover,
+body.archive-page .v2-edition-btn.active,
+body.archive-page .mode-tab:hover,
+body.archive-page .mode-tab.active,
+body.archive-page .filter-chip:hover,
+body.archive-page .filter-chip.active{
+  border-color:var(--bright)!important;
+  box-shadow:0 0 0 1px rgba(216,180,90,.25),0 0 18px rgba(216,180,90,.10)!important;
+}
+
+/* Source control remains slightly brighter, as on Home. */
+body.archive-page .universal-story-source,
+body.archive-page .archive-home-twin .v2-feature-source{
+  border-color:rgba(215,183,86,.55)!important;
+}

@@ -1,0 +1,193 @@
+/* EMPIRICAL v9.6 — true cross-page mobile workspace contract
+   Archive, Categories, and Location keep the same left-reader/right-navigator
+   relationship at every mobile width. Legacy inline readers remain disabled. */
+
+@media (max-width: 860px) {
+  html,
+  body.archive-page,
+  body.categories-page,
+  body.location-page {
+    min-height: 100% !important;
+    height: auto !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    overscroll-behavior-y: auto !important;
+  }
+
+  body.archive-page .shell,
+  body.categories-page .shell,
+  body.location-page .shell,
+  body.archive-page .engine,
+  body.categories-page .engine,
+  body.location-page .engine {
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+
+  body.archive-page .unified-layout,
+  body.categories-page .unified-layout,
+  body.location-page .unified-layout {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1.18fr) minmax(0, .82fr) !important;
+    grid-template-rows: minmax(0, 1fr) !important;
+    align-items: stretch !important;
+    gap: 8px !important;
+    width: 100% !important;
+    height: clamp(600px, 76svh, 720px) !important;
+    min-height: 600px !important;
+    max-height: 720px !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+  }
+
+  body.archive-page .reader-card,
+  body.categories-page .reader-card,
+  body.location-page .reader-card,
+  body.archive-page .navigator-card,
+  body.categories-page .navigator-card,
+  body.location-page .navigator-card {
+    display: flex !important;
+    order: initial !important;
+    width: auto !important;
+    height: 100% !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    max-height: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+  }
+
+  body.archive-page .reader-card > .scroll,
+  body.categories-page .reader-card > .scroll,
+  body.location-page .reader-card > .scroll,
+  body.archive-page .navigator-list,
+  body.archive-page #editionStories,
+  body.categories-page .category-story-scroll,
+  body.categories-page #groupStories,
+  body.location-page .location-story-scroll,
+  body.location-page #groupStories {
+    min-width: 0 !important;
+    min-height: 0 !important;
+    height: auto !important;
+    max-height: none !important;
+    overflow-y: auto !important;
+    overflow-x: hidden !important;
+    scrollbar-gutter: stable !important;
+    overscroll-behavior: contain !important;
+    -webkit-overflow-scrolling: touch !important;
+    touch-action: pan-y !important;
+  }
+
+  body.archive-page .navigator-card,
+  body.categories-page .navigator-card,
+  body.location-page .navigator-card {
+    padding: 10px !important;
+  }
+
+  body.archive-page .reader-card .universal-story-copy,
+  body.categories-page .reader-card .universal-story-copy,
+  body.location-page .reader-card .universal-story-copy,
+  body.archive-page .reader-card .v2-feature-content,
+  body.categories-page .reader-card .v2-feature-content,
+  body.location-page .reader-card .v2-feature-content {
+    max-width: 100% !important;
+    padding: 14px !important;
+  }
+
+  body.archive-page .story-btn,
+  body.categories-page .story-btn,
+  body.location-page .story-btn {
+    padding: 9px !important;
+    margin-bottom: 7px !important;
+  }
+
+  body.archive-page .story-btn strong,
+  body.categories-page .story-btn strong,
+  body.location-page .story-btn strong {
+    font-size: .82rem !important;
+    line-height: 1.28 !important;
+  }
+
+  body.archive-page .story-btn span,
+  body.categories-page .story-btn span,
+  body.location-page .story-btn span,
+  body.archive-page .chip,
+  body.categories-page .chip,
+  body.location-page .chip {
+    font-size: .66rem !important;
+  }
+
+  body.archive-page .mobile-inline-detail,
+  body.categories-page .mobile-inline-detail,
+  body.location-page .mobile-inline-detail,
+  body.archive-page .mobile-toggle,
+  body.categories-page .mobile-toggle,
+  body.location-page .mobile-toggle,
+  body.archive-page .mobile-source-badge,
+  body.categories-page .mobile-source-badge,
+  body.location-page .mobile-source-badge,
+  body.archive-page .mobile-picker-wrap,
+  body.categories-page .mobile-picker-wrap,
+  body.location-page .mobile-picker-wrap {
+    display: none !important;
+  }
+
+  body.archive-page .v2-feature-source,
+  body.categories-page .v2-feature-source,
+  body.location-page .v2-feature-source {
+    position: static !important;
+    display: inline-flex !important;
+    margin-top: 10px !important;
+  }
+}
+
+@media (max-width: 520px) {
+  body.archive-page .shell,
+  body.categories-page .shell,
+  body.location-page .shell {
+    padding: 6px !important;
+    gap: 6px !important;
+  }
+
+  body.archive-page .unified-layout,
+  body.categories-page .unified-layout,
+  body.location-page .unified-layout {
+    grid-template-columns: minmax(0, 1.12fr) minmax(0, .88fr) !important;
+    gap: 6px !important;
+    height: clamp(620px, 78svh, 740px) !important;
+    min-height: 620px !important;
+    max-height: 740px !important;
+  }
+
+  body.archive-page .navigator-card,
+  body.categories-page .navigator-card,
+  body.location-page .navigator-card {
+    padding: 7px !important;
+  }
+
+  body.archive-page .reader-card .universal-story-copy,
+  body.categories-page .reader-card .universal-story-copy,
+  body.location-page .reader-card .universal-story-copy,
+  body.archive-page .reader-card .v2-feature-content,
+  body.categories-page .reader-card .v2-feature-content,
+  body.location-page .reader-card .v2-feature-content {
+    padding: 10px !important;
+  }
+
+  body.archive-page .story-btn,
+  body.categories-page .story-btn,
+  body.location-page .story-btn {
+    padding: 7px !important;
+    border-radius: 12px !important;
+  }
+
+  body.archive-page .chipline,
+  body.categories-page .chipline,
+  body.location-page .chipline {
+    gap: 3px !important;
+    margin-top: 5px !important;
+  }
+}

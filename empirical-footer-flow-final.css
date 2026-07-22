@@ -1,0 +1,139 @@
+/* Empirical footer flow repair — single source of truth.
+   Keeps the existing black footer design while placing it after the complete workspace. */
+
+html{
+  min-height:100%;
+  background:#050403;
+}
+
+body,
+body.home-page,
+body.archive-page,
+body.categories-page,
+body.location-page,
+body.about-page{
+  height:auto!important;
+  min-height:100vh!important;
+  min-height:100dvh!important;
+  overflow-x:hidden!important;
+  overflow-y:auto!important;
+  display:block!important;
+  padding:0!important;
+  background:#050403!important;
+}
+
+/* The complete header + reader/display workspace comes first. */
+body>.shell{
+  width:min(100%,1540px)!important;
+  height:auto!important;
+  max-height:none!important;
+  min-height:100vh!important;
+  min-height:100dvh!important;
+  margin:0 auto!important;
+  padding:8px 10px 18px!important;
+  overflow:visible!important;
+  box-sizing:border-box!important;
+}
+
+/* Preserve the existing two-card layouts and their internal reader scrolling. */
+body>.shell>.engine{
+  min-height:0!important;
+}
+
+body>.shell>.engine>.panel3,
+body>.shell>.engine>.about-grid,
+body>.shell>.engine>.unified-layout,
+body>.shell>.engine>.home-v2-engine{
+  min-height:620px!important;
+  overflow:visible!important;
+}
+
+/* The actual black footer is a normal block after the workspace. */
+body>.empirical-global-footer{
+  position:relative!important;
+  inset:auto!important;
+  left:auto!important;
+  right:auto!important;
+  top:auto!important;
+  bottom:auto!important;
+  transform:none!important;
+  z-index:2!important;
+  width:min(calc(100% - 20px),1520px)!important;
+  min-height:96px!important;
+  height:auto!important;
+  margin:18px auto max(8px,env(safe-area-inset-bottom))!important;
+  padding:10px 16px!important;
+  box-sizing:border-box!important;
+  display:grid!important;
+  visibility:visible!important;
+  opacity:1!important;
+  overflow:hidden!important;
+  border:1px solid rgba(247,218,132,.78)!important;
+  border-radius:16px!important;
+  background:linear-gradient(180deg,rgba(25,16,5,.98),rgba(6,4,2,.99))!important;
+  box-shadow:0 0 0 1px rgba(247,218,132,.10) inset,0 12px 34px rgba(0,0,0,.55)!important;
+  color:#f8efd9!important;
+}
+
+/* Retire the older editorial bar if present. */
+body>.empirical-closing-bar,
+body>footer.empirical-closing-bar{
+  display:none!important;
+}
+
+/* Source controls remain in their reader flow and can never sit under the footer. */
+.source-box,
+.v2-feature-source,
+#v2FeatureSource{
+  position:relative!important;
+  inset:auto!important;
+  transform:none!important;
+  z-index:1!important;
+  margin-top:12px!important;
+  margin-bottom:12px!important;
+}
+
+.scroll,
+#mainDetail,
+#rippleDetail,
+#groupDetail,
+.reader-card,
+[class*="reading"],
+[class*="reader"]{
+  scroll-padding-bottom:24px!important;
+}
+
+@media(max-width:1100px){
+  body>.shell{
+    min-height:auto!important;
+    padding-bottom:20px!important;
+  }
+  body>.shell>.engine>.panel3,
+  body>.shell>.engine>.about-grid,
+  body>.shell>.engine>.unified-layout,
+  body>.shell>.engine>.home-v2-engine{
+    min-height:700px!important;
+  }
+  body>.empirical-global-footer{
+    margin-top:22px!important;
+  }
+}
+
+@media(max-width:860px){
+  body>.shell{
+    padding:6px 6px 18px!important;
+  }
+  body>.shell>.engine>.panel3,
+  body>.shell>.engine>.about-grid,
+  body>.shell>.engine>.unified-layout,
+  body>.shell>.engine>.home-v2-engine{
+    min-height:0!important;
+  }
+  body>.empirical-global-footer{
+    width:calc(100% - 12px)!important;
+    min-height:106px!important;
+    margin:18px auto max(6px,env(safe-area-inset-bottom))!important;
+    padding:9px 11px!important;
+    border-radius:14px!important;
+  }
+}
