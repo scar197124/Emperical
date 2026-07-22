@@ -1,8 +1,2 @@
 User-agent: *
 Allow: /
-
-Sitemap: https://venomas56.github.io/Emperical/sitemap.xml
-
-# Empirical AI-Human-Harmony:
-# This site was created in collaboration between a human creator and an AI assistant.
-# The archive is intended for grounded good news, source visibility, and positive ripple effects.

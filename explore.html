@@ -1,48 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<title>Explore | Emperical</title>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1" name="viewport"/>
-<style>
-:root{--ring:#FFD700;--border:#FFD700}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:#000;color:#fff;font:16px/1.6 Georgia,"Times New Roman",serif}
-a{text-decoration:none;color:#FFD700}
-.ticker-wrap{position:sticky;top:0;z-index:50;background:var(--ring);border-bottom:6px solid #000;overflow:hidden}
-.ticker{display:flex;width:max-content;animation:scroll 35s linear infinite}
-.ticker span{padding:16px 42px;font-size:15px;font-weight:700;letter-spacing:1px;color:#000;white-space:nowrap;font-family:system-ui;text-transform:uppercase}
-@keyframes scroll{from{transform:translateX(100%)}to{transform:translateX(-100%)}}
-header{border-bottom:2px solid var(--border);padding:24px 16px;text-align:center}.brand{font-size:36px;font-weight:600;letter-spacing:.8px;color:var(--ring)}.tagline{margin-top:6px;font-size:14px;letter-spacing:2px;text-transform:uppercase;color:#fff}.nav{margin-top:18px}.nav a{display:inline-block;margin:0 6px;padding:8px 14px;border:2px solid var(--border);border-radius:20px;font-family:system-ui;font-size:12px;color:#fff}.nav a.active,.nav a:hover{background:var(--ring);color:#000}
-section{max-width:960px;margin:0 auto;padding:30px 16px}.card{border:2px solid var(--border);border-radius:16px;padding:22px;margin-bottom:22px;background:#0b0b0b;box-shadow:inset 0 0 0 1px rgba(255,255,255,.025)}.card h3{margin:6px 0 12px;font-size:22px;color:var(--ring)}footer{border-top:2px solid var(--border);margin-top:40px;padding:24px 16px;text-align:center;font-size:12px;color:#888}.footer-edition{font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:#bfae4d;margin-bottom:10px;padding-bottom:10px;border-bottom:1px solid #333;}
-.explore-hero{text-align:center}.explore-hero p{max-width:760px;margin:10px auto;color:#ddd}.explore-note{border-left:3px solid var(--ring);padding:10px 14px;background:rgba(255,215,0,.06);color:#eee;text-align:left}.section-kicker{font-family:system-ui;text-transform:uppercase;letter-spacing:1.4px;font-size:11px;color:#bfae4d;margin-bottom:8px}.count-badge{display:inline-block;min-width:24px;text-align:center;margin-left:7px;padding:1px 7px;border-radius:999px;background:rgba(255,215,0,.15);border:1px solid rgba(255,215,0,.4);color:var(--ring);font-family:system-ui;font-size:11px}.pill-grid{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;margin:18px 0 4px}.pill{border:1px solid rgba(255,215,0,.75);border-radius:999px;padding:8px 12px;color:#fff;background:#070707;font-family:system-ui;font-size:12px}.pill:hover{background:rgba(255,215,0,.12)}.pill strong{color:var(--ring)}.mini-list{list-style:none;margin:14px 0 0;padding:0;display:grid;gap:12px}.mini-list li{margin:0;padding:14px 15px;border:1px solid rgba(255,215,0,.34);border-radius:13px;background:rgba(255,215,0,.045);box-shadow:inset 0 0 0 1px rgba(255,255,255,.018)}.mini-list li:hover{border-color:rgba(255,215,0,.68);background:rgba(255,215,0,.075)}.mini-list li a{display:block;font-size:16px;line-height:1.35;color:#FFD700}.mini-list small{display:block;color:#aaa;font-family:system-ui;font-size:12px;margin-top:5px;line-height:1.45}.mini-list small::before{content:"Edition / region: ";color:#bfae4d;text-transform:uppercase;letter-spacing:.7px;font-size:10px}.toggle-wrap{display:flex;justify-content:center;margin:22px auto 8px}.view-toggle{display:inline-flex;border:2px solid var(--border);border-radius:999px;padding:4px;background:#050505;box-shadow:0 0 18px rgba(255,215,0,.08)}.view-toggle button{appearance:none;border:0;background:transparent;color:#fff;border-radius:999px;padding:10px 18px;font-family:system-ui;font-size:12px;font-weight:800;letter-spacing:1px;text-transform:uppercase;cursor:pointer}.view-toggle button.active{background:var(--ring);color:#000}.view-panel{display:none}.view-panel.active{display:block}.view-intro{text-align:center;color:#d8d0a0;font-family:system-ui;font-size:13px;margin:8px auto 18px;max-width:720px}.explore-group{scroll-margin-top:90px}.latest-index{margin-top:28px;border-style:dashed;background:#070707}@media(max-width:760px){.pill-grid{justify-content:flex-start}.nav{display:flex;flex-wrap:wrap;justify-content:center;gap:8px}.nav a{margin:0}.nav a{margin:4px}.view-toggle{width:100%;max-width:360px}.view-toggle button{flex:1;padding:10px 8px}.card{padding:18px}}
-</style>
-</head>
-<body>
-<div class="progress-bar" aria-hidden="true"></div>
-<header><div class="brand">EMPERICAL</div><div class="tagline">Categories</div><nav class="nav"><a href="index.html">Home</a><a href="archive.html">Archive</a><a href="categories.html">Categories</a><a href="location.html">Location</a><a href="about.html">About</a></nav></header>
-<main class="page-shell">
-  <section class="hero-panel">
-    <p class="kicker">Explore</p>
-    <h1>Browse Emperical by category or location.</h1>
-    <p class="lede">This page is kept as a compatibility path for older Explore links. For the clean reader view, choose Categories or Location below.</p>
-    <div class="nav" style="justify-content:center; margin-top: 1.25rem;">
-      <a href="categories.html">Categories</a>
-      <a href="location.html">Location</a>
-    </div>
-  </section>
-</main>
-<footer class="site-footer">
-  <p>Emperical keeps source links visible for transparency. Stories are independently summarized in original wording.</p>
-</footer>
-<script>
-window.addEventListener('scroll', () => {
-  const doc = document.documentElement;
-  const scrolled = (doc.scrollTop || document.body.scrollTop) / ((doc.scrollHeight - doc.clientHeight) || 1);
-  const bar = document.querySelector('.progress-bar');
-  if (bar) bar.style.width = `${Math.min(100, Math.max(0, scrolled * 100))}%`;
-});
-</script>
-</body>
-</html>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#080705"><title>Categories | Perical</title><link rel="stylesheet" href="app.css?v=12.6"></head><body data-page="categories"><header class="site-header">
+  <div class="identity-hero" role="img" aria-label="Perical — Tree of Life connecting Earth, humanity, and artificial intelligence">
+    <span class="sr-only">PERICAL · One truth · One humanity · One future</span>
+  </div>
+  <nav class="nav" aria-label="Primary">
+    <a href="index.html" data-nav="home">⌂ <span>Home</span></a>
+    <a href="archive.html" data-nav="archive">▣ <span>Archive</span></a>
+    <a href="categories.html" data-nav="categories">▦ <span>Categories</span></a>
+    <a href="location.html" data-nav="location">⌖ <span>Location</span></a>
+    <a href="about.html" data-nav="about">ⓘ <span>About</span></a>
+  </nav>
+</header><main class="page"><section class="page-title"><h2>Categories</h2><p>Filter the current stories by the four ways good news moves.</p></section><section class="workspace"><article class="panel reader-panel" aria-label="Story reader"><div class="panel-body reader" id="reader"><p class="empty">Loading story…</p></div></article><aside class="panel display-panel" aria-label="Story selection"><div class="panel-body"><div class="panel-status"><span>Stories</span><span class="count" id="count">0 stories</span></div><div class="toolbar" id="toolbar"></div><div class="story-list" id="storyList"></div></div></aside></section><section class="lower"><article class="section-card"><h3>Four Ways Good News Moves</h3><div class="ways"><a class="way" href="categories.html"><b>Good Samaritans</b><span>People helping people directly.</span></a><a class="way" href="categories.html"><b>Random Good News</b><span>Progress in daily life and community.</span></a><a class="way" href="categories.html"><b>Wow, Is This Real?</b><span>Remarkable history and discoveries.</span></a><a class="way" href="categories.html"><b>Science & Discovery</b><span>Research and practical innovation.</span></a></div></article><article class="section-card glance"><div><h3>Today’s Edition at a Glance</h3><p>Progress becomes visible when you look closely. These 20 stories show goodness in action.</p></div><div class="stats"><div class="stat"><b>20</b>Stories</div><div class="stat"><b>4</b>Movements</div><div class="stat"><b>Global</b>Reach</div></div></article></section></main><footer class="footer"><span>Perical · Evidence-based good news</span><span>Read carefully. Follow the source.</span></footer><script src="stories-data.js?v=12.6"></script><script src="app.js?v=12.6"></script></body></html>
