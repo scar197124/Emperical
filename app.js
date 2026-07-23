@@ -50,20 +50,56 @@ function setupToolbar(){
   else if(PAGE==='archive'){vals=['All',...unique(scope,'editionDate').reverse()];title='Edition';}
   else{t.remove();return;}
   t.className='wheel-shell';
-  t.innerHTML=`<div class="wheel-top"><span>${title}</span><strong id="wheelValue">${PAGE==='archive'?'All Editions':'All'}</strong></div><div class="selector-wheel" id="selectorWheel" role="listbox" aria-label="${title} selector"><div class="wheel-spacer" aria-hidden="true"></div>${vals.map((v,i)=>`<button class="wheel-option ${i===0?'active':''}" type="button" role="option" aria-selected="${i===0}" data-value="${esc(v)}">${v==='All'&&PAGE==='archive'?'All Editions':esc(v)}</button>`).join('')}<div class="wheel-spacer" aria-hidden="true"></div></div><div class="wheel-center" aria-hidden="true"></div><div class="wheel-footer"><p class="wheel-hint">Swipe or scroll. Centered choice applies automatically.</p><p class="wheel-results" id="wheelResults" aria-live="polite">${scope.length} stories</p></div>`;
+  t.innerHTML=`<div class="wheel-top"><span>${title}</span><strong id="wheelValue">${PAGE==='archive'?'All Editions':'All'}</strong></div><div class="selector-wheel" id="selectorWheel" role="listbox" tabindex="0" aria-label="${title} selector"><div class="wheel-spacer" aria-hidden="true"></div>${vals.map((v,i)=>`<button class="wheel-option ${i===0?'active':''}" type="button" role="option" aria-selected="${i===0}" data-value="${esc(v)}">${v==='All'&&PAGE==='archive'?'All Editions':esc(v)}</button>`).join('')}<div class="wheel-spacer" aria-hidden="true"></div></div><div class="wheel-center" aria-hidden="true"></div><div class="wheel-footer"><p class="wheel-hint">Swipe, scroll, or use arrow keys.</p><p class="wheel-results" id="wheelResults" aria-live="polite">${scope.length} stories</p></div>`;
   const wheel=$('#selectorWheel');
   const options=[...wheel.querySelectorAll('.wheel-option')];
-  let timer=0,current=0;
-  const choose=(index,scroll=true)=>{
-    index=Math.max(0,Math.min(options.length-1,index));current=index;
-    options.forEach((o,i)=>{const on=i===index;o.classList.toggle('active',on);o.setAttribute('aria-selected',String(on));});
-    if(scroll){const target=options[index].offsetTop-(wheel.clientHeight-options[index].offsetHeight)/2;wheel.scrollTo({top:Math.max(0,target),behavior:'smooth'});}
-    applyFilter(options[index].dataset.value);
+  let current=0,preview=0,appliedValue='All',settleTimer=0,raf=0,pointerActive=false;
+  const centerTop=index=>Math.max(0,options[index].offsetTop-(wheel.clientHeight-options[index].offsetHeight)/2);
+  const nearest=()=>{
+    const center=wheel.scrollTop+wheel.clientHeight/2;
+    let best=0,dist=Infinity;
+    options.forEach((o,i)=>{const d=Math.abs((o.offsetTop+o.offsetHeight/2)-center);if(d<dist){dist=d;best=i;}});
+    return best;
   };
-  options.forEach((o,i)=>o.addEventListener('click',()=>choose(i,true)));
-  wheel.addEventListener('scroll',()=>{clearTimeout(timer);timer=setTimeout(()=>{const center=wheel.scrollTop+wheel.clientHeight/2;let best=0,dist=Infinity;options.forEach((o,i)=>{const c=o.offsetTop+o.offsetHeight/2;const d=Math.abs(c-center);if(d<dist){dist=d;best=i;}});if(best!==current)choose(best,false);else{const target=options[best].offsetTop-(wheel.clientHeight-options[best].offsetHeight)/2;wheel.scrollTo({top:Math.max(0,target),behavior:'smooth'});}},90);},{passive:true});
-  wheel.addEventListener('keydown',e=>{if(e.key==='ArrowDown'){e.preventDefault();choose(current+1,true);}else if(e.key==='ArrowUp'){e.preventDefault();choose(current-1,true);}else if(e.key==='Home'){e.preventDefault();choose(0,true);}else if(e.key==='End'){e.preventDefault();choose(options.length-1,true);}});
-  requestAnimationFrame(()=>{if(options[0]){const target=options[0].offsetTop-(wheel.clientHeight-options[0].offsetHeight)/2;wheel.scrollTop=Math.max(0,target);}});
+  const paint=index=>{
+    preview=index;
+    options.forEach((o,i)=>{const on=i===index;o.classList.toggle('active',on);o.setAttribute('aria-selected',String(on));});
+    const value=options[index]?.dataset.value||'All';
+    const label=$('#wheelValue');
+    if(label)label.textContent=value==='All'?(PAGE==='archive'?'All Editions':'All'):value;
+  };
+  const commit=(index,{center=true,behavior='smooth'}={})=>{
+    index=Math.max(0,Math.min(options.length-1,index));
+    current=index;paint(index);
+    if(center)wheel.scrollTo({top:centerTop(index),behavior});
+    const value=options[index].dataset.value;
+    if(value!==appliedValue){appliedValue=value;applyFilter(value);paint(index);}
+  };
+  const scheduleCommit=(delay=55)=>{
+    clearTimeout(settleTimer);
+    settleTimer=setTimeout(()=>{if(!pointerActive)commit(nearest(),{center:true,behavior:'smooth'});},delay);
+  };
+  options.forEach((o,i)=>o.addEventListener('click',e=>{e.preventDefault();commit(i,{center:true,behavior:'smooth'});wheel.focus({preventScroll:true});}));
+  wheel.addEventListener('scroll',()=>{
+    if(!raf)raf=requestAnimationFrame(()=>{raf=0;paint(nearest());});
+    scheduleCommit(55);
+  },{passive:true});
+  wheel.addEventListener('pointerdown',()=>{pointerActive=true;clearTimeout(settleTimer);},{passive:true});
+  const release=()=>{pointerActive=false;scheduleCommit(25);};
+  wheel.addEventListener('pointerup',release,{passive:true});
+  wheel.addEventListener('pointercancel',release,{passive:true});
+  wheel.addEventListener('keydown',e=>{
+    let next=current;
+    if(e.key==='ArrowDown'||e.key==='PageDown')next=current+1;
+    else if(e.key==='ArrowUp'||e.key==='PageUp')next=current-1;
+    else if(e.key==='Home')next=0;
+    else if(e.key==='End')next=options.length-1;
+    else if(e.key==='Enter'||e.key===' '){e.preventDefault();commit(preview,{center:true,behavior:'smooth'});return;}
+    else return;
+    e.preventDefault();commit(next,{center:true,behavior:'smooth'});
+  });
+  if('onscrollend' in wheel)wheel.addEventListener('scrollend',()=>{if(!pointerActive)commit(nearest(),{center:true,behavior:'smooth'});},{passive:true});
+  requestAnimationFrame(()=>{wheel.scrollTop=centerTop(0);paint(0);});
 }
 function updateStats(){
   const current=STORIES.filter(currentEdition).length;

@@ -3664,7 +3664,7 @@ window.PERICAL_STORIES = [
     "edition": "July 22, 2026 — Twenty-Five Fresh Good Stories",
     "source": "Good News Network",
     "sourceUrl": "https://www.goodnewsnetwork.org/paralyzed-man-can-feed-himself-and-pet-his-dog-again-thanks-to-double-neural-bypass-surgery/",
-    "isCurrent": true
+    "isCurrent": false
   },
   {
     "id": "fresh-july22-002",
@@ -3679,7 +3679,7 @@ window.PERICAL_STORIES = [
     "edition": "July 22, 2026 — Twenty-Five Fresh Good Stories",
     "source": "Good News Network",
     "sourceUrl": "https://www.goodnewsnetwork.org/rich-rainfall-set-to-bust-mexicos-6-year-drought/",
-    "isCurrent": true
+    "isCurrent": false
   },
   {
     "id": "fresh-july22-003",
@@ -3694,7 +3694,7 @@ window.PERICAL_STORIES = [
     "edition": "July 22, 2026 — Twenty-Five Fresh Good Stories",
     "source": "Good News Network",
     "sourceUrl": "https://www.goodnewsnetwork.org/man-shocked-to-discover-familys-kitchen-table-was-actually-ancestors-qing-dynasty-diploma/",
-    "isCurrent": true
+    "isCurrent": false
   },
   {
     "id": "fresh-july22-004",
@@ -3709,7 +3709,7 @@ window.PERICAL_STORIES = [
     "edition": "July 22, 2026 — Twenty-Five Fresh Good Stories",
     "source": "Good News Network",
     "sourceUrl": "https://www.goodnewsnetwork.org/teen-rescues-elderly-dementia-patient-wandering-around-in-103f-heat/",
-    "isCurrent": true
+    "isCurrent": false
   },
   {
     "id": "fresh-july22-005",
@@ -3724,7 +3724,7 @@ window.PERICAL_STORIES = [
     "edition": "July 22, 2026 — Twenty-Five Fresh Good Stories",
     "source": "Good News Network",
     "sourceUrl": "https://www.goodnewsnetwork.org/off-duty-north-texas-firefighter-saves-3-children-trapped-under-boat-on-4th-of-july/",
-    "isCurrent": true
+    "isCurrent": false
   },
   {
     "id": "fresh-july22-006",
@@ -3739,7 +3739,7 @@ window.PERICAL_STORIES = [
     "edition": "July 22, 2026 — Twenty-Five Fresh Good Stories",
     "source": "Good News Network",
     "sourceUrl": "https://www.goodnewsnetwork.org/new-species-of-monkey-found-in-dr-congo-shows-how-much-theres-left-to-discover/",
-    "isCurrent": true
+    "isCurrent": false
   },
   {
     "id": "fresh-july22-007",
@@ -3754,7 +3754,7 @@ window.PERICAL_STORIES = [
     "edition": "July 22, 2026 — Twenty-Five Fresh Good Stories",
     "source": "Good News Network",
     "sourceUrl": "https://www.goodnewsnetwork.org/british-runner-calls-his-shot-and-breaks-world-record-in-the-mile-after-it-stood-for-27-years/",
-    "isCurrent": true
+    "isCurrent": false
   },
   {
     "id": "fresh-july22-008",
@@ -3769,7 +3769,7 @@ window.PERICAL_STORIES = [
     "edition": "July 22, 2026 — Twenty-Five Fresh Good Stories",
     "source": "Good News Network",
     "sourceUrl": "https://www.goodnewsnetwork.org/coral-reef-long-presumed-dead-is-rediscovered-teeming-with-life-off-coast-of-africa/",
-    "isCurrent": true
+    "isCurrent": false
   },
   {
     "id": "fresh-july22-009",
@@ -3784,7 +3784,7 @@ window.PERICAL_STORIES = [
     "edition": "July 22, 2026 — Twenty-Five Fresh Good Stories",
     "source": "Good News Network",
     "sourceUrl": "https://www.goodnewsnetwork.org/after-5-yo-diagnosed-with-rare-disease-little-sister-wanted-to-be-her-brave-bone-marrow-donor/",
-    "isCurrent": true
+    "isCurrent": false
   },
   {
     "id": "fresh-july22-010",
@@ -3799,7 +3799,7 @@ window.PERICAL_STORIES = [
     "edition": "July 22, 2026 — Twenty-Five Fresh Good Stories",
     "source": "Good News Network",
     "sourceUrl": "https://www.goodnewsnetwork.org/biotech-startup-breeds-blight-tolerant-american-chestnut-with-long-term-viability/",
-    "isCurrent": true
+    "isCurrent": false
   },
   {
     "id": "fresh-july22-011",
@@ -3814,7 +3814,7 @@ window.PERICAL_STORIES = [
     "edition": "July 22, 2026 — Twenty-Five Fresh Good Stories",
     "source": "Good News Network",
     "sourceUrl": "https://www.goodnewsnetwork.org/senior-center-worker-celebrates-50-years-on-the-job-without-using-a-single-sick-day/",
-    "isCurrent": true
+    "isCurrent": false
   },
   {
     "id": "fresh-july22-012",
@@ -3829,7 +3829,7 @@ window.PERICAL_STORIES = [
     "edition": "July 22, 2026 — Twenty-Five Fresh Good Stories",
     "source": "Good News Network",
     "sourceUrl": "https://www.goodnewsnetwork.org/longest-undersea-road-to-shorten-travel-times-by-5-hours-and-feature-great-hall-of-lights/",
-    "isCurrent": true
+    "isCurrent": false
   },
   {
     "id": "fresh-july22-013",
@@ -3844,7 +3844,7 @@ window.PERICAL_STORIES = [
     "edition": "July 22, 2026 — Twenty-Five Fresh Good Stories",
     "source": "Good News Network",
     "sourceUrl": "https://www.goodnewsnetwork.org/pigeon-walks-up-to-firefighters-who-offer-oxygen-to-clear-its-lungs/",
-    "isCurrent": true
+    "isCurrent": false
   },
   {
     "id": "fresh-july22-014",
@@ -3859,7 +3859,7 @@ window.PERICAL_STORIES = [
     "edition": "July 22, 2026 — Twenty-Five Fresh Good Stories",
     "source": "Good News Network",
     "sourceUrl": "https://www.goodnewsnetwork.org/kansas-city-cop-wont-stop-until-he-finds-stolen-e-bike-for-cancer-patient-one-month-later/",
-    "isCurrent": true
+    "isCurrent": false
   },
   {
     "id": "fresh-july22-015",
@@ -3874,7 +3874,7 @@ window.PERICAL_STORIES = [
     "edition": "July 22, 2026 — Twenty-Five Fresh Good Stories",
     "source": "Good News Network",
     "sourceUrl": "https://www.goodnewsnetwork.org/pharaohs-daughters-were-skilled-at-archery-4000-years-ago-reveals-new-research/",
-    "isCurrent": true
+    "isCurrent": false
   },
   {
     "id": "fresh-july22-016",
@@ -3889,7 +3889,7 @@ window.PERICAL_STORIES = [
     "edition": "July 22, 2026 — Twenty-Five Fresh Good Stories",
     "source": "Good News Network",
     "sourceUrl": "https://www.goodnewsnetwork.org/people-advised-a-basketball-career-but-giant-man-wanted-to-help-others-as-a-texas-police-officer/",
-    "isCurrent": true
+    "isCurrent": false
   },
   {
     "id": "fresh-july22-017",
@@ -3904,7 +3904,7 @@ window.PERICAL_STORIES = [
     "edition": "July 22, 2026 — Twenty-Five Fresh Good Stories",
     "source": "Good News Network",
     "sourceUrl": "https://www.goodnewsnetwork.org/drug-may-repair-dna-at-earliest-stages-of-alzheimers-and-its-already-passed-safety-trials/",
-    "isCurrent": true
+    "isCurrent": false
   },
   {
     "id": "fresh-july22-018",
@@ -3919,7 +3919,7 @@ window.PERICAL_STORIES = [
     "edition": "July 22, 2026 — Twenty-Five Fresh Good Stories",
     "source": "Good News Network",
     "sourceUrl": "https://www.goodnewsnetwork.org/homegrown-catnip-lotion-proves-to-be-an-effective-mosquito-repellent-in-rural-uganda/",
-    "isCurrent": true
+    "isCurrent": false
   },
   {
     "id": "fresh-july22-019",
@@ -3934,7 +3934,7 @@ window.PERICAL_STORIES = [
     "edition": "July 22, 2026 — Twenty-Five Fresh Good Stories",
     "source": "Good News Network",
     "sourceUrl": "https://www.goodnewsnetwork.org/meet-the-firefighting-donkeys-of-spain-chowing-down-on-grass-and-fire-risk-from-dawn-to-dusk/",
-    "isCurrent": true
+    "isCurrent": false
   },
   {
     "id": "fresh-july22-020",
@@ -3949,7 +3949,7 @@ window.PERICAL_STORIES = [
     "edition": "July 22, 2026 — Twenty-Five Fresh Good Stories",
     "source": "Good News Network",
     "sourceUrl": "https://www.goodnewsnetwork.org/would-you-like-sugar-with-your-stars-sugar-detected-in-interstellar-space-for-the-first-time/",
-    "isCurrent": true
+    "isCurrent": false
   },
   {
     "id": "fresh-july22-021",
@@ -3964,7 +3964,7 @@ window.PERICAL_STORIES = [
     "edition": "July 22, 2026 — Twenty-Five Fresh Good Stories",
     "source": "Good News Network",
     "sourceUrl": "https://www.goodnewsnetwork.org/raising-rice-and-fish-together-cuts-disease-from-snails-while-boosting-crop-yields-by-25/",
-    "isCurrent": true
+    "isCurrent": false
   },
   {
     "id": "fresh-july22-022",
@@ -3979,7 +3979,7 @@ window.PERICAL_STORIES = [
     "edition": "July 22, 2026 — Twenty-Five Fresh Good Stories",
     "source": "Good News Network",
     "sourceUrl": "https://www.goodnewsnetwork.org/this-extraordinary-desert-mouse-defies-aging-and-it-could-change-human-longevity/",
-    "isCurrent": true
+    "isCurrent": false
   },
   {
     "id": "fresh-july22-023",
@@ -3994,7 +3994,7 @@ window.PERICAL_STORIES = [
     "edition": "July 22, 2026 — Twenty-Five Fresh Good Stories",
     "source": "Good News Network",
     "sourceUrl": "https://www.goodnewsnetwork.org/scientists-identify-gene-at-the-center-of-muscular-aging-and-how-exercise-defeats-it/",
-    "isCurrent": true
+    "isCurrent": false
   },
   {
     "id": "fresh-july22-024",
@@ -4009,7 +4009,7 @@ window.PERICAL_STORIES = [
     "edition": "July 22, 2026 — Twenty-Five Fresh Good Stories",
     "source": "Good News Network",
     "sourceUrl": "https://www.goodnewsnetwork.org/canada-successfully-exploring-for-white-hydrogen-gas-a-clean-power-source-beneath-existing-mines/",
-    "isCurrent": true
+    "isCurrent": false
   },
   {
     "id": "fresh-july22-025",
@@ -4024,6 +4024,406 @@ window.PERICAL_STORIES = [
     "edition": "July 22, 2026 — Twenty-Five Fresh Good Stories",
     "source": "Good News Network",
     "sourceUrl": "https://www.goodnewsnetwork.org/blind-people-offered-hope-of-seeing-again-after-stem-cell-breakthrough-remakes-retinal-blood-vessels/",
+    "isCurrent": false
+  },
+  {
+    "id": "good-july23-001",
+    "title": "NASA Joins a National Mission to Speed Up Scientific Discovery With AI",
+    "summary": "NASA joined the Genesis Mission, a national effort designed to use artificial intelligence to help scientists and engineers work through difficult questions faster. The aim is not to replace human curiosity, but to give research teams stronger tools for finding patterns, testing ideas, and moving promising discoveries forward.",
+    "why": "Discovery often advances when people gain better ways to ask questions. Giving scientists tools that can organize enormous amounts of information may free more time for judgment, imagination, and the careful work of turning an idea into something useful.",
+    "ripple": "If the collaboration succeeds, methods developed for space and engineering research could support progress in medicine, climate science, materials, and other fields where faster insight can improve everyday life.",
+    "mainCategory": "Science & Discovery",
+    "category": "Science & Discovery",
+    "location": "United States",
+    "source": "NASA",
+    "sourceUrl": "https://www.nasa.gov/news-release/nasa-joins-genesis-mission-to-accelerate-ai-driven-discovery/",
+    "editionDate": "July 23, 2026 — Twenty-Five Good Stories From Many Sources",
+    "edition": "July 23, 2026 — Twenty-Five Good Stories From Many Sources",
+    "file": "index.html",
+    "isCurrent": true
+  },
+  {
+    "id": "good-july23-002",
+    "title": "New Horizons Wakes From Hibernation in Good Health Far Beyond Pluto",
+    "summary": "NASA’s New Horizons spacecraft woke from hibernation and reported that it was healthy after another long stretch in the outer solar system. The mission has travelled for two decades, passed Pluto, studied a Kuiper Belt object, and continued gathering information from a region no spacecraft had explored this closely before.",
+    "why": "A machine built by people is still listening, measuring, and responding billions of kilometres from home. Its continued health reflects years of patience, teamwork, and careful engineering carried across an almost unimaginable distance.",
+    "ripple": "Every successful wake-up extends the mission’s ability to study the edge of the solar system. Those observations can deepen knowledge of how planets formed and help future explorers design missions that travel even farther.",
+    "mainCategory": "Science & Discovery",
+    "category": "Space Exploration",
+    "location": "Outer Solar System",
+    "source": "NASA Science",
+    "sourceUrl": "https://science.nasa.gov/missions/new-horizons/nasas-new-horizons-spacecraft-wakes-from-hibernation-in-good-health/",
+    "editionDate": "July 23, 2026 — Twenty-Five Good Stories From Many Sources",
+    "edition": "July 23, 2026 — Twenty-Five Good Stories From Many Sources",
+    "file": "index.html",
+    "isCurrent": true
+  },
+  {
+    "id": "good-july23-003",
+    "title": "A Pristine Meteorite Is Revealing New Clues About Ancient Water",
+    "summary": "NASA researchers are studying a meteorite that was recovered quickly after it fell, preserving unusually clean evidence from the early solar system. Minerals and salts inside it are helping scientists trace ancient water and the chemistry that existed before planets became the worlds we know today.",
+    "why": "A small stone can carry a story older than Earth’s oceans. Protecting it from contamination allowed researchers to read details that might otherwise have been lost, turning careful recovery into a window on the beginnings of our planetary neighbourhood.",
+    "ripple": "The findings can be compared with asteroid samples returned by spacecraft, strengthening the search for the ingredients that helped make habitable worlds possible and guiding future sample-return missions.",
+    "mainCategory": "Wow, Is This Real?",
+    "category": "Space Discovery",
+    "location": "International",
+    "source": "NASA Science",
+    "sourceUrl": "https://science.nasa.gov/science-research/astromaterials/nasa-study-of-pristine-meteorite-adds-to-story-of-ancient-asteroids/",
+    "editionDate": "July 23, 2026 — Twenty-Five Good Stories From Many Sources",
+    "edition": "July 23, 2026 — Twenty-Five Good Stories From Many Sources",
+    "file": "index.html",
+    "isCurrent": true
+  },
+  {
+    "id": "good-july23-004",
+    "title": "El Salvador Is Validated for Eliminating Trachoma as a Public Health Problem",
+    "summary": "The World Health Organization validated El Salvador for eliminating trachoma as a public health problem. The achievement reflects years of prevention, treatment, sanitation work, and community health efforts against an infection that can damage sight when it goes untreated.",
+    "why": "A health victory can be quiet: fewer painful infections, fewer families fearing preventable blindness, and more children growing up without a disease that once shaped daily life. Elimination means sustained public work reached people where they live.",
+    "ripple": "El Salvador’s progress offers practical lessons for other countries working toward the same goal and shows how coordinated local care, clean environments, and long-term follow-through can remove an old threat.",
+    "mainCategory": "Health & Medicine",
+    "category": "Public Health Progress",
+    "location": "El Salvador",
+    "source": "World Health Organization",
+    "sourceUrl": "https://www.who.int/news-room/headlines",
+    "editionDate": "July 23, 2026 — Twenty-Five Good Stories From Many Sources",
+    "edition": "July 23, 2026 — Twenty-Five Good Stories From Many Sources",
+    "file": "index.html",
+    "isCurrent": true
+  },
+  {
+    "id": "good-july23-005",
+    "title": "Global Hunger Levels Ease for a Third Consecutive Year",
+    "summary": "A new United Nations report found that global hunger levels eased for the third year in a row. Serious gaps remain between regions, but the overall movement shows that food systems, aid programs, farming support, and social protection can produce measurable progress when they reach people consistently.",
+    "why": "Behind a global percentage are ordinary meals: a child arriving at school with energy, a parent facing one less impossible choice, and a family gaining a little more room to plan beyond the next day.",
+    "ripple": "Understanding where progress is strongest can help governments and organizations direct resources toward approaches that work, while keeping attention on communities that have not yet shared equally in the improvement.",
+    "mainCategory": "Human Progress",
+    "category": "Food Security",
+    "location": "Global",
+    "source": "World Health Organization / United Nations",
+    "sourceUrl": "https://www.who.int/news-room/releases/1?dm_i=ccpr21d6",
+    "editionDate": "July 23, 2026 — Twenty-Five Good Stories From Many Sources",
+    "edition": "July 23, 2026 — Twenty-Five Good Stories From Many Sources",
+    "file": "index.html",
+    "isCurrent": true
+  },
+  {
+    "id": "good-july23-006",
+    "title": "MIT Researchers Find a Way to Help Solid-State Batteries Last Longer",
+    "summary": "MIT researchers identified why tiny pathways of lithium can form inside solid-state batteries and cause them to fail. By changing how the solid electrolyte is processed, the team improved ion movement while reducing the unwanted electrical leakage that helps those damaging pathways begin.",
+    "why": "Better batteries are not only about devices lasting longer. They can make electric transportation, renewable-energy storage, and dependable power systems easier to build without asking people to trade performance for safety.",
+    "ripple": "The discovery gives battery designers a clearer problem to solve and may support cells that charge faster, carry more energy, and remain useful through more years of daily use.",
+    "mainCategory": "Clean Energy",
+    "category": "Battery Research",
+    "location": "Cambridge, Massachusetts",
+    "source": "MIT News",
+    "sourceUrl": "https://news.mit.edu/2026/discovery-helps-explain-why-solid-state-batteries-often-fail-0706",
+    "editionDate": "July 23, 2026 — Twenty-Five Good Stories From Many Sources",
+    "edition": "July 23, 2026 — Twenty-Five Good Stories From Many Sources",
+    "file": "index.html",
+    "isCurrent": true
+  },
+  {
+    "id": "good-july23-007",
+    "title": "A New Quantum-Dot Discovery Could Make Digital Displays Brighter and More Efficient",
+    "summary": "MIT researchers reported a way to improve the performance of quantum dots used to produce light in displays. The work could help screens create brighter colours while using less energy, addressing a long-standing efficiency problem in these tiny light-emitting materials.",
+    "why": "Small improvements inside common technology can add up across millions of devices. A screen that needs less power can last longer on a charge and reduce the energy quietly consumed through hours of ordinary use.",
+    "ripple": "The same understanding may improve televisions, phones, medical imaging tools, and other optical systems, while giving manufacturers a more efficient path for future display designs.",
+    "mainCategory": "Science & Discovery",
+    "category": "Materials Innovation",
+    "location": "Cambridge, Massachusetts",
+    "source": "MIT News",
+    "sourceUrl": "https://news.mit.edu/2026/discovery-could-lead-brighter-more-energy-efficient-digital-displays-0710",
+    "editionDate": "July 23, 2026 — Twenty-Five Good Stories From Many Sources",
+    "edition": "July 23, 2026 — Twenty-Five Good Stories From Many Sources",
+    "file": "index.html",
+    "isCurrent": true
+  },
+  {
+    "id": "good-july23-008",
+    "title": "MIT Engineers Learn to Guide the Growth of Tiny Artificial Blood Vessels",
+    "summary": "MIT engineers developed a precise method for directing where very small blood vessels grow. The approach addresses capillaries that are too fine for ordinary 3D printing, helping researchers build living tissues with the delicate circulation networks cells need to survive.",
+    "why": "Repairing tissue is not only about creating its shape. It must also receive oxygen and nutrients. Learning to guide capillaries brings laboratory-grown tissue closer to behaving like the living systems it is meant to heal or replace.",
+    "ripple": "More realistic vessel networks could improve drug testing, regenerative medicine, wound research, and eventually the ability to create larger functional tissues for patients.",
+    "mainCategory": "Health & Medicine",
+    "category": "Regenerative Medicine",
+    "location": "Cambridge, Massachusetts",
+    "source": "MIT News",
+    "sourceUrl": "https://news.mit.edu/index.php/2026/mit-engineers-find-precise-way-to-grow-artificial-blood-vessels-0714",
+    "editionDate": "July 23, 2026 — Twenty-Five Good Stories From Many Sources",
+    "edition": "July 23, 2026 — Twenty-Five Good Stories From Many Sources",
+    "file": "index.html",
+    "isCurrent": true
+  },
+  {
+    "id": "good-july23-009",
+    "title": "A Milder Ebola Relative May Show Researchers How the Body Wins",
+    "summary": "Researchers at the University of Texas Medical Branch studied Bombali ebolavirus, a related strain that produced strong disease signs in an advanced model while survival remained complete. That unusual outcome let scientists observe how a complex immune system can confront the virus without the narrow window created by the deadliest strains.",
+    "why": "Sometimes progress comes from studying resilience rather than only damage. Seeing how a body survives can reveal protective responses that are difficult to observe when illness moves too quickly.",
+    "ripple": "The work may help researchers identify targets for future treatments and vaccines while providing a safer scientific roadmap for understanding severe viral disease.",
+    "mainCategory": "Health & Medicine",
+    "category": "Infectious Disease Research",
+    "location": "Galveston, Texas",
+    "source": "University of Texas Medical Branch",
+    "sourceUrl": "https://www.utmb.edu/news/article/utmb-news/2026/07/10/utmb-study-of-milder-ebola-strain-could-hold-the-key-to-future-treatments",
+    "editionDate": "July 23, 2026 — Twenty-Five Good Stories From Many Sources",
+    "edition": "July 23, 2026 — Twenty-Five Good Stories From Many Sources",
+    "file": "index.html",
+    "isCurrent": true
+  },
+  {
+    "id": "good-july23-010",
+    "title": "AI Helps Reveal Multiple-Sclerosis Lesions Hidden in Older MRI Scans",
+    "summary": "A University at Buffalo-led study found that artificial intelligence could identify cortical brain lesions that conventional review often misses in existing MRI scans. The technique may allow researchers and clinicians to see signs connected with disease progression without requiring every patient to begin with a new generation of equipment.",
+    "why": "People living with a complex illness deserve to have the clearest possible picture of what is happening inside their bodies. Finding useful information already present in older scans can turn stored images into new understanding.",
+    "ripple": "The method could strengthen MS research, improve monitoring, and help clinics gain more value from imaging they already possess, especially where advanced scanners are not widely available.",
+    "mainCategory": "Health & Medicine",
+    "category": "Medical Imaging",
+    "location": "Buffalo, New York",
+    "source": "University at Buffalo",
+    "sourceUrl": "https://www.buffalo.edu/news/ub-in-the-news/2026/07/002.html",
+    "editionDate": "July 23, 2026 — Twenty-Five Good Stories From Many Sources",
+    "edition": "July 23, 2026 — Twenty-Five Good Stories From Many Sources",
+    "file": "index.html",
+    "isCurrent": true
+  },
+  {
+    "id": "good-july23-011",
+    "title": "A Collaborative AI System Could Help Design Better Clinical Trials",
+    "summary": "Weill Cornell Medicine researchers evaluated an AI system that works through trial-design questions like a team of collaborating experts. Using real-world patient data, it can simulate and compare choices before a costly clinical trial begins.",
+    "why": "A promising treatment can still be delayed by a trial that asks the wrong question or recruits the wrong group. Better planning means less wasted effort and a clearer path between a laboratory idea and the people waiting for help.",
+    "ripple": "More precise trial design could reduce costs, shorten development timelines, and improve the chance that useful treatments are tested fairly and effectively.",
+    "mainCategory": "Health & Medicine",
+    "category": "Clinical Research",
+    "location": "New York, United States",
+    "source": "Weill Cornell Medicine",
+    "sourceUrl": "https://news.weill.cornell.edu/news/2026/07/ai-research-team-could-streamline-clinical-trial-design",
+    "editionDate": "July 23, 2026 — Twenty-Five Good Stories From Many Sources",
+    "edition": "July 23, 2026 — Twenty-Five Good Stories From Many Sources",
+    "file": "index.html",
+    "isCurrent": true
+  },
+  {
+    "id": "good-july23-012",
+    "title": "A Student Idea Grows Into Quiet Home-Health Monitoring for Older Adults",
+    "summary": "Research that began with a student idea at Rochester Institute of Technology helped develop a household device that can measure cardiovascular signals during an ordinary daily routine. The goal is to collect useful health information without asking older adults to master another complicated piece of equipment.",
+    "why": "The best health technology can disappear into life instead of making life revolve around technology. A familiar routine may provide early information while preserving independence and dignity.",
+    "ripple": "Passive monitoring could help families and care teams notice meaningful changes sooner, support ageing at home, and reduce the burden of repeated manual measurements.",
+    "mainCategory": "Health & Medicine",
+    "category": "Ageing & Independence",
+    "location": "Rochester, New York",
+    "source": "Rochester Institute of Technology",
+    "sourceUrl": "https://www.rit.edu/research/news",
+    "editionDate": "July 23, 2026 — Twenty-Five Good Stories From Many Sources",
+    "edition": "July 23, 2026 — Twenty-Five Good Stories From Many Sources",
+    "file": "index.html",
+    "isCurrent": true
+  },
+  {
+    "id": "good-july23-013",
+    "title": "A Community Program in Kosovo Is Helping Young Children Begin Childhood Again",
+    "summary": "A UNICEF-supported early-childhood program in Kosovo is opening learning and play opportunities to families who had been excluded by poverty and unemployment. Educators reported changes not only in children’s confidence and development, but also in the way parents participate in their growth.",
+    "why": "Childhood should contain room to explore, make friends, and feel expected. When a family gains access to early learning, the change can reach beyond school readiness and restore a sense of belonging.",
+    "ripple": "Programs that include parents can strengthen whole communities, helping early education become a shared habit rather than a service available only to families with more resources.",
+    "mainCategory": "Human Progress",
+    "category": "Early Childhood",
+    "location": "Kosovo",
+    "source": "UNICEF Kosovo",
+    "sourceUrl": "https://www.unicef.org/kosovoprogramme/stories/where-childhood-begins-again",
+    "editionDate": "July 23, 2026 — Twenty-Five Good Stories From Many Sources",
+    "edition": "July 23, 2026 — Twenty-Five Good Stories From Many Sources",
+    "file": "index.html",
+    "isCurrent": true
+  },
+  {
+    "id": "good-july23-014",
+    "title": "Community Care Is Opening New Paths for Women and Children in Madhya Pradesh",
+    "summary": "UNICEF highlighted connected work in Madhya Pradesh that brings health care, nutrition support, child protection, and community policing closer to families. The program includes treatment for vulnerable babies and practical support that helps girls and families regain confidence in their future.",
+    "why": "A person rarely needs only one kind of help. Care becomes more powerful when health workers, public agencies, and communities see the whole family rather than passing each problem to a separate door.",
+    "ripple": "The integrated model can help more children recover, stay in school, and grow in safer homes while giving communities a larger role in sustaining the change.",
+    "mainCategory": "Human Progress",
+    "category": "Women & Children",
+    "location": "Madhya Pradesh, India",
+    "source": "UNICEF India",
+    "sourceUrl": "https://www.unicef.org/india/blog/journey-hope-and-transformation-women-and-children-madhya-pradesh",
+    "editionDate": "July 23, 2026 — Twenty-Five Good Stories From Many Sources",
+    "edition": "July 23, 2026 — Twenty-Five Good Stories From Many Sources",
+    "file": "index.html",
+    "isCurrent": true
+  },
+  {
+    "id": "good-july23-015",
+    "title": "A Simple Colour-Coded Tape Is Helping Community Volunteers Protect Babies",
+    "summary": "In Kagara, Nigeria, community volunteers use a colour-coded measuring tape during home visits to spot signs of malnutrition in young children. The tool makes an invisible risk easier to recognize and helps families receive a referral before a child’s condition becomes more severe.",
+    "why": "Life-saving care does not always begin with a machine or a hospital. Sometimes it begins with a neighbour carrying a simple tool, paying attention, and helping a parent reach support in time.",
+    "ripple": "Training more local volunteers can extend early detection into homes that health systems may struggle to reach, giving more children a chance to recover while treatment is simpler.",
+    "mainCategory": "Health & Medicine",
+    "category": "Community Health",
+    "location": "Katsina State, Nigeria",
+    "source": "UNICEF Nigeria",
+    "sourceUrl": "https://www.unicef.org/nigeria/stories/kagara-community-volunteers-colour-coded-tape-saves-lives",
+    "editionDate": "July 23, 2026 — Twenty-Five Good Stories From Many Sources",
+    "edition": "July 23, 2026 — Twenty-Five Good Stories From Many Sources",
+    "file": "index.html",
+    "isCurrent": true
+  },
+  {
+    "id": "good-july23-016",
+    "title": "Labrador Youth Can Earn Positive Tickets for Kindness and Leadership",
+    "summary": "The RCMP in Labrador brought back a summer program that recognizes young people for helpful, safe, and responsible actions. Officers may give a positive ticket when they see a child wearing a bicycle helmet, helping another person, following safety rules, or setting a good example.",
+    "why": "Young people are often corrected publicly and appreciated quietly. Turning good choices into something adults actively notice tells them that kindness and responsibility are part of how a community defines strength.",
+    "ripple": "Local businesses and police share the recognition, creating more everyday contact built around encouragement rather than trouble and giving other young people visible examples to follow.",
+    "mainCategory": "Good Samaritans",
+    "category": "Youth Leadership",
+    "location": "Labrador, Canada",
+    "source": "NTV Newfoundland and Labrador",
+    "sourceUrl": "https://ntv.ca/justice/rcmp-brings-back-positive-ticket-program-for-labrador-youth/",
+    "editionDate": "July 23, 2026 — Twenty-Five Good Stories From Many Sources",
+    "edition": "July 23, 2026 — Twenty-Five Good Stories From Many Sources",
+    "file": "index.html",
+    "isCurrent": true
+  },
+  {
+    "id": "good-july23-017",
+    "title": "A Community Food Fair Provides the Equivalent of 4,430 Meals",
+    "summary": "Renewed Hope volunteers distributed thousands of pounds of groceries and fresh produce during a free food fair in Caledon. More than twenty-five volunteers unloaded, sorted, welcomed, and served neighbours, providing the equivalent of 4,430 meals without charging families at the tables.",
+    "why": "Food support can protect more than an empty cupboard. Being welcomed without judgment lets a person carry groceries home with dignity and feel that their community sees the pressure they are under.",
+    "ripple": "A well-organized event can connect donors, volunteers, and residents, build trust for future support, and show how local action can turn surplus and generosity into immediate relief.",
+    "mainCategory": "Good Samaritans",
+    "category": "Food & Community",
+    "location": "Caledon, Ontario",
+    "source": "Caledon Citizen",
+    "sourceUrl": "https://caledoncitizen.com/renewed-hope-food-fair-delivers-4430-meals-for-caledon-residents/",
+    "editionDate": "July 23, 2026 — Twenty-Five Good Stories From Many Sources",
+    "edition": "July 23, 2026 — Twenty-Five Good Stories From Many Sources",
+    "file": "index.html",
+    "isCurrent": true
+  },
+  {
+    "id": "good-july23-018",
+    "title": "London Volunteers Fill a Day With Small, Deliberate Acts of Kindness",
+    "summary": "Project IMPACK organized a Random Acts of Kindness Day in London, Ontario, inviting individuals, families, friends, and work teams to walk through the city sharing encouraging messages, small treats, smiles, and practical gestures of care.",
+    "why": "Kindness can sound abstract until someone decides where and when to practice it. A planned day creates permission for people to approach one another with warmth and discover that connection does not always require a grand event.",
+    "ripple": "Participants may carry the habit beyond one day, while people who receive an unexpected gesture can be reminded that public spaces still belong to neighbours who notice one another.",
+    "mainCategory": "Good Samaritans",
+    "category": "Community Kindness",
+    "location": "London, Ontario",
+    "source": "London Economic Development Corporation",
+    "sourceUrl": "https://www.ledc.com/event/project-impacks-2026-london-ontario-random-acts-kindness-day",
+    "editionDate": "July 23, 2026 — Twenty-Five Good Stories From Many Sources",
+    "edition": "July 23, 2026 — Twenty-Five Good Stories From Many Sources",
+    "file": "index.html",
+    "isCurrent": true
+  },
+  {
+    "id": "good-july23-019",
+    "title": "A Girl’s Lemonade Stand Keeps a Community Giver’s Legacy Moving",
+    "summary": "A young girl in Ontario donated the proceeds from her Canada Day lemonade stand to a community meal program connected with a late local restaurateur known for helping neighbours. Her small stand became a way for one family to continue the welcome and generosity he had offered through his restaurant.",
+    "why": "A legacy stays alive when someone else decides it is worth carrying. The amount raised matters, but so does a child learning that remembrance can be active and that generosity can be practiced with the tools already in her hands.",
+    "ripple": "The donation supports meals now and may encourage other families to turn birthdays, stands, and neighbourhood events into simple ways of sustaining local care.",
+    "mainCategory": "Good Samaritans",
+    "category": "Youth Kindness",
+    "location": "Aurora, Ontario",
+    "source": "AuroraToday",
+    "sourceUrl": "https://www.auroratoday.ca/local-news/we-hope-were-making-sam-proud-girls-lemonade-stand-honours-aurora-community-hero-12501523",
+    "editionDate": "July 23, 2026 — Twenty-Five Good Stories From Many Sources",
+    "edition": "July 23, 2026 — Twenty-Five Good Stories From Many Sources",
+    "file": "index.html",
+    "isCurrent": true
+  },
+  {
+    "id": "good-july23-020",
+    "title": "Residents Are Helping Restore a Wildlife Link at Hidden Valley Park",
+    "summary": "Conservation Halton invited residents to join restoration sessions at Hidden Valley Park, removing invasive plants and preparing for native tree planting. The work is intended to improve habitat and strengthen an ecological connection between Cootes Paradise and the Niagara Escarpment.",
+    "why": "A healthy landscape is built through repeated, unglamorous care: pulling the wrong plant, making room for the right one, and returning months later to continue. Volunteers get to see that recovery is something hands can participate in.",
+    "ripple": "The project can improve movement and shelter for wildlife, strengthen biodiversity, and create a local group of residents who understand the park well enough to keep protecting it.",
+    "mainCategory": "Good Earth",
+    "category": "Habitat Restoration",
+    "location": "Burlington, Ontario",
+    "source": "Oakville News",
+    "sourceUrl": "https://www.oakvillenews.org/local-news/help-wanted-for-conservation-halton-revitalization-this-summer-12544508",
+    "editionDate": "July 23, 2026 — Twenty-Five Good Stories From Many Sources",
+    "edition": "July 23, 2026 — Twenty-Five Good Stories From Many Sources",
+    "file": "index.html",
+    "isCurrent": true
+  },
+  {
+    "id": "good-july23-021",
+    "title": "Australia Extends a Decade-Long Partnership Protecting Threatened Wildlife",
+    "summary": "Australian Wildlife Conservancy and the New South Wales government announced plans to extend a conservation partnership for another ten years. Their work at large protected landscapes has supported threatened native animals through habitat management, monitoring, and carefully managed reintroductions.",
+    "why": "Wildlife recovery usually takes longer than a funding cycle or a headline. A renewed decade gives conservation teams the continuity needed to learn, adjust, and stay beside vulnerable species through the slow work of rebuilding populations.",
+    "ripple": "Long-term cooperation can protect more habitat, strengthen scientific knowledge, and provide a model for governments and nonprofit organizations sharing responsibility for species that cannot recover within administrative boundaries.",
+    "mainCategory": "Good Earth",
+    "category": "Wildlife Recovery",
+    "location": "New South Wales, Australia",
+    "source": "Australian Wildlife Conservancy",
+    "sourceUrl": "https://www.australianwildlife.org/news-and-resources/press-release/awc-to-extend-groundbreaking-partnership-with-nsw-government",
+    "editionDate": "July 23, 2026 — Twenty-Five Good Stories From Many Sources",
+    "edition": "July 23, 2026 — Twenty-Five Good Stories From Many Sources",
+    "file": "index.html",
+    "isCurrent": true
+  },
+  {
+    "id": "good-july23-022",
+    "title": "A Study of 91 African Projects Identifies What Conservation Does Best",
+    "summary": "The International Union for Conservation of Nature reviewed evidence from 91 projects across 31 African countries to identify approaches that most effectively protect species, restore habitats, and support community livelihoods. The study focuses on turning years of field experience into clearer guidance.",
+    "why": "Conservation resources are limited, and good intentions are not enough. Learning which actions repeatedly help animals, landscapes, and people allows future work to honour both the communities involved and the urgency of biodiversity loss.",
+    "ripple": "Organizations can use the findings to design stronger projects, avoid repeating weak approaches, and direct funding toward methods with demonstrated results across different places.",
+    "mainCategory": "Good Earth",
+    "category": "Conservation Evidence",
+    "location": "Africa",
+    "source": "IUCN",
+    "sourceUrl": "https://iucn.org/news/202606/what-works-conservation-new-study-identifies-approaches-delivering-strongest-results",
+    "editionDate": "July 23, 2026 — Twenty-Five Good Stories From Many Sources",
+    "edition": "July 23, 2026 — Twenty-Five Good Stories From Many Sources",
+    "file": "index.html",
+    "isCurrent": true
+  },
+  {
+    "id": "good-july23-023",
+    "title": "A Senior Dachshund Is Thriving After Rescue and a New Beginning",
+    "summary": "Sunny, an older miniature dachshund rescued with twelve other dogs from poor breeding conditions, is now settling into a home filled with comfort, medical care, and patient attention. New photographs show him resting safely and learning what ordinary affection feels like.",
+    "why": "Recovery is not always dramatic. For an older animal, it can be a warm place to sleep, pain being treated, and the gradual realization that a human hand is arriving to help rather than harm.",
+    "ripple": "Sunny’s progress honours the shelter workers, donors, foster families, and adopters who make long recoveries possible and may encourage someone to consider an older animal whose best days can still be ahead.",
+    "mainCategory": "Animals",
+    "category": "Animal Recovery",
+    "location": "British Columbia, Canada",
+    "source": "BC SPCA",
+    "sourceUrl": "https://spca.bc.ca/news/senior-dachshund-gets-a-new-name/",
+    "editionDate": "July 23, 2026 — Twenty-Five Good Stories From Many Sources",
+    "edition": "July 23, 2026 — Twenty-Five Good Stories From Many Sources",
+    "file": "index.html",
+    "isCurrent": true
+  },
+  {
+    "id": "good-july23-024",
+    "title": "An 11-Year-Old Spends 100 Hours Reading to Shelter Animals",
+    "summary": "Eleven-year-old Nehemiah Turner completed more than one hundred hours in a Jacksonville Humane Society program that invites children to read beside adoptable animals. His steady visits gave nervous pets a calm human voice while he built confidence and patience of his own.",
+    "why": "Care does not have to be loud to matter. Sitting down, opening a book, and returning week after week can make an unfamiliar shelter feel safer for an animal waiting for a home.",
+    "ripple": "His milestone may inspire more young readers, help shelter pets become comfortable around people, and show children that their time and attention are valuable forms of service.",
+    "mainCategory": "Good Samaritans",
+    "category": "Children & Animals",
+    "location": "Jacksonville, Florida",
+    "source": "People",
+    "sourceUrl": "https://people.com/11-year-old-boy-brings-storytime-to-shelter-animals-12022648",
+    "editionDate": "July 23, 2026 — Twenty-Five Good Stories From Many Sources",
+    "edition": "July 23, 2026 — Twenty-Five Good Stories From Many Sources",
+    "file": "index.html",
+    "isCurrent": true
+  },
+  {
+    "id": "good-july23-025",
+    "title": "Five Poolside Responders Are Honoured for Saving a Swimmer’s Life",
+    "summary": "Five people at a Queensland aquatic centre were recognized after working together when a swimmer suffered cardiac arrest. Staff members began the rescue, called emergency services, prepared equipment, and continued lifesaving treatment with an off-duty police officer until paramedics arrived.",
+    "why": "Emergencies can overwhelm a room, but training and cooperation can turn separate bystanders into one calm chain of care. Each person completed the next necessary task, giving the swimmer time that could not be replaced.",
+    "ripple": "Public recognition can encourage CPR training, reinforce emergency preparation at community facilities, and remind people that survival often depends on several ordinary individuals acting together.",
+    "mainCategory": "Good Samaritans",
+    "category": "Lifesaving Teamwork",
+    "location": "Gatton, Queensland",
+    "source": "The Courier-Mail",
+    "sourceUrl": "https://www.couriermail.com.au/news/queensland/gatton/council-honours-five-heroes-for-saving-mans-life-in-poolside-rescue/news-story/9bdad559026b233ef8598b2101f00ee9",
+    "editionDate": "July 23, 2026 — Twenty-Five Good Stories From Many Sources",
+    "edition": "July 23, 2026 — Twenty-Five Good Stories From Many Sources",
+    "file": "index.html",
     "isCurrent": true
   }
 ];

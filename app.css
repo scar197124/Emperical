@@ -552,3 +552,88 @@ body::before{
   .reader-takeaways{grid-template-columns:1fr;gap:10px}
   .reader-takeaways .reader-section{min-height:0}
 }
+
+/* v12.7 — compact identity header without cropping the full banner */
+.identity-hero{
+  height:auto;
+  aspect-ratio:1536 / 264;
+  background-size:100% auto;
+  background-position:center center;
+}
+.site-header .nav{
+  min-height:56px;
+  padding:5px 12px;
+  gap:10px;
+}
+.site-header .nav a{
+  min-height:42px;
+  padding:7px 14px;
+}
+.site-header .nav a[aria-current=page]::after{
+  bottom:-6px;
+}
+@media(max-width:900px){
+  .identity-hero{
+    height:auto;
+    aspect-ratio:1536 / 264;
+    background-size:100% auto;
+  }
+  .site-header .nav{
+    min-height:50px;
+    padding:4px 7px;
+    gap:4px;
+  }
+  .site-header .nav a{
+    min-height:40px;
+    padding:6px 10px;
+  }
+}
+@media(max-width:560px){
+  .identity-hero{
+    height:auto;
+    aspect-ratio:1536 / 264;
+  }
+  .site-header .nav{
+    min-height:48px;
+    padding:3px 6px;
+  }
+  .site-header .nav a{
+    min-height:38px;
+    padding:5px 9px;
+  }
+}
+@media(max-width:390px){
+  .identity-hero{
+    height:auto;
+    aspect-ratio:1536 / 264;
+  }
+}
+
+/* v12.8 — responsive wheel tuning: fast highlight, single settled filter update */
+.selector-wheel{
+  contain:layout paint;
+  scroll-snap-type:y mandatory;
+  scroll-behavior:auto;
+  cursor:grab;
+  outline:none;
+}
+.selector-wheel:active{cursor:grabbing}
+.selector-wheel:focus-visible{box-shadow:inset 0 0 0 1px rgba(240,189,69,.48),0 0 18px rgba(240,189,69,.12);border-radius:9px}
+.wheel-option{
+  scroll-snap-stop:always;
+  transition:opacity .10s ease,transform .10s ease,color .10s ease,text-shadow .10s ease;
+  user-select:none;
+  -webkit-user-select:none;
+}
+.wheel-option.active{text-shadow:0 0 18px rgba(240,189,69,.42)}
+.wheel-center{box-shadow:0 0 22px rgba(235,180,56,.13),inset 0 0 12px rgba(235,180,56,.055)}
+@media(min-width:901px){
+  .toolbar.wheel-shell{height:184px;min-height:184px;max-height:184px}
+  .selector-wheel{height:102px;scroll-padding-block:34px}
+  .wheel-option{height:34px;min-height:34px}
+  .wheel-spacer{height:34px}
+  .wheel-center{top:50px;height:34px}
+}
+@media(max-width:900px){
+  .selector-wheel{touch-action:pan-y;overscroll-behavior-y:contain;-webkit-overflow-scrolling:touch}
+}
